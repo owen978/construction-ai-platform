@@ -1,0 +1,11 @@
+# robots.txt for BuildCopilot
+User-agent: *
+Allow: /
+
+# Block admin pages from indexing
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://buildcopilot.ai/sitemap.xml
