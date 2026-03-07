@@ -6,6 +6,9 @@ import { getRoles } from '@/lib/queries/roles'
 import { getTasks } from '@/lib/queries/tasks'
 import { RoleCard } from '@/components/cards/role-card'
 import { TaskCard } from '@/components/cards/task-card'
+import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 export const metadata: Metadata = {
   title: 'AI for Construction Roles & Tasks',
@@ -17,8 +20,29 @@ export default async function AIForPage() {
   const roles = await getRoles()
   const tasks = await getTasks()
 
+  const allItems = [
+    ...roles.map((r) => ({ name: `AI for ${r.name}`, url: `${SITE_URL}/ai-for/${r.slug}` })),
+    ...tasks.map((t) => ({ name: `AI for ${t.name}`, url: `${SITE_URL}/ai-for/${t.slug}` })),
+  ]
+
+  const schemas = [
+    breadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: 'AI for Roles & Tasks' },
+    ]),
+    collectionPageSchema({
+      name: 'AI for Construction Roles & Tasks',
+      description:
+        'Find AI workflows tailored to your construction role. Browse by role or task — QS, Project Manager, Site Manager, Estimator, and more.',
+      url: `${SITE_URL}/ai-for`,
+      items: allItems,
+    }),
+  ]
+
   return (
     <>
+      <script {...jsonLdScriptProps(schemas)} />
+
       {/* Page Header */}
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">

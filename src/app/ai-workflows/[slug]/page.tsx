@@ -9,7 +9,10 @@ import { CopyButton } from '@/components/ui/copy-button'
 import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
+import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import type { DifficultyLevel } from '@/types'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 const difficultyVariant: Record<DifficultyLevel, 'info' | 'warning' | 'success'> = {
   beginner: 'success',
@@ -43,8 +46,46 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
     notFound()
   }
 
+  // Build HowTo steps from the prompt (split into logical steps)
+  const promptSteps = workflow.prompt
+    ? workflow.prompt
+        .split(/\n(?=\d+[\.\)]\s|Step\s+\d|[-•]\s)/)
+        .map((s: string) => s.trim())
+        .filter((s: string) => s.length > 10)
+    : []
+
+  // If prompt doesn't split well, create generic steps
+  const howToSteps =
+    promptSteps.length >= 2
+      ? promptSteps
+      : [
+          `Open your preferred AI tool (e.g. ChatGPT, Claude, or Microsoft Copilot)`,
+          `Copy the ${workflow.title} prompt below and paste it into the AI tool`,
+          `Customise the placeholders with your project-specific details`,
+          `Review the AI output and refine as needed for your project`,
+        ]
+
+  const schemas = [
+    breadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: 'AI Workflows', url: `${SITE_URL}/ai-workflows` },
+      { name: workflow.title },
+    ]),
+    howToSchema({
+      name: workflow.title,
+      description: workflow.description || `AI workflow for construction professionals: ${workflow.title}`,
+      slug: workflow.slug,
+      steps: howToSteps.slice(0, 10), // Google recommends max ~10 steps
+      difficulty: workflow.difficulty,
+      tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
+      estimatedTime: 'PT10M',
+    }),
+  ]
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
+      <script {...jsonLdScriptProps(schemas)} />
+
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
         <Link href="/" className="hover:text-[#ff6b35] transition-colors">

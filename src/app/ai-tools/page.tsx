@@ -4,6 +4,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getTools } from '@/lib/queries/tools'
 import { ToolCard } from '@/components/cards/tool-card'
+import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 export const metadata: Metadata = {
   title: 'AI Tools',
@@ -14,8 +17,27 @@ export const metadata: Metadata = {
 export default async function ToolsPage() {
   const tools = await getTools()
 
+  const schemas = [
+    breadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: 'AI Tools' },
+    ]),
+    collectionPageSchema({
+      name: 'AI Tools for Construction',
+      description:
+        'Discover the best AI tools for construction professionals. Compare features, pricing, and find the right tool for your needs.',
+      url: `${SITE_URL}/ai-tools`,
+      items: tools.map((t) => ({
+        name: t.name,
+        url: `${SITE_URL}/ai-tools/${t.slug}`,
+      })),
+    }),
+  ]
+
   return (
     <>
+      <script {...jsonLdScriptProps(schemas)} />
+
       {/* Page Header */}
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">

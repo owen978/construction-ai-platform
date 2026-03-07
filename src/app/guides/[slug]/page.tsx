@@ -7,7 +7,10 @@ import { getGuideBySlug } from '@/lib/queries/guides'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { createClient } from '@/lib/supabase/server'
+import { breadcrumbSchema, articleSchema, jsonLdScriptProps } from '@/lib/schema'
 import type { DifficultyLevel, Workflow } from '@/types'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 const difficultyVariant: Record<DifficultyLevel, 'info' | 'warning' | 'success'> = {
   beginner: 'success',
@@ -52,8 +55,26 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
   const relatedWorkflows: Workflow[] = workflows ?? []
 
+  const schemas = [
+    breadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: 'Guides', url: `${SITE_URL}/guides` },
+      { name: guide.title },
+    ]),
+    articleSchema({
+      title: guide.title,
+      description: guide.description || `Construction AI guide: ${guide.title}`,
+      slug: guide.slug,
+      datePublished: guide.created_at,
+      dateModified: guide.updated_at,
+      readingTimeMinutes: guide.reading_time_minutes,
+    }),
+  ]
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
+      <script {...jsonLdScriptProps(schemas)} />
+
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
         <Link href="/" className="hover:text-[#ff6b35] transition-colors">

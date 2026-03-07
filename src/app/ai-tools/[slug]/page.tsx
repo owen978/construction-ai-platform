@@ -7,6 +7,9 @@ import { getToolBySlug } from '@/lib/queries/tools'
 import { getWorkflowsByToolId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
+import { breadcrumbSchema, softwareApplicationSchema, jsonLdScriptProps } from '@/lib/schema'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 interface ToolDetailPageProps {
   params: Promise<{ slug: string }>
@@ -36,8 +39,26 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
 
   const workflows = await getWorkflowsByToolId(tool.id)
 
+  const schemas = [
+    breadcrumbSchema([
+      { name: 'Home', url: SITE_URL },
+      { name: 'AI Tools', url: `${SITE_URL}/ai-tools` },
+      { name: tool.name },
+    ]),
+    softwareApplicationSchema({
+      name: tool.name,
+      description: tool.description || `AI tool for construction professionals: ${tool.name}`,
+      slug: tool.slug,
+      category: tool.category,
+      pricing: tool.pricing,
+      url: tool.url,
+    }),
+  ]
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
+      <script {...jsonLdScriptProps(schemas)} />
+
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
         <Link href="/" className="hover:text-[#ff6b35] transition-colors">

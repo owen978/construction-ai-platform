@@ -7,6 +7,9 @@ import { getRoleBySlug } from '@/lib/queries/roles'
 import { getTaskBySlug } from '@/lib/queries/tasks'
 import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
+import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 interface AIForPageProps {
   params: Promise<{ slug: string }>
@@ -42,8 +45,27 @@ export default async function AIForPage({ params }: AIForPageProps) {
   if (role) {
     const workflows = await getWorkflowsByRoleId(role.id)
 
+    const schemas = [
+      breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'AI for Roles & Tasks', url: `${SITE_URL}/ai-for` },
+        { name: `AI for ${role.name}` },
+      ]),
+      collectionPageSchema({
+        name: `AI for ${role.name}`,
+        description: role.description || `AI workflows and prompts for ${role.name} in construction`,
+        url: `${SITE_URL}/ai-for/${role.slug}`,
+        items: workflows.map((w) => ({
+          name: w.title,
+          url: `${SITE_URL}/ai-workflows/${w.slug}`,
+        })),
+      }),
+    ]
+
     return (
       <div className="mx-auto max-w-7xl px-4 py-12">
+        <script {...jsonLdScriptProps(schemas)} />
+
         <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
           <Link href="/" className="hover:text-[#ff6b35] transition-colors">
             Home
@@ -85,8 +107,27 @@ export default async function AIForPage({ params }: AIForPageProps) {
   if (task) {
     const workflows = await getWorkflowsByTaskId(task.id)
 
+    const schemas = [
+      breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'AI for Roles & Tasks', url: `${SITE_URL}/ai-for` },
+        { name: `AI for ${task.name}` },
+      ]),
+      collectionPageSchema({
+        name: `AI for ${task.name}`,
+        description: task.description || `AI workflows and prompts for ${task.name} in construction`,
+        url: `${SITE_URL}/ai-for/${task.slug}`,
+        items: workflows.map((w) => ({
+          name: w.title,
+          url: `${SITE_URL}/ai-workflows/${w.slug}`,
+        })),
+      }),
+    ]
+
     return (
       <div className="mx-auto max-w-7xl px-4 py-12">
+        <script {...jsonLdScriptProps(schemas)} />
+
         <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
           <Link href="/" className="hover:text-[#ff6b35] transition-colors">
             Home
