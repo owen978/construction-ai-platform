@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>&copy; 2025 BuildCopilot. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BuildCopilot. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-[#ff6b35] transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-[#ff6b35] transition-colors">Terms</Link>
