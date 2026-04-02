@@ -25,7 +25,7 @@ function toRfc822(date: string): string {
 export async function GET() {
   const supabase = createPublicClient()
 
-  const [workflows, guides, tools, roles, tasks] = await Promise.all([
+  const [workflows, guides, tools, roles, tasks, templates] = await Promise.all([
     supabase
       .from('workflows')
       .select('title, slug, description, created_at')
@@ -56,6 +56,12 @@ export async function GET() {
       .eq('status', 'published')
       .order('created_at', { ascending: false })
       .limit(10),
+    (supabase as any)
+      .from('templates')
+      .select('name, slug, description, created_at')
+      .eq('status', 'published')
+      .order('created_at', { ascending: false })
+      .limit(20),
   ])
 
   const items: FeedItem[] = []
@@ -102,6 +108,15 @@ export async function GET() {
       url: `${SITE_URL}/ai-for/${t.slug}`,
       description: t.description || `AI workflows for ${t.name} in construction`,
       pubDate: t.created_at,
+    })
+  }
+
+  for (const tpl of templates.data ?? []) {
+    items.push({
+      title: tpl.name,
+      url: `${SITE_URL}/templates/${tpl.slug}`,
+      description: tpl.description || `Free construction template: ${tpl.name}`,
+      pubDate: tpl.created_at,
     })
   }
 

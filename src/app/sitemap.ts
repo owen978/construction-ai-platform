@@ -7,12 +7,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = createPublicClient()
 
   // Fetch all published slugs in parallel
-  const [workflows, roles, tasks, tools, guides] = await Promise.all([
+  const [workflows, roles, tasks, tools, guides, templates] = await Promise.all([
     supabase.from('workflows').select('slug, updated_at').eq('status', 'published'),
     supabase.from('roles').select('slug, updated_at').eq('status', 'published'),
     supabase.from('tasks').select('slug, updated_at').eq('status', 'published'),
     supabase.from('tools').select('slug, updated_at').eq('status', 'published'),
     supabase.from('guides').select('slug, updated_at').eq('status', 'published'),
+    (supabase as any).from('templates').select('slug, updated_at').eq('status', 'published'),
   ])
 
   // Static pages
@@ -40,6 +41,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/templates`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/ai-for`,
@@ -119,9 +126,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
+  // Dynamic template pages
+  const templatePages: MetadataRoute.Sitemap = (templates.data ?? []).map((t: any) => ({
+    url: `${BASE_URL}/templates/${t.slug}`,
+    lastModified: new Date(t.updated_at),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   return [
     ...staticPages,
     ...workflowPages,
+    ...templatePages,
     ...rolePages,
     ...taskPages,
     ...toolPages,

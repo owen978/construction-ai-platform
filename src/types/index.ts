@@ -39,6 +39,28 @@ export type RoleWithTasks = Role & {
   tasks: Task[]
 }
 
+// Template type (manual definition until database types are regenerated)
+export interface Template {
+  id: string
+  name: string
+  slug: string
+  description: string | null
+  what_is_it: string | null
+  key_sections: string | null
+  template_content: string | null
+  when_to_use: string | null
+  who_uses_it: string | null
+  ai_tips: string | null
+  icon: string | null
+  primary_keyword: string | null
+  meta_title: string | null
+  meta_description: string | null
+  status: string
+  sort_order: number | null
+  created_at: string
+  updated_at: string
+}
+
 // Status and difficulty types
 export type ContentStatus = 'draft' | 'published' | 'archived'
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced'

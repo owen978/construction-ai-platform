@@ -14,6 +14,7 @@ import {
 
 const navLinks = [
   { href: '/ai-workflows', label: 'AI Workflows' },
+  { href: '/templates', label: 'Templates' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/guides', label: 'Guides' },
   { href: '/ai-for', label: 'AI for Roles' },
