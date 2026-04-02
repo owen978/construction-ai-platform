@@ -14,7 +14,7 @@ export default function TermsPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">Terms of Use</span>
           </nav>
@@ -46,15 +46,15 @@ export default function TermsPage() {
             <p className="mb-3">The AI workflows, prompts, and guides on this Site are provided for your personal and professional use, subject to the following conditions:</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>You may copy, use, and adapt the AI prompts and workflows for your own construction projects and professional work.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>You may not republish, redistribute, or resell our content in bulk or as part of a competing service without written permission.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Attribution is appreciated but not required when using individual prompts in your day-to-day work.</span>
               </li>
             </ul>
@@ -122,7 +122,7 @@ export default function TermsPage() {
             <h2 className="mb-4 text-2xl font-bold text-slate-900">12. Contact</h2>
             <p>
               If you have any questions about these terms, please contact us at{' '}
-              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors">
+              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-primary hover:text-primary/90 transition-colors">
                 hello@buildcopilot.ai
               </a>.
             </p>

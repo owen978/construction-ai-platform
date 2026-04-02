@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">About</span>
           </nav>
@@ -83,12 +83,12 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-[#ff6b35]/20 bg-gradient-to-br from-[#1a1a2e] to-[#1a1a2e]/95 p-8 text-center">
+          <div className="rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
             <h2 className="mb-2 text-xl font-bold text-white">Ready to get started?</h2>
             <p className="mb-6 text-slate-300">Browse our library of AI workflows built for construction professionals.</p>
             <Link
               href="/ai-workflows"
-              className="inline-flex items-center rounded-lg bg-[#ff6b35] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
             >
               Explore Workflows
             </Link>

@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import { getFeaturedWorkflows } from '@/lib/queries/workflows'
 import { getRoles } from '@/lib/queries/roles'

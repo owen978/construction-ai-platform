@@ -1,16 +1,17 @@
 import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/button-variants'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#1a1a2e] geometric-grid py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-charcoal geometric-grid py-24 sm:py-32">
       <div className="relative mx-auto max-w-7xl px-4 text-center">
-        <div className="mb-6 inline-flex items-center rounded-full bg-[#ff6b35]/10 px-4 py-1.5 text-sm font-medium text-[#ff6b35] ring-1 ring-[#ff6b35]/30">
+        <div className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary ring-1 ring-primary/30">
           AI-Powered Construction Workflows
         </div>
 
         <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
           Work Smarter on{' '}
-          <span className="text-[#ff6b35]">Every Project</span>
+          <span className="text-primary">Every Project</span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
@@ -21,7 +22,7 @@ export function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
             href="/ai-workflows"
-            className="inline-flex items-center rounded-lg bg-[#ff6b35] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+            className={buttonVariants({ size: 'lg', className: 'px-8 py-3.5 h-auto shadow-lg shadow-primary/25' })}
           >
             Explore Workflows
             <svg
@@ -40,7 +41,7 @@ export function Hero() {
           </Link>
           <Link
             href="/guides"
-            className="inline-flex items-center rounded-lg px-8 py-3.5 text-sm font-semibold text-white ring-1 ring-slate-600 hover:bg-white/10 transition-all"
+            className={buttonVariants({ variant: 'outline-dark', size: 'lg', className: 'px-8 py-3.5 h-auto' })}
           >
             Read the Guides
           </Link>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/button-variants'
 
 export function NewsletterCTA() {
   return (
@@ -7,7 +8,7 @@ export function NewsletterCTA() {
         <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-slate-50 to-white border border-slate-200/60 px-8 py-12 sm:px-16 sm:py-16">
           <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:justify-between lg:gap-12">
             <div className="lg:max-w-xl">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#ff6b35] mb-2">
+              <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">
                 Free Newsletter
               </p>
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -20,7 +21,7 @@ export function NewsletterCTA() {
             <div className="mt-8 flex shrink-0 flex-col items-center gap-3 lg:mt-0">
               <Link
                 href="/newsletter"
-                className="inline-flex items-center rounded-lg bg-[#ff6b35] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+                className={buttonVariants({ size: 'lg', className: 'px-8 py-3.5 h-auto shadow-lg shadow-primary/25' })}
               >
                 Subscribe Free
                 <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

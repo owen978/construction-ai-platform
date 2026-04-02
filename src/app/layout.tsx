@@ -47,6 +47,11 @@ export const metadata: Metadata = {
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
     images: ['/og-image.png'],
   },
+  alternates: {
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
   robots: {
     index: true,
     follow: true,

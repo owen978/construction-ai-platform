@@ -1,15 +1,20 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getRoleBySlug } from '@/lib/queries/roles'
-import { getTaskBySlug } from '@/lib/queries/tasks'
+import { getRoleBySlug, getRoleSlugs } from '@/lib/queries/roles'
+import { getTaskBySlug, getTaskSlugs } from '@/lib/queries/tasks'
 import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+
+export async function generateStaticParams() {
+  const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])
+  return [...roles, ...tasks].map(({ slug }) => ({ slug }))
+}
 
 interface AIForPageProps {
   params: Promise<{ slug: string }>
@@ -67,7 +72,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
         <script {...jsonLdScriptProps(schemas)} />
 
         <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
-          <Link href="/" className="hover:text-[#ff6b35] transition-colors">
+          <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
           <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
@@ -129,7 +134,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
         <script {...jsonLdScriptProps(schemas)} />
 
         <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
-          <Link href="/" className="hover:text-[#ff6b35] transition-colors">
+          <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
           <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>

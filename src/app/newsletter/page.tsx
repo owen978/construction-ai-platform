@@ -15,7 +15,7 @@ export default function NewsletterPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">Newsletter</span>
           </nav>
@@ -60,7 +60,7 @@ export default function NewsletterPage() {
         </div>
 
         {/* GHL Embedded Form */}
-        <div className="rounded-lg border border-[#ff6b35]/20 bg-gradient-to-br from-[#1a1a2e] to-[#1a1a2e]/95 p-8 sm:p-12">
+        <div className="rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 sm:p-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">Subscribe to the Newsletter</h2>
             <p className="mt-3 text-slate-300">Join construction professionals already using AI to work smarter.</p>
@@ -95,7 +95,7 @@ export default function NewsletterPage() {
         <div className="mt-8 text-center">
           <p className="text-sm text-slate-500">
             We respect your privacy. Unsubscribe anytime. Read our{' '}
-            <Link href="/privacy" className="text-[#ff6b35] hover:text-[#e85d26] transition-colors">
+            <Link href="/privacy" className="text-primary hover:text-primary/90 transition-colors">
               Privacy Policy
             </Link>.
           </p>

@@ -1,8 +1,16 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Menu } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button-variants'
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+  SheetTitle,
+} from '@/components/ui/sheet'
 
 const navLinks = [
   { href: '/ai-workflows', label: 'AI Workflows' },
@@ -12,14 +20,13 @@ const navLinks = [
 ]
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1a1a2e] border-b border-slate-800">
+    <header className="sticky top-0 z-50 bg-charcoal border-b border-slate-800">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-xl font-bold text-white">
-          <span className="inline-block h-2 w-2 rounded-sm bg-[#ff6b35] mr-2" />
+          <span className="inline-block h-2 w-2 rounded-sm bg-primary mr-2" />
           BuildCopilot
         </Link>
 
@@ -41,68 +48,57 @@ export function Header() {
 
         <Link
           href="/ai-workflows"
-          className="hidden md:inline-flex items-center rounded-lg bg-[#ff6b35] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#e85d26] transition-colors"
+          className={buttonVariants({ className: 'hidden md:inline-flex' })}
         >
           Get Started
         </Link>
 
-        <button
-          type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-300 hover:text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
+        <Sheet>
+          <SheetTrigger
+            render={
+              <button
+                type="button"
+                className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-300 hover:text-white"
+                aria-label="Toggle menu"
+              />
+            }
           >
-            {mobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
-              />
-            )}
-          </svg>
-        </button>
-      </div>
-
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-800 bg-[#1a1a2e]">
-          <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-colors ${
-                  pathname === link.href
-                    ? 'text-white'
-                    : 'text-slate-300 hover:text-white'
-                }`}
+            <Menu className="h-6 w-6" />
+          </SheetTrigger>
+          <SheetContent side="right" className="bg-charcoal border-l-slate-800" showCloseButton={false}>
+            <SheetTitle className="sr-only">Navigation</SheetTitle>
+            <nav className="flex flex-col gap-4 p-4">
+              {navLinks.map((link) => (
+                <SheetClose
+                  key={link.href}
+                  render={
+                    <Link
+                      href={link.href}
+                      className={`text-sm font-medium transition-colors ${
+                        pathname === link.href
+                          ? 'text-white'
+                          : 'text-slate-300 hover:text-white'
+                      }`}
+                    />
+                  }
+                >
+                  {link.label}
+                </SheetClose>
+              ))}
+              <SheetClose
+                render={
+                  <Link
+                    href="/ai-workflows"
+                    className={buttonVariants({ className: 'mt-2' })}
+                  />
+                }
               >
-                {link.label}
-              </Link>
-            ))}
-            <Link
-              href="/ai-workflows"
-              onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center rounded-lg bg-[#ff6b35] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#e85d26] transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      )}
+                Get Started
+              </SheetClose>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   )
 }

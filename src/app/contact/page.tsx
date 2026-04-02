@@ -14,7 +14,7 @@ export default function ContactPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">Contact</span>
           </nav>
@@ -27,7 +27,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-3xl px-4 py-12">
         <div className="grid gap-8 sm:grid-cols-2">
           {/* General Enquiries */}
-          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-[#ff6b35] transition-all">
+          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
               💬
             </div>
@@ -37,14 +37,14 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:hello@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
             >
               hello@buildcopilot.ai
             </a>
           </div>
 
           {/* Partnerships */}
-          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-[#ff6b35] transition-all">
+          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
               🤝
             </div>
@@ -54,14 +54,14 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:partners@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
             >
               partners@buildcopilot.ai
             </a>
           </div>
 
           {/* Consulting */}
-          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-[#ff6b35] transition-all">
+          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
               👔
             </div>
@@ -71,14 +71,14 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:consulting@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
             >
               consulting@buildcopilot.ai
             </a>
           </div>
 
           {/* Feedback */}
-          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-[#ff6b35] transition-all">
+          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
               💡
             </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:feedback@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors"
+              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
             >
               feedback@buildcopilot.ai
             </a>
@@ -96,14 +96,14 @@ export default function ContactPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 rounded-lg border border-[#ff6b35]/20 bg-gradient-to-br from-[#1a1a2e] to-[#1a1a2e]/95 p-8 text-center">
+        <div className="mt-12 rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
           <h2 className="mb-2 text-xl font-bold text-white">Looking for AI Construction Copilot?</h2>
           <p className="mb-6 text-slate-300">Our software product has all these workflows pre-built and ready to run.</p>
           <a
             href="https://aiconstructioncopilot.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg bg-[#ff6b35] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
           >
             Visit AI Construction Copilot
             <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

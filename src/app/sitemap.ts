@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next'
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   // Fetch all published slugs in parallel
   const [workflows, roles, tasks, tools, guides] = await Promise.all([

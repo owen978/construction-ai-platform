@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">Privacy Policy</span>
           </nav>
@@ -39,15 +39,15 @@ export default function PrivacyPage() {
             <p className="mb-3">We may collect the following types of information:</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Email address</strong> — if you voluntarily subscribe to our newsletter or contact us.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Usage data</strong> — anonymous analytics data such as pages visited, time on site, and referral sources, collected via privacy-friendly analytics.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Device information</strong> — browser type, operating system, and screen resolution for optimising our website experience.</span>
               </li>
             </ul>
@@ -58,19 +58,19 @@ export default function PrivacyPage() {
             <p className="mb-3">We use your information to:</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Send you our newsletter and updates about new AI workflows (only if you opt in).</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Respond to enquiries you send via our contact page.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Improve our website, content, and user experience through anonymous analytics.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Comply with legal obligations.</span>
               </li>
             </ul>
@@ -95,15 +95,15 @@ export default function PrivacyPage() {
             <p className="mb-3">We may use the following third-party services:</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Email marketing platform</strong> — to manage newsletter subscriptions and send updates.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Website hosting</strong> — to serve our website securely and reliably.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span><strong className="text-slate-900">Analytics</strong> — to understand how visitors use our site (anonymised data only).</span>
               </li>
             </ul>
@@ -124,29 +124,29 @@ export default function PrivacyPage() {
             <p className="mb-3">Under UK GDPR, you have the right to:</p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Access the personal data we hold about you.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Request correction of inaccurate data.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Request deletion of your data.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Withdraw consent at any time (for newsletter subscriptions).</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6b35]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>Lodge a complaint with the Information Commissioner&apos;s Office (ICO).</span>
               </li>
             </ul>
             <p className="mt-3">
               To exercise any of these rights, contact us at{' '}
-              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors">
+              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-primary hover:text-primary/90 transition-colors">
                 hello@buildcopilot.ai
               </a>.
             </p>
@@ -170,7 +170,7 @@ export default function PrivacyPage() {
             <h2 className="mb-4 text-2xl font-bold text-slate-900">11. Contact Us</h2>
             <p>
               If you have any questions about this privacy policy or how we handle your data, please contact us at{' '}
-              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-[#ff6b35] hover:text-[#e85d26] transition-colors">
+              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-primary hover:text-primary/90 transition-colors">
                 hello@buildcopilot.ai
               </a>.
             </p>

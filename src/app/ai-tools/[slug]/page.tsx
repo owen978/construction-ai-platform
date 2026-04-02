@@ -1,15 +1,20 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getToolBySlug } from '@/lib/queries/tools'
+import { getToolBySlug, getToolSlugs } from '@/lib/queries/tools'
 import { getWorkflowsByToolId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, softwareApplicationSchema, jsonLdScriptProps } from '@/lib/schema'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+
+export async function generateStaticParams() {
+  const slugs = await getToolSlugs()
+  return slugs.map(({ slug }) => ({ slug }))
+}
 
 interface ToolDetailPageProps {
   params: Promise<{ slug: string }>
@@ -61,11 +66,11 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
 
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
-        <Link href="/" className="hover:text-[#ff6b35] transition-colors">
+        <Link href="/" className="hover:text-primary transition-colors">
           Home
         </Link>
         <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-        <Link href="/ai-tools" className="hover:text-[#ff6b35] transition-colors">
+        <Link href="/ai-tools" className="hover:text-primary transition-colors">
           AI Tools
         </Link>
         <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
@@ -100,7 +105,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
             href={tool.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg bg-[#ff6b35] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
           >
             Visit {tool.name} &rarr;
           </a>

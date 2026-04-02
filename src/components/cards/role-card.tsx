@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { cn, truncate } from '@/lib/utils'
+import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
 import type { Role } from '@/types'
 
 interface RoleCardProps {
@@ -11,27 +12,25 @@ export function RoleCard({ role, className }: RoleCardProps) {
   const { name, slug, description, icon } = role
 
   return (
-    <Link
-      href={`/ai-for/${slug}`}
-      className={cn(
-        'group relative flex flex-col rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:shadow-lg hover:border-l-[#ff6b35] transition-all duration-300',
-        className
-      )}
-    >
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-orange-50 text-3xl">
-        {icon || '\uD83D\uDC64'}
-      </div>
-      <h3 className="text-lg font-semibold text-slate-900 group-hover:text-[#ff6b35] transition-colors">
-        {name}
-      </h3>
-      {description && (
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          {truncate(description, 120)}
-        </p>
-      )}
-      <span className="mt-auto pt-4 inline-flex items-center text-sm font-medium text-[#ff6b35] opacity-0 group-hover:opacity-100 transition-opacity">
-        View workflows &rarr;
-      </span>
+    <Link href={`/ai-for/${slug}`} className={cn('group', className)}>
+      <Card className="h-full border-l-4 border-l-transparent transition-all duration-300 hover:border-l-primary hover:shadow-lg">
+        <CardContent className="flex h-full flex-col p-6">
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-orange-50 text-3xl">
+            {icon || '\uD83D\uDC64'}
+          </div>
+          <CardTitle className="text-lg group-hover:text-primary transition-colors">
+            {name}
+          </CardTitle>
+          {description && (
+            <CardDescription className="mt-2 leading-relaxed">
+              {truncate(description, 120)}
+            </CardDescription>
+          )}
+          <span className="mt-auto pt-4 inline-flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+            View workflows &rarr;
+          </span>
+        </CardContent>
+      </Card>
     </Link>
   )
 }

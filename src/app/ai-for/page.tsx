@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -47,7 +47,7 @@ export default async function AIForPage() {
       <div className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:pt-16">
           <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-[#ff6b35] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">AI for Roles & Tasks</span>
           </nav>
@@ -59,7 +59,7 @@ export default async function AIForPage() {
       {/* Roles Section */}
       <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#ff6b35] mb-2">By Role</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">By Role</p>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Construction Roles</h2>
           <p className="mt-2 text-slate-600">Select your role to see AI workflows built specifically for you.</p>
         </div>
@@ -80,7 +80,7 @@ export default async function AIForPage() {
       {/* Tasks Section */}
       <div className="mx-auto max-w-7xl px-4 pb-16">
         <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#ff6b35] mb-2">By Task</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">By Task</p>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Construction Tasks</h2>
           <p className="mt-2 text-slate-600">Browse AI workflows by the type of work you need to do.</p>
         </div>

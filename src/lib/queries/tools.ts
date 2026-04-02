@@ -1,8 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Tool } from '@/types'
 
 export async function getTools(): Promise<Tool[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tools')
@@ -15,7 +15,7 @@ export async function getTools(): Promise<Tool[]> {
 }
 
 export async function getToolBySlug(slug: string): Promise<Tool | null> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tools')
@@ -32,7 +32,7 @@ export async function getToolBySlug(slug: string): Promise<Tool | null> {
 }
 
 export async function getFeaturedTools(limit: number = 6): Promise<Tool[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tools')
@@ -41,6 +41,18 @@ export async function getFeaturedTools(limit: number = 6): Promise<Tool[]> {
     .eq('featured', true)
     .order('sort_order', { ascending: true })
     .limit(limit)
+
+  if (error) throw error
+  return data ?? []
+}
+
+export async function getToolSlugs(): Promise<{ slug: string }[]> {
+  const supabase = createPublicClient()
+
+  const { data, error } = await supabase
+    .from('tools')
+    .select('slug')
+    .eq('status', 'published')
 
   if (error) throw error
   return data ?? []

@@ -1,8 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Role } from '@/types'
 
 export async function getRoles(): Promise<Role[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('roles')
@@ -15,7 +15,7 @@ export async function getRoles(): Promise<Role[]> {
 }
 
 export async function getRoleBySlug(slug: string): Promise<Role | null> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('roles')
@@ -32,7 +32,7 @@ export async function getRoleBySlug(slug: string): Promise<Role | null> {
 }
 
 export async function getRoleSlugs(): Promise<{ slug: string }[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('roles')

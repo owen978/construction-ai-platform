@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { requireAdmin } from '@/lib/auth'
+import { Card, CardContent } from '@/components/ui/card'
 
 export const dynamic = 'force-dynamic'
 
@@ -40,18 +42,18 @@ export default async function AdminDashboardPage() {
 
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-bold text-slate-900">Admin Dashboard</h1>
+      <h1 className="mb-8 text-2xl font-bold text-foreground">Admin Dashboard</h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat) => (
-          <a
-            key={stat.label}
-            href={stat.href}
-            className="rounded-lg border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
-          >
-            <p className="text-sm font-medium text-slate-500">{stat.label}</p>
-            <p className="mt-2 text-3xl font-bold text-slate-900">{stat.count}</p>
-          </a>
+          <Link key={stat.label} href={stat.href}>
+            <Card className="transition-shadow hover:shadow-md">
+              <CardContent className="p-6">
+                <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+                <p className="mt-2 text-3xl font-bold text-foreground">{stat.count}</p>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>

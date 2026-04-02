@@ -1,8 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Workflow, WorkflowWithRelations } from '@/types'
 
 export async function getWorkflows(): Promise<Workflow[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -15,7 +15,7 @@ export async function getWorkflows(): Promise<Workflow[]> {
 }
 
 export async function getWorkflowBySlug(slug: string): Promise<WorkflowWithRelations | null> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -32,7 +32,7 @@ export async function getWorkflowBySlug(slug: string): Promise<WorkflowWithRelat
 }
 
 export async function getFeaturedWorkflows(limit: number = 6): Promise<Workflow[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -47,7 +47,7 @@ export async function getFeaturedWorkflows(limit: number = 6): Promise<Workflow[
 }
 
 export async function getWorkflowsByRoleId(roleId: string): Promise<Workflow[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -61,7 +61,7 @@ export async function getWorkflowsByRoleId(roleId: string): Promise<Workflow[]> 
 }
 
 export async function getWorkflowsByTaskId(taskId: string): Promise<Workflow[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -75,7 +75,7 @@ export async function getWorkflowsByTaskId(taskId: string): Promise<Workflow[]> 
 }
 
 export async function getWorkflowsByToolId(toolId: string): Promise<Workflow[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')
@@ -88,8 +88,22 @@ export async function getWorkflowsByToolId(toolId: string): Promise<Workflow[]> 
   return data ?? []
 }
 
+export async function getWorkflowsByGuideId(guideId: string): Promise<Workflow[]> {
+  const supabase = createPublicClient()
+
+  const { data, error } = await supabase
+    .from('workflows')
+    .select('*')
+    .eq('status', 'published')
+    .eq('guide_id', guideId)
+    .order('sort_order', { ascending: true })
+
+  if (error) throw error
+  return data ?? []
+}
+
 export async function getWorkflowSlugs(): Promise<{ slug: string }[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('workflows')

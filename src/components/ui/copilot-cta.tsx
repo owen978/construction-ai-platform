@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button-variants'
 
 interface CopilotCTAProps {
   className?: string
@@ -9,13 +10,13 @@ export function CopilotCTA({ className, variant = 'sidebar' }: CopilotCTAProps) 
   return (
     <div
       className={cn(
-        'relative overflow-hidden rounded-lg border border-[#ff6b35]/20 bg-gradient-to-br from-[#1a1a2e] to-[#1a1a2e]/95 p-6',
+        'relative overflow-hidden rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-6',
         variant === 'inline' && 'my-8',
         className
       )}
     >
       <div className="relative">
-        <div className="mb-2 inline-flex items-center rounded-full bg-[#ff6b35]/10 px-3 py-1 text-xs font-medium text-[#ff6b35]">
+        <div className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
           Try our software
         </div>
         <h3 className="text-lg font-semibold text-white">
@@ -28,7 +29,7 @@ export function CopilotCTA({ className, variant = 'sidebar' }: CopilotCTAProps) 
           href="https://aiconstructioncopilot.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center rounded-lg bg-[#ff6b35] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#ff6b35]/25 hover:bg-[#e85d26] transition-all"
+          className={buttonVariants({ className: 'mt-4 shadow-lg shadow-primary/25' })}
         >
           Try Free
           <svg

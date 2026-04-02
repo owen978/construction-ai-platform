@@ -1,8 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Task } from '@/types'
 
 export async function getTasks(): Promise<Task[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tasks')
@@ -15,7 +15,7 @@ export async function getTasks(): Promise<Task[]> {
 }
 
 export async function getTaskBySlug(slug: string): Promise<Task | null> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tasks')
@@ -32,7 +32,7 @@ export async function getTaskBySlug(slug: string): Promise<Task | null> {
 }
 
 export async function getTaskSlugs(): Promise<{ slug: string }[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('tasks')

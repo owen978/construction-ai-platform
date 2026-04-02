@@ -1,9 +1,9 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getWorkflowBySlug } from '@/lib/queries/workflows'
+import { getWorkflowBySlug, getWorkflowSlugs } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { CopyButton } from '@/components/ui/copy-button'
 import { ToolCard } from '@/components/cards/tool-card'
@@ -13,6 +13,11 @@ import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+
+export async function generateStaticParams() {
+  const slugs = await getWorkflowSlugs()
+  return slugs.map(({ slug }) => ({ slug }))
+}
 
 const difficultyVariant: Record<DifficultyLevel, 'info' | 'warning' | 'success'> = {
   beginner: 'success',
@@ -88,11 +93,11 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
 
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
-        <Link href="/" className="hover:text-[#ff6b35] transition-colors">
+        <Link href="/" className="hover:text-primary transition-colors">
           Home
         </Link>
         <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-        <Link href="/ai-workflows" className="hover:text-[#ff6b35] transition-colors">
+        <Link href="/ai-workflows" className="hover:text-primary transition-colors">
           AI Workflows
         </Link>
         <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>

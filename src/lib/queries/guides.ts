@@ -1,8 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
+import { createPublicClient } from '@/lib/supabase/public'
 import type { Guide } from '@/types'
 
 export async function getGuides(): Promise<Guide[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('guides')
@@ -15,7 +15,7 @@ export async function getGuides(): Promise<Guide[]> {
 }
 
 export async function getGuideBySlug(slug: string): Promise<Guide | null> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('guides')
@@ -32,7 +32,7 @@ export async function getGuideBySlug(slug: string): Promise<Guide | null> {
 }
 
 export async function getFeaturedGuides(limit: number = 6): Promise<Guide[]> {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data, error } = await supabase
     .from('guides')
@@ -41,6 +41,18 @@ export async function getFeaturedGuides(limit: number = 6): Promise<Guide[]> {
     .eq('featured', true)
     .order('sort_order', { ascending: true })
     .limit(limit)
+
+  if (error) throw error
+  return data ?? []
+}
+
+export async function getGuideSlugs(): Promise<{ slug: string }[]> {
+  const supabase = createPublicClient()
+
+  const { data, error } = await supabase
+    .from('guides')
+    .select('slug')
+    .eq('status', 'published')
 
   if (error) throw error
   return data ?? []
