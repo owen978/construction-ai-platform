@@ -9,6 +9,7 @@ import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workfl
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -105,6 +106,10 @@ export default async function AIForPage({ params }: AIForPageProps) {
           <p className="text-slate-500">No workflows available for this role yet.</p>
         )}
 
+        <div className="mt-12 mx-auto max-w-xl">
+          <PromptPackCTA context="role" roleName={role.name} />
+        </div>
+
         <NewsletterInline />
       </div>
     )
@@ -168,6 +173,10 @@ export default async function AIForPage({ params }: AIForPageProps) {
         ) : (
           <p className="text-slate-500">No workflows available for this task yet.</p>
         )}
+
+        <div className="mt-12 mx-auto max-w-xl">
+          <PromptPackCTA context="role" roleName={task.name} />
+        </div>
 
         <NewsletterInline />
       </div>

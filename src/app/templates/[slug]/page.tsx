@@ -9,6 +9,8 @@ import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
+import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
+import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -116,6 +118,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
+          <PromptPackBanner context="template" />
+
           {/* Template Content */}
           {template.template_content && (
             <div className="mt-8">
@@ -208,6 +212,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
               for step-by-step prompts.
             </p>
           </div>
+
+          <PromptPackCTA context="template" />
 
           <CopilotCTA />
 

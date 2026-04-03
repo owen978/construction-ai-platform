@@ -11,6 +11,8 @@ import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
+import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
+import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
@@ -139,6 +141,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
             </div>
           )}
 
+          <PromptPackBanner context="workflow" />
+
           {/* Prompt */}
           {workflow.prompt && (
             <div className="mt-8">
@@ -194,6 +198,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               <GuideCard guide={workflow.guide} />
             </div>
           )}
+
+          <PromptPackCTA context="workflow" />
 
           <CopilotCTA />
 
