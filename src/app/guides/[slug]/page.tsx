@@ -8,6 +8,8 @@ import { getWorkflowsByGuideId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, articleSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterBanner } from '@/components/sections/newsletter-banner'
+import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
@@ -110,6 +112,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
             {guide.content}
           </div>
         )}
+        <NewsletterBanner />
       </article>
 
       {/* Related Workflows */}
@@ -123,6 +126,8 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           </div>
         </div>
       )}
+
+      <NewsletterInline />
     </div>
   )
 }

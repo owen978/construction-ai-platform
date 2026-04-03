@@ -10,6 +10,7 @@ import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
@@ -195,6 +196,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           )}
 
           <CopilotCTA />
+
+          <NewsletterSidebar />
         </div>
       </div>
     </div>

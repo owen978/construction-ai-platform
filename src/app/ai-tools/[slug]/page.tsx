@@ -8,6 +8,7 @@ import { getWorkflowsByToolId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, softwareApplicationSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterInline } from '@/components/sections/newsletter-inline'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -125,6 +126,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
           </div>
         </div>
       )}
+      <NewsletterInline />
     </div>
   )
 }

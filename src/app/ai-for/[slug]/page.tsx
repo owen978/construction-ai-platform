@@ -8,6 +8,7 @@ import { getTaskBySlug, getTaskSlugs } from '@/lib/queries/tasks'
 import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterInline } from '@/components/sections/newsletter-inline'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -103,6 +104,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
         ) : (
           <p className="text-slate-500">No workflows available for this role yet.</p>
         )}
+
+        <NewsletterInline />
       </div>
     )
   }
@@ -165,6 +168,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
         ) : (
           <p className="text-slate-500">No workflows available for this task yet.</p>
         )}
+
+        <NewsletterInline />
       </div>
     )
   }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { getTools } from '@/lib/queries/tools'
 import { ToolCard } from '@/components/cards/tool-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterInline } from '@/components/sections/newsletter-inline'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -65,6 +66,8 @@ export default async function ToolsPage() {
           </div>
         )}
       </div>
+
+      <NewsletterInline />
     </>
   )
 }

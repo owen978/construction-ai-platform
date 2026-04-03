@@ -7,6 +7,8 @@ import { getTemplateBySlug, getTemplateSlugs } from '@/lib/queries/templates'
 import { CopyButton } from '@/components/ui/copy-button'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
+import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
+import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -131,6 +133,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
+          <NewsletterBanner />
+
           {/* When to Use */}
           {template.when_to_use && (
             <div className="mt-8">
@@ -206,6 +210,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           </div>
 
           <CopilotCTA />
+
+          <NewsletterSidebar />
         </div>
       </div>
     </div>
