@@ -46,6 +46,21 @@ export async function getFeaturedTools(limit: number = 6): Promise<Tool[]> {
   return data ?? []
 }
 
+export async function getOtherTools(excludeSlug: string, limit: number = 5): Promise<Tool[]> {
+  const supabase = createPublicClient()
+
+  const { data, error } = await supabase
+    .from('tools')
+    .select('*')
+    .eq('status', 'published')
+    .neq('slug', excludeSlug)
+    .order('sort_order', { ascending: true })
+    .limit(limit)
+
+  if (error) throw error
+  return data ?? []
+}
+
 export async function getToolSlugs(): Promise<{ slug: string }[]> {
   const supabase = createPublicClient()
 
