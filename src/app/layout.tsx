@@ -18,8 +18,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    template: '%s | BuildCopilot — The AI Operating System for Construction',
-    default: 'BuildCopilot — The AI Operating System for Construction',
+    template: '%s | BuildCopilot',
+    default: 'BuildCopilot: The AI Operating System for Construction',
   },
   description:
     'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: siteUrl,
     siteName: 'BuildCopilot',
-    title: 'BuildCopilot — The AI Operating System for Construction',
+    title: 'BuildCopilot: The AI Operating System for Construction',
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BuildCopilot — The AI Operating System for Construction',
+    title: 'BuildCopilot: The AI Operating System for Construction',
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
     images: ['/og-image.png'],
