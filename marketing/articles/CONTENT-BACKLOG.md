@@ -37,14 +37,53 @@ These target the bigger US AI market and blue-ocean (zero-competition) terms. Th
 | 21 | queued | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /prompt-pack, /ai-workflows, /ai-tools/chatgpt |
 | 22 | queued | golden thread construction | UK 250 / KD 9 (UK moat) | golden-thread-construction-explained | /guides/ai-for-health-and-safety-documentation, /templates/rams, /ai-workflows |
 
-### Page types that need a developer (not the weekly engine)
+## Wave 3 — ChatGPT prompt hub pages (as guides, blue ocean / zero competition)
 
-These need new code routes, so they are a separate build sprint, not auto-publishable as guides:
+First-mover advantage. Each is a hub of ready-to-use prompts for that role, linking to the role page and relevant workflows.
 
-- **ChatGPT prompt hub pages** per role (`/chatgpt-prompts-for-quantity-surveyors`, etc.) — zero competition, first-mover advantage
-- **Tool comparison pages** (`/best-ai-tools-for-construction`, `/free-ai-construction-estimating` — KD 7, $4.50 CPC) — high commercial intent
-- **UK compliance section** (`/uk/golden-thread-construction`, `/uk/building-safety-act-ai`)
-- **Missing template pages** (`/templates/fire-risk-assessment` — UK SV 200, KD 4)
+| # | Status | Target keyword | Slug | Internal links |
+|---|--------|----------------|------|----------------|
+| 23 | queued | chatgpt prompts for quantity surveyors | chatgpt-prompts-for-quantity-surveyors | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /prompt-pack |
+| 24 | queued | chatgpt prompts for project managers | chatgpt-prompts-for-project-managers | /ai-for/project-management, /ai-workflows/generate-project-risk-register, /prompt-pack |
+| 25 | queued | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /prompt-pack |
+| 26 | queued | chatgpt prompts for estimators | chatgpt-prompts-for-estimators | /ai-for/estimator, /ai-workflows/generate-preliminary-cost-plan, /prompt-pack |
+| 27 | queued | chatgpt prompts for contract managers | chatgpt-prompts-for-contract-managers | /ai-for/contracts-manager, /ai-workflows/write-variation-assessment, /prompt-pack |
+| 28 | queued | chatgpt prompts for quantity surveying / QS | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /prompt-pack |
+| 29 | queued | chatgpt prompts for construction directors | chatgpt-prompts-for-construction-directors | /ai-for/construction-director, /ai-workflows, /prompt-pack |
+
+> Add the remaining roles (planning engineer, BIM manager, procurement, design, commercial, document control) as further rows when these are published.
+
+## Wave 4 — Tool comparison pages (as guides, high commercial intent)
+
+| # | Status | Target keyword | Volume / KD | Slug | Internal links |
+|---|--------|----------------|-------------|------|----------------|
+| 30 | queued | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /prompt-pack |
+| 31 | queued | free ai for construction estimating | US 250 / KD 7 / $4.50 | free-ai-for-construction-estimating | /guides/ai-for-cost-estimation, /ai-tools/claude, /ai-workflows/generate-bill-of-quantities |
+| 32 | queued | ai construction software | US 350 / KD 52 | best-ai-construction-software | /ai-tools, /ai-tools/autodesk-construction-cloud, /ai-tools/procore |
+| 33 | queued | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-for-cost-estimation, /templates/cost-plan |
+| 34 | queued | chatgpt vs claude for construction | comparison intent | chatgpt-vs-claude-for-construction | /ai-tools/chatgpt, /ai-tools/claude, /prompt-pack |
+| 35 | queued | best ai tools for project management construction | US 200 | best-ai-tools-for-construction-project-management | /ai-tools, /ai-workflows/generate-project-risk-register |
+| 36 | queued | ai construction scheduling software | US 150 / KD 30 | best-ai-tools-for-construction-scheduling | /ai-workflows/generate-lookahead-schedule-summary, /ai-tools |
+
+## Wave 5 — UK compliance guides (UK moat, zero US competition)
+
+| # | Status | Target keyword | Volume / KD | Slug | Internal links |
+|---|--------|----------------|-------------|------|----------------|
+| 37 | queued | building safety act compliance | UK 70 | building-safety-act-construction-guide | /templates/rams, /guides/ai-for-health-and-safety-documentation |
+| 38 | queued | cdm regulations | UK / blue ocean | cdm-2015-regulations-explained | /templates/construction-phase-plan, /templates/rams, /ai-workflows/draft-method-statement |
+| 39 | queued | jct vs nec contracts | UK contract intent | jct-vs-nec-contracts-explained | /ai-workflows/summarise-contract-clauses, /ai-for/contracts-manager |
+
+## Wave 6 — New template pages (need a small publish-template script first)
+
+These are `/templates/` pages, not guides. They need a `scripts/publish-template.mjs` script (one-off dev task, ~30 min) before they can be auto-published. High value, low difficulty.
+
+| # | Status | Target keyword | Volume / KD | Slug |
+|---|--------|----------------|-------------|------|
+| T1 | blocked-needs-script | fire risk assessment template uk | UK 200 / KD 4 | fire-risk-assessment |
+| T2 | blocked-needs-script | legionella risk assessment template | UK 150 / KD 0 | legionella-risk-assessment |
+| T3 | blocked-needs-script | safe work method statement template | 90 / KD 0 | safe-work-method-statement |
+| T4 | blocked-needs-script | jct contract template | UK 150 / KD 0 | jct-contract-template |
+| T5 | blocked-needs-script | nec contract template | UK 10 | nec-contract-template |
 
 ## Article quality rules (every article must follow these for SEO + GEO)
 
