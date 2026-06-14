@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/publish-guide.mjs:*)",
+      "Bash(node scripts/publish-template.mjs:*)",
+      "Bash(node scripts/generate-post-image.mjs:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(curl:*)",
+      "Bash(node scripts/publish-guide.mjs *)",
+      "Bash(node scripts/publish-template.mjs *)",
+      "Bash(node scripts/generate-post-image.mjs *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(curl *)",
+      "Read",
+      "Edit(marketing/**)",
+      "Write(marketing/**)"
+    ]
+  }
+}
