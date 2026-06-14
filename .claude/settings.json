@@ -1,6 +1,9 @@
 {
   "permissions": {
     "allow": [
+      "Read",
+      "Write",
+      "Edit",
       "Bash(node scripts/publish-guide.mjs:*)",
       "Bash(node scripts/publish-template.mjs:*)",
       "Bash(node scripts/generate-post-image.mjs:*)",
@@ -24,10 +27,15 @@
       "Bash(cat:*)",
       "Bash(mkdir:*)",
       "Bash(echo:*)",
-      "Bash(true)",
-      "Read",
-      "Edit(marketing/**)",
-      "Write(marketing/**)"
+      "Bash(grep:*)",
+      "Bash(grep *)",
+      "Bash(wc:*)",
+      "Bash(wc *)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(sort:*)",
+      "Bash(find:*)",
+      "Bash(true)"
     ]
   }
 }
