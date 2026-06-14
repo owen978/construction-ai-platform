@@ -10,6 +10,8 @@ import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
+import { getRelatedContent } from '@/lib/queries/related'
+import { RelatedResources } from '@/components/sections/related-resources'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -51,6 +53,11 @@ export default async function AIForPage({ params }: AIForPageProps) {
   const role = await getRoleBySlug(slug)
   if (role) {
     const workflows = await getWorkflowsByRoleId(role.id)
+    const relatedResources = await getRelatedContent({
+      keywords: `${role.name} ${role.description ?? ''}`,
+      excludeType: null,
+      excludeSlug: role.slug,
+    })
 
     const schemas = [
       breadcrumbSchema([
@@ -110,6 +117,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
           <PromptPackCTA context="role" roleName={role.name} />
         </div>
 
+        <RelatedResources items={relatedResources} />
+
         <NewsletterInline />
       </div>
     )
@@ -119,6 +128,11 @@ export default async function AIForPage({ params }: AIForPageProps) {
   const task = await getTaskBySlug(slug)
   if (task) {
     const workflows = await getWorkflowsByTaskId(task.id)
+    const relatedResources = await getRelatedContent({
+      keywords: `${task.name} ${task.description ?? ''}`,
+      excludeType: null,
+      excludeSlug: task.slug,
+    })
 
     const schemas = [
       breadcrumbSchema([
@@ -177,6 +191,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
         <div className="mt-12 mx-auto max-w-xl">
           <PromptPackCTA context="role" roleName={task.name} />
         </div>
+
+        <RelatedResources items={relatedResources} />
 
         <NewsletterInline />
       </div>

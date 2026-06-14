@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, articleSchema, faqSchema, extractFaqFromMarkdown, jsonLdScriptProps } from '@/lib/schema'
 import { MarkdownContent } from '@/components/markdown-content'
+import { getRelatedContent } from '@/lib/queries/related'
+import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import type { DifficultyLevel } from '@/types'
@@ -53,6 +55,11 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
   }
 
   const relatedWorkflows = await getWorkflowsByGuideId(guide.id)
+  const relatedResources = await getRelatedContent({
+    keywords: `${guide.title} ${guide.description ?? ''}`,
+    excludeType: 'guide',
+    excludeSlug: guide.slug,
+  })
 
   const faqItems = guide.content ? extractFaqFromMarkdown(guide.content) : []
 
@@ -126,6 +133,8 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           </div>
         </div>
       )}
+
+      <RelatedResources items={relatedResources} />
 
       <NewsletterInline />
     </div>

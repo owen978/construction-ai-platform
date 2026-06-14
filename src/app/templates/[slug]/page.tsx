@@ -11,6 +11,8 @@ import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
+import { getRelatedContent } from '@/lib/queries/related'
+import { RelatedResources } from '@/components/sections/related-resources'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -44,6 +46,12 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
   if (!template) {
     notFound()
   }
+
+  const relatedResources = await getRelatedContent({
+    keywords: `${template.name} ${template.primary_keyword ?? ''} ${template.description ?? ''}`,
+    excludeType: 'template',
+    excludeSlug: template.slug,
+  })
 
   const schemas = [
     breadcrumbSchema([
@@ -220,6 +228,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           <NewsletterSidebar />
         </div>
       </div>
+
+      <RelatedResources items={relatedResources} />
     </div>
   )
 }
