@@ -19,9 +19,7 @@ export function organizationSchema() {
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals.',
     sameAs: [
-      // Add social profile URLs when created
-      // 'https://www.linkedin.com/company/buildcopilot',
-      // 'https://twitter.com/BuildCopilotAI',
+      'https://www.linkedin.com/company/contractor-systems/',
     ],
   }
 }
