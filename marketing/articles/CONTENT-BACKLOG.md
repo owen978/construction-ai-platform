@@ -73,17 +73,17 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 | 38 | queued | cdm regulations | UK / blue ocean | cdm-2015-regulations-explained | /templates/construction-phase-plan, /templates/rams, /ai-workflows/draft-method-statement |
 | 39 | queued | jct vs nec contracts | UK contract intent | jct-vs-nec-contracts-explained | /ai-workflows/summarise-contract-clauses, /ai-for/contracts-manager |
 
-## Wave 6 — New template pages (need a small publish-template script first)
+## Wave 6 — New template pages (`/templates/`, published via scripts/publish-template.mjs)
 
-These are `/templates/` pages, not guides. They need a `scripts/publish-template.mjs` script (one-off dev task, ~30 min) before they can be auto-published. High value, low difficulty.
+These are template pages, not guides. The engine writes a template Markdown file to `marketing/templates/` (frontmatter + `## section` blocks matching marketing/templates/fire-risk-assessment.md) and runs `node scripts/publish-template.mjs <file>.md`.
 
 | # | Status | Target keyword | Volume / KD | Slug |
 |---|--------|----------------|-------------|------|
-| T1 | blocked-needs-script | fire risk assessment template uk | UK 200 / KD 4 | fire-risk-assessment |
-| T2 | blocked-needs-script | legionella risk assessment template | UK 150 / KD 0 | legionella-risk-assessment |
-| T3 | blocked-needs-script | safe work method statement template | 90 / KD 0 | safe-work-method-statement |
-| T4 | blocked-needs-script | jct contract template | UK 150 / KD 0 | jct-contract-template |
-| T5 | blocked-needs-script | nec contract template | UK 10 | nec-contract-template |
+| T1 | PUBLISHED | fire risk assessment template uk | UK 200 / KD 4 | fire-risk-assessment |
+| T2 | queued-template | legionella risk assessment template | UK 150 / KD 0 | legionella-risk-assessment |
+| T3 | queued-template | safe work method statement template | 90 / KD 0 | safe-work-method-statement |
+| T4 | queued-template | jct contract template | UK 150 / KD 0 | jct-contract-template |
+| T5 | queued-template | nec contract template | UK 10 | nec-contract-template |
 
 ## Article quality rules (every article must follow these for SEO + GEO)
 
