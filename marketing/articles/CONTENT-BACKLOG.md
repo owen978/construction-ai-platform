@@ -20,6 +20,32 @@
 | 11 | queued | pre qualification questionnaire / pas 91 / pqq | "pre qualification questionnaire" cluster | construction-pqq-pas91-guide | /ai-workflows/draft-pre-qualification-questionnaire |
 | 12 | queued | cdm construction phase plan template | "cdm construction phase plan" cluster | cdm-construction-phase-plan-guide | /templates/construction-phase-plan, /ai-workflows/create-waste-management-plan |
 
+## Wave 2 — new pages from Ahrefs keyword research (marketing/keyword-research.md)
+
+These target the bigger US AI market and blue-ocean (zero-competition) terms. They are all `/guides/` pages, so the existing weekly engine publishes them with no code changes. The weekly engine works through Wave 1 first, then Wave 2.
+
+| # | Status | Target keyword | Volume / KD | Slug | Internal links |
+|---|--------|----------------|-------------|------|----------------|
+| 13 | queued | ai in construction | US 2,000 / KD 31 (hub page) | ai-in-construction | /ai-tools/claude, /ai-workflows, /guides/ai-for-cost-estimation, /ai-for/quantity-surveyor, /prompt-pack |
+| 14 | queued | generative ai in construction | US 150 / KD 0 (easy win) | generative-ai-in-construction | /guides/ai-in-construction, /ai-tools/claude, /ai-workflows, /prompt-pack |
+| 15 | queued | ai in construction safety | US 200 / KD 3 (easy win) | ai-in-construction-safety | /ai-workflows/generate-coshh-risk-assessment, /templates/rams, /ai-for/health-and-safety-manager, /prompt-pack |
+| 16 | queued | will ai replace construction workers | US 80 / KD 0 (engagement) | will-ai-replace-construction-workers | /guides/ai-in-construction, /ai-for/quantity-surveyor, /ai-workflows |
+| 17 | queued | how to use ai in construction | US 200 / KD 37 | how-to-use-ai-in-construction | /ai-workflows, /prompt-pack, /ai-tools/claude, /guides/ai-in-construction |
+| 18 | queued | ai construction estimating | US 300 / $7 CPC (high value) | ai-construction-estimating | /guides/ai-for-cost-estimation, /ai-workflows/generate-bill-of-quantities, /templates/cost-plan, /prompt-pack |
+| 19 | queued | ai for construction project management | US 200 / KD 56 | ai-for-construction-project-management | /ai-workflows/generate-project-risk-register, /ai-workflows/draft-monthly-progress-report, /guides/ai-in-construction |
+| 20 | queued | ai use cases in construction | US 150 | ai-use-cases-in-construction | /ai-workflows, /guides/ai-in-construction, /prompt-pack |
+| 21 | queued | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /prompt-pack, /ai-workflows, /ai-tools/chatgpt |
+| 22 | queued | golden thread construction | UK 250 / KD 9 (UK moat) | golden-thread-construction-explained | /guides/ai-for-health-and-safety-documentation, /templates/rams, /ai-workflows |
+
+### Page types that need a developer (not the weekly engine)
+
+These need new code routes, so they are a separate build sprint, not auto-publishable as guides:
+
+- **ChatGPT prompt hub pages** per role (`/chatgpt-prompts-for-quantity-surveyors`, etc.) — zero competition, first-mover advantage
+- **Tool comparison pages** (`/best-ai-tools-for-construction`, `/free-ai-construction-estimating` — KD 7, $4.50 CPC) — high commercial intent
+- **UK compliance section** (`/uk/golden-thread-construction`, `/uk/building-safety-act-ai`)
+- **Missing template pages** (`/templates/fire-risk-assessment` — UK SV 200, KD 4)
+
 ## Article quality rules (every article must follow these for SEO + GEO)
 
 1. **Direct-answer opening.** First paragraph defines the term in bold and answers the core query in 2-3 sentences. This is what Google AI Overviews and ChatGPT quote.
