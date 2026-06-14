@@ -7,7 +7,8 @@ import { getGuideBySlug, getGuideSlugs } from '@/lib/queries/guides'
 import { getWorkflowsByGuideId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
 import { WorkflowCard } from '@/components/cards/workflow-card'
-import { breadcrumbSchema, articleSchema, jsonLdScriptProps } from '@/lib/schema'
+import { breadcrumbSchema, articleSchema, faqSchema, extractFaqFromMarkdown, jsonLdScriptProps } from '@/lib/schema'
+import { MarkdownContent } from '@/components/markdown-content'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import type { DifficultyLevel } from '@/types'
@@ -53,6 +54,8 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
   const relatedWorkflows = await getWorkflowsByGuideId(guide.id)
 
+  const faqItems = guide.content ? extractFaqFromMarkdown(guide.content) : []
+
   const schemas = [
     breadcrumbSchema([
       { name: 'Home', url: SITE_URL },
@@ -67,6 +70,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
       dateModified: guide.updated_at,
       readingTimeMinutes: guide.reading_time_minutes,
     }),
+    ...(faqItems.length > 0 ? [faqSchema(faqItems)] : []),
   ]
 
   return (
@@ -107,11 +111,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
         </div>
 
         {/* Guide content */}
-        {guide.content && (
-          <div className="whitespace-pre-wrap leading-relaxed text-slate-700">
-            {guide.content}
-          </div>
-        )}
+        {guide.content && <MarkdownContent content={guide.content} />}
         <NewsletterBanner />
       </article>
 

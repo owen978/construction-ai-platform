@@ -150,6 +150,72 @@ export function articleSchema(options: ArticleOptions) {
   return schema
 }
 
+// ─── FAQPage (for guides/articles with an FAQ section) ──────────────
+
+interface FaqItem {
+  question: string
+  answer: string
+}
+
+export function faqSchema(items: FaqItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+}
+
+/**
+ * Extracts FAQ pairs from Markdown content for FAQPage schema.
+ * Convention: a level-2 heading containing "FAQ" or "Frequently Asked",
+ * followed by level-3 headings as questions and the text beneath as answers.
+ * Returns [] if no FAQ section is found.
+ */
+export function extractFaqFromMarkdown(content: string): FaqItem[] {
+  if (!content) return []
+
+  const lines = content.split('\n')
+  const faqStart = lines.findIndex(
+    (line) => /^##\s/.test(line) && /faq|frequently asked/i.test(line)
+  )
+  if (faqStart === -1) return []
+
+  const items: FaqItem[] = []
+  let question: string | null = null
+  let answerLines: string[] = []
+
+  const flush = () => {
+    if (question && answerLines.length > 0) {
+      const answer = answerLines.join(' ').replace(/\s+/g, ' ').trim()
+      if (answer) items.push({ question, answer })
+    }
+    question = null
+    answerLines = []
+  }
+
+  for (let i = faqStart + 1; i < lines.length; i++) {
+    const line = lines[i]
+    if (/^##\s/.test(line)) break // next top-level section ends the FAQ
+    const q = line.match(/^###\s+(.*)/)
+    if (q) {
+      flush()
+      question = q[1].trim()
+    } else if (question) {
+      answerLines.push(line.trim())
+    }
+  }
+  flush()
+
+  return items
+}
+
 // ─── SoftwareApplication (for tool pages) ───────────────────────────
 
 interface SoftwareAppOptions {
