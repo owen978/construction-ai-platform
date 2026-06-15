@@ -101,7 +101,7 @@ export default function RamsGeneratorPage() {
       </div>
 
       {/* The tool */}
-      <FormwiseEmbed height={820} />
+      <FormwiseEmbed />
 
       {/* What is a RAMS */}
       <div className="mt-12 rounded-lg border border-primary/20 bg-primary/5 p-6">
