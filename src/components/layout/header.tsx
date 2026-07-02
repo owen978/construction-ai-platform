@@ -18,6 +18,7 @@ const navLinks = [
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/guides', label: 'Guides' },
   { href: '/ai-for', label: 'AI for Roles' },
+  { href: '/services', label: 'Services' },
 ]
 
 export function Header() {

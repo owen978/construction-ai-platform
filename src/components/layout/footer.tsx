@@ -19,6 +19,7 @@ const roleLinks = [
 
 const companyLinks = [
   { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
   { href: '/contact', label: 'Contact' },
   { href: '/newsletter', label: 'Newsletter' },
   { href: '/privacy', label: 'Privacy Policy' },
