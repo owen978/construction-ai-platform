@@ -85,6 +85,52 @@ These are template pages, not guides. The engine writes a template Markdown file
 | T4 | queued-template | jct contract template | UK 150 / KD 0 | jct-contract-template |
 | T5 | queued-template | nec contract template | UK 10 | nec-contract-template |
 
+## Wave 7 — Software comparison & alternatives guides (high commercial intent, salvaged from the Jan 2026 pSEO topic matrix)
+
+Reframed from the old aiconstructioncopilot.com comparison pages: these target buyers actively choosing software, the highest-intent readers on the site. UK angle wherever possible.
+
+| # | Status | Target keyword | Slug | Internal links |
+|---|--------|----------------|------|----------------|
+| 40 | queued | procore alternatives / procore for small contractors | procore-alternatives-for-small-contractors | /ai-tools/procore, /ai-tools, /guides/best-ai-construction-software, /prompt-pack |
+| 41 | queued | construction project management in excel / excel vs software | excel-vs-construction-software | /templates/cost-plan, /ai-workflows, /ai-tools/claude, /prompt-pack |
+| 42 | queued | asta powerproject vs microsoft project | asta-powerproject-vs-microsoft-project | /ai-workflows/generate-lookahead-schedule-summary, /ai-for/project-scheduling, /ai-tools |
+| 43 | queued | best construction software for small builders uk | best-construction-software-for-small-builders-uk | /ai-tools, /guides/best-ai-tools-for-construction, /templates, /prompt-pack |
+| 44 | queued | best software for quantity surveyors uk | best-software-for-quantity-surveyors-uk | /ai-for/quantity-surveyor, /guides/ai-for-quantity-surveyors-guide, /ai-workflows/generate-bill-of-quantities, /ai-tools/claude |
+| 45 | queued | monday.com for construction | monday-com-for-construction | /ai-tools, /ai-workflows/generate-project-risk-register, /guides/ai-for-construction-project-management |
+| 46 | queued | notion for construction teams | notion-for-construction-teams | /ai-tools/notion-ai, /ai-workflows, /prompt-pack |
+| 47 | queued | bluebeam alternatives | bluebeam-revu-alternatives | /ai-tools/bluebeam-revu, /ai-tools, /ai-for/material-takeoff |
+| 48 | queued | primavera p6 vs asta powerproject | primavera-p6-vs-asta-powerproject | /guides/asta-powerproject-vs-microsoft-project, /ai-for/project-scheduling, /ai-workflows |
+| 49 | queued | procore vs autodesk construction cloud | procore-vs-autodesk-construction-cloud | /ai-tools/procore, /ai-tools/autodesk-construction-cloud, /guides/best-ai-construction-software |
+
+## Wave 8 — Pain-point guides (salvaged from the Jan 2026 pSEO topic matrix; problem-first searches)
+
+| # | Status | Target keyword | Slug | Internal links |
+|---|--------|----------------|------|----------------|
+| 50 | queued | reduce admin time construction / construction paperwork | how-to-reduce-admin-time-in-construction | /ai-workflows, /prompt-pack, /guides/how-to-use-ai-in-construction, /templates |
+| 51 | queued | improve estimating accuracy construction | how-to-improve-estimating-accuracy | /guides/ai-construction-estimating, /templates/cost-plan, /ai-workflows/generate-bill-of-quantities |
+| 52 | queued | reduce construction project delays | how-to-reduce-construction-project-delays | /ai-workflows/generate-project-risk-register, /guides/ai-for-construction-project-management, /ai-for/programme-narrative-writing |
+| 53 | queued | manage subcontractors / subcontractor management | how-to-manage-subcontractors-effectively | /ai-for/subcontractor-management, /templates, /ai-workflows/analyse-tender-returns |
+| 54 | queued | reduce rework in construction | how-to-reduce-rework-in-construction | /guides/construction-snagging-list-guide, /ai-for/quality-control, /ai-for/snagging-and-defects |
+| 55 | queued | win more construction tenders | how-to-win-more-construction-tenders | /guides/ai-tender-analysis-guide, /ai-workflows/analyse-tender-returns, /guides/construction-pqq-pas91-guide, /ai-for/tender-analysis |
+| 56 | queued | construction document control | construction-document-control-best-practices | /ai-for/document-control, /templates, /ai-workflows |
+| 57 | queued | track construction costs / cost tracking | how-to-track-construction-costs-accurately | /guides/construction-cost-plan-guide, /ai-for/budget-forecasting, /ai-workflows/generate-preliminary-cost-plan |
+
+## Wave 9 — Business-type & remaining role guides (salvaged from the Jan 2026 pSEO topic matrix; role salary and cost-benchmark data available in pSEO_Enhanced_Content CSVs in the Cowork root)
+
+| # | Status | Target keyword | Slug | Internal links |
+|---|--------|----------------|------|----------------|
+| 58 | queued | ai for house builders / residential developers | ai-for-house-builders | /guides/ai-in-construction, /ai-workflows, /ai-for/site-manager, /prompt-pack |
+| 59 | queued | ai for electrical contractors | ai-for-electrical-contractors | /guides/ai-in-construction, /ai-workflows, /templates/rams, /prompt-pack |
+| 60 | queued | ai for groundworks contractors | ai-for-groundworks-contractors | /guides/ai-in-construction, /ai-workflows, /templates/method-statement |
+| 61 | queued | ai for roofing contractors | ai-for-roofing-contractors | /guides/ai-in-construction, /ai-workflows, /templates/rams |
+| 62 | queued | ai for m&e contractors | ai-for-mechanical-electrical-contractors | /guides/ai-for-electrical-contractors, /ai-workflows, /prompt-pack |
+| 63 | queued | chatgpt prompts for planning engineers | chatgpt-prompts-for-planning-engineers | /ai-for/planning-engineer, /ai-workflows/generate-lookahead-schedule-summary, /prompt-pack |
+| 64 | queued | chatgpt prompts for bim managers | chatgpt-prompts-for-bim-managers | /ai-for/bim-manager, /ai-workflows, /prompt-pack |
+| 65 | queued | chatgpt prompts for procurement managers | chatgpt-prompts-for-procurement-managers | /ai-for/procurement-manager, /ai-workflows/analyse-tender-returns, /prompt-pack |
+| 66 | queued | chatgpt prompts for design managers | chatgpt-prompts-for-design-managers | /ai-for/design-manager, /ai-workflows, /prompt-pack |
+| 67 | queued | chatgpt prompts for commercial managers | chatgpt-prompts-for-commercial-managers | /ai-for/commercial-manager, /ai-workflows/write-variation-assessment, /prompt-pack |
+| 68 | queued | chatgpt prompts for document controllers | chatgpt-prompts-for-document-controllers | /ai-for/document-control, /ai-workflows, /prompt-pack |
+
 ## Article quality rules (every article must follow these for SEO + GEO)
 
 1. **Direct-answer opening.** First paragraph defines the term in bold and answers the core query in 2-3 sentences. This is what Google AI Overviews and ChatGPT quote.
