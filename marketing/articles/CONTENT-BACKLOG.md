@@ -16,7 +16,7 @@
 | 7 | PUBLISHED | snag list / snagging list template | "snag list template" 20 impr + cluster | construction-snagging-list-guide | /ai-workflows/generate-snagging-list-template, /ai-for/snagging-and-defects |
 | 8 | PUBLISHED | toolbox talk template / toolbox talks | "toolbox talk template" cluster @ pos 68-86 | construction-toolbox-talks-guide | /templates/toolbox-talk, /ai-workflows/write-toolbox-talk |
 | 9 | PUBLISHED | ai tender analysis / tender evaluation | "ai tender analysis" 52 impr @ pos 87 | ai-tender-analysis-guide | /ai-workflows/analyse-tender-returns, /templates/tender-evaluation, /ai-for/tender-analysis |
-| 10 | queued | cost plan / nrm1 cost plan template | /templates/cost-plan pos 6.57, expand cluster | construction-cost-plan-guide | /templates/cost-plan, /ai-workflows/generate-preliminary-cost-plan, /ai-for/cost-estimation |
+| 10 | PUBLISHED | cost plan / nrm1 cost plan template | /templates/cost-plan pos 6.57, expand cluster | construction-cost-plan-guide | /templates/cost-plan, /ai-workflows/generate-preliminary-cost-plan, /ai-for/cost-estimation |
 | 11 | queued | pre qualification questionnaire / pas 91 / pqq | "pre qualification questionnaire" cluster | construction-pqq-pas91-guide | /ai-workflows/draft-pre-qualification-questionnaire |
 | 12 | queued | cdm construction phase plan template | "cdm construction phase plan" cluster | cdm-construction-phase-plan-guide | /templates/construction-phase-plan, /ai-workflows/create-waste-management-plan |
 
