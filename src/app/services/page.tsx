@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 }
 
 const ctaHref =
-  'mailto:owen@subcontractorhub.co.uk?subject=Commercial%20support%20enquiry'
+  'mailto:hello@contractorsystems.co.uk?subject=Commercial%20support%20enquiry&body=Hi%20Owen%2C%0A%0AQuick%20intro%20so%20the%2015-minute%20call%20is%20useful%3A%0A%0ACompany%3A%20%0AScheme%20or%20project%20(rough%20value)%3A%20%0AWhat%20we%20need%20help%20with%3A%20%0ABest%20number%20and%20time%20to%20call%3A%20%0A%0AThanks%2C'
 
 const roadmapCtaHref =
-  'mailto:owen@subcontractorhub.co.uk?subject=AI%20Roadmap%20Review%20enquiry'
+  'mailto:hello@contractorsystems.co.uk?subject=AI%20Roadmap%20Review%20enquiry&body=Hi%20Owen%2C%0A%0AWe%20are%20interested%20in%20the%20AI%20Roadmap%20Review.%0A%0ACompany%3A%20%0AWhat%20we%20do%3A%20%0AWhere%20the%20admin%20hours%20go%20at%20the%20moment%3A%20%0ABest%20number%20and%20time%20to%20call%3A%20%0A%0AThanks%2C'
 
 const proofPoints = [
   'Live commercial function for a residential developer across five sites',
