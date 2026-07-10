@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     'Fixed-outcome commercial and AI services for construction. QS services you already know, procurement packages, quote comparisons, cash flow forecasts, plus AI and systems services starting with a £950 AI Implementation Roadmap Review, credited in full against any build over £2,500.',
 }
 
+const bookingHref =
+  'https://link.contractorsystems.co.uk/widget/booking/mzWN8jEzZDL5SxkY71ut'
+
 const ctaHref =
   'mailto:hello@contractorsystems.co.uk?subject=Commercial%20support%20enquiry&body=Hi%20Owen%2C%0A%0AQuick%20intro%20so%20the%2015-minute%20call%20is%20useful%3A%0A%0ACompany%3A%20%0AScheme%20or%20project%20(rough%20value)%3A%20%0AWhat%20we%20need%20help%20with%3A%20%0ABest%20number%20and%20time%20to%20call%3A%20%0A%0AThanks%2C'
 
@@ -292,13 +295,16 @@ export default function ServicesPage() {
 
           <div className="mt-8 flex flex-col items-center gap-3">
             <a
-              href={ctaHref}
+              href={bookingHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
             >
               Book a 15-minute call
             </a>
             <p className="text-sm text-slate-400">
-              Fixed fee agreed up front. Delivered in days, not weeks.
+              Fixed fee agreed up front. Delivered in days, not weeks.{' '}
+              <a href={ctaHref} className="text-primary hover:underline">Prefer email?</a>
             </p>
           </div>
         </div>
@@ -384,13 +390,16 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <a
-                  href={roadmapCtaHref}
+                  href={bookingHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={buttonVariants({ className: 'mt-5 w-full px-8 py-3 text-base shadow-lg shadow-primary/25' })}
                 >
                   Book your Roadmap Review
                 </a>
                 <p className="mt-3 text-center text-xs text-slate-400">
-                  Delivered in days. 45-minute walkthrough included.
+                  Delivered in days. 45-minute walkthrough included.{' '}
+                  <a href={roadmapCtaHref} className="text-primary hover:underline">Prefer email?</a>
                 </p>
               </div>
             </div>
@@ -505,14 +514,16 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8">
             <a
-              href={ctaHref}
+              href={bookingHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
             >
               Book a 15-minute call
             </a>
           </div>
           <p className="mt-4 text-sm text-slate-400">
-            Prefer to browse first? <Link href="/ai-workflows" className="text-primary hover:underline">Explore the free AI workflows</Link>.
+            <a href={ctaHref} className="text-primary hover:underline">Prefer email?</a> Or browse first: <Link href="/ai-workflows" className="text-primary hover:underline">explore the free AI workflows</Link>.
           </p>
         </div>
       </div>
