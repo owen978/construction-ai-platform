@@ -18,7 +18,7 @@
 | 9 | PUBLISHED | ai tender analysis / tender evaluation | "ai tender analysis" 52 impr @ pos 87 | ai-tender-analysis-guide | /ai-workflows/analyse-tender-returns, /templates/tender-evaluation, /ai-for/tender-analysis |
 | 10 | PUBLISHED | cost plan / nrm1 cost plan template | /templates/cost-plan pos 6.57, expand cluster | construction-cost-plan-guide | /templates/cost-plan, /ai-workflows/generate-preliminary-cost-plan, /ai-for/cost-estimation |
 | 11 | PUBLISHED | pre qualification questionnaire / pas 91 / pqq | "pre qualification questionnaire" cluster | construction-pqq-pas91-guide | /ai-workflows/draft-pre-qualification-questionnaire |
-| 12 | queued | cdm construction phase plan template | "cdm construction phase plan" cluster | cdm-construction-phase-plan-guide | /templates/construction-phase-plan, /ai-workflows/create-waste-management-plan |
+| 12 | PUBLISHED | cdm construction phase plan template | "cdm construction phase plan" cluster | cdm-construction-phase-plan-guide | /templates/construction-phase-plan, /ai-workflows/create-waste-management-plan |
 
 ## Wave 10 — BIM-AI cluster (from GSC 15 Jul 2026: ~1,700 impressions of BIM-AI demand converting at ~0% — the site's biggest unserved audience)
 
