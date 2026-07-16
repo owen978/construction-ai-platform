@@ -6,6 +6,7 @@ const resourceLinks = [
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/guides', label: 'Guides' },
   { href: '/ai-for', label: 'AI for Roles' },
+  { href: '/tools/rams-generator', label: 'Free RAMS Generator' },
 ]
 
 const roleLinks = [

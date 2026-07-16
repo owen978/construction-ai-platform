@@ -13,6 +13,7 @@ import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
+import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { FreeToolCallout } from '@/components/sections/free-tool-callout'
@@ -256,6 +257,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           <NewsletterSidebar />
         </div>
       </div>
+
+      <RelatedGuides section="templates" slug={slug} />
 
       <RelatedResources items={relatedResources} />
     </div>

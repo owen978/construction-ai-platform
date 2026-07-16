@@ -15,6 +15,7 @@ import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
+import { RelatedGuides } from '@/components/sections/related-guides'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
@@ -212,6 +213,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           <NewsletterSidebar />
         </div>
       </div>
+
+      <RelatedGuides section="ai-workflows" slug={slug} />
     </div>
   )
 }

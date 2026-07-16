@@ -12,6 +12,7 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
+import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 
@@ -122,6 +123,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
           <PromptPackCTA context="role" roleName={role.name} />
         </div>
 
+        <RelatedGuides section="ai-for" slug={slug} />
+
         <RelatedResources items={relatedResources} />
 
         <NewsletterInline />
@@ -198,6 +201,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
         <div className="mt-12 mx-auto max-w-xl">
           <PromptPackCTA context="role" roleName={task.name} />
         </div>
+
+        <RelatedGuides section="ai-for" slug={slug} />
 
         <RelatedResources items={relatedResources} />
 
