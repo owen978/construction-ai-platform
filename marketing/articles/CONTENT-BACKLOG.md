@@ -20,6 +20,17 @@
 | 11 | queued | pre qualification questionnaire / pas 91 / pqq | "pre qualification questionnaire" cluster | construction-pqq-pas91-guide | /ai-workflows/draft-pre-qualification-questionnaire |
 | 12 | queued | cdm construction phase plan template | "cdm construction phase plan" cluster | cdm-construction-phase-plan-guide | /templates/construction-phase-plan, /ai-workflows/create-waste-management-plan |
 
+## Wave 10 — BIM-AI cluster (from GSC 15 Jul 2026: ~1,700 impressions of BIM-AI demand converting at ~0% — the site's biggest unserved audience)
+
+PRIORITY WAVE — the engine should treat these as next after the current in-flight row, ahead of waves 2-9, because live GSC demand beats speculative keywords. Row 69 is a REWRITE: publish-guide.mjs upserts by slug, so writing a new, much deeper article file with the SAME slug updates the existing weak page (currently 1,349 impr @ pos 31, CTR 0.07%).
+
+| # | Status | Target keyword | GSC evidence | Slug | Internal links |
+|---|--------|----------------|--------------|------|----------------|
+| 69 | queued | ai bim workflow / ai for bim | REWRITE existing guide: 1,349 impr @ pos 31; "ai bim workflow" 260 impr | ai-for-bim-workflows (SAME slug — upsert) | /ai-for/bim-manager, /guides/chatgpt-prompts-for-bim-managers, /ai-tools/autodesk-construction-cloud, /prompt-pack |
+| 70 | queued | bim ai copilot / bim copilot | 259 + 11 impr, pos 16-42 | bim-ai-copilot-guide | /guides/ai-for-bim-workflows, /ai-for/bim-manager, /ai-tools/claude |
+| 71 | queued | ai for bim model checking / ai assisted bim quality assurance | 231 + 229 impr, pos 22-43 | ai-bim-model-checking-and-qa | /guides/ai-for-bim-workflows, /ai-for/quality-control, /ai-tools/autodesk-construction-cloud |
+| 72 | queued | ai assistant for bim / bim ai assistant | 133 + 101 impr, pos 36-40 | ai-assistant-for-bim | /guides/bim-ai-copilot-guide, /ai-for/bim-manager, /prompt-pack |
+
 ## Wave 2 — new pages from Ahrefs keyword research (marketing/keyword-research.md)
 
 These target the bigger US AI market and blue-ocean (zero-competition) terms. They are all `/guides/` pages, so the existing weekly engine publishes them with no code changes. The weekly engine works through Wave 1 first, then Wave 2.
