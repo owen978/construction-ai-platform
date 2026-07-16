@@ -12,7 +12,7 @@ meta_description: "What is a RAMS in construction? A full guide to Risk Assessme
 
 A **RAMS** (Risk Assessment and Method Statement) is a combined health and safety document used in construction and other high-risk industries. It brings together two things in one document: a **risk assessment** that identifies the hazards of a task and how likely they are to cause harm, and a **method statement** that explains, step by step, the safe way to carry the work out. In short, the risk assessment says what could go wrong, and the method statement says how you will stop it going wrong.
 
-If you are a site manager, contractor, or subcontractor in the UK, you will be asked for a RAMS before you start almost any significant task on site. This guide explains exactly what a RAMS is, what it must contain, how it differs from a standalone method statement or risk assessment, and how to produce a solid one quickly using a template and AI. You can also jump straight to our [free RAMS template](/templates/rams).
+If you are a site manager, contractor, or subcontractor in the UK, you will be asked for a RAMS before you start almost any significant task on site. This guide explains exactly what a RAMS is, what it must contain, how it differs from a standalone method statement or risk assessment, and how to produce a solid one quickly using a template and AI. If you want a head start, our [free RAMS generator](/tools/rams-generator) drafts a task-specific RAMS for you in minutes, or you can jump straight to our [free RAMS template](/templates/rams).
 
 ## What does RAMS stand for?
 
@@ -124,6 +124,8 @@ That level of detail is what a principal contractor wants to see. Notice that se
 
 Writing a RAMS from a blank page takes a competent person two to four hours, and most of that time is spent on structure and wording rather than on the genuine safety thinking. This is exactly the kind of task where AI helps: it produces a structured, professional first draft in minutes, and you spend your time reviewing and adding the site-specific judgement that only you have.
 
+The fastest route is our [free RAMS generator](/tools/rams-generator). Describe the task, the site, and the main hazards, and it drafts the full risk assessment and method statement for you, ready for a competent person to review and tailor. No sign-up, no cost.
+
 The approach we recommend on BuildCopilot is simple:
 
 1. **Start from a structured prompt.** Give the AI the task, the working environment, the height, the substances, and the equipment. The more specific your input, the better the draft.
@@ -146,7 +148,7 @@ Our [draft method statement workflow](/ai-workflows/draft-method-statement) walk
 
 ## Free RAMS template
 
-You do not need to start from scratch. We provide a [free RAMS template](/templates/rams) with every section above already laid out, ready for you to adapt to your task. Combine it with the AI approach above and you can turn a two-hour job into a twenty-minute one without cutting any corners on safety.
+You do not need to start from scratch. We provide a [free RAMS template](/templates/rams) with every section above already laid out, ready for you to adapt to your task. If you would rather have the first draft written for you, the [free RAMS generator](/tools/rams-generator) produces a task-specific RAMS in minutes. Either way, you can turn a two-hour job into a twenty-minute one without cutting any corners on safety.
 
 ## Frequently asked questions
 

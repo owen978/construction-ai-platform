@@ -13,6 +13,8 @@ import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { ServiceCTA } from '@/components/sections/service-cta'
+import { getServiceCta } from '@/lib/service-cta'
 import type { DifficultyLevel } from '@/types'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
@@ -54,6 +56,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
     notFound()
   }
 
+  const serviceCta = getServiceCta('guides', slug)
   const relatedWorkflows = await getWorkflowsByGuideId(guide.id)
   const relatedResources = await getRelatedContent({
     keywords: `${guide.title} ${guide.description ?? ''}`,
@@ -119,6 +122,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
         {/* Guide content */}
         {guide.content && <MarkdownContent content={guide.content} />}
+        {serviceCta && <ServiceCTA config={serviceCta} />}
         <NewsletterBanner />
       </article>
 

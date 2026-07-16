@@ -13,8 +13,30 @@ import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
+import { ServiceCTA } from '@/components/sections/service-cta'
+import { getServiceCta } from '@/lib/service-cta'
+import { FreeToolCallout } from '@/components/sections/free-tool-callout'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+
+/** Free interactive tools promoted from closely related template pages. */
+const FREE_TOOL_CALLOUTS: Record<
+  string,
+  { heading: string; text: string; href: string; linkLabel: string }
+> = {
+  rams: {
+    heading: 'Skip the blank template: generate your RAMS instead',
+    text: 'Our free RAMS generator drafts a task-specific risk assessment and method statement for you in minutes. Review it, tailor it to your site, and issue it.',
+    href: '/tools/rams-generator',
+    linkLabel: 'Try the free RAMS generator',
+  },
+  'method-statement': {
+    heading: 'Need the full RAMS, not just the method statement?',
+    text: 'Our free RAMS generator drafts the risk assessment and method statement together, task by task, ready for a competent person to review.',
+    href: '/tools/rams-generator',
+    linkLabel: 'Try the free RAMS generator',
+  },
+}
 
 export async function generateStaticParams() {
   const slugs = await getTemplateSlugs()
@@ -47,6 +69,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
     notFound()
   }
 
+  const serviceCta = getServiceCta('templates', slug)
+  const freeTool = FREE_TOOL_CALLOUTS[slug]
   const relatedResources = await getRelatedContent({
     keywords: `${template.name} ${template.primary_keyword ?? ''} ${template.description ?? ''}`,
     excludeType: 'template',
@@ -102,6 +126,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </p>
           )}
 
+          {freeTool && <FreeToolCallout {...freeTool} />}
+
           {/* What is it */}
           {template.what_is_it && (
             <div className="mt-8">
@@ -144,6 +170,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
               </div>
             </div>
           )}
+
+          {serviceCta && <ServiceCTA config={serviceCta} />}
 
           <NewsletterBanner />
 

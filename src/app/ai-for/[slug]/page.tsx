@@ -12,6 +12,8 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
+import { ServiceCTA } from '@/components/sections/service-cta'
+import { getServiceCta } from '@/lib/service-cta'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
 
@@ -48,6 +50,7 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
 
 export default async function AIForPage({ params }: AIForPageProps) {
   const { slug } = await params
+  const serviceCta = getServiceCta('ai-for', slug)
 
   // Try role first
   const role = await getRoleBySlug(slug)
@@ -99,6 +102,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
             {role.description}
           </p>
         )}
+
+        {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
 
         {workflows.length > 0 ? (
           <div>
@@ -174,6 +179,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
             {task.description}
           </p>
         )}
+
+        {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
 
         {workflows.length > 0 ? (
           <div>
