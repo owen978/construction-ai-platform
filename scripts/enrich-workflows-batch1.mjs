@@ -268,7 +268,7 @@ MONTHLY CASHFLOW FORECAST
 | 8 | Apr 27 | £385,000 | £3,570,000 | £410,000 | £3,795,000 | £113,850 | £465,600 | -£286,550 |
 | 9 | May 27 | £310,000 | £3,880,000 | £330,000 | £4,125,000 | £123,750 | £397,700 | -£198,850 |
 | 10 | Jun 27 | £185,000 | £4,065,000 | £75,000 | £4,200,000 | £126,000 | £320,100 | -£63,750 |
-| 11 | Jul 27 | £110,000 | £4,175,000 | £40,000 | £4,240,000 | £127,200 | £71,750 | -£102,000 |
+| 11 | Jul 27 | £110,000 | £4,175,000 | £40,000 | £4,240,000 | £127,200 | £72,750 | -£101,000 |
 
 Note: valuation income is shown received in the month it is paid, roughly one month after the valuation, reflecting the 7-day due date and 21-day final date for payment. Month 1's valuation is received in month 2. This lag is the whole reason the net position stays negative throughout.
 
@@ -301,7 +301,7 @@ Look at the maximum funding requirement: £517,500 in month 3 on a £4.24m job. 
 
 That is the number you take to the board. Everything else in the table is working out.
 
-And check the arithmetic before you send it. On the first run of this exact prompt, the cumulative expenditure column landed at £4,205,000 against a stated £4,175,000 total. The table looked perfect. It was wrong by £30,000 because the model does not add up, it predicts what an addition looks like. Sum the column yourself.`
+And check the arithmetic before you send it. The classic failure on a table like this is a cumulative column that drifts a few thousand off the stated total: everything looks immaculate, every row is plausible, and the totals do not tie. The model does not add up, it predicts what an addition looks like. Sum the column yourself, every time.`
 
 const CASH_USE_CASE = `Use at contract award to build the first cashflow, then monthly to reforecast as the programme moves and variations land.
 
