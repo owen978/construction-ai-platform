@@ -104,6 +104,15 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </p>
         )}
 
+        {role.long_description && (
+          <div className="mb-10 max-w-3xl">
+            <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
+            <div className="whitespace-pre-wrap text-slate-600">
+              {role.long_description}
+            </div>
+          </div>
+        )}
+
         {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
 
         {workflows.length > 0 ? (
@@ -181,6 +190,15 @@ export default async function AIForPage({ params }: AIForPageProps) {
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
             {task.description}
           </p>
+        )}
+
+        {task.long_description && (
+          <div className="mb-10 max-w-3xl">
+            <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
+            <div className="whitespace-pre-wrap text-slate-600">
+              {task.long_description}
+            </div>
+          </div>
         )}
 
         {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
