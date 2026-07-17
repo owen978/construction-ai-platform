@@ -1,12 +1,12 @@
 # Enrichment checklist — 'Crawled, currently not indexed' pages (GSC 16 Jul 2026)
 # Worked by Task 5 (Page Enrichment Machine), 6 per run, top to bottom. Prioritised: pages with known impressions first.
 
-- [ ] https://buildcopilot.ai/templates/rams
-- [ ] https://buildcopilot.ai/ai-for/tender-analysis
-- [ ] https://buildcopilot.ai/ai-workflows/draft-rfi-response
-- [ ] https://buildcopilot.ai/ai-workflows/generate-cashflow-forecast
-- [ ] https://buildcopilot.ai/guides/ai-for-contract-administration
-- [ ] https://buildcopilot.ai/templates/cost-plan
+- [x] https://buildcopilot.ai/templates/rams
+- [x] https://buildcopilot.ai/ai-for/tender-analysis — BLOCKED, needs a human decision. Not enriched. The `tasks` table has no long-form content column (only name/slug/description/icon/meta_*), and /ai-for/[slug] renders just the description plus a grid of workflow cards. There is no field to put 800 words in. Every /ai-for/ task page on the checklist has this same problem, so this is a one-off fix that unblocks 13 more URLs. Options for Owen: (a) add a `long_description TEXT` column to `tasks` (and `roles`) and render it on /ai-for/[slug] the way /ai-workflows/[slug] already renders `workflow.long_description` — needs a DDL migration run in the Supabase SQL editor plus a page change, so it is outside a content-only run; or (b) accept these pages as thin hub/index pages and noindex them, since arguably their job is to route to the workflows, not to rank. Recommend (a). Meta title/description here are already unique and click-worthy from the July GSC run.
+- [x] https://buildcopilot.ai/ai-workflows/draft-rfi-response
+- [x] https://buildcopilot.ai/ai-workflows/generate-cashflow-forecast
+- [x] https://buildcopilot.ai/guides/ai-for-contract-administration
+- [x] https://buildcopilot.ai/templates/cost-plan
 - [ ] https://buildcopilot.ai/templates/tender-evaluation
 - [ ] https://buildcopilot.ai/ai-tools/chatgpt
 - [ ] https://buildcopilot.ai/ai-workflows/create-bid-no-bid-decision-framework
