@@ -126,8 +126,23 @@ const aiServices = [
       'Written roadmap: quick wins, costed options, savings',
       '45-minute walkthrough call, delivered in days',
       'Credited in full against any build over £2,500 within 60 days',
+      'Guarantee: if we cannot find 20+ hours a month of recoverable time, you do not pay',
     ],
     highlighted: true,
+  },
+  {
+    name: 'AI Working Sessions',
+    price: '£1,500',
+    priceNote: 'per month, capped at 6 clients',
+    tag: 'Do it yourselves, guided',
+    description:
+      'Two 45-minute working sessions a month where we build your systems together on your screen: audit a workflow, cut the fat, then automate it. One workflow at a time.',
+    features: [
+      'Two 45-minute working sessions per month',
+      'Questions between sessions answered within a business day',
+      'First session sets up your foundation properly',
+      'Cancel monthly, no tie-in',
+    ],
   },
   {
     name: 'Data to Dashboard',
@@ -165,7 +180,7 @@ const aiServices = [
     features: [
       'Tailored to your projects and workflows',
       'Yours to keep and run in-house',
-      'Dashboards, trackers, generators and more',
+      '60 days of fixes included, optional care plan from £95/month',
     ],
   },
 ]
@@ -371,6 +386,10 @@ export default function ServicesPage() {
               </p>
               <p className="mt-4 leading-relaxed text-slate-300">
                 The roadmap is yours to keep. Implement it in-house, or have us build it for you.
+              </p>
+              <p className="mt-4 rounded-md border border-amber-400/30 bg-amber-400/10 p-4 text-sm font-semibold leading-relaxed text-amber-300">
+                Our guarantee: if the review cannot find at least 20 hours a month of recoverable
+                time across your live projects, you do not pay.
               </p>
             </div>
 
