@@ -12,12 +12,12 @@
 - [x] https://buildcopilot.ai/ai-workflows/create-bid-no-bid-decision-framework
 - [x] https://buildcopilot.ai/ai-workflows/generate-meeting-minutes
 - [x] https://buildcopilot.ai/ai-workflows/create-cost-value-reconciliation
-- [ ] https://buildcopilot.ai/ai-workflows/draft-pre-qualification-questionnaire
-- [ ] https://buildcopilot.ai/ai-tools/procore
-- [ ] https://buildcopilot.ai/ai-tools/bluebeam-revu
-- [ ] https://buildcopilot.ai/ai-for/claims-management
-- [ ] https://buildcopilot.ai/ai-for/budget-forecasting
-- [ ] https://buildcopilot.ai/ai-for/contract-review
+- [x] https://buildcopilot.ai/ai-workflows/draft-pre-qualification-questionnaire
+- [x] https://buildcopilot.ai/ai-tools/procore
+- [x] https://buildcopilot.ai/ai-tools/bluebeam-revu
+- [x] https://buildcopilot.ai/ai-for/claims-management
+- [x] https://buildcopilot.ai/ai-for/budget-forecasting
+- [x] https://buildcopilot.ai/ai-for/contract-review
 - [ ] https://buildcopilot.ai/ai-for/environmental-compliance
 - [ ] https://buildcopilot.ai/ai-for/material-takeoff
 - [ ] https://buildcopilot.ai/ai-for/programme-narrative-writing
