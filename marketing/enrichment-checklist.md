@@ -18,12 +18,12 @@
 - [x] https://buildcopilot.ai/ai-for/claims-management
 - [x] https://buildcopilot.ai/ai-for/budget-forecasting
 - [x] https://buildcopilot.ai/ai-for/contract-review
-- [ ] https://buildcopilot.ai/ai-for/environmental-compliance
-- [ ] https://buildcopilot.ai/ai-for/material-takeoff
-- [ ] https://buildcopilot.ai/ai-for/programme-narrative-writing
-- [ ] https://buildcopilot.ai/ai-for/progress-reporting
-- [ ] https://buildcopilot.ai/ai-for/project-scheduling
-- [ ] https://buildcopilot.ai/ai-for/risk-assessment
+- [x] https://buildcopilot.ai/ai-for/environmental-compliance
+- [x] https://buildcopilot.ai/ai-for/material-takeoff
+- [x] https://buildcopilot.ai/ai-for/programme-narrative-writing
+- [x] https://buildcopilot.ai/ai-for/progress-reporting
+- [x] https://buildcopilot.ai/ai-for/project-scheduling — enriched, but FLAG for Owen: taxonomy overlap. This page and /ai-for/programme-narrative-writing had near-identical descriptions (both "programme narratives" + "critical path"), which is plausibly part of why Google declined to index both. I have scoped them apart in the new copy: project-scheduling = building/maintaining the programme (logic, float, critical path, sequencing); programme-narrative-writing = writing about the programme (monthly narrative, delay explanation, recovery). Two things still need a human decision: (a) the child workflows are mis-parented — all three genuine programme workflows (write-programme-narrative, generate-lookahead-schedule-summary, create-recovery-programme-narrative) sit under programme-narrative-writing, while project-scheduling's only child is create-project-execution-plan-summary, which is not a scheduling workflow; (b) the two task `description` fields still overlap and should be rewritten to match the new scoping. Consider re-parenting the lookahead workflow to project-scheduling.
+- [x] https://buildcopilot.ai/ai-for/risk-assessment — note: this page is now explicitly scoped to PROJECT/COMMERCIAL risk (risk register, EMV, mitigation owners) and draws a clear line to H&S risk assessment / RAMS, which lives at /templates/rams. The old meta_description mentioned COSHH and safety documentation, which did not match either the page's child workflows (project risk register, commercial risk summary) or its intent; rewritten.
 - [ ] https://buildcopilot.ai/ai-for/site-induction-documentation
 - [ ] https://buildcopilot.ai/ai-for/stakeholder-communication
 - [ ] https://buildcopilot.ai/ai-for/subcontractor-management
