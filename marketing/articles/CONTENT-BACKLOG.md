@@ -29,7 +29,7 @@ PRIORITY WAVE — the engine should treat these as next after the current in-fli
 | 69 | PUBLISHED | ai bim workflow / ai for bim | REWRITE existing guide: 1,349 impr @ pos 31; "ai bim workflow" 260 impr | ai-for-bim-workflows (SAME slug — upsert) | /ai-for/bim-manager, /guides/chatgpt-prompts-for-bim-managers, /ai-tools/autodesk-construction-cloud, /prompt-pack |
 | 70 | PUBLISHED | bim ai copilot / bim copilot | 259 + 11 impr, pos 16-42 | bim-ai-copilot-guide | /guides/ai-for-bim-workflows, /ai-for/bim-manager, /ai-tools/claude |
 | 71 | PUBLISHED | ai for bim model checking / ai assisted bim quality assurance | 231 + 229 impr, pos 22-43 | ai-bim-model-checking-and-qa | /guides/ai-for-bim-workflows, /ai-for/quality-control, /ai-tools/autodesk-construction-cloud |
-| 72 | queued | ai assistant for bim / bim ai assistant | 133 + 101 impr, pos 36-40 | ai-assistant-for-bim | /guides/bim-ai-copilot-guide, /ai-for/bim-manager, /prompt-pack |
+| 72 | PUBLISHED | ai assistant for bim / bim ai assistant | 133 + 101 impr, pos 36-40 | ai-assistant-for-bim | /guides/bim-ai-copilot-guide, /ai-for/bim-manager, /prompt-pack |
 
 ## Wave 2 — new pages from Ahrefs keyword research (marketing/keyword-research.md)
 
