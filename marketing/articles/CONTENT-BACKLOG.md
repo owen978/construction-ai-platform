@@ -39,7 +39,7 @@ These target the bigger US AI market and blue-ocean (zero-competition) terms. Th
 |---|--------|----------------|-------------|------|----------------|
 | 13 | PUBLISHED | ai in construction | US 2,000 / KD 31 (hub page) | ai-in-construction | /ai-tools/claude, /ai-workflows, /guides/ai-for-cost-estimation, /ai-for/quantity-surveyor, /prompt-pack |
 | 14 | PUBLISHED | generative ai in construction | US 150 / KD 0 (easy win) | generative-ai-in-construction | /guides/ai-in-construction, /ai-tools/claude, /ai-workflows, /prompt-pack |
-| 15 | queued | ai in construction safety | US 200 / KD 3 (easy win) | ai-in-construction-safety | /ai-workflows/generate-coshh-risk-assessment, /templates/rams, /ai-for/health-and-safety-manager, /prompt-pack |
+| 15 | PUBLISHED | ai in construction safety | US 200 / KD 3 (easy win) | ai-in-construction-safety | /ai-workflows/generate-coshh-risk-assessment, /templates/rams, /ai-for/health-and-safety-manager, /prompt-pack |
 | 16 | queued | will ai replace construction workers | US 80 / KD 0 (engagement) | will-ai-replace-construction-workers | /guides/ai-in-construction, /ai-for/quantity-surveyor, /ai-workflows |
 | 17 | queued | how to use ai in construction | US 200 / KD 37 | how-to-use-ai-in-construction | /ai-workflows, /prompt-pack, /ai-tools/claude, /guides/ai-in-construction |
 | 18 | queued | ai construction estimating | US 300 / $7 CPC (high value) | ai-construction-estimating | /guides/ai-for-cost-estimation, /ai-workflows/generate-bill-of-quantities, /templates/cost-plan, /prompt-pack |
