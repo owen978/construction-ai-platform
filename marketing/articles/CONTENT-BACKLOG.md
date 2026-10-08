@@ -45,7 +45,7 @@ These target the bigger US AI market and blue-ocean (zero-competition) terms. Th
 | 18 | PUBLISHED | ai construction estimating | US 300 / $7 CPC (high value) | ai-construction-estimating | /guides/ai-for-cost-estimation, /ai-workflows/generate-bill-of-quantities, /templates/cost-plan, /prompt-pack |
 | 19 | PUBLISHED | ai for construction project management | US 200 / KD 56 | ai-for-construction-project-management | /ai-workflows/generate-project-risk-register, /ai-workflows/draft-monthly-progress-report, /guides/ai-in-construction |
 | 20 | PUBLISHED | ai use cases in construction | US 150 | ai-use-cases-in-construction | /ai-workflows, /guides/ai-in-construction, /prompt-pack |
-| 21 | queued | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /prompt-pack, /ai-workflows, /ai-tools/chatgpt |
+| 21 | PUBLISHED | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /prompt-pack, /ai-workflows, /ai-tools/chatgpt |
 | 22 | queued | golden thread construction | UK 250 / KD 9 (UK moat) | golden-thread-construction-explained | /guides/ai-for-health-and-safety-documentation, /templates/rams, /ai-workflows |
 
 ## Wave 3 — ChatGPT prompt hub pages (as guides, blue ocean / zero competition)
