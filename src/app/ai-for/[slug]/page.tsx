@@ -20,6 +20,7 @@ import { ConstructionRatingNote } from '@/components/sections/construction-ratin
 import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { pluralRole } from '@/lib/utils'
 
 export async function generateStaticParams() {
   const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
   if (role) {
     return pageMetadata({
       path: `/ai-for/${slug}`,
-      title: role.meta_title || `AI for ${role.name}`,
+      title: role.meta_title || `AI for ${pluralRole(role.name)}`,
       description: role.meta_description || role.description || undefined,
       routeImage: true,
     })
@@ -75,10 +76,10 @@ export default async function AIForPage({ params }: AIForPageProps) {
       breadcrumbSchema([
         { name: 'Home', url: SITE_URL },
         { name: 'AI for Roles & Tasks', url: `${SITE_URL}/ai-for` },
-        { name: `AI for ${role.name}` },
+        { name: `AI for ${pluralRole(role.name)}` },
       ]),
       collectionPageSchema({
-        name: `AI for ${role.name}`,
+        name: `AI for ${pluralRole(role.name)}`,
         description: role.description || `AI workflows and prompts for ${role.name} in construction`,
         url: `${SITE_URL}/ai-for/${role.slug}`,
         items: workflows.map((w) => ({
@@ -97,14 +98,18 @@ export default async function AIForPage({ params }: AIForPageProps) {
             Home
           </Link>
           <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-          <span className="font-medium text-slate-900">AI for {role.name}</span>
+          <Link href="/ai-for" className="hover:text-primary transition-colors">
+            AI for Roles &amp; Tasks
+          </Link>
+          <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+          <span className="font-medium text-slate-900">AI for {pluralRole(role.name)}</span>
         </nav>
 
         <div className="h-16 w-16 rounded-lg bg-orange-50 text-4xl flex items-center justify-center mb-4" aria-hidden="true">
           {role.icon || ''}
         </div>
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          AI for {role.name}
+          AI for {pluralRole(role.name)}
         </h1>
         {role.description && (
           <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
@@ -188,6 +193,10 @@ export default async function AIForPage({ params }: AIForPageProps) {
         <nav className="mb-8 flex items-center gap-2 text-sm text-slate-500">
           <Link href="/" className="hover:text-primary transition-colors">
             Home
+          </Link>
+          <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+          <Link href="/ai-for" className="hover:text-primary transition-colors">
+            AI for Roles &amp; Tasks
           </Link>
           <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
           <span className="font-medium text-slate-900">AI for {task.name}</span>

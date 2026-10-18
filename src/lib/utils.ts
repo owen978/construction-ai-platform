@@ -30,3 +30,10 @@ export function truncate(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text
   return text.slice(0, maxLength).trimEnd() + '...'
 }
+
+/** "Quantity Surveyor" → "Quantity Surveyors"; leaves function names like "Document Control" alone. */
+export function pluralRole(name: string) {
+  return /(Manager|Surveyor|Estimator|Director|Engineer|Controller|Planner|Coordinator|Buyer|Subcontractor)$/i.test(name)
+    ? `${name}s`
+    : name
+}

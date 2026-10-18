@@ -12,6 +12,7 @@ import { pageMetadata } from '@/lib/metadata'
 import { isDailyIdeasEnabled } from '@/lib/features'
 import { AUTHOR } from '@/lib/author'
 import { SITE_URL } from '@/lib/site'
+import { pluralRole } from '@/lib/utils'
 import { breadcrumbSchema, dailyIdeaSchema, jsonLdScriptProps } from '@/lib/schema'
 import { getRoles } from '@/lib/queries/roles'
 import { getToolBySlug, getToolSlugs } from '@/lib/queries/tools'
@@ -229,7 +230,7 @@ export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
                 <li>
                   Every workflow for this role:{' '}
                   <Link href={links.mainRolePage.href} className="font-semibold text-primary hover:underline">
-                    AI for {links.mainRolePage.name}
+                    AI for {pluralRole(links.mainRolePage.name)}
                   </Link>
                 </li>
               )}

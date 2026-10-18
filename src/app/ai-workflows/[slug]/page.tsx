@@ -31,6 +31,7 @@ import { getIdeasForWorkflow } from '@/lib/daily-ideas'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { pluralRole } from '@/lib/utils'
 
 export async function generateStaticParams() {
   const slugs = await getWorkflowSlugs()
@@ -147,7 +148,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               {workflow.difficulty ? workflow.difficulty.charAt(0).toUpperCase() + workflow.difficulty.slice(1) : 'Workflow'}
             </Badge>
             {workflow.role && (
-              <Link href={`/ai-for/${workflow.role.slug}`} title={`AI for ${workflow.role.name}s`}>
+              <Link href={`/ai-for/${workflow.role.slug}`} title={`AI for ${pluralRole(workflow.role.name)}`}>
                 <Badge variant="default" className="transition-opacity hover:opacity-80">{workflow.role.name}</Badge>
               </Link>
             )}
@@ -246,7 +247,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       {moreForRole.length > 0 && workflow.role && (
         <section className="mt-16">
           <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-slate-200 pb-3">
-            <h2 className="text-2xl font-bold text-slate-900">More AI workflows for {workflow.role.name}s</h2>
+            <h2 className="text-2xl font-bold text-slate-900">More AI workflows for {pluralRole(workflow.role.name)}</h2>
             <Link href={`/ai-for/${workflow.role.slug}`} className="text-sm font-semibold text-primary hover:underline">
               All {workflow.role.name} workflows &rarr;
             </Link>
