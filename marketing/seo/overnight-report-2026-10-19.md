@@ -54,5 +54,5 @@ To ship it, say "merge claude/seo-guards and push". Every commit is separate, so
 
 ## Overnight checks
 
-- Midnight daily ideas launch: see the session for the live result (homepage card, nav link on static pages after the 00:02 push, /daily, Monday's page, sitemap, feed).
+- Midnight daily ideas launch: **live and verified at 00:03.** The pipeline commit pushed at 00:01:59 and Vercel deployed by 00:02:47. Monday's idea is on the homepage; the Daily nav link shows on the home, about and services pages; /daily and /daily/2026-10-19-explain-what-moved-in-this-months-valuation return 200 with a working share image; Tuesday's page still 404s as it should; the sitemap and feed include the idea.
 - 06:21 daily writer and 07:41 content task: results reported in the session when they finish.
