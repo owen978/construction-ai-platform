@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: TemplateDetailPageProps): Pro
     path: `/templates/${slug}`,
     title: template.meta_title || template.name,
     description: template.meta_description || template.description || undefined,
+    routeImage: true,
   })
 }
 

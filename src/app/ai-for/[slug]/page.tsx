@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
       path: `/ai-for/${slug}`,
       title: role.meta_title || `AI for ${role.name}`,
       description: role.meta_description || role.description || undefined,
+      routeImage: true,
     })
   }
 
@@ -44,6 +45,7 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
       path: `/ai-for/${slug}`,
       title: task.meta_title || `AI for ${task.name}`,
       description: task.meta_description || task.description || undefined,
+      routeImage: true,
     })
   }
 

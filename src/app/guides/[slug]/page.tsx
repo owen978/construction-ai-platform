@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: GuideDetailPageProps): Promis
     title: guide.meta_title || guide.title,
     description: guide.meta_description || guide.description || undefined,
     type: 'article',
+    routeImage: true,
   })
 }
 

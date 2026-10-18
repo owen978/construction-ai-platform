@@ -21,17 +21,23 @@ export const FEED_ALTERNATE = { 'application/rss+xml': '/feed.xml' }
  * og:url, so every share preview looked like the homepage.
  *
  * `path` is relative; the root layout's metadataBase makes it absolute.
+ *
+ * Pass `routeImage: true` on routes with their own opengraph-image file:
+ * explicit images here would win over the file, so they're left out and the
+ * file supplies og:image (X falls back to og:image for its card).
  */
 export function pageMetadata({
   path,
   title,
   description,
   type = 'website',
+  routeImage = false,
 }: {
   path: string
   title: string
   description?: string
   type?: 'website' | 'article'
+  routeImage?: boolean
 }): Metadata {
   return {
     // Titles that already name the site (e.g. "About BuildCopilot", or a CMS
@@ -49,13 +55,13 @@ export function pageMetadata({
       url: path,
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      ...(routeImage ? {} : { images: [DEFAULT_OG_IMAGE] }),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [DEFAULT_OG_IMAGE.url],
+      ...(routeImage ? {} : { images: [DEFAULT_OG_IMAGE.url] }),
     },
   }
 }
