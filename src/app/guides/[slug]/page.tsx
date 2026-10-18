@@ -124,7 +124,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
         {/* Guide content */}
         {guide.content && <MarkdownContent content={guide.content} />}
-        {serviceCta && <ServiceCTA config={serviceCta} utmContent={`guide-${slug}`} />}
+        <ServiceCTA config={serviceCta} utmContent={`guide-${slug}`} />
         <NewsletterBanner />
       </article>
 

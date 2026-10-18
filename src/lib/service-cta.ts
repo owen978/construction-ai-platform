@@ -2,8 +2,25 @@
  * Mapping of detail-page paths to done-for-you service CTA content.
  *
  * Keyed by `${section}/${slug}` (e.g. 'ai-for/quantity-surveyor').
- * Pages whose path is not in this map render no service CTA at all.
+ * Pages whose path is not in this map show ROADMAP_REVIEW_OFFER instead.
  */
+
+/**
+ * The £950 AI Roadmap Review box. Its price, guarantee and credit terms live
+ * only here and must match what /services promises.
+ */
+export const ROADMAP_REVIEW_OFFER = {
+  kicker: 'AI Roadmap Review',
+  heading: 'Want this done for your team?',
+  body: "A QS with 25+ years' experience reviews your commercial and admin workflows and hands you a written roadmap: quick wins, costed options, what each step saves.",
+  points: [
+    '£950 fixed, delivered in days, 45-minute walkthrough',
+    "If we can't find 20+ hours a month of recoverable time, you don't pay",
+    'Credited in full against any build over £2,500 within 60 days',
+  ],
+  bookLabel: 'Book your Roadmap Review',
+  newsletterLabel: 'Get the free weekly newsletter',
+}
 
 export interface ServiceCtaItem {
   label: string

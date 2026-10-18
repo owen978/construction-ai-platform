@@ -170,7 +170,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
-          {serviceCta && <ServiceCTA config={serviceCta} utmContent={`template-${slug}`} />}
+          <ServiceCTA config={serviceCta} utmContent={`template-${slug}`} />
 
           <NewsletterBanner />
 
