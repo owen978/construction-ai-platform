@@ -7,11 +7,11 @@
 
 | # | Status | Target keyword cluster | GSC signal | Slug | Internal links |
 |---|--------|------------------------|-----------|------|----------------|
-| 1 | PUBLISHED | rams / rams template / what is a rams | /templates/rams 439 impr @ pos 73 | what-is-a-rams-construction-guide | /templates/rams, /templates/method-statement, /templates/risk-assessment, /ai-workflows/draft-method-statement, /ai-workflows/generate-coshh-risk-assessment, /prompt-pack |
+| 1 | PUBLISHED | rams / rams template / what is a rams | /templates/rams 439 impr @ pos 73 | what-is-a-rams-construction-guide | /templates/rams, /templates/method-statement, /templates/risk-assessment, /ai-workflows/draft-method-statement, /ai-workflows/generate-coshh-risk-assessment, /newsletter |
 | 2 | PUBLISHED | construction daily report template / daily site report | ~348 impr across variations @ pos 55-73 | construction-daily-report-guide | /templates/daily-report, /templates/site-diary, /ai-workflows/write-daily-site-report, /ai-for/site-manager |
 | 3 | PUBLISHED | project risk register / construction risk register | 239 impr @ pos 47 + "construction risk register" cluster | how-to-build-a-construction-risk-register | /templates/risk-register, /ai-workflows/generate-project-risk-register, /guides/ai-risk-assessment-construction |
 | 4 | PUBLISHED | construction meeting minutes / meeting minutes software | 156 impr @ pos 12 (quickest win) | construction-meeting-minutes-guide | /templates/meeting-minutes, /ai-workflows/generate-meeting-minutes, /ai-workflows/draft-pre-construction-meeting-agenda |
-| 5 | PUBLISHED | ai for quantity surveyors / quantity surveyor ai | best-performing role page, strong cluster | ai-for-quantity-surveyors-guide | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /ai-workflows/analyse-tender-returns, /ai-tools/claude, /prompt-pack |
+| 5 | PUBLISHED | ai for quantity surveyors / quantity surveyor ai | best-performing role page, strong cluster | ai-for-quantity-surveyors-guide | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /ai-workflows/analyse-tender-returns, /ai-tools/claude, /newsletter |
 | 6 | PUBLISHED | method statement / construction method statement template | "method statement" cluster @ pos 27-47 | construction-method-statement-guide | /templates/method-statement, /ai-workflows/draft-method-statement, /templates/rams |
 | 7 | PUBLISHED | snag list / snagging list template | "snag list template" 20 impr + cluster | construction-snagging-list-guide | /ai-workflows/generate-snagging-list-template, /ai-for/snagging-and-defects |
 | 8 | PUBLISHED | toolbox talk template / toolbox talks | "toolbox talk template" cluster @ pos 68-86 | construction-toolbox-talks-guide | /templates/toolbox-talk, /ai-workflows/write-toolbox-talk |
@@ -26,10 +26,10 @@ PRIORITY WAVE — the engine should treat these as next after the current in-fli
 
 | # | Status | Target keyword | GSC evidence | Slug | Internal links |
 |---|--------|----------------|--------------|------|----------------|
-| 69 | PUBLISHED | ai bim workflow / ai for bim | REWRITE existing guide: 1,349 impr @ pos 31; "ai bim workflow" 260 impr | ai-for-bim-workflows (SAME slug — upsert) | /ai-for/bim-manager, /guides/chatgpt-prompts-for-bim-managers, /ai-tools/autodesk-construction-cloud, /prompt-pack |
+| 69 | PUBLISHED | ai bim workflow / ai for bim | REWRITE existing guide: 1,349 impr @ pos 31; "ai bim workflow" 260 impr | ai-for-bim-workflows (SAME slug — upsert) | /ai-for/bim-manager, /guides/chatgpt-prompts-for-bim-managers, /ai-tools/autodesk-construction-cloud, /newsletter |
 | 70 | PUBLISHED | bim ai copilot / bim copilot | 259 + 11 impr, pos 16-42 | bim-ai-copilot-guide | /guides/ai-for-bim-workflows, /ai-for/bim-manager, /ai-tools/claude |
 | 71 | PUBLISHED | ai for bim model checking / ai assisted bim quality assurance | 231 + 229 impr, pos 22-43 | ai-bim-model-checking-and-qa | /guides/ai-for-bim-workflows, /ai-for/quality-control, /ai-tools/autodesk-construction-cloud |
-| 72 | PUBLISHED | ai assistant for bim / bim ai assistant | 133 + 101 impr, pos 36-40 | ai-assistant-for-bim | /guides/bim-ai-copilot-guide, /ai-for/bim-manager, /prompt-pack |
+| 72 | PUBLISHED | ai assistant for bim / bim ai assistant | 133 + 101 impr, pos 36-40 | ai-assistant-for-bim | /guides/bim-ai-copilot-guide, /ai-for/bim-manager, /newsletter |
 
 ## Wave 2 — new pages from Ahrefs keyword research (marketing/keyword-research.md)
 
@@ -37,15 +37,15 @@ These target the bigger US AI market and blue-ocean (zero-competition) terms. Th
 
 | # | Status | Target keyword | Volume / KD | Slug | Internal links |
 |---|--------|----------------|-------------|------|----------------|
-| 13 | PUBLISHED | ai in construction | US 2,000 / KD 31 (hub page) | ai-in-construction | /ai-tools/claude, /ai-workflows, /guides/ai-for-cost-estimation, /ai-for/quantity-surveyor, /prompt-pack |
-| 14 | PUBLISHED | generative ai in construction | US 150 / KD 0 (easy win) | generative-ai-in-construction | /guides/ai-in-construction, /ai-tools/claude, /ai-workflows, /prompt-pack |
-| 15 | PUBLISHED | ai in construction safety | US 200 / KD 3 (easy win) | ai-in-construction-safety | /ai-workflows/generate-coshh-risk-assessment, /templates/rams, /ai-for/health-and-safety-manager, /prompt-pack |
+| 13 | PUBLISHED | ai in construction | US 2,000 / KD 31 (hub page) | ai-in-construction | /ai-tools/claude, /ai-workflows, /guides/ai-for-cost-estimation, /ai-for/quantity-surveyor, /newsletter |
+| 14 | PUBLISHED | generative ai in construction | US 150 / KD 0 (easy win) | generative-ai-in-construction | /guides/ai-in-construction, /ai-tools/claude, /ai-workflows, /newsletter |
+| 15 | PUBLISHED | ai in construction safety | US 200 / KD 3 (easy win) | ai-in-construction-safety | /ai-workflows/generate-coshh-risk-assessment, /templates/rams, /ai-for/health-and-safety-manager, /newsletter |
 | 16 | PUBLISHED | will ai replace construction workers | US 80 / KD 0 (engagement) | will-ai-replace-construction-workers | /guides/ai-in-construction, /ai-for/quantity-surveyor, /ai-workflows |
-| 17 | PUBLISHED | how to use ai in construction | US 200 / KD 37 | how-to-use-ai-in-construction | /ai-workflows, /prompt-pack, /ai-tools/claude, /guides/ai-in-construction |
-| 18 | PUBLISHED | ai construction estimating | US 300 / $7 CPC (high value) | ai-construction-estimating | /guides/ai-for-cost-estimation, /ai-workflows/generate-bill-of-quantities, /templates/cost-plan, /prompt-pack |
+| 17 | PUBLISHED | how to use ai in construction | US 200 / KD 37 | how-to-use-ai-in-construction | /ai-workflows, /newsletter, /ai-tools/claude, /guides/ai-in-construction |
+| 18 | PUBLISHED | ai construction estimating | US 300 / $7 CPC (high value) | ai-construction-estimating | /guides/ai-for-cost-estimation, /ai-workflows/generate-bill-of-quantities, /templates/cost-plan, /newsletter |
 | 19 | PUBLISHED | ai for construction project management | US 200 / KD 56 | ai-for-construction-project-management | /ai-workflows/generate-project-risk-register, /ai-workflows/draft-monthly-progress-report, /guides/ai-in-construction |
-| 20 | PUBLISHED | ai use cases in construction | US 150 | ai-use-cases-in-construction | /ai-workflows, /guides/ai-in-construction, /prompt-pack |
-| 21 | PUBLISHED | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /prompt-pack, /ai-workflows, /ai-tools/chatgpt |
+| 20 | PUBLISHED | ai use cases in construction | US 150 | ai-use-cases-in-construction | /ai-workflows, /guides/ai-in-construction, /newsletter |
+| 21 | PUBLISHED | chatgpt prompts for construction | blue ocean / first-mover | chatgpt-prompts-for-construction | /newsletter, /ai-workflows, /ai-tools/chatgpt |
 | 22 | PUBLISHED | golden thread construction | UK 250 / KD 9 (UK moat) | golden-thread-construction-explained | /guides/ai-for-health-and-safety-documentation, /templates/rams, /ai-workflows |
 
 ## Wave 3 — ChatGPT prompt hub pages (as guides, blue ocean / zero competition)
@@ -54,13 +54,13 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 
 | # | Status | Target keyword | Slug | Internal links |
 |---|--------|----------------|------|----------------|
-| 23 | PUBLISHED | chatgpt prompts for quantity surveyors | chatgpt-prompts-for-quantity-surveyors | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /prompt-pack |
-| 24 | queued | chatgpt prompts for project managers | chatgpt-prompts-for-project-managers | /ai-for/project-manager, /ai-workflows/generate-project-risk-register, /prompt-pack |
-| 25 | queued | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /prompt-pack |
-| 26 | queued | chatgpt prompts for estimators | chatgpt-prompts-for-estimators | /ai-for/estimator, /ai-workflows/generate-preliminary-cost-plan, /prompt-pack |
-| 27 | queued | chatgpt prompts for contract managers | chatgpt-prompts-for-contract-managers | /ai-for/contracts-manager, /ai-workflows/write-variation-assessment, /prompt-pack |
-| 28 | queued | chatgpt prompts for quantity surveying / QS | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /prompt-pack |
-| 29 | queued | chatgpt prompts for construction directors | chatgpt-prompts-for-construction-directors | /ai-for/construction-director, /ai-workflows, /prompt-pack |
+| 23 | PUBLISHED | chatgpt prompts for quantity surveyors | chatgpt-prompts-for-quantity-surveyors | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /newsletter |
+| 24 | queued | chatgpt prompts for project managers | chatgpt-prompts-for-project-managers | /ai-for/project-manager, /ai-workflows/generate-project-risk-register, /newsletter |
+| 25 | queued | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /newsletter |
+| 26 | queued | chatgpt prompts for estimators | chatgpt-prompts-for-estimators | /ai-for/estimator, /ai-workflows/generate-preliminary-cost-plan, /newsletter |
+| 27 | queued | chatgpt prompts for contract managers | chatgpt-prompts-for-contract-managers | /ai-for/contracts-manager, /ai-workflows/write-variation-assessment, /newsletter |
+| 28 | queued | chatgpt prompts for quantity surveying / QS | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /newsletter |
+| 29 | queued | chatgpt prompts for construction directors | chatgpt-prompts-for-construction-directors | /ai-for/construction-director, /ai-workflows, /newsletter |
 
 > Add the remaining roles (planning engineer, BIM manager, procurement, design, commercial, document control) as further rows when these are published.
 
@@ -68,11 +68,11 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 
 | # | Status | Target keyword | Volume / KD | Slug | Internal links |
 |---|--------|----------------|-------------|------|----------------|
-| 30 | queued | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /prompt-pack |
+| 30 | queued | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /newsletter |
 | 31 | queued | free ai for construction estimating | US 250 / KD 7 / $4.50 | free-ai-for-construction-estimating | /guides/ai-for-cost-estimation, /ai-tools/claude, /ai-workflows/generate-bill-of-quantities |
 | 32 | queued | ai construction software | US 350 / KD 52 | best-ai-construction-software | /ai-tools, /ai-tools/autodesk-construction-cloud, /ai-tools/procore |
 | 33 | queued | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-for-cost-estimation, /templates/cost-plan |
-| 34 | queued | chatgpt vs claude for construction | comparison intent | chatgpt-vs-claude-for-construction | /ai-tools/chatgpt, /ai-tools/claude, /prompt-pack |
+| 34 | queued | chatgpt vs claude for construction | comparison intent | chatgpt-vs-claude-for-construction | /ai-tools/chatgpt, /ai-tools/claude, /newsletter |
 | 35 | queued | best ai tools for project management construction | US 200 | best-ai-tools-for-construction-project-management | /ai-tools, /ai-workflows/generate-project-risk-register |
 | 36 | queued | ai construction scheduling software | US 150 / KD 30 | best-ai-tools-for-construction-scheduling | /ai-workflows/generate-lookahead-schedule-summary, /ai-tools |
 
@@ -102,13 +102,13 @@ Reframed from the old aiconstructioncopilot.com comparison pages: these target b
 
 | # | Status | Target keyword | Slug | Internal links |
 |---|--------|----------------|------|----------------|
-| 40 | queued | procore alternatives / procore for small contractors | procore-alternatives-for-small-contractors | /ai-tools/procore, /ai-tools, /guides/best-ai-construction-software, /prompt-pack |
-| 41 | queued | construction project management in excel / excel vs software | excel-vs-construction-software | /templates/cost-plan, /ai-workflows, /ai-tools/claude, /prompt-pack |
+| 40 | queued | procore alternatives / procore for small contractors | procore-alternatives-for-small-contractors | /ai-tools/procore, /ai-tools, /guides/best-ai-construction-software, /newsletter |
+| 41 | queued | construction project management in excel / excel vs software | excel-vs-construction-software | /templates/cost-plan, /ai-workflows, /ai-tools/claude, /newsletter |
 | 42 | queued | asta powerproject vs microsoft project | asta-powerproject-vs-microsoft-project | /ai-workflows/generate-lookahead-schedule-summary, /ai-for/project-scheduling, /ai-tools |
-| 43 | queued | best construction software for small builders uk | best-construction-software-for-small-builders-uk | /ai-tools, /guides/best-ai-tools-for-construction, /templates, /prompt-pack |
+| 43 | queued | best construction software for small builders uk | best-construction-software-for-small-builders-uk | /ai-tools, /guides/best-ai-tools-for-construction, /templates, /newsletter |
 | 44 | queued | best software for quantity surveyors uk | best-software-for-quantity-surveyors-uk | /ai-for/quantity-surveyor, /guides/ai-for-quantity-surveyors-guide, /ai-workflows/generate-bill-of-quantities, /ai-tools/claude |
 | 45 | queued | monday.com for construction | monday-com-for-construction | /ai-tools, /ai-workflows/generate-project-risk-register, /guides/ai-for-construction-project-management |
-| 46 | queued | notion for construction teams | notion-for-construction-teams | /ai-tools/notion-ai, /ai-workflows, /prompt-pack |
+| 46 | queued | notion for construction teams | notion-for-construction-teams | /ai-tools/notion-ai, /ai-workflows, /newsletter |
 | 47 | queued | bluebeam alternatives | bluebeam-revu-alternatives | /ai-tools/bluebeam-revu, /ai-tools, /ai-for/material-takeoff |
 | 48 | queued | primavera p6 vs asta powerproject | primavera-p6-vs-asta-powerproject | /guides/asta-powerproject-vs-microsoft-project, /ai-for/project-scheduling, /ai-workflows |
 | 49 | queued | procore vs autodesk construction cloud | procore-vs-autodesk-construction-cloud | /ai-tools/procore, /ai-tools/autodesk-construction-cloud, /guides/best-ai-construction-software |
@@ -117,7 +117,7 @@ Reframed from the old aiconstructioncopilot.com comparison pages: these target b
 
 | # | Status | Target keyword | Slug | Internal links |
 |---|--------|----------------|------|----------------|
-| 50 | queued | reduce admin time construction / construction paperwork | how-to-reduce-admin-time-in-construction | /ai-workflows, /prompt-pack, /guides/how-to-use-ai-in-construction, /templates |
+| 50 | queued | reduce admin time construction / construction paperwork | how-to-reduce-admin-time-in-construction | /ai-workflows, /newsletter, /guides/how-to-use-ai-in-construction, /templates |
 | 51 | queued | improve estimating accuracy construction | how-to-improve-estimating-accuracy | /guides/ai-construction-estimating, /templates/cost-plan, /ai-workflows/generate-bill-of-quantities |
 | 52 | queued | reduce construction project delays | how-to-reduce-construction-project-delays | /ai-workflows/generate-project-risk-register, /guides/ai-for-construction-project-management, /ai-for/programme-narrative-writing |
 | 53 | queued | manage subcontractors / subcontractor management | how-to-manage-subcontractors-effectively | /ai-for/subcontractor-management, /templates, /ai-workflows/analyse-tender-returns |
@@ -130,17 +130,17 @@ Reframed from the old aiconstructioncopilot.com comparison pages: these target b
 
 | # | Status | Target keyword | Slug | Internal links |
 |---|--------|----------------|------|----------------|
-| 58 | queued | ai for house builders / residential developers | ai-for-house-builders | /guides/ai-in-construction, /ai-workflows, /ai-for/site-manager, /prompt-pack |
-| 59 | queued | ai for electrical contractors | ai-for-electrical-contractors | /guides/ai-in-construction, /ai-workflows, /templates/rams, /prompt-pack |
+| 58 | queued | ai for house builders / residential developers | ai-for-house-builders | /guides/ai-in-construction, /ai-workflows, /ai-for/site-manager, /newsletter |
+| 59 | queued | ai for electrical contractors | ai-for-electrical-contractors | /guides/ai-in-construction, /ai-workflows, /templates/rams, /newsletter |
 | 60 | queued | ai for groundworks contractors | ai-for-groundworks-contractors | /guides/ai-in-construction, /ai-workflows, /templates/method-statement |
 | 61 | queued | ai for roofing contractors | ai-for-roofing-contractors | /guides/ai-in-construction, /ai-workflows, /templates/rams |
-| 62 | queued | ai for m&e contractors | ai-for-mechanical-electrical-contractors | /guides/ai-for-electrical-contractors, /ai-workflows, /prompt-pack |
-| 63 | queued | chatgpt prompts for planning engineers | chatgpt-prompts-for-planning-engineers | /ai-for/planning-engineer, /ai-workflows/generate-lookahead-schedule-summary, /prompt-pack |
-| 64 | queued | chatgpt prompts for bim managers | chatgpt-prompts-for-bim-managers | /ai-for/bim-manager, /ai-workflows, /prompt-pack |
-| 65 | queued | chatgpt prompts for procurement managers | chatgpt-prompts-for-procurement-managers | /ai-for/procurement-manager, /ai-workflows/analyse-tender-returns, /prompt-pack |
-| 66 | queued | chatgpt prompts for design managers | chatgpt-prompts-for-design-managers | /ai-for/design-manager, /ai-workflows, /prompt-pack |
-| 67 | queued | chatgpt prompts for commercial managers | chatgpt-prompts-for-commercial-managers | /ai-for/commercial-manager, /ai-workflows/write-variation-assessment, /prompt-pack |
-| 68 | queued | chatgpt prompts for document controllers | chatgpt-prompts-for-document-controllers | /ai-for/document-control, /ai-workflows, /prompt-pack |
+| 62 | queued | ai for m&e contractors | ai-for-mechanical-electrical-contractors | /guides/ai-for-electrical-contractors, /ai-workflows, /newsletter |
+| 63 | queued | chatgpt prompts for planning engineers | chatgpt-prompts-for-planning-engineers | /ai-for/planning-engineer, /ai-workflows/generate-lookahead-schedule-summary, /newsletter |
+| 64 | queued | chatgpt prompts for bim managers | chatgpt-prompts-for-bim-managers | /ai-for/bim-manager, /ai-workflows, /newsletter |
+| 65 | queued | chatgpt prompts for procurement managers | chatgpt-prompts-for-procurement-managers | /ai-for/procurement-manager, /ai-workflows/analyse-tender-returns, /newsletter |
+| 66 | queued | chatgpt prompts for design managers | chatgpt-prompts-for-design-managers | /ai-for/design-manager, /ai-workflows, /newsletter |
+| 67 | queued | chatgpt prompts for commercial managers | chatgpt-prompts-for-commercial-managers | /ai-for/commercial-manager, /ai-workflows/write-variation-assessment, /newsletter |
+| 68 | queued | chatgpt prompts for document controllers | chatgpt-prompts-for-document-controllers | /ai-for/document-control, /ai-workflows, /newsletter |
 
 ## Article quality rules (every article must follow these for SEO + GEO)
 
@@ -149,7 +149,7 @@ Reframed from the old aiconstructioncopilot.com comparison pages: these target b
 3. **At least one comparison table.** AI engines extract tables readily (e.g. RAMS vs method statement vs risk assessment).
 4. **A worked example.** Concrete, UK-specific, realistic.
 5. **FAQ section.** End with `## Frequently asked questions` and 5-6 `###` questions. This auto-generates FAQPage schema (built into the guide page).
-6. **5+ internal links** to the relevant template / workflow / role pages and /prompt-pack.
+6. **5+ internal links** to the relevant template / workflow / role pages and /newsletter (the free weekly newsletter; the £29 Prompt Pack is retired and /prompt-pack only redirects).
 7. **UK construction context.** Reference CDM 2015, RICS, NRM, real cards/tickets where relevant.
 8. **No em dashes.** Use commas, colons, or parentheses.
 9. **2,000-3,000 words.**
