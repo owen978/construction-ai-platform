@@ -14,11 +14,11 @@ export const AUTHOR = {
    */
   bylineLabel: 'Editor',
   /** Square headshot in /public, e.g. '/owen-hagger.jpg'. Initials show until set. */
-  photo: null as string | null,
+  photo: '/owen-hagger.jpg' as string | null,
   /** Personal profiles, used on the author page and as Person.sameAs. */
   profiles: {
-    linkedin: null as string | null,
-    x: null as string | null,
+    linkedin: 'https://www.linkedin.com/in/owen-hagger/' as string | null,
+    x: 'https://x.com/owenhagger' as string | null,
   },
   company: {
     name: 'Contractor Systems',

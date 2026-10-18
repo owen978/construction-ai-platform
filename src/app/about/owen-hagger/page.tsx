@@ -53,6 +53,7 @@ export default function OwenHaggerPage() {
                 alt={AUTHOR.name}
                 width={112}
                 height={112}
+                loading="eager"
                 className="h-28 w-28 shrink-0 rounded-full object-cover"
               />
             ) : (
