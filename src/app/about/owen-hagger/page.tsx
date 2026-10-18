@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   path: AUTHOR.path,
   title: `${AUTHOR.name}, ${AUTHOR.jobTitle}`,
   description:
-    'Owen Hagger is a quantity surveyor with 25 years in UK construction and the founder of Contractor Systems, which builds AI systems for contractors turning over £10m+.',
+    'Owen Hagger is a quantity surveyor with 25 years in UK construction and the founder of Contractor Systems, which builds AI systems across commercial, operations, site management and H&S for contractors turning over £10m+.',
 })
 
 export default function OwenHaggerPage() {
@@ -95,7 +95,10 @@ export default function OwenHaggerPage() {
               I build AI systems for UK contractors turning over £10m+.
             </p>
             <p className="mt-4">
-              The aim is simple. Take the repeat admin off the commercial team, and keep a person checking what goes out.
+              Not just the commercial side. Operations, site management and health and safety too.
+            </p>
+            <p className="mt-4">
+              The aim is simple. Take the repeat admin off your teams, in the office and on site, and keep a person checking what goes out.
             </p>
           </section>
 

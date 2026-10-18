@@ -90,7 +90,7 @@ export default function AboutPage() {
             <h2 className="mb-4 text-2xl font-bold text-slate-900">Why it&apos;s free</h2>
             <p>Everything here is free. No login, no paywall.</p>
             <p className="mt-4">
-              If you want these workflows built into your own systems, I do that through {AUTHOR.company.name}, starting with a £950{' '}
+              If you want these workflows built into your own systems, I do that through {AUTHOR.company.name}, starting with a paid{' '}
               <Link href="/services" className="font-semibold text-primary hover:text-primary/90 transition-colors">
                 Roadmap Review
               </Link>
