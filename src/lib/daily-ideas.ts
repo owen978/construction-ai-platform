@@ -1,4 +1,5 @@
 import rawIdeas from '@/content/daily-ideas.generated.json'
+import { formatMins } from '@/lib/utils'
 
 /**
  * "Construction AI workflow of the day". Ideas are written as Markdown in
@@ -151,13 +152,6 @@ const titleCase = (slug: string) =>
 export const roleLabel = (slug: string) => ROLE_LABELS[slug] ?? titleCase(slug)
 export const toolLabel = (slug: string) => TOOL_LABELS[slug] ?? titleCase(slug)
 export const taskLabel = (slug: string) => titleCase(slug)
-
-export function formatMins(mins: number) {
-  if (mins < 60) return `${mins}m`
-  const h = Math.floor(mins / 60)
-  const m = mins % 60
-  return m ? `${h}h ${m}m` : `${h}h`
-}
 
 /** "~3h → 40m" when both typical figures exist, else null. */
 export function timeSavedLabel(idea: Pick<DailyIdea, 'timeByHandMins' | 'timeWithAiMins'>) {

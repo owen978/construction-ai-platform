@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "predev": "node scripts/build-daily-ideas.mjs",
-    "prebuild": "node scripts/build-daily-ideas.mjs",
+    "predev": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs",
+    "prebuild": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs",
     "daily-ideas": "node scripts/build-daily-ideas.mjs"
   },
   "dependencies": {
