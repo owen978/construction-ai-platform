@@ -3,6 +3,15 @@ import { createPublicClient } from '@/lib/supabase/public'
 import { SITE_URL } from '@/lib/site'
 import { isToolVisible } from '@/lib/features'
 
+/**
+ * Newest updated_at across the given rows. Hub pages use this so their lastmod
+ * moves only when their content does, not on every build.
+ */
+function newest(...lists: { updated_at: string }[][]): Date | undefined {
+  const times = lists.flat().map((r) => Date.parse(r.updated_at)).filter(Number.isFinite)
+  return times.length ? new Date(Math.max(...times)) : undefined
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = createPublicClient()
 
@@ -16,96 +25,96 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     (supabase as any).from('templates').select('slug, updated_at').eq('status', 'published'),
   ])
 
-  // Static pages
+  const workflowRows = workflows.data ?? []
+  const roleRows = roles.data ?? []
+  const taskRows = tasks.data ?? []
+  const toolRows = (tools.data ?? []).filter((t) => isToolVisible(t.slug))
+  const guideRows = guides.data ?? []
+  const templateRows: { slug: string; updated_at: string }[] = templates.data ?? []
+
+  // Static pages. Hubs take their newest child's date; pages with no content
+  // source omit lastmod rather than claim the build time.
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: new Date(),
+      lastModified: newest(workflowRows, roleRows, taskRows, toolRows, guideRows, templateRows),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${SITE_URL}/ai-workflows`,
-      lastModified: new Date(),
+      lastModified: newest(workflowRows),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/ai-tools`,
-      lastModified: new Date(),
+      lastModified: newest(toolRows),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/guides`,
-      lastModified: new Date(),
+      lastModified: newest(guideRows),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/templates`,
-      lastModified: new Date(),
+      lastModified: newest(templateRows),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/tools/rams-generator`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/ai-for`,
-      lastModified: new Date(),
+      lastModified: newest(roleRows, taskRows),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/newsletter`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${SITE_URL}/prompt-pack`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/services`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/about`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${SITE_URL}/contact`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${SITE_URL}/privacy`,
-      lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${SITE_URL}/terms`,
-      lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
   ]
 
   // Dynamic workflow pages
-  const workflowPages: MetadataRoute.Sitemap = (workflows.data ?? []).map((w) => ({
+  const workflowPages: MetadataRoute.Sitemap = workflowRows.map((w) => ({
     url: `${SITE_URL}/ai-workflows/${w.slug}`,
     lastModified: new Date(w.updated_at),
     changeFrequency: 'monthly' as const,
@@ -113,7 +122,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Dynamic role pages
-  const rolePages: MetadataRoute.Sitemap = (roles.data ?? []).map((r) => ({
+  const rolePages: MetadataRoute.Sitemap = roleRows.map((r) => ({
     url: `${SITE_URL}/ai-for/${r.slug}`,
     lastModified: new Date(r.updated_at),
     changeFrequency: 'monthly' as const,
@@ -121,7 +130,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Dynamic task pages (under /ai-for/ since tasks use same route structure)
-  const taskPages: MetadataRoute.Sitemap = (tasks.data ?? []).map((t) => ({
+  const taskPages: MetadataRoute.Sitemap = taskRows.map((t) => ({
     url: `${SITE_URL}/ai-for/${t.slug}`,
     lastModified: new Date(t.updated_at),
     changeFrequency: 'monthly' as const,
@@ -129,17 +138,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Dynamic tool pages
-  const toolPages: MetadataRoute.Sitemap = (tools.data ?? [])
-    .filter((t) => isToolVisible(t.slug))
-    .map((t) => ({
-      url: `${SITE_URL}/ai-tools/${t.slug}`,
-      lastModified: new Date(t.updated_at),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
+  const toolPages: MetadataRoute.Sitemap = toolRows.map((t) => ({
+    url: `${SITE_URL}/ai-tools/${t.slug}`,
+    lastModified: new Date(t.updated_at),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   // Dynamic guide pages
-  const guidePages: MetadataRoute.Sitemap = (guides.data ?? []).map((g) => ({
+  const guidePages: MetadataRoute.Sitemap = guideRows.map((g) => ({
     url: `${SITE_URL}/guides/${g.slug}`,
     lastModified: new Date(g.updated_at),
     changeFrequency: 'monthly' as const,
@@ -147,7 +154,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Dynamic template pages
-  const templatePages: MetadataRoute.Sitemap = (templates.data ?? []).map((t: any) => ({
+  const templatePages: MetadataRoute.Sitemap = templateRows.map((t) => ({
     url: `${SITE_URL}/templates/${t.slug}`,
     lastModified: new Date(t.updated_at),
     changeFrequency: 'monthly' as const,
