@@ -20,14 +20,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // www served a duplicate copy of the site. One 301 hop to the apex,
-      // keeping path and query string.
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.buildcopilot.ai" }],
-        destination: "https://buildcopilot.ai/:path*",
-        statusCode: 301,
-      },
       // A wrong slug in the risk-register guide; the role page is /ai-for/project-manager.
       {
         source: "/ai-for/project-management",
