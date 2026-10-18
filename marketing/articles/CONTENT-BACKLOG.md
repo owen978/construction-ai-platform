@@ -59,7 +59,7 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 | 25 | queued | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /newsletter |
 | 26 | queued | chatgpt prompts for estimators | chatgpt-prompts-for-estimators | /ai-for/estimator, /ai-workflows/generate-preliminary-cost-plan, /newsletter |
 | 27 | queued | chatgpt prompts for contract managers | chatgpt-prompts-for-contract-managers | /ai-for/contracts-manager, /ai-workflows/write-variation-assessment, /newsletter |
-| 28 | queued | chatgpt prompts for quantity surveying / QS | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /newsletter |
+| 28 | queued | chatgpt prompts for health and safety managers | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /newsletter |
 | 29 | queued | chatgpt prompts for construction directors | chatgpt-prompts-for-construction-directors | /ai-for/construction-director, /ai-workflows, /newsletter |
 
 > Add the remaining roles (planning engineer, BIM manager, procurement, design, commercial, document control) as further rows when these are published.
