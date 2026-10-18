@@ -7,7 +7,9 @@ import { getRoleBySlug, getRoleSlugs } from '@/lib/queries/roles'
 import { getTaskBySlug, getTaskSlugs } from '@/lib/queries/tasks'
 import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
-import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
+import { breadcrumbSchema, collectionPageSchema, faqSchema, jsonLdScriptProps } from '@/lib/schema'
+import { getAiForExtras } from '@/lib/ai-for-extras'
+import { AiForExtras } from '@/components/sections/ai-for-extras'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
@@ -60,6 +62,7 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
 export default async function AIForPage({ params }: AIForPageProps) {
   const { slug } = await params
   const serviceCta = getServiceCta('ai-for', slug)
+  const extras = getAiForExtras(slug)
 
   // Try role first
   const role = await getRoleBySlug(slug)
@@ -87,6 +90,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           url: `${SITE_URL}/ai-workflows/${w.slug}`,
         })),
       }),
+      ...(extras && extras.faqs.length > 0 ? [faqSchema(extras.faqs)] : []),
     ]
 
     return (
@@ -125,6 +129,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
             </div>
           </div>
         )}
+
+        {extras && <AiForExtras extras={extras} title={`How AI helps ${pluralRole(role.name)}`} />}
 
         <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
         <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
@@ -184,6 +190,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           url: `${SITE_URL}/ai-workflows/${w.slug}`,
         })),
       }),
+      ...(extras && extras.faqs.length > 0 ? [faqSchema(extras.faqs)] : []),
     ]
 
     return (
@@ -222,6 +229,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
             </div>
           </div>
         )}
+
+        {extras && <AiForExtras extras={extras} title={`How AI helps with ${task.name.toLowerCase()}`} />}
 
         <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
         <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
