@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
+import { GHL_FORM_EMBED_SCRIPT, GHL_NEWSLETTER_FORM_ID, GHL_NEWSLETTER_FORM_URL } from '@/lib/ghl'
 import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
@@ -70,9 +71,9 @@ export default function NewsletterPage() {
 
           <div className="mx-auto max-w-lg">
             <iframe
-              src="https://link.contractorsystems.co.uk/widget/form/rncFCtEjzs4hnT5jgHsB"
+              src={GHL_NEWSLETTER_FORM_URL}
               style={{ width: '100%', height: '554px', border: 'none', borderRadius: '3px' }}
-              id="inline-rncFCtEjzs4hnT5jgHsB"
+              id={`inline-${GHL_NEWSLETTER_FORM_ID}`}
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
               data-trigger-value=""
@@ -82,12 +83,12 @@ export default function NewsletterPage() {
               data-deactivation-value=""
               data-form-name=""
               data-height="554"
-              data-layout-iframe-id="inline-rncFCtEjzs4hnT5jgHsB"
-              data-form-id="rncFCtEjzs4hnT5jgHsB"
+              data-layout-iframe-id={`inline-${GHL_NEWSLETTER_FORM_ID}`}
+              data-form-id={GHL_NEWSLETTER_FORM_ID}
               title="Newsletter signup form"
             />
             <Script
-              src="https://link.contractorsystems.co.uk/js/form_embed.js"
+              src={GHL_FORM_EMBED_SCRIPT}
               strategy="lazyOnload"
             />
           </div>

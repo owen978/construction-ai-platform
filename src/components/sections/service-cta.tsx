@@ -2,8 +2,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button-variants'
 import type { ServiceCtaConfig } from '@/lib/service-cta'
-
-const BOOKING_URL = 'https://link.contractorsystems.co.uk/widget/booking/mzWN8jEzZDL5SxkY71ut'
+import { GHL_BOOKING_URL } from '@/lib/ghl'
 
 interface ServiceCTAProps {
   config: ServiceCtaConfig
@@ -55,7 +54,7 @@ export function ServiceCTA({ config, className }: ServiceCTAProps) {
           See the service
         </Link>
         <a
-          href={BOOKING_URL}
+          href={GHL_BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={buttonVariants({ variant: 'outline' })}
