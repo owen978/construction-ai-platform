@@ -95,6 +95,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       difficulty: workflow.difficulty,
       tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
       estimatedTime: 'PT10M',
+      dateModified: workflow.updated_at,
     }),
   ]
 

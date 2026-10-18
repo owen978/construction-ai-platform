@@ -85,6 +85,15 @@ export function profilePageSchema() {
   }
 }
 
+/**
+ * Credit for guides and workflows, matching the visible byline
+ * ("Editor: Owen Hagger"): the site is the author and Owen the editor.
+ * If AUTHOR.bylineLabel becomes "Written by", make Owen the author here too.
+ */
+function contentCredits() {
+  return { author: organizationSchema(), editor: personSchema() }
+}
+
 // ─── HowTo (for workflow pages) ─────────────────────────────────────
 
 interface HowToOptions {
@@ -95,6 +104,8 @@ interface HowToOptions {
   difficulty?: string | null
   tool?: { name: string; url?: string | null } | null
   estimatedTime?: string // ISO 8601 duration e.g. "PT10M"
+  /** Same updated_at the page's byline shows. */
+  dateModified?: string | null
 }
 
 export function howToSchema(options: HowToOptions) {
@@ -110,10 +121,15 @@ export function howToSchema(options: HowToOptions) {
       text: step,
     })),
     publisher: organizationSchema(),
+    ...contentCredits(),
   }
 
   if (options.estimatedTime) {
     schema.totalTime = options.estimatedTime
+  }
+
+  if (options.dateModified) {
+    schema.dateModified = options.dateModified
   }
 
   if (options.tool) {
@@ -146,6 +162,7 @@ export function articleSchema(options: ArticleOptions) {
     description: options.description,
     url: `${SITE_URL}/guides/${options.slug}`,
     publisher: organizationSchema(),
+    ...contentCredits(),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${SITE_URL}/guides/${options.slug}`,
