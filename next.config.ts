@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       // The £29 Prompt Pack is retired. Re-point this at the free Starter Pack
-      // landing page once it exists. 27 guides still link /prompt-pack in their text.
+      // landing page once it exists (old posts and bookmarks still use /prompt-pack).
       {
         source: "/prompt-pack",
         destination: "/newsletter",

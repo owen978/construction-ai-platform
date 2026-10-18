@@ -14,6 +14,8 @@ import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
+import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
+import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
@@ -118,6 +120,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
         )}
 
         <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
+        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
 
         {workflows.length > 0 ? (
           <div>
@@ -203,6 +206,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
         )}
 
         <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
+        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
 
         {workflows.length > 0 ? (
           <div>

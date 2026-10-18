@@ -418,7 +418,7 @@ export default function ServicesPage() {
                 </a>
                 <p className="mt-3 text-center text-xs text-slate-400">
                   Delivered in days. 45-minute walkthrough included.{' '}
-                  <a href={roadmapCtaHref} className="text-primary hover:underline">Prefer email?</a>
+                  <a href={roadmapCtaHref} className="text-primary-bright hover:underline">Prefer email?</a>
                 </p>
               </div>
             </div>

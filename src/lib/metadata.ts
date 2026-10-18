@@ -9,6 +9,9 @@ export const DEFAULT_OG_IMAGE = {
   alt: 'BuildCopilot — The AI Operating System for Construction',
 }
 
+/** Roughly what Google shows before truncating a title. */
+const MAX_TITLE_LENGTH = 60
+
 export const FEED_ALTERNATE = { 'application/rss+xml': '/feed.xml' }
 
 /**
@@ -40,9 +43,14 @@ export function pageMetadata({
   routeImage?: boolean
 }): Metadata {
   return {
-    // Titles that already name the site (e.g. "About BuildCopilot", or a CMS
-    // meta_title ending "| BuildCopilot") skip the layout's "%s | BuildCopilot".
-    title: title.includes(SITE_NAME) ? { absolute: title } : title,
+    // Skip the layout's "%s | BuildCopilot" when the title already names the
+    // site (e.g. "About BuildCopilot", or a CMS meta_title ending
+    // "| BuildCopilot"), or when the suffix would push it past 60 characters
+    // and get the keyword part truncated in search results.
+    title:
+      title.includes(SITE_NAME) || `${title} | ${SITE_NAME}`.length > MAX_TITLE_LENGTH
+        ? { absolute: title }
+        : title,
     description,
     alternates: {
       canonical: path,

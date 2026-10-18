@@ -18,7 +18,7 @@ export function NewsletterInline({ className }: NewsletterInlineProps) {
       <div className="mx-auto max-w-7xl px-4">
         <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 px-8 py-12 sm:px-16 sm:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary-bright mb-2">
               Free Weekly Newsletter
             </p>
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">

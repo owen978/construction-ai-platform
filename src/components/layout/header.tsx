@@ -28,7 +28,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-charcoal border-b border-slate-800">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-xl font-bold text-white">
-          <span className="inline-block h-2 w-2 rounded-sm bg-primary mr-2" />
+          <span className="inline-block h-2 w-2 rounded-sm bg-primary-bright mr-2" />
           BuildCopilot
         </Link>
 

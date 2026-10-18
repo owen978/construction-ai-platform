@@ -5,13 +5,13 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-charcoal geometric-grid py-24 sm:py-32">
       <div className="relative mx-auto max-w-7xl px-4 text-center">
-        <div className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary ring-1 ring-primary/30">
+        <div className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary-bright ring-1 ring-primary/30">
           AI-Powered Construction Workflows
         </div>
 
         <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
           Work Smarter on{' '}
-          <span className="text-primary">Every Project</span>
+          <span className="text-primary-bright">Every Project</span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">

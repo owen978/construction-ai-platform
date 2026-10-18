@@ -16,6 +16,8 @@ import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
+import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
+import { getConstructionRatingNote } from '@/lib/construction-rating'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
@@ -130,6 +132,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
         {/* Guide content */}
         {guide.content && <MarkdownContent content={guide.content} />}
         <ServiceCTA config={serviceCta} utmContent={`guide-${slug}`} />
+        <ConstructionRatingNote note={getConstructionRatingNote('guides', slug)} />
         <NewsletterBanner />
       </article>
 

@@ -16,6 +16,8 @@ import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
+import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
+import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
@@ -170,6 +172,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           )}
 
           <ServiceCTA config={serviceCta} utmContent={`workflow-${slug}`} />
+          <ConstructionRatingNote note={getConstructionRatingNote('ai-workflows', slug)} />
 
           {/* Example Output */}
           {workflow.example_output && (
