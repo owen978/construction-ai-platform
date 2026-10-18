@@ -23,6 +23,7 @@ const companyLinks = [
   { href: '/services', label: 'Services' },
   { href: '/contact', label: 'Contact' },
   { href: '/newsletter', label: 'Newsletter' },
+  { href: 'https://constructionrating.co.uk', label: 'Construction Rating' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Use' },
 ]
