@@ -55,6 +55,14 @@ export function AdminSidebar() {
         >
           &larr; Back to Site
         </Link>
+        <form action="/api/admin/logout" method="post">
+          <button
+            type="submit"
+            className="block w-full rounded-md px-3 py-2 text-left text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900"
+          >
+            Sign out
+          </button>
+        </form>
       </div>
     </aside>
   )

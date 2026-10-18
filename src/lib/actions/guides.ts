@@ -3,10 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { requireAdmin } from '@/lib/auth'
 import { generateSlug } from '@/lib/utils'
 import type { GuideInsert, GuideUpdate } from '@/types'
 
 export async function createGuide(formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const title = formData.get('title') as string
@@ -40,6 +42,7 @@ export async function createGuide(formData: FormData) {
 }
 
 export async function updateGuide(id: string, formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const title = formData.get('title') as string
@@ -74,6 +77,7 @@ export async function updateGuide(id: string, formData: FormData) {
 }
 
 export async function deleteGuide(id: string) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const { error } = await supabase

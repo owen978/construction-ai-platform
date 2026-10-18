@@ -3,10 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { requireAdmin } from '@/lib/auth'
 import { generateSlug } from '@/lib/utils'
 import type { RoleInsert, RoleUpdate } from '@/types'
 
 export async function createRole(formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const name = formData.get('name') as string
@@ -34,6 +36,7 @@ export async function createRole(formData: FormData) {
 }
 
 export async function updateRole(id: string, formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const name = formData.get('name') as string
@@ -62,6 +65,7 @@ export async function updateRole(id: string, formData: FormData) {
 }
 
 export async function deleteRole(id: string) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const { error } = await supabase
