@@ -233,7 +233,7 @@ const faqs = [
   {
     question: 'Do you work remotely?',
     answer:
-      'Yes. We are based in South Wales and work with clients across the UK remotely. Everything runs through shared dashboards, clear handovers and short calls, so you always know where each job stands.',
+      'Yes. UK-based, working with contractors across the UK. Most work is delivered remotely, with site or office visits where a scheme genuinely needs them. Everything runs through shared dashboards, clear handovers and short calls, so you always know where each job stands.',
   },
   {
     question: 'Do you have JCT and NEC experience?',
@@ -485,7 +485,7 @@ export default function ServicesPage() {
               Want us on hand every month?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600">
-              For teams running £2M to £5M schemes that want the fixed-outcome work plus a
+              For contractors turning over £10m+ who want the fixed-outcome work plus a
               commercial function on tap, month after month.
             </p>
           </div>
