@@ -61,7 +61,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
   if (role) {
     const workflows = await getWorkflowsByRoleId(role.id)
     const relatedResources = await getRelatedContent({
-      keywords: `${role.name} ${role.description ?? ''}`,
+      title: role.name,
+      context: role.description ?? '',
       excludeType: null,
       excludeSlug: role.slug,
     })
@@ -145,7 +146,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
   if (task) {
     const workflows = await getWorkflowsByTaskId(task.id)
     const relatedResources = await getRelatedContent({
-      keywords: `${task.name} ${task.description ?? ''}`,
+      title: task.name,
+      context: task.description ?? '',
       excludeType: null,
       excludeSlug: task.slug,
     })

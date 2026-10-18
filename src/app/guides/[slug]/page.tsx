@@ -62,7 +62,8 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
   const serviceCta = getServiceCta('guides', slug)
   const relatedWorkflows = await getWorkflowsByGuideId(guide.id)
   const relatedResources = await getRelatedContent({
-    keywords: `${guide.title} ${guide.description ?? ''}`,
+    title: guide.title,
+    context: guide.description ?? '',
     excludeType: 'guide',
     excludeSlug: guide.slug,
   })
