@@ -133,7 +133,7 @@ UK estimating runs on established standards, and AI should be used inside them, 
 ## How to get started with AI estimating
 
 1. **Pick one stage.** Most estimators get the fastest win from tender document review or subcontract quote comparison.
-2. **Use a proven prompt.** A good prompt sets the role (UK estimator), the standard (NRM2), the format, and the constraint to flag gaps instead of inventing. The [BuildCopilot Prompt Pack](/prompt-pack) has ready-made estimating prompts.
+2. **Use a proven prompt.** A good prompt sets the role (UK estimator), the standard (NRM2), the format, and the constraint to flag gaps instead of inventing. New prompts like this go out in our [free weekly newsletter](/newsletter).
 3. **Feed it your data, never ask it for rates.** Your labour rates, your supplier prices, your benchmark costs.
 4. **Keep totals in a spreadsheet.** AI structures; the spreadsheet calculates.
 5. **Review everything.** Treat AI output as a first draft from a keen junior estimator: fast, useful, and occasionally confidently wrong.

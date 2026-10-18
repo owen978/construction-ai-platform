@@ -105,7 +105,7 @@ Six asks cover most of a BIM manager's week. Keep them saved and reuse them rath
 | COBie completeness check | Monthly from Stage 5 | COBie export | Missing field and inconsistency report |
 | Register versus MIDP check | Fortnightly | Drawing register, MIDP | Late, unreviewed, and unversioned list |
 
-The full set of construction prompts, including the BIM ones with the exact wording, is in the [BuildCopilot Prompt Pack](/prompt-pack), and the [AI workflows library](/ai-workflows) has the step by step versions.
+The [AI workflows library](/ai-workflows) has the step by step versions, and new prompts go out in our [free weekly newsletter](/newsletter).
 
 ## The verification routine that makes this safe
 

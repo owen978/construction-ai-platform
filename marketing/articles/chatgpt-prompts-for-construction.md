@@ -12,7 +12,7 @@ meta_description: "25 copy-paste ChatGPT prompts for construction: daily reports
 
 **ChatGPT prompts for construction** are written instructions that tell ChatGPT (or Claude, or Copilot) exactly how to produce a piece of construction work, such as a daily site report, a method statement, a tender comparison or a variation letter. The prompts that work give the AI four things: a role, the real project facts, a fixed output format, and a rule not to invent anything it was not told. Get those four right and a 40 minute document becomes a 5 minute review.
 
-This guide gives you 25 copy-paste prompts grouped by job, a simple formula for writing your own, a UK worked example, and the mistakes that make AI output useless or risky. If you want a ready-formatted set in one download, the [BuildCopilot Prompt Pack](/prompt-pack) collects 50 construction prompts and templates, and every prompt below links to a step-by-step workflow in our [AI workflows library](/ai-workflows).
+This guide gives you 25 copy-paste prompts grouped by job, a simple formula for writing your own, a UK worked example, and the mistakes that make AI output useless or risky. Every prompt below links to a step-by-step workflow in our [AI workflows library](/ai-workflows), and new prompts go out in our [free weekly newsletter](/newsletter).
 
 ## Why most construction prompts fail
 
@@ -230,4 +230,4 @@ Tell it explicitly: "Do not invent anything. Write [CONFIRM] where information i
 
 ### Is there a free library of construction prompts?
 
-Yes. Every prompt in this guide is free to copy, and each links to a free step-by-step workflow in the BuildCopilot AI workflows library. If you want everything formatted and ready to use in one download, the BuildCopilot Prompt Pack bundles 50 construction prompts and templates for site, commercial and safety teams.
+Yes. Every prompt in this guide is free to copy, and each links to a free step-by-step workflow in the BuildCopilot AI workflows library. New prompts go out in the free weekly BuildCopilot newsletter as we publish them.

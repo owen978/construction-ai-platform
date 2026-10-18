@@ -33,7 +33,7 @@ It is worth being concrete, because the gap between the marketing and the realit
 - **Rewrite for a different audience.** A technical delay explanation becomes a clear client-facing paragraph. An engineer's note becomes a toolbox talk in plain language.
 - **Answer "how do I" questions about process and standards.** What a construction phase plan needs under CDM 2015, how NRM1 elements are structured, what goes in a PAS 91 response.
 
-Notice that every item on that list is a language task. That is what these tools are: extremely capable language engines. Our [AI workflows library](/ai-workflows) has the specific prompts for each of these jobs, and the full set is packaged in the [BuildCopilot Prompt Pack](/prompt-pack).
+Notice that every item on that list is a language task. That is what these tools are: extremely capable language engines. Our [AI workflows library](/ai-workflows) has the specific prompts for each of these jobs, and new ones go out in our [free weekly newsletter](/newsletter).
 
 ## What AI cannot do on a construction site
 
@@ -113,7 +113,7 @@ If you want to be on the right side of this, the actions are unglamorous and eff
 
 **Pick your worst admin task and automate that one first.** Not a strategy, not a pilot programme. The single document you most resent writing. For most site staff that is the daily report. For a QS it is often the variation write-up or the tender comparison. Get one workflow working properly before adding a second.
 
-**Learn to write a proper prompt.** The difference between a useless output and a genuinely good one is almost entirely the quality of the instruction: the context you provide, the format you ask for, and the constraints you set. This is a learnable skill and it takes about an afternoon to get competent at. Our [prompt pack](/prompt-pack) contains the construction-specific versions so you are not starting from scratch.
+**Learn to write a proper prompt.** The difference between a useless output and a genuinely good one is almost entirely the quality of the instruction: the context you provide, the format you ask for, and the constraints you set. This is a learnable skill and it takes about an afternoon to get competent at. Our [free weekly newsletter](/newsletter) sends construction-specific prompts so you are not starting from scratch.
 
 **Always review before it leaves your hands.** Treat every AI output as a first draft from a fast, well-read, overconfident graduate who has never been to your site. That framing gets the value without the risk. For anything safety-critical, the review is not optional: a competent person has to check it, and that person is you.
 

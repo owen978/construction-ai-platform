@@ -75,7 +75,7 @@ To make this concrete, here is how a site manager on a UK project might use AI t
 
 **The review:** The site manager reads it critically, corrects the crane position, adds the specific lift plan reference, confirms the competent person names, and adjusts the sequence to match the actual site setup. Total time: 10 minutes instead of 40, and the output is more thorough because the AI does not forget standard sections when it is tired.
 
-The lesson holds across every use case: AI gets you to a strong first draft in a fraction of the time, and your expertise turns that draft into something correct and site-specific. You can see the exact prompt structure in the [AI workflows library](/ai-workflows), and the full set of ready-to-use construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack).
+The lesson holds across every use case: AI gets you to a strong first draft in a fraction of the time, and your expertise turns that draft into something correct and site-specific. You can see the exact prompt structure in the [AI workflows library](/ai-workflows), and new ready-to-use prompts go out every week in our [free newsletter](/newsletter).
 
 ## Which AI tools should construction teams use?
 

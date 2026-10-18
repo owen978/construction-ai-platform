@@ -105,7 +105,7 @@ The quality of AI tender analysis depends almost entirely on the prompt. A vague
 3. **Demand it flag uncertainty.** "Where a figure is unclear or you are inferring, mark it clearly. Do not guess totals."
 4. **Ask for exclusions explicitly.** "List every exclusion, qualification, and assumption for each bidder verbatim, with the page reference."
 
-The [analyse tender returns workflow](/ai-workflows/analyse-tender-returns) gives you the full, tested prompt for each step, and the wider [BuildCopilot Prompt Pack](/prompt-pack) covers the surrounding QS tasks. If you are new to choosing a tool for this, [Claude](/ai-tools/claude) handles long documents well, which matters when a single bid runs to hundreds of pages. Quantity surveyors running these evaluations regularly will also find the [AI for tender analysis collection](/ai-for/tender-analysis) useful.
+The [analyse tender returns workflow](/ai-workflows/analyse-tender-returns) gives you the full, tested prompt for each step, and new prompts for the surrounding QS tasks go out in our [free weekly newsletter](/newsletter). If you are new to choosing a tool for this, [Claude](/ai-tools/claude) handles long documents well, which matters when a single bid runs to hundreds of pages. Quantity surveyors running these evaluations regularly will also find the [AI for tender analysis collection](/ai-for/tender-analysis) useful.
 
 ## Data security and probity
 

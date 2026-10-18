@@ -108,7 +108,7 @@ You do not need a new platform or a budget sign-off. Start small:
 4. **Save the prompt and reuse it.** The value compounds when the same prompt is used every week on every project.
 5. **Add the next document.** Risk register review, look-ahead, then change log summary.
 
-The [BuildCopilot Prompt Pack](/prompt-pack) has ready-made prompts for all of these, and our guide on [how to use AI in construction](/guides/how-to-use-ai-in-construction) covers the general approach. For the bigger picture of where the industry is heading, see [AI in construction](/guides/ai-in-construction).
+Our [free weekly newsletter](/newsletter) sends new project management prompts as we publish them, and our guide on [how to use AI in construction](/guides/how-to-use-ai-in-construction) covers the general approach. For the bigger picture of where the industry is heading, see [AI in construction](/guides/ai-in-construction).
 
 ## The limits, and the controls that keep AI output safe
 

@@ -131,7 +131,7 @@ You do not need a project. You need five hours spread across a week.
 
 **Day 4.** Run it against a week you already understand, and check the answer against what you know to be true. You are calibrating trust, not testing the tool. Where it is wrong, the fix is almost always missing context rather than a bad model.
 
-**Day 5.** Write the prompt down somewhere the team can reuse it, with a note on what context to paste. A prompt that lives in one person's head is not a workflow. Our [construction prompt pack](/prompt-pack) has starting points for most of these, and the [AI for BIM managers collection](/ai-for/bim-manager) covers the role-specific ones. The broader [AI workflows library](/ai-workflows) has the adjacent tasks, including [generating coordination meeting minutes](/ai-workflows/generate-meeting-minutes), which is usually the second thing people automate.
+**Day 5.** Write the prompt down somewhere the team can reuse it, with a note on what context to paste. A prompt that lives in one person's head is not a workflow. The [AI for BIM managers collection](/ai-for/bim-manager) covers the role-specific prompts, and new ones go out in our [free weekly newsletter](/newsletter). The broader [AI workflows library](/ai-workflows) has the adjacent tasks, including [generating coordination meeting minutes](/ai-workflows/generate-meeting-minutes), which is usually the second thing people automate.
 
 By the end of that week you will have one workflow that reliably saves a few hours, which is a far better outcome than five workflows that half work.
 

@@ -105,7 +105,7 @@ You do not need a transformation project. The pattern that works in SME contract
 
 **Week 3 and 4: prove the time saving.** Measure it honestly. How long did it take before, how long does it take now, including review. If the honest answer is "no faster", the task was wrong or the input was too thin. Fix that before expanding.
 
-**Month 2: build the prompt library.** Every prompt that produces a good result gets saved somewhere the team can find it. This is the real asset. The tool is a commodity; your library of prompts that work on your kind of work is not. Our [BuildCopilot Prompt Pack](/prompt-pack) gives you a tested starting library so you are not writing from scratch.
+**Month 2: build the prompt library.** Every prompt that produces a good result gets saved somewhere the team can find it. This is the real asset. The tool is a commodity; your library of prompts that work on your kind of work is not. If you want help working out which tasks to build it around, our £950 [AI Roadmap Review](/services) looks at your workflows and sets out the quick wins.
 
 **Month 3: expand by role.** Add a second person and a second task. Quantity surveyors, site managers and estimators all have different high-value tasks. The [AI for quantity surveyors guide](/guides/ai-for-quantity-surveyors-guide) and the [AI for site managers collection](/ai-for/site-manager) cover the role-specific starting points.
 

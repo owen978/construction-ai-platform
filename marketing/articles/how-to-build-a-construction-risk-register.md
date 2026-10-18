@@ -118,7 +118,7 @@ The workflow is straightforward:
 3. **Review and challenge.** This is the critical step. The AI gives you a thorough first draft, but you apply project knowledge: delete what does not apply, add the site-specific risks only you know about, and adjust the scores to reflect reality.
 4. **Maintain it.** Each review cycle, paste in what has changed and have the AI update statuses, residual scores, and review dates.
 
-The AI does the heavy lifting of breadth and structure so you do not stare at an empty spreadsheet, and you provide the judgement that makes the register accurate. A first draft that took half a day now takes twenty minutes. Our [generate project risk register workflow](/ai-workflows/generate-project-risk-register) gives you the exact prompt, and the full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack). Project managers will also find the wider [AI for project management collection](/ai-for/project-manager) useful for the rest of the PM workflow.
+The AI does the heavy lifting of breadth and structure so you do not stare at an empty spreadsheet, and you provide the judgement that makes the register accurate. A first draft that took half a day now takes twenty minutes. Our [generate project risk register workflow](/ai-workflows/generate-project-risk-register) gives you the exact prompt, and new construction prompts go out in our [free weekly newsletter](/newsletter). Project managers will also find the wider [AI for project management collection](/ai-for/project-manager) useful for the rest of the PM workflow.
 
 ## Common risk register mistakes
 

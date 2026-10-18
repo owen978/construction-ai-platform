@@ -200,7 +200,7 @@ The AI did not decide anything. It did the comparison and the maths so the QS co
 - **Name the contract and edition.** JCT 2016 and JCT 2024 differ in places, and bespoke amendments change everything. Paste the amended clauses rather than relying on what the AI thinks the standard form says.
 - **Protect commercial data.** Use a business account with training on your data switched off, and check your firm's policy before pasting client or tender information. Never paste one tenderer's prices into a query to another.
 - **Keep the professional judgement.** RICS professional standards still apply to work you sign off. AI output is a first draft, not advice.
-- **Save prompts that work.** Build a short library of your best prompts so the whole commercial team uses the same structure. The [BuildCopilot Prompt Pack](/prompt-pack) is a ready-made starting point.
+- **Save prompts that work.** Build a short library of your best prompts so the whole commercial team uses the same structure. The prompts in this guide are a good place to start, and new ones go out in our [free weekly newsletter](/newsletter).
 
 ## Frequently asked questions
 

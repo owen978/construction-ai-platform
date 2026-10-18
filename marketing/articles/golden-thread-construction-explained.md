@@ -226,4 +226,4 @@ At Gateway 3, the Building Safety Regulator can refuse or delay the completion c
 
 ### Can AI help manage the golden thread?
 
-Yes, for the information work. AI is good at turning rough notes into structured change records, cross-checking change logs against drawing and specification registers, summarising long fire strategies and test reports, and running gap checks before a gateway. It must not make compliance decisions or fill missing information with guesses, and the record itself must live in your controlled system. The [BuildCopilot Prompt Pack](/prompt-pack) includes prompts for this kind of document checking.
+Yes, for the information work. AI is good at turning rough notes into structured change records, cross-checking change logs against drawing and specification registers, summarising long fire strategies and test reports, and running gap checks before a gateway. It must not make compliance decisions or fill missing information with guesses, and the record itself must live in your controlled system. If you want someone to look at your own process and set out where AI fits, that is what our £950 [AI Roadmap Review](/services) does.

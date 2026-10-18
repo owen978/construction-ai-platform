@@ -115,7 +115,7 @@ The workflow is simple:
 3. **Review and localise.** Check it matches your RAMS, add your site-specific detail, and remove anything that does not apply. The AI gives you the structure and the safety wording; you provide the site judgement.
 4. **Print the attendance sheet and deliver it.**
 
-A talk that took 20 minutes to find and adapt now takes 5, and crucially it is tailored to the exact work happening that day. Our [write toolbox talk workflow](/ai-workflows/write-toolbox-talk) gives you the exact prompt, and the full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack). Health and safety leads will also find the wider [AI for health and safety managers collection](/ai-for/health-and-safety-manager) useful, and site supervisors can pair this with the [AI for site managers tools](/ai-for/site-manager).
+A talk that took 20 minutes to find and adapt now takes 5, and crucially it is tailored to the exact work happening that day. Our [write toolbox talk workflow](/ai-workflows/write-toolbox-talk) gives you the exact prompt, and new prompts go out each week in our [free newsletter](/newsletter). Health and safety leads will also find the wider [AI for health and safety managers collection](/ai-for/health-and-safety-manager) useful, and site supervisors can pair this with the [AI for site managers tools](/ai-for/site-manager).
 
 ## Common toolbox talk mistakes
 

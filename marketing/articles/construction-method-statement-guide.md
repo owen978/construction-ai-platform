@@ -90,7 +90,7 @@ AI fixes this by drafting a task-specific, properly structured method statement 
 3. **Review and make it site-specific.** Check the AI has not invented plant or certificates, add anything site-specific it could not know, and confirm the hazards and controls match your risk assessment.
 4. **Brief, sign, and submit.**
 
-The AI handles the structure and the professional wording. You provide the facts, the site knowledge, and the judgement, which is the part that must never be automated away. Our [draft method statement workflow](/ai-workflows/draft-method-statement) gives you the exact prompt, and the full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack).
+The AI handles the structure and the professional wording. You provide the facts, the site knowledge, and the judgement, which is the part that must never be automated away. Our [draft method statement workflow](/ai-workflows/draft-method-statement) gives you the exact prompt, and new prompts go out in our [free weekly newsletter](/newsletter).
 
 A word of caution: never submit an AI-drafted method statement without a competent person reviewing it. The document is a legal safety record and the responsibility for its accuracy stays with you, not the tool.
 

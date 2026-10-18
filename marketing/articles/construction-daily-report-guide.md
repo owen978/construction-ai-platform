@@ -88,7 +88,7 @@ The workflow is simple:
 3. **Review and correct.** Check the AI has not invented anything, add anything it could not know, and confirm the delay and instruction detail is accurate.
 4. **Attach photos and submit.**
 
-The AI handles the structure, the formatting, and the professional wording. You provide the facts and the judgement. A report that took 30 minutes now takes 5, and crucially the records stay detailed even at the end of a hard day. Our [write daily site report workflow](/ai-workflows/write-daily-site-report) gives you the exact prompt, and the full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack). Site managers will also find the wider [AI for site managers collection](/ai-for/site-manager) useful.
+The AI handles the structure, the formatting, and the professional wording. You provide the facts and the judgement. A report that took 30 minutes now takes 5, and crucially the records stay detailed even at the end of a hard day. Our [write daily site report workflow](/ai-workflows/write-daily-site-report) gives you the exact prompt, and new construction prompts go out in our [free weekly newsletter](/newsletter). Site managers will also find the wider [AI for site managers collection](/ai-for/site-manager) useful.
 
 ## Common daily report mistakes
 

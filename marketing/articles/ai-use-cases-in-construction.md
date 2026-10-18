@@ -131,7 +131,7 @@ Here is how a 40-person main contractor might use AI across a single week on a Â
 You do not need a strategy document or a budget to begin. Start small, with one repeated task.
 
 1. **Pick one task you do every day or every week.** Daily reports, minutes or toolbox talks are ideal first choices.
-2. **Use a proper prompt.** A vague request gets a vague answer. Give AI your role, the project context, the format you need and the facts. The [BuildCopilot Prompt Pack](/prompt-pack) has tested construction prompts you can copy.
+2. **Use a proper prompt.** A vague request gets a vague answer. Give AI your role, the project context, the format you need and the facts. Our [free weekly newsletter](/newsletter) sends tested construction prompts you can copy.
 3. **Always review the output.** Check every fact, figure, date and clause reference. AI can sound confident and still be wrong.
 4. **Protect sensitive data.** Check your company policy before pasting in client names, commercial rates or personal data. Use business plans with data controls where possible, and remove personal details you do not need.
 5. **Build a library.** When a prompt works well, save it and share it with the team so everyone gets the same quality.

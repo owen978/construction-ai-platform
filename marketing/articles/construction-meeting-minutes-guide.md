@@ -102,7 +102,7 @@ The workflow is simple:
 3. **Review and correct.** Check the AI has not invented a decision, confirm every action has the right owner and date, and make sure variations and instructions are captured accurately.
 4. **Circulate within 24 hours** to the full distribution list.
 
-The AI handles the structure, the formatting, and the professional wording. You provide the facts and the judgement, especially around decisions, variations, and who owns what. A write-up that took an hour now takes five minutes, and the actions stay sharp because you are not reconstructing them from memory days later. Our [generate meeting minutes workflow](/ai-workflows/generate-meeting-minutes) gives you the exact prompt, and the full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack).
+The AI handles the structure, the formatting, and the professional wording. You provide the facts and the judgement, especially around decisions, variations, and who owns what. A write-up that took an hour now takes five minutes, and the actions stay sharp because you are not reconstructing them from memory days later. Our [generate meeting minutes workflow](/ai-workflows/generate-meeting-minutes) gives you the exact prompt, and our [free weekly newsletter](/newsletter) sends new ones as we publish them.
 
 A word of caution on AI transcription: never rely on the AI for the decisions themselves. Transcription tools mishear names, numbers, and dates, and they cannot tell a firm instruction from a passing comment. The human chair or minute-taker always owns the final record.
 

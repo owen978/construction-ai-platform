@@ -12,7 +12,7 @@ meta_description: "How quantity surveyors use AI for bills of quantities, tender
 
 **AI for quantity surveyors** means using large language model tools, such as Claude, to speed up the repetitive, document-heavy parts of the QS role: drafting bills of quantities, analysing tender returns, summarising contract clauses, preparing valuations, and writing cost reports. It does not replace your commercial judgement or your measurement standards. It removes the hours you spend formatting, comparing, and writing up work you have already thought through, so you can spend more time on the decisions that actually move the numbers.
 
-This guide explains exactly where AI helps a quantity surveyor today, where it does not, a worked UK example, and the [QS prompts](/prompt-pack) you can start using this afternoon. If you want the role overview first, see our [AI for quantity surveyors hub](/ai-for/quantity-surveyor).
+This guide explains exactly where AI helps a quantity surveyor today, where it does not, a worked UK example, and the [QS prompts](/guides/chatgpt-prompts-for-quantity-surveyors) you can start using this afternoon. If you want the role overview first, see our [AI for quantity surveyors hub](/ai-for/quantity-surveyor).
 
 ## What quantity surveyors actually spend time on
 
@@ -101,7 +101,7 @@ You do not need a procurement project or a new software budget. You need one tas
 4. **Check every number and claim.** Treat the output as a confident junior's first draft: useful, fast, and to be verified.
 5. **Save the prompt.** Once a prompt works, reuse it every month. This is where the compounding time saving comes from.
 
-The [BuildCopilot Prompt Pack](/prompt-pack) gives you ready-made, QS-specific prompts for each of these so you are not starting from a blank box.
+Our [free weekly newsletter](/newsletter) sends new QS prompts as we publish them, so you are not starting from a blank box.
 
 ## Which AI tool should a quantity surveyor use?
 

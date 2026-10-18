@@ -119,7 +119,7 @@ You do not need a strategy, a pilot, or a budget. You need three sessions.
 
 **Two: set the review rule before you scale.** Write it down: every AI-drafted safety document is reviewed and signed by a named competent person before use, and legal references are verified against source. Agree it now, while the volume is small, not after a near miss.
 
-**Three: standardise the prompts.** The value compounds when everyone uses the same tested prompts rather than improvising. Our [BuildCopilot Prompt Pack](/prompt-pack) contains the full set for safety documentation, all free.
+**Three: standardise the prompts.** The value compounds when everyone uses the same tested prompts rather than improvising. Our [free weekly newsletter](/newsletter) sends new tested prompts as we publish them, so the whole team works from the same starting point.
 
 Start with the paperwork. It is the largest, cheapest, and safest win available, and it buys back the time that everything else in construction safety depends on.
 

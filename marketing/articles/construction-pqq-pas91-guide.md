@@ -134,7 +134,7 @@ The workflow that works:
 
 Step 6 is where AI genuinely outperforms a tired commercial manager reading his own writing at 7pm. A model given the buyer's scoring matrix will reliably spot that question 4.3 asked for "three years" of data and you supplied two, or that your environmental answer described a policy without ever stating who is accountable for it.
 
-Our [draft pre-qualification questionnaire workflow](/ai-workflows/draft-pre-qualification-questionnaire) contains the exact prompts for each step. The wider prompt set, including tender and bid prompts, is in the [BuildCopilot Prompt Pack](/prompt-pack). Because PQQ packs involve long documents and attachments, [Claude](/ai-tools/claude) tends to handle the context better than shorter-window tools.
+Our [draft pre-qualification questionnaire workflow](/ai-workflows/draft-pre-qualification-questionnaire) contains the exact prompts for each step. For new prompts as we publish them, sign up to our [free weekly newsletter](/newsletter). Because PQQ packs involve long documents and attachments, [Claude](/ai-tools/claude) tends to handle the context better than shorter-window tools.
 
 Once you pass pre-qualification, the same discipline applies to the tender itself. Our [AI tender analysis guide](/guides/ai-tender-analysis-guide) covers evaluating and responding to the ITT stage, and the [tender analysis collection](/ai-for/tender-analysis) has the role-specific prompts.
 

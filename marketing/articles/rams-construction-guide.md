@@ -136,7 +136,7 @@ The approach we recommend on BuildCopilot is simple:
 
 The AI replaces the blank page and the formatting, not your professional judgement. A RAMS that is generated and then signed off without review is dangerous and would not stand up to scrutiny. A RAMS that is generated and then properly reviewed by a competent person is just as valid as one typed from scratch, and far quicker to produce.
 
-Our [draft method statement workflow](/ai-workflows/draft-method-statement) walks through the exact prompt to use, and the full library of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack).
+Our [draft method statement workflow](/ai-workflows/draft-method-statement) walks through the exact prompt to use, and new construction prompts go out in our [free weekly newsletter](/newsletter).
 
 ## Common RAMS mistakes that get you rejected
 

@@ -111,7 +111,7 @@ A sensible AI workflow looks like this:
 3. **Have it draft the assumptions, exclusions, and risk narrative.** This is the writing that eats an afternoon and that AI produces in seconds.
 4. **Review, price, and correct.** You apply real rates, adjust the risk allowances to the stage, and check nothing has been invented. The judgement stays with you.
 
-The result is a structured first draft in minutes instead of a blank spreadsheet. Our [generate preliminary cost plan workflow](/ai-workflows/generate-preliminary-cost-plan) gives you the exact prompt, and the wider [AI for cost estimation guide](/ai-for/cost-estimation) covers estimating tasks beyond cost planning. If you want the full set of construction prompts, they are in the [BuildCopilot Prompt Pack](/prompt-pack). For the tool itself, [Claude for construction](/ai-tools/claude) handles the long, structured documents that cost planning produces particularly well, and the broader [AI construction estimating guide](/guides/ai-construction-estimating) puts cost planning in context.
+The result is a structured first draft in minutes instead of a blank spreadsheet. Our [generate preliminary cost plan workflow](/ai-workflows/generate-preliminary-cost-plan) gives you the exact prompt, and the wider [AI for cost estimation guide](/ai-for/cost-estimation) covers estimating tasks beyond cost planning. New construction prompts go out every week in our [free newsletter](/newsletter). For the tool itself, [Claude for construction](/ai-tools/claude) handles the long, structured documents that cost planning produces particularly well, and the broader [AI construction estimating guide](/guides/ai-construction-estimating) puts cost planning in context.
 
 ## Common cost plan mistakes
 

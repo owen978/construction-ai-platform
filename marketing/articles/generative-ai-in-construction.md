@@ -123,7 +123,7 @@ A weak prompt gets a generic answer, which is why most people who try AI for ten
 4. **The output format.** Exact sections, in order, with the level of detail expected.
 5. **A hallucination guard.** "Where information has not been provided, insert [TO BE CONFIRMED] rather than assuming. Do not cite regulation numbers unless you are certain."
 
-Save the working version somewhere shared. A prompt that lives in one person's chat history is not a business process. The [BuildCopilot Prompt Pack](/prompt-pack) gives you tested construction prompts to start from rather than building each one cold.
+Save the working version somewhere shared. A prompt that lives in one person's chat history is not a business process. Our [free weekly newsletter](/newsletter) sends tested construction prompts to start from rather than building each one cold.
 
 ### Week 3: run it in parallel
 

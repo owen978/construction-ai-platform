@@ -123,7 +123,7 @@ You do not need a platform. You need four saved prompts, the relevant project do
 4. **Log everything.** Save the export, the output, and what you did about it. This is your evidence trail, and on a higher-risk building it is not optional.
 5. **Review every output.** Especially anything reported as compliant. Spot-check five rows a week against the model. If the AI is wrong, you want to find out on a spot check rather than at handover.
 
-The prompts themselves are the fiddly part, and the ones for information checking are in the [BuildCopilot Prompt Pack](/prompt-pack) alongside the wider set of [construction AI workflows](/ai-workflows). If you want the assistant layer that runs these continuously rather than weekly, that is covered in the [BIM AI copilot guide](/guides/bim-ai-copilot-guide), and the role-level view is in the [AI for BIM managers collection](/ai-for/bim-manager).
+The prompts themselves are the fiddly part. The wider set of [construction AI workflows](/ai-workflows) gives you tested starting points, and new prompts go out in our [free weekly newsletter](/newsletter). If you want the assistant layer that runs these continuously rather than weekly, that is covered in the [BIM AI copilot guide](/guides/bim-ai-copilot-guide), and the role-level view is in the [AI for BIM managers collection](/ai-for/bim-manager).
 
 ## Common mistakes
 

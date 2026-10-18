@@ -138,7 +138,7 @@ Four things separate a prompt that produces something usable from one that produ
 
 **Specify the output shape.** A table with named columns, sorted a stated way. BIM outputs almost always feed into another system, whether that is a coordination log, an issue tracker, or a report, so shape matters more than prose quality.
 
-The full set of construction prompts is in the [BuildCopilot Prompt Pack](/prompt-pack), and the [risk register workflow](/ai-workflows/generate-project-risk-register) shows the same structure applied to project risk.
+The [risk register workflow](/ai-workflows/generate-project-risk-register) shows the same structure applied to project risk, and new prompts go out in our [free weekly newsletter](/newsletter).
 
 ## Compliance guardrails you should not skip
 
