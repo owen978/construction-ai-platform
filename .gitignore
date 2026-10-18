@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .claude/launch.json
+
+# Compiled from marketing/daily-ideas by scripts/build-daily-ideas.mjs (runs before dev and build)
+/src/content/daily-ideas.generated.json

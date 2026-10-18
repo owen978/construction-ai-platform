@@ -1,6 +1,7 @@
 import { createPublicClient } from '@/lib/supabase/public'
 import { SITE_URL } from '@/lib/site'
-import { isToolVisible } from '@/lib/features'
+import { isDailyIdeasEnabled, isToolVisible } from '@/lib/features'
+import { getPublishedIdeas, ideaPath } from '@/lib/daily-ideas'
 
 interface FeedItem {
   title: string
@@ -121,6 +122,17 @@ export async function GET() {
   }
 
   // Sort all items by date, most recent first
+  if (isDailyIdeasEnabled()) {
+    for (const idea of getPublishedIdeas().slice(0, 30)) {
+      items.push({
+        title: `Workflow of the day: ${idea.title}`,
+        url: `${SITE_URL}${ideaPath(idea)}`,
+        description: idea.summary,
+        pubDate: `${idea.publishDate}T06:00:00Z`,
+      })
+    }
+  }
+
   items.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

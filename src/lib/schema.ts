@@ -143,6 +143,41 @@ export function howToSchema(options: HowToOptions) {
   return schema
 }
 
+// ─── HowTo (for /daily idea pages) ──────────────────────────────────
+
+interface DailyIdeaSchemaOptions {
+  title: string
+  summary: string
+  path: string // e.g. "/daily/2026-10-20-check-a-subcontractor-application"
+  publishDate: string
+  steps: string[]
+  tool: string
+  timeWithAiMins: number | null
+}
+
+export function dailyIdeaSchema(options: DailyIdeaSchemaOptions) {
+  const url = `${SITE_URL}${options.path}`
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: options.title,
+    description: options.summary,
+    url,
+    datePublished: options.publishDate,
+    publisher: organizationSchema(),
+    ...contentCredits(),
+    tool: { '@type': 'HowToTool', name: options.tool },
+    isAccessibleForFree: true,
+  }
+  if (options.steps.length > 0) {
+    schema.step = options.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text }))
+  }
+  if (options.timeWithAiMins) {
+    schema.totalTime = `PT${options.timeWithAiMins}M`
+  }
+  return schema
+}
+
 // ─── Article (for guide pages) ──────────────────────────────────────
 
 interface ArticleOptions {

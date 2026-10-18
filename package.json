@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predev": "node scripts/build-daily-ideas.mjs",
+    "prebuild": "node scripts/build-daily-ideas.mjs",
+    "daily-ideas": "node scripts/build-daily-ideas.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",

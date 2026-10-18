@@ -11,8 +11,10 @@ import {
   SheetClose,
   SheetTitle,
 } from '@/components/ui/sheet'
+import { isDailyIdeasEnabled } from '@/lib/features'
 
 const navLinks = [
+  ...(isDailyIdeasEnabled() ? [{ href: '/daily', label: 'Daily Ideas' }] : []),
   { href: '/ai-workflows', label: 'AI Workflows' },
   { href: '/templates', label: 'Templates' },
   { href: '/ai-tools', label: 'AI Tools' },
