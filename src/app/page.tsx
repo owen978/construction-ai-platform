@@ -4,9 +4,12 @@ export const revalidate = 600
 import { getFeaturedWorkflows } from '@/lib/queries/workflows'
 import { getRoles } from '@/lib/queries/roles'
 import { getLatestGuides } from '@/lib/queries/guides'
+import { getTemplates } from '@/lib/queries/templates'
+import { getContentCounts } from '@/lib/queries/counts'
 import { Hero } from '@/components/sections/hero'
 import { StatsBar } from '@/components/sections/stats-bar'
 import { FeaturedWorkflows } from '@/components/sections/featured-workflows'
+import { FeaturedTemplates } from '@/components/sections/featured-templates'
 import { RoleGrid } from '@/components/sections/role-grid'
 import { LatestGuides } from '@/components/sections/latest-guides'
 import { CTASection } from '@/components/sections/cta-section'
@@ -36,10 +39,12 @@ const HOMEPAGE_GUIDE_SLUGS = [
 ]
 
 export default async function HomePage() {
-  const [featuredWorkflows, roles, latestGuides] = await Promise.all([
+  const [featuredWorkflows, roles, latestGuides, templates, counts] = await Promise.all([
     getFeaturedWorkflows(),
     getRoles(),
     getLatestGuides(6, HOMEPAGE_GUIDE_SLUGS),
+    getTemplates(),
+    getContentCounts(),
   ])
 
   const today = londonDate()
@@ -57,8 +62,9 @@ export default async function HomePage() {
           more={getRecentIdeas(ideaOfTheDay.idea.slug, 3, today)}
         />
       )}
-      <StatsBar />
+      <StatsBar counts={counts} />
       <FeaturedWorkflows workflows={featuredWorkflows} />
+      <FeaturedTemplates templates={templates} />
       <RoleGrid roles={roles} />
       <LatestGuides guides={latestGuides} />
       <NewsletterCTA />

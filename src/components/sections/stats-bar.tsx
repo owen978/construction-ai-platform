@@ -1,10 +1,15 @@
-export function StatsBar() {
+import type { ContentCounts } from '@/lib/queries/counts'
+
+/** Live counts only: every figure here comes from the published content. */
+export function StatsBar({ counts }: { counts: ContentCounts }) {
   const stats = [
-    { value: '50+', label: 'AI Workflows' },
-    { value: '6', label: 'Construction Roles' },
-    { value: '100%', label: 'Free to Use' },
-    { value: '5min', label: 'Average Time Saved' },
-  ]
+    { value: counts.workflows, label: 'AI Workflows' },
+    { value: counts.templates, label: 'Free Templates' },
+    { value: counts.guides, label: 'Practical Guides' },
+    { value: counts.roles, label: 'Construction Roles' },
+  ].filter((s) => s.value > 0)
+
+  if (stats.length === 0) return null
 
   return (
     <section className="border-y border-slate-200/60 bg-white py-12">
