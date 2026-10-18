@@ -3,10 +3,11 @@ import type { Metadata } from 'next'
 export const SITE_NAME = 'BuildCopilot'
 
 export const DEFAULT_OG_IMAGE = {
-  url: '/og-image.png',
+  // JPEG copy of og-image.png: 278 KB instead of 2.4 MB, so previews load reliably.
+  url: '/og-image.jpg',
   width: 1536,
   height: 1024,
-  alt: 'BuildCopilot — The AI Operating System for Construction',
+  alt: 'BuildCopilot: The AI Operating System for Construction',
 }
 
 /** Roughly what Google shows before truncating a title. */

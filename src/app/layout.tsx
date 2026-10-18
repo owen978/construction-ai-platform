@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Geist } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Header } from '@/components/layout/header'
 import { isDailyIdeasEnabled } from '@/lib/features'
@@ -10,12 +10,12 @@ import { cn } from "@/lib/utils";
 import { SITE_URL } from '@/lib/site'
 import { DEFAULT_OG_IMAGE, FEED_ALTERNATE, SITE_NAME } from '@/lib/metadata'
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
+// One font: Inter, exposed as --font-sans for Tailwind's font-sans. (Geist was
+// also loaded and preloaded, but Inter on <body> overrode it everywhere.)
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
@@ -60,8 +60,8 @@ export default function RootLayout({
   const showDailyIdeas = isDailyIdeasEnabled() && getPublishedIdeas().length > 0
 
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${inter.className} min-h-screen bg-white text-slate-600 antialiased`}>
+    <html lang="en-GB" className={cn('font-sans', inter.variable)}>
+      <body className="min-h-screen bg-white text-slate-600 antialiased">
         <Header showDailyIdeas={showDailyIdeas} />
         <main>{children}</main>
         <Footer showDailyIdeas={showDailyIdeas} />

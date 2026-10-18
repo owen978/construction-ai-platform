@@ -31,6 +31,7 @@ export function NewsletterInline({ className }: NewsletterInlineProps) {
 
           <div className="mx-auto mt-8 max-w-lg">
             <iframe
+              loading="lazy"
               src={GHL_NEWSLETTER_FORM_URL}
               style={{ width: '100%', height: '554px', border: 'none', borderRadius: '3px' }}
               id={`inline-${GHL_NEWSLETTER_FORM_ID}`}
