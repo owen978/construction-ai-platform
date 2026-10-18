@@ -13,6 +13,9 @@ sys.path.insert(0, sys.argv[1])
 from pipeline_ideas import MON, TUE, WED, THU, FRI, SAT, SUN  # noqa: E402
 
 OUT = sys.argv[2]
+# Optional: pipeline.json for the daily writing task, and an approval note.
+JSON_OUT = sys.argv[5] if len(sys.argv) > 5 else None
+APPROVED = sys.argv[6] if len(sys.argv) > 6 else ''  # e.g. 'Approved by Owen, 18 Oct 2026'
 BACKLOG = json.loads(open(sys.argv[3]).read())    # [{n, kw, slug}] in engine order
 LIVE = json.loads(open(sys.argv[4]).read())       # {'workflows': [...], 'guides': [...], 'templates': [...]}
 
@@ -107,7 +110,7 @@ for n, day, theme, it in rows:
         n, day, f'{day:%A}', theme, it['title'], ', '.join(ROLE.get(r, r) for r in it['roles']), it['task'],
         it['contract'], TOOL.get(it['tool'], it['tool']), DIFF[it['difficulty']], RISK[it['risk']],
         ('https://buildcopilot.ai' + it['related']) if it['related'] else '', it['source'], it['note'],
-        f"{g['kw']} (/guides/{g['slug']})" if g else '', LINKEDIN.get(day, ''), '', '',
+        f"{g['kw']} (/guides/{g['slug']})" if g else '', LINKEDIN.get(day, ''), 'Yes' if APPROVED else '', APPROVED,
     ])
 for row in ws.iter_rows(min_row=2):
     for cell in row:
@@ -167,6 +170,21 @@ for line in [
     'Ideas drawn from real client work (Bluefield) are marked "Anonymise" and will use sizes and trades only, never names.',
 ]:
     hw.append([line])
+
+if JSON_OUT:
+    DIFF_FULL = {'b': 'beginner', 'i': 'intermediate', 'a': 'advanced'}
+    RISK_FULL = {'l': 'low', 'm': 'medium', 'h': 'high'}
+    out = [{
+        'day': n, 'date': day.isoformat(), 'weekday': f'{day:%A}', 'theme': theme, 'title': it['title'],
+        'roles': it['roles'], 'task': it['task'],
+        'contractForms': [c.strip() for c in it['contract'].split(',') if c.strip()],
+        'tool': it['tool'], 'difficulty': DIFF_FULL[it['difficulty']], 'riskIfWrong': RISK_FULL[it['risk']],
+        'relatedPage': it['related'] or None, 'source': it['source'], 'notes': it['note'],
+        'status': 'approved' if APPROVED else 'proposed',
+    } for n, day, theme, it in rows]
+    with open(JSON_OUT, 'w') as f:
+        json.dump({'approval': APPROVED or None, 'start': rows[0][1].isoformat(), 'end': rows[-1][1].isoformat(), 'days': out}, f, indent=1, ensure_ascii=False)
+        f.write('\n')
 
 wb.move_sheet('How to review', offset=-4)
 wb.active = 0

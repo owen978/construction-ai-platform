@@ -14,7 +14,7 @@ relatedWorkflow: "generate-meeting-minutes"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""
-status: "draft"
+status: "approved"
 ---
 
 ## When to use it

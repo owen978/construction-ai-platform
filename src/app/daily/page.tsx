@@ -41,8 +41,10 @@ function filterHref(params: { role?: string; tool?: string; page?: number }) {
 export default async function DailyArchivePage({ searchParams }: DailyArchiveProps) {
   if (!isDailyIdeasEnabled()) notFound()
 
-  const { role, tool, page: pageParam } = await searchParams
   const all = getPublishedIdeas()
+  if (all.length === 0) notFound()
+
+  const { role, tool, page: pageParam } = await searchParams
   const filtered = all.filter((i) => (!role || i.roles.includes(role)) && (!tool || i.tool === tool))
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const page = Math.min(pages, Math.max(1, Number(pageParam) || 1))

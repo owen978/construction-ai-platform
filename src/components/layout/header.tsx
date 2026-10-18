@@ -11,10 +11,8 @@ import {
   SheetClose,
   SheetTitle,
 } from '@/components/ui/sheet'
-import { isDailyIdeasEnabled } from '@/lib/features'
 
-const navLinks = [
-  ...(isDailyIdeasEnabled() ? [{ href: '/daily', label: 'Daily Ideas' }] : []),
+const baseNavLinks = [
   { href: '/ai-workflows', label: 'AI Workflows' },
   { href: '/templates', label: 'Templates' },
   { href: '/ai-tools', label: 'AI Tools' },
@@ -23,7 +21,9 @@ const navLinks = [
   { href: '/services', label: 'Services' },
 ]
 
-export function Header() {
+/** showDailyIdeas comes from the server layout: true once a daily idea has been published. */
+export function Header({ showDailyIdeas = false }: { showDailyIdeas?: boolean }) {
+  const navLinks = showDailyIdeas ? [{ href: '/daily', label: 'Daily Ideas' }, ...baseNavLinks] : baseNavLinks
   const pathname = usePathname()
 
   return (
