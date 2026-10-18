@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // www served a duplicate copy of the site. One 301 hop to the apex,
+      // keeping path and query string.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.buildcopilot.ai" }],
+        destination: "https://buildcopilot.ai/:path*",
+        statusCode: 301,
+      },
       // A wrong slug in the risk-register guide; the role page is /ai-for/project-manager.
       {
         source: "/ai-for/project-management",
@@ -27,7 +35,7 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       // The £29 Prompt Pack is retired. Re-point this at the free Starter Pack
-      // landing page once it exists. 27 guides still link /prompt-pack in their text.
+      // landing page once it exists (old posts and bookmarks still use /prompt-pack).
       {
         source: "/prompt-pack",
         destination: "/newsletter",
