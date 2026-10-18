@@ -2,7 +2,7 @@
 /**
  * publish-guide.mjs — publish (or update) a guide from a Markdown file.
  *
- * Usage:  node scripts/publish-guide.mjs marketing/articles/some-guide.md [--draft]
+ * Usage:  node scripts/publish-guide.mjs marketing/articles/some-guide.md [--draft] [--check] [--skip-seo-checks]
  *
  * The Markdown file must start with a frontmatter block:
  *   ---
@@ -17,6 +17,10 @@
  *   meta_description: "..."
  *   ---
  *
+ * Search checks (scripts/lib/seo-checks.mjs) run first: title and description
+ * lengths, em dashes, word count and internal links. --check runs them
+ * without publishing; errors stop the publish unless --skip-seo-checks is given.
+ *
  * Upserts by slug: updates the existing guide if the slug exists, else inserts.
  * Reads Supabase credentials from .env.local.
  */
@@ -25,6 +29,7 @@ import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient } from '@supabase/supabase-js'
+import { checkPage, reportChecks } from './lib/seo-checks.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
@@ -83,6 +88,18 @@ async function main() {
 
   const raw = readFileSync(resolve(ROOT, filePath), 'utf8')
   const { data, body } = parseFrontmatter(raw)
+
+  const checks = checkPage({
+    kind: 'guide',
+    title: data.title ?? '',
+    metaTitle: data.meta_title ?? null,
+    description: data.description ?? null,
+    metaDescription: data.meta_description ?? null,
+    body,
+  })
+  const ok = reportChecks(filePath, checks, { skip: process.argv.includes('--skip-seo-checks') })
+  if (process.argv.includes('--check')) process.exit(ok ? 0 : 1)
+  if (!ok) process.exit(1)
 
   if (!data.title || !data.slug) {
     throw new Error('Frontmatter must include at least title and slug.')

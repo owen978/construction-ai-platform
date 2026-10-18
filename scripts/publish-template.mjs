@@ -2,7 +2,7 @@
 /**
  * publish-template.mjs — publish (or update) a template page from a Markdown file.
  *
- * Usage:  node scripts/publish-template.mjs marketing/templates/some-template.md [--draft]
+ * Usage:  node scripts/publish-template.mjs marketing/templates/some-template.md [--draft] [--check] [--skip-seo-checks]
  *
  * The file has frontmatter for the meta fields, then the body uses
  * "## <section>" headings whose names match the templates table columns:
@@ -24,6 +24,10 @@
  *   ## key_sections
  *   ...
  *
+ * Search checks (scripts/lib/seo-checks.mjs) run first: title and description
+ * lengths, em dashes, word count and internal links. --check runs them
+ * without publishing; errors stop the publish unless --skip-seo-checks is given.
+ *
  * Upserts the `templates` table by slug. Reads Supabase creds from .env.local.
  */
 
@@ -31,6 +35,7 @@ import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient } from '@supabase/supabase-js'
+import { checkPage, reportChecks } from './lib/seo-checks.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
@@ -106,6 +111,18 @@ async function main() {
 
   const raw = readFileSync(resolve(ROOT, filePath), 'utf8')
   const { data, body } = parseFrontmatter(raw)
+
+  const checks = checkPage({
+    kind: 'template',
+    title: data.name ?? '',
+    metaTitle: data.meta_title ?? null,
+    description: data.description ?? null,
+    metaDescription: data.meta_description ?? null,
+    body,
+  })
+  const ok = reportChecks(filePath, checks, { skip: process.argv.includes('--skip-seo-checks') })
+  if (process.argv.includes('--check')) process.exit(ok ? 0 : 1)
+  if (!ok) process.exit(1)
   const sections = parseSections(body)
 
   if (!data.name || !data.slug) {
