@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local Vercel build output, and worktrees of parallel Claude sessions.
+    ".vercel/**",
+    ".claude/**",
   ]),
 ]);
 

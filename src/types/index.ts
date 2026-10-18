@@ -8,6 +8,7 @@ export type Guide = Database['public']['Tables']['guides']['Row']
 export type Workflow = Database['public']['Tables']['workflows']['Row']
 export type Prompt = Database['public']['Tables']['prompts']['Row']
 export type ContentPost = Database['public']['Tables']['content_posts']['Row']
+export type Template = Database['public']['Tables']['templates']['Row']
 
 // Insert types
 export type RoleInsert = Database['public']['Tables']['roles']['Insert']
@@ -39,27 +40,6 @@ export type RoleWithTasks = Role & {
   tasks: Task[]
 }
 
-// Template type (manual definition until database types are regenerated)
-export interface Template {
-  id: string
-  name: string
-  slug: string
-  description: string | null
-  what_is_it: string | null
-  key_sections: string | null
-  template_content: string | null
-  when_to_use: string | null
-  who_uses_it: string | null
-  ai_tips: string | null
-  icon: string | null
-  primary_keyword: string | null
-  meta_title: string | null
-  meta_description: string | null
-  status: string
-  sort_order: number | null
-  created_at: string
-  updated_at: string
-}
 
 // Status and difficulty types
 export type ContentStatus = 'draft' | 'published' | 'archived'

@@ -446,6 +446,70 @@ export type Database = {
           },
         ]
       }
+      // Added by hand from schema/templates-migration.sql (not yet regenerated).
+      templates: {
+        Row: {
+          id: string
+          name: string
+          slug: string
+          description: string | null
+          what_is_it: string | null
+          key_sections: string | null
+          template_content: string | null
+          when_to_use: string | null
+          who_uses_it: string | null
+          ai_tips: string | null
+          icon: string | null
+          primary_keyword: string | null
+          meta_title: string | null
+          meta_description: string | null
+          status: 'draft' | 'published' | 'archived'
+          sort_order: number | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          slug: string
+          description?: string | null
+          what_is_it?: string | null
+          key_sections?: string | null
+          template_content?: string | null
+          when_to_use?: string | null
+          who_uses_it?: string | null
+          ai_tips?: string | null
+          icon?: string | null
+          primary_keyword?: string | null
+          meta_title?: string | null
+          meta_description?: string | null
+          status?: 'draft' | 'published' | 'archived'
+          sort_order?: number | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          slug?: string
+          description?: string | null
+          what_is_it?: string | null
+          key_sections?: string | null
+          template_content?: string | null
+          when_to_use?: string | null
+          who_uses_it?: string | null
+          ai_tips?: string | null
+          icon?: string | null
+          primary_keyword?: string | null
+          meta_title?: string | null
+          meta_description?: string | null
+          status?: 'draft' | 'published' | 'archived'
+          sort_order?: number | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

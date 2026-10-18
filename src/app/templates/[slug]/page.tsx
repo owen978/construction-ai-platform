@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: TemplateDetailPageProps): Pro
     path: `/templates/${slug}`,
     title: template.meta_title || template.name,
     description: template.meta_description || template.description || undefined,
+    routeImage: true,
   })
 }
 
@@ -73,7 +74,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
   const serviceCta = getServiceCta('templates', slug)
   const freeTool = FREE_TOOL_CALLOUTS[slug]
   const relatedResources = await getRelatedContent({
-    keywords: `${template.name} ${template.primary_keyword ?? ''} ${template.description ?? ''}`,
+    title: `${template.name} ${template.primary_keyword ?? ''}`,
+    context: template.description ?? '',
     excludeType: 'template',
     excludeSlug: template.slug,
   })

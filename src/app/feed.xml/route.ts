@@ -56,7 +56,7 @@ export async function GET() {
       .eq('status', 'published')
       .order('created_at', { ascending: false })
       .limit(10),
-    (supabase as any)
+    supabase
       .from('templates')
       .select('name, slug, description, created_at')
       .eq('status', 'published')

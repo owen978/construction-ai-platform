@@ -1,4 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+// Without its own metadata a 404 showed the homepage title and the layout's
+// "index, follow" next to Next.js's automatic noindex.
+export const metadata: Metadata = {
+  title: 'Page not found',
+  robots: { index: false, follow: true },
+}
 
 export default function NotFound() {
   return (

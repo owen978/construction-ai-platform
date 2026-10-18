@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: WorkflowDetailPageProps): Pro
     path: `/ai-workflows/${slug}`,
     title: workflow.meta_title || workflow.title,
     description: workflow.meta_description || workflow.description || undefined,
+    routeImage: true,
   })
 }
 

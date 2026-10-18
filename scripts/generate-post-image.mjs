@@ -13,7 +13,7 @@
  * without, a big-title card. Brand: charcoal #14152a, orange #ff6b35, white text.
  */
 
-import { writeFileSync, mkdirSync } from 'node:fs'
+import { mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
