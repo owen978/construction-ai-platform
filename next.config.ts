@@ -1,10 +1,26 @@
 import type { NextConfig } from "next";
 import { COPILOT_TOOL_SLUG, features } from "./src/lib/features";
 
+// HSTS is already sent by Vercel. No full CSP yet: the GHL form embed and
+// Vercel Analytics would need allow-listing first.
+const securityHeaders = [
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+  },
+];
+
 const nextConfig: NextConfig = {
+  async headers() {
+    return [{ source: "/:path*", headers: securityHeaders }];
+  },
   async redirects() {
     return [
-      // Linked from the risk-register guide before the role page's slug was fixed.
+      // A wrong slug in the risk-register guide; the role page is /ai-for/project-manager.
       {
         source: "/ai-for/project-management",
         destination: "/ai-for/project-manager",
