@@ -9,6 +9,16 @@ export const features = {
    * /ai-tools (next.config.ts).
    */
   copilot: false,
+  /**
+   * "Construction AI workflow of the day": homepage card, /daily archive and
+   * /daily/{date}-{slug} pages. Off until Owen approves the idea pipeline.
+   * Always on in local development so the feature can be built and reviewed.
+   */
+  dailyIdeas: false,
+}
+
+export function isDailyIdeasEnabled() {
+  return features.dailyIdeas || process.env.NODE_ENV === 'development'
 }
 
 export const COPILOT_TOOL_SLUG = 'ai-construction-copilot'

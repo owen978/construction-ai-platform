@@ -1,4 +1,5 @@
-export const revalidate = 3600
+// 10 minutes, so the workflow of the day switches soon after midnight (London) without a deploy.
+export const revalidate = 600
 
 import { getFeaturedWorkflows } from '@/lib/queries/workflows'
 import { getRoles } from '@/lib/queries/roles'
@@ -11,6 +12,9 @@ import { LatestGuides } from '@/components/sections/latest-guides'
 import { CTASection } from '@/components/sections/cta-section'
 import { NewsletterCTA } from '@/components/sections/newsletter-cta'
 import { websiteSchema, jsonLdScriptProps } from '@/lib/schema'
+import { DailyIdeaCard } from '@/components/daily/daily-idea-card'
+import { isDailyIdeasEnabled } from '@/lib/features'
+import { getIdeaOfTheDay, getRecentIdeas, londonDate } from '@/lib/daily-ideas'
 import type { Metadata } from 'next'
 import { FEED_ALTERNATE } from '@/lib/metadata'
 
@@ -38,10 +42,21 @@ export default async function HomePage() {
     getLatestGuides(6, HOMEPAGE_GUIDE_SLUGS),
   ])
 
+  const today = londonDate()
+  const ideaOfTheDay = isDailyIdeasEnabled() ? getIdeaOfTheDay(today) : null
+
   return (
     <>
       <script {...jsonLdScriptProps(websiteSchema())} />
       <Hero />
+      {ideaOfTheDay && (
+        <DailyIdeaCard
+          idea={ideaOfTheDay.idea}
+          rotated={ideaOfTheDay.rotated}
+          today={today}
+          more={getRecentIdeas(ideaOfTheDay.idea.slug, 3, today)}
+        />
+      )}
       <StatsBar />
       <FeaturedWorkflows workflows={featuredWorkflows} />
       <RoleGrid roles={roles} />

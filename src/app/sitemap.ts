@@ -1,7 +1,11 @@
 import type { MetadataRoute } from 'next'
 import { createPublicClient } from '@/lib/supabase/public'
 import { SITE_URL } from '@/lib/site'
-import { isToolVisible } from '@/lib/features'
+import { isDailyIdeasEnabled, isToolVisible } from '@/lib/features'
+import { getPublishedIdeas, ideaPath } from '@/lib/daily-ideas'
+
+// Hourly, so each day's idea page joins the sitemap on its day without a deploy.
+export const revalidate = 3600
 
 /**
  * Newest updated_at across the given rows. Hub pages use this so their lastmod
@@ -161,8 +165,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
+  const dailyIdeas = isDailyIdeasEnabled() ? getPublishedIdeas() : []
+  const dailyPages: MetadataRoute.Sitemap = dailyIdeas.length
+    ? [
+        {
+          url: `${SITE_URL}/daily`,
+          lastModified: new Date(`${dailyIdeas[0].publishDate}T00:00:00Z`),
+          changeFrequency: 'daily' as const,
+          priority: 0.8,
+        },
+        ...dailyIdeas.map((i) => ({
+          url: `${SITE_URL}${ideaPath(i)}`,
+          lastModified: new Date(`${i.publishDate}T00:00:00Z`),
+          changeFrequency: 'monthly' as const,
+          priority: 0.6,
+        })),
+      ]
+    : []
+
   return [
     ...staticPages,
+    ...dailyPages,
     ...workflowPages,
     ...templatePages,
     ...rolePages,
