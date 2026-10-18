@@ -14,9 +14,11 @@ const SITE_NAME = 'BuildCopilot'
 export function organizationSchema() {
   return {
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    // /logo.png never existed (404); the 180px app icon meets Google's 112px minimum.
+    logo: `${SITE_URL}/apple-icon.png`,
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals.',
     sameAs: [
@@ -32,7 +34,7 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
-    alternateName: 'BuildCopilot — The AI Operating System for Construction',
+    alternateName: 'BuildCopilot: The AI Operating System for Construction',
     url: SITE_URL,
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
@@ -196,6 +198,8 @@ export function articleSchema(options: ArticleOptions) {
     headline: options.title,
     description: options.description,
     url: `${SITE_URL}/guides/${options.slug}`,
+    image: `${SITE_URL}/guides/${options.slug}/opengraph-image`,
+    inLanguage: 'en-GB',
     publisher: organizationSchema(),
     ...contentCredits(),
     mainEntityOfPage: {
@@ -304,7 +308,7 @@ export function softwareApplicationSchema(options: SoftwareAppOptions) {
     url: options.url || `${SITE_URL}/ai-tools/${options.slug}`,
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    publisher: organizationSchema(),
+    // No publisher: these are other companies' products, reviewed here.
   }
 
   if (options.category) {
@@ -315,11 +319,14 @@ export function softwareApplicationSchema(options: SoftwareAppOptions) {
     const isFree =
       options.pricing.toLowerCase().includes('free') ||
       options.pricing.toLowerCase().includes('freemium')
-    schema.offers = {
-      '@type': 'Offer',
-      price: isFree ? '0' : undefined,
-      priceCurrency: 'USD',
-      description: options.pricing,
+    // Only a free tier can be stated as a valid Offer; paid prices vary and aren't stored.
+    if (isFree) {
+      schema.offers = {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'GBP',
+        description: options.pricing,
+      }
     }
   }
 

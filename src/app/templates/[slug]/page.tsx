@@ -95,9 +95,12 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
       description: template.description || `Free ${template.name} for construction professionals`,
       url: `${SITE_URL}/templates/${template.slug}`,
       isAccessibleForFree: true,
-      inLanguage: 'en',
+      inLanguage: 'en-GB',
+      dateModified: template.updated_at,
+      image: `${SITE_URL}/templates/${template.slug}/opengraph-image`,
       publisher: {
         '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
         name: 'BuildCopilot',
         url: SITE_URL,
       },
