@@ -10,12 +10,32 @@ import { collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { cn } from '@/lib/utils'
 import { getPublishedIdeas, ideaPath, roleLabel, toolLabel, type DailyIdea } from '@/lib/daily-ideas'
 
-export const metadata: Metadata = pageMetadata({
-  path: '/daily',
-  title: 'Construction AI Workflow of the Day: Archive',
-  description:
-    'A new construction AI workflow every day: the prompt to copy, what it produced and what you still check. Browse every one by role, task and tool.',
-})
+const ARCHIVE_TITLE = 'Construction AI Workflow of the Day: Archive'
+const ARCHIVE_DESCRIPTION =
+  'A new construction AI workflow every day: the prompt to copy, what it produced and what you still check. Browse every one by role, task and tool.'
+
+/**
+ * Page 2, 3... of the full archive are their own canonical pages, so older
+ * ideas keep a crawl path. Role and tool filters only re-sort the same ideas
+ * (and duplicate the /ai-for/ hubs), so they point at /daily and stay out of
+ * the index while their links are still followed.
+ */
+export async function generateMetadata({ searchParams }: DailyArchiveProps): Promise<Metadata> {
+  const { role, tool, page } = await searchParams
+  const lastPage = Math.max(1, Math.ceil(getPublishedIdeas().length / PAGE_SIZE))
+  const pageNumber = Math.min(lastPage, Math.max(1, Number(page) || 1))
+  if (role || tool) {
+    return { ...pageMetadata({ path: '/daily', title: ARCHIVE_TITLE, description: ARCHIVE_DESCRIPTION }), robots: { index: false, follow: true } }
+  }
+  if (pageNumber > 1) {
+    return pageMetadata({
+      path: `/daily?page=${pageNumber}`,
+      title: `${ARCHIVE_TITLE} (page ${pageNumber})`,
+      description: ARCHIVE_DESCRIPTION,
+    })
+  }
+  return pageMetadata({ path: '/daily', title: ARCHIVE_TITLE, description: ARCHIVE_DESCRIPTION })
+}
 
 const PAGE_SIZE = 30
 
