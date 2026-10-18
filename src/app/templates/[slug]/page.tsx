@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { getTemplateBySlug, getTemplateSlugs } from '@/lib/queries/templates'
 import { CopyButton } from '@/components/ui/copy-button'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
+import { features } from '@/lib/features'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
@@ -253,7 +254,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
 
           <PromptPackCTA context="template" />
 
-          <CopilotCTA />
+          {features.copilot && <CopilotCTA />}
 
           <NewsletterSidebar />
         </div>

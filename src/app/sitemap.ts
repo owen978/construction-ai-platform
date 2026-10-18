@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { createPublicClient } from '@/lib/supabase/public'
 import { SITE_URL } from '@/lib/site'
+import { isToolVisible } from '@/lib/features'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = createPublicClient()
@@ -128,12 +129,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // Dynamic tool pages
-  const toolPages: MetadataRoute.Sitemap = (tools.data ?? []).map((t) => ({
-    url: `${SITE_URL}/ai-tools/${t.slug}`,
-    lastModified: new Date(t.updated_at),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  const toolPages: MetadataRoute.Sitemap = (tools.data ?? [])
+    .filter((t) => isToolVisible(t.slug))
+    .map((t) => ({
+      url: `${SITE_URL}/ai-tools/${t.slug}`,
+      lastModified: new Date(t.updated_at),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
 
   // Dynamic guide pages
   const guidePages: MetadataRoute.Sitemap = (guides.data ?? []).map((g) => ({

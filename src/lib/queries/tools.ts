@@ -1,4 +1,5 @@
 import { createPublicClient } from '@/lib/supabase/public'
+import { isToolVisible } from '@/lib/features'
 import type { Tool } from '@/types'
 
 export async function getTools(): Promise<Tool[]> {
@@ -11,10 +12,12 @@ export async function getTools(): Promise<Tool[]> {
     .order('sort_order', { ascending: true })
 
   if (error) throw error
-  return data ?? []
+  return (data ?? []).filter((t) => isToolVisible(t.slug))
 }
 
 export async function getToolBySlug(slug: string): Promise<Tool | null> {
+  if (!isToolVisible(slug)) return null
+
   const supabase = createPublicClient()
 
   const { data, error } = await supabase
@@ -40,10 +43,9 @@ export async function getFeaturedTools(limit: number = 6): Promise<Tool[]> {
     .eq('status', 'published')
     .eq('featured', true)
     .order('sort_order', { ascending: true })
-    .limit(limit)
 
   if (error) throw error
-  return data ?? []
+  return (data ?? []).filter((t) => isToolVisible(t.slug)).slice(0, limit)
 }
 
 export async function getOtherTools(excludeSlug: string, limit: number = 5): Promise<Tool[]> {
@@ -55,10 +57,9 @@ export async function getOtherTools(excludeSlug: string, limit: number = 5): Pro
     .eq('status', 'published')
     .neq('slug', excludeSlug)
     .order('sort_order', { ascending: true })
-    .limit(limit)
 
   if (error) throw error
-  return data ?? []
+  return (data ?? []).filter((t) => isToolVisible(t.slug)).slice(0, limit)
 }
 
 export async function getToolSlugs(): Promise<{ slug: string }[]> {
@@ -70,5 +71,5 @@ export async function getToolSlugs(): Promise<{ slug: string }[]> {
     .eq('status', 'published')
 
   if (error) throw error
-  return data ?? []
+  return (data ?? []).filter((t) => isToolVisible(t.slug))
 }

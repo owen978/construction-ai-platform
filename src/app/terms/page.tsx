@@ -88,7 +88,7 @@ export default function TermsPage() {
           <div>
             <h2 className="mb-4 text-2xl font-bold text-slate-900">7. Third-Party Links and Tools</h2>
             <p>
-              The Site may contain links to third-party websites, AI tools, and software products (including AI Construction Copilot). We are not responsible for the content, privacy practices, or terms of any third-party services. Use of third-party tools is subject to their own terms and conditions.
+              The Site may contain links to third-party websites, AI tools, and software products. We are not responsible for the content, privacy practices, or terms of any third-party services. Use of third-party tools is subject to their own terms and conditions.
             </p>
           </div>
 

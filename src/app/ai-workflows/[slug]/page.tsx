@@ -9,6 +9,7 @@ import { CopyButton } from '@/components/ui/copy-button'
 import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
+import { features } from '@/lib/features'
 import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
@@ -209,7 +210,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
 
           <PromptPackCTA context="workflow" />
 
-          <CopilotCTA />
+          {features.copilot && <CopilotCTA />}
 
           <NewsletterSidebar />
         </div>

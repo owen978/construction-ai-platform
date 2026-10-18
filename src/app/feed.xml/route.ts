@@ -1,5 +1,6 @@
 import { createPublicClient } from '@/lib/supabase/public'
 import { SITE_URL } from '@/lib/site'
+import { isToolVisible } from '@/lib/features'
 
 interface FeedItem {
   title: string
@@ -83,7 +84,7 @@ export async function GET() {
     })
   }
 
-  for (const t of tools.data ?? []) {
+  for (const t of (tools.data ?? []).filter((t) => isToolVisible(t.slug))) {
     items.push({
       title: t.name,
       url: `${SITE_URL}/ai-tools/${t.slug}`,

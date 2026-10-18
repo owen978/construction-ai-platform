@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { pageMetadata } from '@/lib/metadata'
+import { features } from '@/lib/features'
 
 export const metadata: Metadata = pageMetadata({
   path: '/contact',
@@ -98,21 +99,23 @@ export default function ContactPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
-          <h2 className="mb-2 text-xl font-bold text-white">Looking for AI Construction Copilot?</h2>
-          <p className="mb-6 text-slate-300">Our software product has all these workflows pre-built and ready to run.</p>
-          <a
-            href="https://aiconstructioncopilot.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
-          >
-            Visit AI Construction Copilot
-            <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-            </svg>
-          </a>
-        </div>
+        {features.copilot && (
+          <div className="mt-12 rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
+            <h2 className="mb-2 text-xl font-bold text-white">Looking for AI Construction Copilot?</h2>
+            <p className="mb-6 text-slate-300">Our software product has all these workflows pre-built and ready to run.</p>
+            <a
+              href="https://aiconstructioncopilot.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
+            >
+              Visit AI Construction Copilot
+              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </>
   )
