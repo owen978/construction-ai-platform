@@ -45,6 +45,13 @@ export async function generateStaticParams() {
   return slugs.map(({ slug }) => ({ slug }))
 }
 
+/** "RAMS Template" → "What is a RAMS?", "Meeting Minutes Template" → "What are meeting minutes?" */
+function whatIsHeading(name: string) {
+  const thing = name.replace(/\s+template$/i, '')
+  if (/minutes$/i.test(thing)) return `What are ${thing}?`
+  return `What is ${/^[aeiou]/i.test(thing) ? 'an' : 'a'} ${thing}?`
+}
+
 interface TemplateDetailPageProps {
   params: Promise<{ slug: string }>
 }
@@ -140,7 +147,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           {template.what_is_it && (
             <div className="mt-8">
               <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">
-                What is a {template.name}?
+                {whatIsHeading(template.name)}
               </h2>
               <div className="whitespace-pre-wrap text-slate-600 leading-relaxed">
                 {template.what_is_it}

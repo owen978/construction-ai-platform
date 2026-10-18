@@ -50,7 +50,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
 
   const [workflows, otherTools] = await Promise.all([
     getWorkflowsByToolId(tool.id),
-    getOtherTools(slug, 5),
+    getOtherTools(slug, 10), // all the other tools, so every tool page gets linked
   ])
 
   const schemas = [

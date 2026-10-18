@@ -53,7 +53,7 @@ export function checkPage({ kind, title, metaTitle, description, metaDescription
     else if (words < 2000) warnings.push(`${words} words; the content rules aim for 2,000 to 3,000.`)
     if (links < 3) errors.push(`only ${links} internal links; link at least 3 related BuildCopilot pages (aim for 5 or more).`)
     else if (links < 5) warnings.push(`${links} internal links; aim for 5 or more.`)
-    if (!/^## +Frequently asked questions/im.test(body)) warnings.push('no "## Frequently asked questions" section, so the page can\'t show FAQ rich results.')
+    if (!/^## +Frequently asked questions/im.test(body)) warnings.push('no "## Frequently asked questions" section; FAQs answer the follow-up searches and AI overviews pick them up.')
   } else if (links < 2) {
     warnings.push(`${links} internal links; add 2 or 3 to related BuildCopilot pages.`)
   }

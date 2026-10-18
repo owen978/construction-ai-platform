@@ -1,5 +1,9 @@
+import type { Metadata } from 'next'
 import { isAdmin } from '@/lib/auth'
 import { AdminSidebar } from '@/components/layout/admin-sidebar'
+
+// Keep the CMS (including /admin/login) out of search results.
+export const metadata: Metadata = { robots: { index: false, follow: false } }
 
 export default async function AdminLayout({
   children,
