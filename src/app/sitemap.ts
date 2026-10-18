@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     supabase.from('tasks').select('slug, updated_at').eq('status', 'published'),
     supabase.from('tools').select('slug, updated_at').eq('status', 'published'),
     supabase.from('guides').select('slug, updated_at').eq('status', 'published'),
-    (supabase as any).from('templates').select('slug, updated_at').eq('status', 'published'),
+    supabase.from('templates').select('slug, updated_at').eq('status', 'published'),
   ])
 
   const workflowRows = workflows.data ?? []

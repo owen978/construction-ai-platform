@@ -58,22 +58,14 @@ export async function getRelatedContent(opts: GetRelatedOptions): Promise<Relate
   if (primary.size === 0 && secondary.size === 0) return []
 
   const supabase = createPublicClient()
-  const [guidesRes, workflowsRes] = await Promise.all([
+  const [guidesRes, workflowsRes, templatesRes] = await Promise.all([
     supabase.from('guides').select('slug, title').eq('status', 'published'),
     supabase.from('workflows').select('slug, title').eq('status', 'published'),
+    supabase.from('templates').select('slug, name').eq('status', 'published'),
   ])
-  // The templates table is not in the generated Database types, so query it untyped.
-  const templatesRes = await (supabase as unknown as {
-    from: (t: string) => {
-      select: (c: string) => { eq: (k: string, v: string) => Promise<{ data: { slug: string; name: string }[] | null }> }
-    }
-  })
-    .from('templates')
-    .select('slug, name')
-    .eq('status', 'published')
 
-  const guidesData = (guidesRes.data ?? []) as { slug: string; title: string }[]
-  const workflowsData = (workflowsRes.data ?? []) as { slug: string; title: string }[]
+  const guidesData = guidesRes.data ?? []
+  const workflowsData = workflowsRes.data ?? []
   const templatesData = templatesRes.data ?? []
 
   const candidates: RelatedItem[] = []
