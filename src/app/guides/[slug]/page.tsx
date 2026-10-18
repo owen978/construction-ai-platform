@@ -16,8 +16,7 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import type { DifficultyLevel } from '@/types'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 export async function generateStaticParams() {
   const slugs = await getGuideSlugs()

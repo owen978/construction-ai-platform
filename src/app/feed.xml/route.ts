@@ -1,6 +1,5 @@
 import { createPublicClient } from '@/lib/supabase/public'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 interface FeedItem {
   title: string

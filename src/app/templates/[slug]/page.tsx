@@ -17,8 +17,7 @@ import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { FreeToolCallout } from '@/components/sections/free-tool-callout'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 /** Free interactive tools promoted from closely related template pages. */
 const FREE_TOOL_CALLOUTS: Record<

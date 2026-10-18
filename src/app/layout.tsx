@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import './globals.css'
 import { cn } from "@/lib/utils";
+import { SITE_URL } from '@/lib/site'
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -14,10 +15,8 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     template: '%s | BuildCopilot',
     default: 'BuildCopilot: The AI Operating System for Construction',
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: siteUrl,
+    url: SITE_URL,
     siteName: 'BuildCopilot',
     title: 'BuildCopilot: The AI Operating System for Construction',
     description:

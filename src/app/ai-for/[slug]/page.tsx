@@ -15,8 +15,7 @@ import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 export async function generateStaticParams() {
   const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])

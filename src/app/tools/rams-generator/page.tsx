@@ -3,8 +3,7 @@ import Link from 'next/link'
 import { breadcrumbSchema, faqSchema, organizationSchema, jsonLdScriptProps } from '@/lib/schema'
 import { FormwiseEmbed } from '@/components/formwise-embed'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Free RAMS Generator: Risk Assessment & Method Statement',

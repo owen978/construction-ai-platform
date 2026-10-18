@@ -5,7 +5,7 @@
  * See: https://developers.google.com/search/docs/appearance/structured-data
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 const SITE_NAME = 'BuildCopilot'
 
 // ─── Organization (shared across schemas) ───────────────────────────

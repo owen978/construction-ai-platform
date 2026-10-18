@@ -11,8 +11,7 @@ import { breadcrumbSchema, softwareApplicationSchema, jsonLdScriptProps } from '
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { ToolCard } from '@/components/cards/tool-card'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://buildcopilot.ai'
+import { SITE_URL } from '@/lib/site'
 
 export async function generateStaticParams() {
   const slugs = await getToolSlugs()
