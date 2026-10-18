@@ -11,13 +11,15 @@ import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features } from '@/lib/features'
-import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { TypicalResult } from '@/components/sections/typical-result'
 import { getWorkflowResult } from '@/lib/workflow-results'
+import { WorkflowExtras } from '@/components/sections/workflow-extras'
+import { getWorkflowExtras } from '@/lib/workflow-extras'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { RelatedGuides } from '@/components/sections/related-guides'
@@ -66,6 +68,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
 
   const serviceCta = getServiceCta('ai-workflows', slug)
   const result = getWorkflowResult(slug)
+  const extras = getWorkflowExtras(slug)
 
   // Build HowTo steps from the prompt (split into logical steps)
   const promptSteps = workflow.prompt
@@ -102,6 +105,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       estimatedTime: result ? `PT${result.timeWithAiMins}M` : undefined,
       dateModified: workflow.updated_at,
     }),
+    ...(extras && extras.faqs.length > 0 ? [faqSchema(extras.faqs)] : []),
   ]
 
   return (
@@ -198,6 +202,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               </div>
             </div>
           )}
+
+          {extras && <WorkflowExtras extras={extras} />}
         </div>
 
         {/* Sidebar */}
