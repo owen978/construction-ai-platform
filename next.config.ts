@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
         destination: "/ai-for/project-manager",
         statusCode: 301,
       },
+      // The £29 Prompt Pack is retired. Re-point this at the free Starter Pack
+      // landing page once it exists. 27 guides still link /prompt-pack in their text.
+      {
+        source: "/prompt-pack",
+        destination: "/newsletter",
+        statusCode: 301,
+      },
       // AI Construction Copilot is hidden until its relaunch (src/lib/features.ts).
       ...(features.copilot
         ? []

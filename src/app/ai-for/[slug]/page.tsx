@@ -9,7 +9,6 @@ import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workfl
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
@@ -130,10 +129,6 @@ export default async function AIForPage({ params }: AIForPageProps) {
           <p className="text-slate-500">No workflows available for this role yet.</p>
         )}
 
-        <div className="mt-12 mx-auto max-w-xl">
-          <PromptPackCTA context="role" roleName={role.name} />
-        </div>
-
         <RelatedGuides section="ai-for" slug={slug} />
 
         <RelatedResources items={relatedResources} />
@@ -217,10 +212,6 @@ export default async function AIForPage({ params }: AIForPageProps) {
         ) : (
           <p className="text-slate-500">No workflows available for this task yet.</p>
         )}
-
-        <div className="mt-12 mx-auto max-w-xl">
-          <PromptPackCTA context="role" roleName={task.name} />
-        </div>
 
         <RelatedGuides section="ai-for" slug={slug} />
 

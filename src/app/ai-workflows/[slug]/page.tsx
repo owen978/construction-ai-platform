@@ -12,8 +12,7 @@ import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features } from '@/lib/features'
 import { breadcrumbSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
-import { PromptPackBanner } from '@/components/sections/prompt-pack-banner'
-import { PromptPackCTA } from '@/components/ui/prompt-pack-cta'
+import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { RelatedGuides } from '@/components/sections/related-guides'
@@ -148,7 +147,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
             </div>
           )}
 
-          <PromptPackBanner context="workflow" />
+          <NewsletterBanner />
 
           {/* Prompt */}
           {workflow.prompt && (
@@ -207,8 +206,6 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               <GuideCard guide={workflow.guide} />
             </div>
           )}
-
-          <PromptPackCTA context="workflow" />
 
           {features.copilot && <CopilotCTA />}
 
