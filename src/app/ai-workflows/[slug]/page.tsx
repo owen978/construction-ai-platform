@@ -3,7 +3,10 @@ export const revalidate = 3600
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getWorkflowBySlug, getWorkflowSlugs } from '@/lib/queries/workflows'
+import { getWorkflowBySlug, getWorkflowSlugs, getWorkflowsByRoleId } from '@/lib/queries/workflows'
+import { getRelatedContent } from '@/lib/queries/related'
+import { RelatedResources } from '@/components/sections/related-resources'
+import { WorkflowCard } from '@/components/cards/workflow-card'
 import { Badge } from '@/components/ui/badge'
 import { Byline } from '@/components/ui/byline'
 import { CopyButton } from '@/components/ui/copy-button'
@@ -71,25 +74,25 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
   const serviceCta = getServiceCta('ai-workflows', slug)
   const result = getWorkflowResult(slug)
   const extras = getWorkflowExtras(slug)
+  const [relatedResources, roleWorkflows] = await Promise.all([
+    getRelatedContent({
+      title: workflow.title,
+      context: workflow.description ?? '',
+      excludeType: 'workflow',
+      excludeSlug: slug,
+    }),
+    workflow.role_id ? getWorkflowsByRoleId(workflow.role_id) : Promise.resolve([]),
+  ])
+  const moreForRole = roleWorkflows.filter((w) => w.slug !== slug).slice(0, 4)
 
-  // Build HowTo steps from the prompt (split into logical steps)
-  const promptSteps = workflow.prompt
-    ? workflow.prompt
-        .split(/\n(?=\d+[\.\)]\s|Step\s+\d|[-•]\s)/)
-        .map((s: string) => s.trim())
-        .filter((s: string) => s.length > 10)
-    : []
-
-  // If prompt doesn't split well, create generic steps
-  const howToSteps =
-    promptSteps.length >= 2
-      ? promptSteps
-      : [
-          `Open your preferred AI tool (e.g. ChatGPT, Claude, or Microsoft Copilot)`,
-          `Copy the ${workflow.title} prompt below and paste it into the AI tool`,
-          `Customise the placeholders with your project-specific details`,
-          `Review the AI output and refine as needed for your project`,
-        ]
+  // HowTo steps describe using the workflow. (Splitting the prompt itself gave
+  // steps like "4. Materials", which are headings inside the prompt, not steps.)
+  const howToSteps = [
+    `Open your preferred AI tool (e.g. ChatGPT, Claude, or Microsoft Copilot)`,
+    `Copy the ${workflow.title} prompt below and paste it into the AI tool`,
+    `Customise the placeholders with your project-specific details`,
+    `Review the AI output and refine as needed for your project`,
+  ]
 
   const schemas = [
     breadcrumbSchema([
@@ -144,10 +147,14 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               {workflow.difficulty ? workflow.difficulty.charAt(0).toUpperCase() + workflow.difficulty.slice(1) : 'Workflow'}
             </Badge>
             {workflow.role && (
-              <Badge variant="default">{workflow.role.name}</Badge>
+              <Link href={`/ai-for/${workflow.role.slug}`} title={`AI for ${workflow.role.name}s`}>
+                <Badge variant="default" className="transition-opacity hover:opacity-80">{workflow.role.name}</Badge>
+              </Link>
             )}
             {workflow.task && (
-              <Badge variant="info">{workflow.task.name}</Badge>
+              <Link href={`/ai-for/${workflow.task.slug}`} title={`AI for ${workflow.task.name.toLowerCase()}`}>
+                <Badge variant="info" className="transition-opacity hover:opacity-80">{workflow.task.name}</Badge>
+              </Link>
             )}
           </div>
 
@@ -236,7 +243,23 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
         </div>
       </div>
 
+      {moreForRole.length > 0 && workflow.role && (
+        <section className="mt-16">
+          <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-slate-200 pb-3">
+            <h2 className="text-2xl font-bold text-slate-900">More AI workflows for {workflow.role.name}s</h2>
+            <Link href={`/ai-for/${workflow.role.slug}`} className="text-sm font-semibold text-primary hover:underline">
+              All {workflow.role.name} workflows &rarr;
+            </Link>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {moreForRole.map((w) => <WorkflowCard key={w.id} workflow={w} />)}
+          </div>
+        </section>
+      )}
+
       <RelatedGuides section="ai-workflows" slug={slug} />
+
+      <RelatedResources items={relatedResources} />
     </div>
   )
 }
