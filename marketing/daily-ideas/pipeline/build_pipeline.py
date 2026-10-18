@@ -19,8 +19,8 @@ APPROVED = sys.argv[6] if len(sys.argv) > 6 else ''  # e.g. 'Approved by Owen, 1
 BACKLOG = json.loads(open(sys.argv[3]).read())    # [{n, kw, slug}] in engine order
 LIVE = json.loads(open(sys.argv[4]).read())       # {'workflows': [...], 'guides': [...], 'templates': [...]}
 
-START = dt.date(2026, 10, 26)
-DAYS = 365
+START = dt.date(2026, 10, 19)  # launch week 19-25 Oct pinned from the Reserve sheet; 26 Oct onwards unchanged
+DAYS = 372
 THEMES = {
     0: ('Commercial & QS', MON), 1: ('Site, quality & handover', TUE), 2: ('Projects, programme & design', WED),
     3: ('Contracts, claims & compliance', THU), 4: ('Estimating, tendering & procurement', FRI),
@@ -99,7 +99,7 @@ def sheet(ws, headers, widths):
     ws.freeze_panes = 'A2'
 
 ws = wb.active
-ws.title = 'Pipeline (365 days)'
+ws.title = f'Pipeline ({DAYS} days)'
 headers = ['Day', 'Date', 'Weekday', 'Theme', 'Idea', 'Roles', 'Task', 'Contract form', 'Tool', 'Difficulty',
            'Risk if wrong', 'Builds on (live page)', 'Source', 'Notes', 'Guide the content task publishes that day',
            'Your LinkedIn post that day', 'Approve? (Yes / No / Change)', 'Your notes']
@@ -150,7 +150,8 @@ for kind, path in [('workflows', 'ai-workflows'), ('guides', 'guides'), ('templa
 hw = wb.create_sheet('How to review')
 hw.column_dimensions['A'].width = 120
 for line in [
-    'BuildCopilot daily ideas: 365-day pipeline for review (Mon 26 Oct 2026 to Mon 25 Oct 2027).',
+    f'BuildCopilot daily ideas: {DAYS}-day pipeline ({rows[0][1]:%a %-d %b %Y} to {rows[-1][1]:%a %-d %b %Y}).',
+    'Launch week (19 to 25 Oct 2026) was filled from the Reserve sheet plus one new Monday idea, approved by Owen on 18 Oct 2026.',
     '',
     'Each weekday has a theme, so every role and use case comes round every week:',
     '  Mon Commercial & QS · Tue Site, quality & handover · Wed Projects, programme & design · Thu Contracts, claims & compliance',

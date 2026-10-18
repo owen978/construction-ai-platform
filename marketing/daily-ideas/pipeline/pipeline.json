@@ -1,10 +1,148 @@
 {
- "approval": "Approved by Owen, 18 Oct 2026 (whole pipeline as proposed)",
- "start": "2026-10-26",
+ "approval": "Approved by Owen, 18 Oct 2026 (whole pipeline as proposed; launch week 19 to 25 Oct approved the same day)",
+ "start": "2026-10-19",
  "end": "2027-10-25",
  "days": [
   {
    "day": 1,
+   "date": "2026-10-19",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Explain what moved in this month's valuation",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/create-cost-value-reconciliation",
+   "source": "New",
+   "notes": "Launch week: new idea, as the Reserve sheet had no Monday idea.",
+   "status": "approved"
+  },
+  {
+   "day": 2,
+   "date": "2026-10-20",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Check the drawings on site are the latest revision",
+   "roles": [
+    "site-manager",
+    "document-control"
+   ],
+   "task": "drawings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "Launch week, from the Reserve sheet.",
+   "status": "approved"
+  },
+  {
+   "day": 3,
+   "date": "2026-10-21",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write a recovery email when a key date is at risk",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/create-recovery-programme-narrative",
+   "source": "New",
+   "notes": "Launch week, from the Reserve sheet.",
+   "status": "approved"
+  },
+  {
+   "day": 4,
+   "date": "2026-10-22",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Build the assessment date calendar under NEC4",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "payment-timing",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 5,
+   "date": "2026-10-23",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the hard and soft landscaping package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 6,
+   "date": "2026-10-24",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: briefing the day's RAMS",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 7,
+   "date": "2026-10-25",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Tidy a messy spreadsheet before you analyse it",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "spreadsheets",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS prompts guide #7",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 8,
    "date": "2026-10-26",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -27,7 +165,7 @@
    "status": "approved"
   },
   {
-   "day": 2,
+   "day": 9,
    "date": "2026-10-27",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -46,7 +184,7 @@
    "status": "approved"
   },
   {
-   "day": 3,
+   "day": 10,
    "date": "2026-10-28",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -65,7 +203,7 @@
    "status": "approved"
   },
   {
-   "day": 4,
+   "day": 11,
    "date": "2026-10-29",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -88,7 +226,7 @@
    "status": "approved"
   },
   {
-   "day": 5,
+   "day": 12,
    "date": "2026-10-30",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -107,7 +245,7 @@
    "status": "approved"
   },
   {
-   "day": 6,
+   "day": 13,
    "date": "2026-10-31",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -126,7 +264,7 @@
    "status": "approved"
   },
   {
-   "day": 7,
+   "day": 14,
    "date": "2026-11-01",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -145,7 +283,7 @@
    "status": "approved"
   },
   {
-   "day": 8,
+   "day": 15,
    "date": "2026-11-02",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -165,7 +303,7 @@
    "status": "approved"
   },
   {
-   "day": 9,
+   "day": 16,
    "date": "2026-11-03",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -184,7 +322,7 @@
    "status": "approved"
   },
   {
-   "day": 10,
+   "day": 17,
    "date": "2026-11-04",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -204,7 +342,7 @@
    "status": "approved"
   },
   {
-   "day": 11,
+   "day": 18,
    "date": "2026-11-05",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -226,7 +364,7 @@
    "status": "approved"
   },
   {
-   "day": 12,
+   "day": 19,
    "date": "2026-11-06",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -246,7 +384,7 @@
    "status": "approved"
   },
   {
-   "day": 13,
+   "day": 20,
    "date": "2026-11-07",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -265,7 +403,7 @@
    "status": "approved"
   },
   {
-   "day": 14,
+   "day": 21,
    "date": "2026-11-08",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -284,7 +422,7 @@
    "status": "approved"
   },
   {
-   "day": 15,
+   "day": 22,
    "date": "2026-11-09",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -306,7 +444,7 @@
    "status": "approved"
   },
   {
-   "day": 16,
+   "day": 23,
    "date": "2026-11-10",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -326,7 +464,7 @@
    "status": "approved"
   },
   {
-   "day": 17,
+   "day": 24,
    "date": "2026-11-11",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -346,7 +484,7 @@
    "status": "approved"
   },
   {
-   "day": 18,
+   "day": 25,
    "date": "2026-11-12",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -368,7 +506,7 @@
    "status": "approved"
   },
   {
-   "day": 19,
+   "day": 26,
    "date": "2026-11-13",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -388,7 +526,7 @@
    "status": "approved"
   },
   {
-   "day": 20,
+   "day": 27,
    "date": "2026-11-14",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -408,7 +546,7 @@
    "status": "approved"
   },
   {
-   "day": 21,
+   "day": 28,
    "date": "2026-11-15",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -427,7 +565,7 @@
    "status": "approved"
   },
   {
-   "day": 22,
+   "day": 29,
    "date": "2026-11-16",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -447,7 +585,7 @@
    "status": "approved"
   },
   {
-   "day": 23,
+   "day": 30,
    "date": "2026-11-17",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -466,7 +604,7 @@
    "status": "approved"
   },
   {
-   "day": 24,
+   "day": 31,
    "date": "2026-11-18",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -485,7 +623,7 @@
    "status": "approved"
   },
   {
-   "day": 25,
+   "day": 32,
    "date": "2026-11-19",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -507,7 +645,7 @@
    "status": "approved"
   },
   {
-   "day": 26,
+   "day": 33,
    "date": "2026-11-20",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -526,7 +664,7 @@
    "status": "approved"
   },
   {
-   "day": 27,
+   "day": 34,
    "date": "2026-11-21",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -545,7 +683,7 @@
    "status": "approved"
   },
   {
-   "day": 28,
+   "day": 35,
    "date": "2026-11-22",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -564,7 +702,7 @@
    "status": "approved"
   },
   {
-   "day": 29,
+   "day": 36,
    "date": "2026-11-23",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -586,7 +724,7 @@
    "status": "approved"
   },
   {
-   "day": 30,
+   "day": 37,
    "date": "2026-11-24",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -605,7 +743,7 @@
    "status": "approved"
   },
   {
-   "day": 31,
+   "day": 38,
    "date": "2026-11-25",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -625,7 +763,7 @@
    "status": "approved"
   },
   {
-   "day": 32,
+   "day": 39,
    "date": "2026-11-26",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -647,7 +785,7 @@
    "status": "approved"
   },
   {
-   "day": 33,
+   "day": 40,
    "date": "2026-11-27",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -668,7 +806,7 @@
    "status": "approved"
   },
   {
-   "day": 34,
+   "day": 41,
    "date": "2026-11-28",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -687,7 +825,7 @@
    "status": "approved"
   },
   {
-   "day": 35,
+   "day": 42,
    "date": "2026-11-29",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -707,7 +845,7 @@
    "status": "approved"
   },
   {
-   "day": 36,
+   "day": 43,
    "date": "2026-11-30",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -730,7 +868,7 @@
    "status": "approved"
   },
   {
-   "day": 37,
+   "day": 44,
    "date": "2026-12-01",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -750,7 +888,7 @@
    "status": "approved"
   },
   {
-   "day": 38,
+   "day": 45,
    "date": "2026-12-02",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -769,7 +907,7 @@
    "status": "approved"
   },
   {
-   "day": 39,
+   "day": 46,
    "date": "2026-12-03",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -791,7 +929,7 @@
    "status": "approved"
   },
   {
-   "day": 40,
+   "day": 47,
    "date": "2026-12-04",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -810,7 +948,7 @@
    "status": "approved"
   },
   {
-   "day": 41,
+   "day": 48,
    "date": "2026-12-05",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -829,7 +967,7 @@
    "status": "approved"
   },
   {
-   "day": 42,
+   "day": 49,
    "date": "2026-12-06",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -848,7 +986,7 @@
    "status": "approved"
   },
   {
-   "day": 43,
+   "day": 50,
    "date": "2026-12-07",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -870,7 +1008,7 @@
    "status": "approved"
   },
   {
-   "day": 44,
+   "day": 51,
    "date": "2026-12-08",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -889,7 +1027,7 @@
    "status": "approved"
   },
   {
-   "day": 45,
+   "day": 52,
    "date": "2026-12-09",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -908,7 +1046,7 @@
    "status": "approved"
   },
   {
-   "day": 46,
+   "day": 53,
    "date": "2026-12-10",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -930,7 +1068,7 @@
    "status": "approved"
   },
   {
-   "day": 47,
+   "day": 54,
    "date": "2026-12-11",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -950,7 +1088,7 @@
    "status": "approved"
   },
   {
-   "day": 48,
+   "day": 55,
    "date": "2026-12-12",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -969,7 +1107,7 @@
    "status": "approved"
   },
   {
-   "day": 49,
+   "day": 56,
    "date": "2026-12-13",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -988,7 +1126,7 @@
    "status": "approved"
   },
   {
-   "day": 50,
+   "day": 57,
    "date": "2026-12-14",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1010,7 +1148,7 @@
    "status": "approved"
   },
   {
-   "day": 51,
+   "day": 58,
    "date": "2026-12-15",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1030,7 +1168,7 @@
    "status": "approved"
   },
   {
-   "day": 52,
+   "day": 59,
    "date": "2026-12-16",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1049,7 +1187,7 @@
    "status": "approved"
   },
   {
-   "day": 53,
+   "day": 60,
    "date": "2026-12-17",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1069,7 +1207,7 @@
    "status": "approved"
   },
   {
-   "day": 54,
+   "day": 61,
    "date": "2026-12-18",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1089,7 +1227,7 @@
    "status": "approved"
   },
   {
-   "day": 55,
+   "day": 62,
    "date": "2026-12-19",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1108,7 +1246,7 @@
    "status": "approved"
   },
   {
-   "day": 56,
+   "day": 63,
    "date": "2026-12-20",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1128,7 +1266,7 @@
    "status": "approved"
   },
   {
-   "day": 57,
+   "day": 64,
    "date": "2026-12-21",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1148,7 +1286,7 @@
    "status": "approved"
   },
   {
-   "day": 58,
+   "day": 65,
    "date": "2026-12-22",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1167,7 +1305,7 @@
    "status": "approved"
   },
   {
-   "day": 59,
+   "day": 66,
    "date": "2026-12-23",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1186,7 +1324,7 @@
    "status": "approved"
   },
   {
-   "day": 60,
+   "day": 67,
    "date": "2026-12-24",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1205,7 +1343,7 @@
    "status": "approved"
   },
   {
-   "day": 61,
+   "day": 68,
    "date": "2026-12-25",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1224,7 +1362,7 @@
    "status": "approved"
   },
   {
-   "day": 62,
+   "day": 69,
    "date": "2026-12-26",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1243,7 +1381,7 @@
    "status": "approved"
   },
   {
-   "day": 63,
+   "day": 70,
    "date": "2026-12-27",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1263,7 +1401,7 @@
    "status": "approved"
   },
   {
-   "day": 64,
+   "day": 71,
    "date": "2026-12-28",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1282,7 +1420,7 @@
    "status": "approved"
   },
   {
-   "day": 65,
+   "day": 72,
    "date": "2026-12-29",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1301,7 +1439,7 @@
    "status": "approved"
   },
   {
-   "day": 66,
+   "day": 73,
    "date": "2026-12-30",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1320,7 +1458,7 @@
    "status": "approved"
   },
   {
-   "day": 67,
+   "day": 74,
    "date": "2026-12-31",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1339,7 +1477,7 @@
    "status": "approved"
   },
   {
-   "day": 68,
+   "day": 75,
    "date": "2027-01-01",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1359,7 +1497,7 @@
    "status": "approved"
   },
   {
-   "day": 69,
+   "day": 76,
    "date": "2027-01-02",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1378,7 +1516,7 @@
    "status": "approved"
   },
   {
-   "day": 70,
+   "day": 77,
    "date": "2027-01-03",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1397,7 +1535,7 @@
    "status": "approved"
   },
   {
-   "day": 71,
+   "day": 78,
    "date": "2027-01-04",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1417,7 +1555,7 @@
    "status": "approved"
   },
   {
-   "day": 72,
+   "day": 79,
    "date": "2027-01-05",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1436,7 +1574,7 @@
    "status": "approved"
   },
   {
-   "day": 73,
+   "day": 80,
    "date": "2027-01-06",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1457,7 +1595,7 @@
    "status": "approved"
   },
   {
-   "day": 74,
+   "day": 81,
    "date": "2027-01-07",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1480,7 +1618,7 @@
    "status": "approved"
   },
   {
-   "day": 75,
+   "day": 82,
    "date": "2027-01-08",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1499,7 +1637,7 @@
    "status": "approved"
   },
   {
-   "day": 76,
+   "day": 83,
    "date": "2027-01-09",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1518,7 +1656,7 @@
    "status": "approved"
   },
   {
-   "day": 77,
+   "day": 84,
    "date": "2027-01-10",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1537,7 +1675,7 @@
    "status": "approved"
   },
   {
-   "day": 78,
+   "day": 85,
    "date": "2027-01-11",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1557,7 +1695,7 @@
    "status": "approved"
   },
   {
-   "day": 79,
+   "day": 86,
    "date": "2027-01-12",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1577,7 +1715,7 @@
    "status": "approved"
   },
   {
-   "day": 80,
+   "day": 87,
    "date": "2027-01-13",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1596,7 +1734,7 @@
    "status": "approved"
   },
   {
-   "day": 81,
+   "day": 88,
    "date": "2027-01-14",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1615,7 +1753,7 @@
    "status": "approved"
   },
   {
-   "day": 82,
+   "day": 89,
    "date": "2027-01-15",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1634,7 +1772,7 @@
    "status": "approved"
   },
   {
-   "day": 83,
+   "day": 90,
    "date": "2027-01-16",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1653,7 +1791,7 @@
    "status": "approved"
   },
   {
-   "day": 84,
+   "day": 91,
    "date": "2027-01-17",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1672,7 +1810,7 @@
    "status": "approved"
   },
   {
-   "day": 85,
+   "day": 92,
    "date": "2027-01-18",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1692,7 +1830,7 @@
    "status": "approved"
   },
   {
-   "day": 86,
+   "day": 93,
    "date": "2027-01-19",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1711,7 +1849,7 @@
    "status": "approved"
   },
   {
-   "day": 87,
+   "day": 94,
    "date": "2027-01-20",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1731,7 +1869,7 @@
    "status": "approved"
   },
   {
-   "day": 88,
+   "day": 95,
    "date": "2027-01-21",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1752,7 +1890,7 @@
    "status": "approved"
   },
   {
-   "day": 89,
+   "day": 96,
    "date": "2027-01-22",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1771,7 +1909,7 @@
    "status": "approved"
   },
   {
-   "day": 90,
+   "day": 97,
    "date": "2027-01-23",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1790,7 +1928,7 @@
    "status": "approved"
   },
   {
-   "day": 91,
+   "day": 98,
    "date": "2027-01-24",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1810,7 +1948,7 @@
    "status": "approved"
   },
   {
-   "day": 92,
+   "day": 99,
    "date": "2027-01-25",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1829,7 +1967,7 @@
    "status": "approved"
   },
   {
-   "day": 93,
+   "day": 100,
    "date": "2027-01-26",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1848,7 +1986,7 @@
    "status": "approved"
   },
   {
-   "day": 94,
+   "day": 101,
    "date": "2027-01-27",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -1868,7 +2006,7 @@
    "status": "approved"
   },
   {
-   "day": 95,
+   "day": 102,
    "date": "2027-01-28",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -1890,7 +2028,7 @@
    "status": "approved"
   },
   {
-   "day": 96,
+   "day": 103,
    "date": "2027-01-29",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -1909,7 +2047,7 @@
    "status": "approved"
   },
   {
-   "day": 97,
+   "day": 104,
    "date": "2027-01-30",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -1928,7 +2066,7 @@
    "status": "approved"
   },
   {
-   "day": 98,
+   "day": 105,
    "date": "2027-01-31",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -1948,7 +2086,7 @@
    "status": "approved"
   },
   {
-   "day": 99,
+   "day": 106,
    "date": "2027-02-01",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -1968,7 +2106,7 @@
    "status": "approved"
   },
   {
-   "day": 100,
+   "day": 107,
    "date": "2027-02-02",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -1988,7 +2126,7 @@
    "status": "approved"
   },
   {
-   "day": 101,
+   "day": 108,
    "date": "2027-02-03",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2008,7 +2146,7 @@
    "status": "approved"
   },
   {
-   "day": 102,
+   "day": 109,
    "date": "2027-02-04",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2027,7 +2165,7 @@
    "status": "approved"
   },
   {
-   "day": 103,
+   "day": 110,
    "date": "2027-02-05",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2046,7 +2184,7 @@
    "status": "approved"
   },
   {
-   "day": 104,
+   "day": 111,
    "date": "2027-02-06",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2065,7 +2203,7 @@
    "status": "approved"
   },
   {
-   "day": 105,
+   "day": 112,
    "date": "2027-02-07",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2084,7 +2222,7 @@
    "status": "approved"
   },
   {
-   "day": 106,
+   "day": 113,
    "date": "2027-02-08",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2107,7 +2245,7 @@
    "status": "approved"
   },
   {
-   "day": 107,
+   "day": 114,
    "date": "2027-02-09",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2126,7 +2264,7 @@
    "status": "approved"
   },
   {
-   "day": 108,
+   "day": 115,
    "date": "2027-02-10",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2146,7 +2284,7 @@
    "status": "approved"
   },
   {
-   "day": 109,
+   "day": 116,
    "date": "2027-02-11",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2166,7 +2304,7 @@
    "status": "approved"
   },
   {
-   "day": 110,
+   "day": 117,
    "date": "2027-02-12",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2185,7 +2323,7 @@
    "status": "approved"
   },
   {
-   "day": 111,
+   "day": 118,
    "date": "2027-02-13",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2204,7 +2342,7 @@
    "status": "approved"
   },
   {
-   "day": 112,
+   "day": 119,
    "date": "2027-02-14",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2223,7 +2361,7 @@
    "status": "approved"
   },
   {
-   "day": 113,
+   "day": 120,
    "date": "2027-02-15",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2243,7 +2381,7 @@
    "status": "approved"
   },
   {
-   "day": 114,
+   "day": 121,
    "date": "2027-02-16",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2262,7 +2400,7 @@
    "status": "approved"
   },
   {
-   "day": 115,
+   "day": 122,
    "date": "2027-02-17",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2282,7 +2420,7 @@
    "status": "approved"
   },
   {
-   "day": 116,
+   "day": 123,
    "date": "2027-02-18",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2305,7 +2443,7 @@
    "status": "approved"
   },
   {
-   "day": 117,
+   "day": 124,
    "date": "2027-02-19",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2324,7 +2462,7 @@
    "status": "approved"
   },
   {
-   "day": 118,
+   "day": 125,
    "date": "2027-02-20",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2343,7 +2481,7 @@
    "status": "approved"
   },
   {
-   "day": 119,
+   "day": 126,
    "date": "2027-02-21",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2363,7 +2501,7 @@
    "status": "approved"
   },
   {
-   "day": 120,
+   "day": 127,
    "date": "2027-02-22",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2383,7 +2521,7 @@
    "status": "approved"
   },
   {
-   "day": 121,
+   "day": 128,
    "date": "2027-02-23",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2403,7 +2541,7 @@
    "status": "approved"
   },
   {
-   "day": 122,
+   "day": 129,
    "date": "2027-02-24",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2422,7 +2560,7 @@
    "status": "approved"
   },
   {
-   "day": 123,
+   "day": 130,
    "date": "2027-02-25",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2441,7 +2579,7 @@
    "status": "approved"
   },
   {
-   "day": 124,
+   "day": 131,
    "date": "2027-02-26",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2460,7 +2598,7 @@
    "status": "approved"
   },
   {
-   "day": 125,
+   "day": 132,
    "date": "2027-02-27",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2479,7 +2617,7 @@
    "status": "approved"
   },
   {
-   "day": 126,
+   "day": 133,
    "date": "2027-02-28",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2498,7 +2636,7 @@
    "status": "approved"
   },
   {
-   "day": 127,
+   "day": 134,
    "date": "2027-03-01",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2517,7 +2655,7 @@
    "status": "approved"
   },
   {
-   "day": 128,
+   "day": 135,
    "date": "2027-03-02",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2536,7 +2674,7 @@
    "status": "approved"
   },
   {
-   "day": 129,
+   "day": 136,
    "date": "2027-03-03",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2556,7 +2694,7 @@
    "status": "approved"
   },
   {
-   "day": 130,
+   "day": 137,
    "date": "2027-03-04",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2578,7 +2716,7 @@
    "status": "approved"
   },
   {
-   "day": 131,
+   "day": 138,
    "date": "2027-03-05",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2597,7 +2735,7 @@
    "status": "approved"
   },
   {
-   "day": 132,
+   "day": 139,
    "date": "2027-03-06",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2616,7 +2754,7 @@
    "status": "approved"
   },
   {
-   "day": 133,
+   "day": 140,
    "date": "2027-03-07",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2635,7 +2773,7 @@
    "status": "approved"
   },
   {
-   "day": 134,
+   "day": 141,
    "date": "2027-03-08",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2654,7 +2792,7 @@
    "status": "approved"
   },
   {
-   "day": 135,
+   "day": 142,
    "date": "2027-03-09",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2673,7 +2811,7 @@
    "status": "approved"
   },
   {
-   "day": 136,
+   "day": 143,
    "date": "2027-03-10",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2692,7 +2830,7 @@
    "status": "approved"
   },
   {
-   "day": 137,
+   "day": 144,
    "date": "2027-03-11",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2712,7 +2850,7 @@
    "status": "approved"
   },
   {
-   "day": 138,
+   "day": 145,
    "date": "2027-03-12",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2731,7 +2869,7 @@
    "status": "approved"
   },
   {
-   "day": 139,
+   "day": 146,
    "date": "2027-03-13",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2750,7 +2888,7 @@
    "status": "approved"
   },
   {
-   "day": 140,
+   "day": 147,
    "date": "2027-03-14",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2769,7 +2907,7 @@
    "status": "approved"
   },
   {
-   "day": 141,
+   "day": 148,
    "date": "2027-03-15",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2789,7 +2927,7 @@
    "status": "approved"
   },
   {
-   "day": 142,
+   "day": 149,
    "date": "2027-03-16",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2808,7 +2946,7 @@
    "status": "approved"
   },
   {
-   "day": 143,
+   "day": 150,
    "date": "2027-03-17",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2827,7 +2965,7 @@
    "status": "approved"
   },
   {
-   "day": 144,
+   "day": 151,
    "date": "2027-03-18",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2847,7 +2985,7 @@
    "status": "approved"
   },
   {
-   "day": 145,
+   "day": 152,
    "date": "2027-03-19",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -2867,7 +3005,7 @@
    "status": "approved"
   },
   {
-   "day": 146,
+   "day": 153,
    "date": "2027-03-20",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -2886,7 +3024,7 @@
    "status": "approved"
   },
   {
-   "day": 147,
+   "day": 154,
    "date": "2027-03-21",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -2906,7 +3044,7 @@
    "status": "approved"
   },
   {
-   "day": 148,
+   "day": 155,
    "date": "2027-03-22",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -2925,7 +3063,7 @@
    "status": "approved"
   },
   {
-   "day": 149,
+   "day": 156,
    "date": "2027-03-23",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -2944,7 +3082,7 @@
    "status": "approved"
   },
   {
-   "day": 150,
+   "day": 157,
    "date": "2027-03-24",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -2963,7 +3101,7 @@
    "status": "approved"
   },
   {
-   "day": 151,
+   "day": 158,
    "date": "2027-03-25",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -2983,7 +3121,7 @@
    "status": "approved"
   },
   {
-   "day": 152,
+   "day": 159,
    "date": "2027-03-26",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3003,7 +3141,7 @@
    "status": "approved"
   },
   {
-   "day": 153,
+   "day": 160,
    "date": "2027-03-27",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3022,7 +3160,7 @@
    "status": "approved"
   },
   {
-   "day": 154,
+   "day": 161,
    "date": "2027-03-28",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3042,7 +3180,7 @@
    "status": "approved"
   },
   {
-   "day": 155,
+   "day": 162,
    "date": "2027-03-29",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3061,7 +3199,7 @@
    "status": "approved"
   },
   {
-   "day": 156,
+   "day": 163,
    "date": "2027-03-30",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3081,7 +3219,7 @@
    "status": "approved"
   },
   {
-   "day": 157,
+   "day": 164,
    "date": "2027-03-31",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3100,7 +3238,7 @@
    "status": "approved"
   },
   {
-   "day": 158,
+   "day": 165,
    "date": "2027-04-01",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3120,7 +3258,7 @@
    "status": "approved"
   },
   {
-   "day": 159,
+   "day": 166,
    "date": "2027-04-02",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3139,7 +3277,7 @@
    "status": "approved"
   },
   {
-   "day": 160,
+   "day": 167,
    "date": "2027-04-03",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3158,7 +3296,7 @@
    "status": "approved"
   },
   {
-   "day": 161,
+   "day": 168,
    "date": "2027-04-04",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3177,7 +3315,7 @@
    "status": "approved"
   },
   {
-   "day": 162,
+   "day": 169,
    "date": "2027-04-05",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3196,7 +3334,7 @@
    "status": "approved"
   },
   {
-   "day": 163,
+   "day": 170,
    "date": "2027-04-06",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3216,7 +3354,7 @@
    "status": "approved"
   },
   {
-   "day": 164,
+   "day": 171,
    "date": "2027-04-07",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3236,7 +3374,7 @@
    "status": "approved"
   },
   {
-   "day": 165,
+   "day": 172,
    "date": "2027-04-08",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3256,7 +3394,7 @@
    "status": "approved"
   },
   {
-   "day": 166,
+   "day": 173,
    "date": "2027-04-09",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3276,7 +3414,7 @@
    "status": "approved"
   },
   {
-   "day": 167,
+   "day": 174,
    "date": "2027-04-10",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3295,7 +3433,7 @@
    "status": "approved"
   },
   {
-   "day": 168,
+   "day": 175,
    "date": "2027-04-11",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3314,7 +3452,7 @@
    "status": "approved"
   },
   {
-   "day": 169,
+   "day": 176,
    "date": "2027-04-12",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3334,7 +3472,7 @@
    "status": "approved"
   },
   {
-   "day": 170,
+   "day": 177,
    "date": "2027-04-13",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3353,7 +3491,7 @@
    "status": "approved"
   },
   {
-   "day": 171,
+   "day": 178,
    "date": "2027-04-14",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3372,7 +3510,7 @@
    "status": "approved"
   },
   {
-   "day": 172,
+   "day": 179,
    "date": "2027-04-15",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3392,7 +3530,7 @@
    "status": "approved"
   },
   {
-   "day": 173,
+   "day": 180,
    "date": "2027-04-16",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3411,7 +3549,7 @@
    "status": "approved"
   },
   {
-   "day": 174,
+   "day": 181,
    "date": "2027-04-17",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3430,7 +3568,7 @@
    "status": "approved"
   },
   {
-   "day": 175,
+   "day": 182,
    "date": "2027-04-18",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3449,7 +3587,7 @@
    "status": "approved"
   },
   {
-   "day": 176,
+   "day": 183,
    "date": "2027-04-19",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3471,7 +3609,7 @@
    "status": "approved"
   },
   {
-   "day": 177,
+   "day": 184,
    "date": "2027-04-20",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3491,7 +3629,7 @@
    "status": "approved"
   },
   {
-   "day": 178,
+   "day": 185,
    "date": "2027-04-21",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3510,7 +3648,7 @@
    "status": "approved"
   },
   {
-   "day": 179,
+   "day": 186,
    "date": "2027-04-22",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3530,7 +3668,7 @@
    "status": "approved"
   },
   {
-   "day": 180,
+   "day": 187,
    "date": "2027-04-23",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3549,7 +3687,7 @@
    "status": "approved"
   },
   {
-   "day": 181,
+   "day": 188,
    "date": "2027-04-24",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3568,7 +3706,7 @@
    "status": "approved"
   },
   {
-   "day": 182,
+   "day": 189,
    "date": "2027-04-25",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3587,7 +3725,7 @@
    "status": "approved"
   },
   {
-   "day": 183,
+   "day": 190,
    "date": "2027-04-26",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3609,7 +3747,7 @@
    "status": "approved"
   },
   {
-   "day": 184,
+   "day": 191,
    "date": "2027-04-27",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3629,7 +3767,7 @@
    "status": "approved"
   },
   {
-   "day": 185,
+   "day": 192,
    "date": "2027-04-28",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3649,7 +3787,7 @@
    "status": "approved"
   },
   {
-   "day": 186,
+   "day": 193,
    "date": "2027-04-29",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3669,7 +3807,7 @@
    "status": "approved"
   },
   {
-   "day": 187,
+   "day": 194,
    "date": "2027-04-30",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3688,7 +3826,7 @@
    "status": "approved"
   },
   {
-   "day": 188,
+   "day": 195,
    "date": "2027-05-01",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3707,7 +3845,7 @@
    "status": "approved"
   },
   {
-   "day": 189,
+   "day": 196,
    "date": "2027-05-02",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3726,7 +3864,7 @@
    "status": "approved"
   },
   {
-   "day": 190,
+   "day": 197,
    "date": "2027-05-03",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3745,7 +3883,7 @@
    "status": "approved"
   },
   {
-   "day": 191,
+   "day": 198,
    "date": "2027-05-04",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3764,7 +3902,7 @@
    "status": "approved"
   },
   {
-   "day": 192,
+   "day": 199,
    "date": "2027-05-05",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3783,7 +3921,7 @@
    "status": "approved"
   },
   {
-   "day": 193,
+   "day": 200,
    "date": "2027-05-06",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3802,7 +3940,7 @@
    "status": "approved"
   },
   {
-   "day": 194,
+   "day": 201,
    "date": "2027-05-07",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3821,7 +3959,7 @@
    "status": "approved"
   },
   {
-   "day": 195,
+   "day": 202,
    "date": "2027-05-08",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3840,7 +3978,7 @@
    "status": "approved"
   },
   {
-   "day": 196,
+   "day": 203,
    "date": "2027-05-09",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3859,7 +3997,7 @@
    "status": "approved"
   },
   {
-   "day": 197,
+   "day": 204,
    "date": "2027-05-10",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -3878,7 +4016,7 @@
    "status": "approved"
   },
   {
-   "day": 198,
+   "day": 205,
    "date": "2027-05-11",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -3897,7 +4035,7 @@
    "status": "approved"
   },
   {
-   "day": 199,
+   "day": 206,
    "date": "2027-05-12",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -3916,7 +4054,7 @@
    "status": "approved"
   },
   {
-   "day": 200,
+   "day": 207,
    "date": "2027-05-13",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -3935,7 +4073,7 @@
    "status": "approved"
   },
   {
-   "day": 201,
+   "day": 208,
    "date": "2027-05-14",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -3954,7 +4092,7 @@
    "status": "approved"
   },
   {
-   "day": 202,
+   "day": 209,
    "date": "2027-05-15",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -3973,7 +4111,7 @@
    "status": "approved"
   },
   {
-   "day": 203,
+   "day": 210,
    "date": "2027-05-16",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -3992,7 +4130,7 @@
    "status": "approved"
   },
   {
-   "day": 204,
+   "day": 211,
    "date": "2027-05-17",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4013,7 +4151,7 @@
    "status": "approved"
   },
   {
-   "day": 205,
+   "day": 212,
    "date": "2027-05-18",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4033,7 +4171,7 @@
    "status": "approved"
   },
   {
-   "day": 206,
+   "day": 213,
    "date": "2027-05-19",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4052,7 +4190,7 @@
    "status": "approved"
   },
   {
-   "day": 207,
+   "day": 214,
    "date": "2027-05-20",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4071,7 +4209,7 @@
    "status": "approved"
   },
   {
-   "day": 208,
+   "day": 215,
    "date": "2027-05-21",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4091,7 +4229,7 @@
    "status": "approved"
   },
   {
-   "day": 209,
+   "day": 216,
    "date": "2027-05-22",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4110,7 +4248,7 @@
    "status": "approved"
   },
   {
-   "day": 210,
+   "day": 217,
    "date": "2027-05-23",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4129,7 +4267,7 @@
    "status": "approved"
   },
   {
-   "day": 211,
+   "day": 218,
    "date": "2027-05-24",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4149,7 +4287,7 @@
    "status": "approved"
   },
   {
-   "day": 212,
+   "day": 219,
    "date": "2027-05-25",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4168,7 +4306,7 @@
    "status": "approved"
   },
   {
-   "day": 213,
+   "day": 220,
    "date": "2027-05-26",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4187,7 +4325,7 @@
    "status": "approved"
   },
   {
-   "day": 214,
+   "day": 221,
    "date": "2027-05-27",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4208,7 +4346,7 @@
    "status": "approved"
   },
   {
-   "day": 215,
+   "day": 222,
    "date": "2027-05-28",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4228,7 +4366,7 @@
    "status": "approved"
   },
   {
-   "day": 216,
+   "day": 223,
    "date": "2027-05-29",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4247,7 +4385,7 @@
    "status": "approved"
   },
   {
-   "day": 217,
+   "day": 224,
    "date": "2027-05-30",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4266,7 +4404,7 @@
    "status": "approved"
   },
   {
-   "day": 218,
+   "day": 225,
    "date": "2027-05-31",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4285,7 +4423,7 @@
    "status": "approved"
   },
   {
-   "day": 219,
+   "day": 226,
    "date": "2027-06-01",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4304,7 +4442,7 @@
    "status": "approved"
   },
   {
-   "day": 220,
+   "day": 227,
    "date": "2027-06-02",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4323,7 +4461,7 @@
    "status": "approved"
   },
   {
-   "day": 221,
+   "day": 228,
    "date": "2027-06-03",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4344,7 +4482,7 @@
    "status": "approved"
   },
   {
-   "day": 222,
+   "day": 229,
    "date": "2027-06-04",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4363,7 +4501,7 @@
    "status": "approved"
   },
   {
-   "day": 223,
+   "day": 230,
    "date": "2027-06-05",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4382,7 +4520,7 @@
    "status": "approved"
   },
   {
-   "day": 224,
+   "day": 231,
    "date": "2027-06-06",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4402,7 +4540,7 @@
    "status": "approved"
   },
   {
-   "day": 225,
+   "day": 232,
    "date": "2027-06-07",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4421,7 +4559,7 @@
    "status": "approved"
   },
   {
-   "day": 226,
+   "day": 233,
    "date": "2027-06-08",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4441,7 +4579,7 @@
    "status": "approved"
   },
   {
-   "day": 227,
+   "day": 234,
    "date": "2027-06-09",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4461,7 +4599,7 @@
    "status": "approved"
   },
   {
-   "day": 228,
+   "day": 235,
    "date": "2027-06-10",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4482,7 +4620,7 @@
    "status": "approved"
   },
   {
-   "day": 229,
+   "day": 236,
    "date": "2027-06-11",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4501,7 +4639,7 @@
    "status": "approved"
   },
   {
-   "day": 230,
+   "day": 237,
    "date": "2027-06-12",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4520,7 +4658,7 @@
    "status": "approved"
   },
   {
-   "day": 231,
+   "day": 238,
    "date": "2027-06-13",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4539,7 +4677,7 @@
    "status": "approved"
   },
   {
-   "day": 232,
+   "day": 239,
    "date": "2027-06-14",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4562,7 +4700,7 @@
    "status": "approved"
   },
   {
-   "day": 233,
+   "day": 240,
    "date": "2027-06-15",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4581,7 +4719,7 @@
    "status": "approved"
   },
   {
-   "day": 234,
+   "day": 241,
    "date": "2027-06-16",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4600,7 +4738,7 @@
    "status": "approved"
   },
   {
-   "day": 235,
+   "day": 242,
    "date": "2027-06-17",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4621,7 +4759,7 @@
    "status": "approved"
   },
   {
-   "day": 236,
+   "day": 243,
    "date": "2027-06-18",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4640,7 +4778,7 @@
    "status": "approved"
   },
   {
-   "day": 237,
+   "day": 244,
    "date": "2027-06-19",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4659,7 +4797,7 @@
    "status": "approved"
   },
   {
-   "day": 238,
+   "day": 245,
    "date": "2027-06-20",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4678,7 +4816,7 @@
    "status": "approved"
   },
   {
-   "day": 239,
+   "day": 246,
    "date": "2027-06-21",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4697,7 +4835,7 @@
    "status": "approved"
   },
   {
-   "day": 240,
+   "day": 247,
    "date": "2027-06-22",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4716,7 +4854,7 @@
    "status": "approved"
   },
   {
-   "day": 241,
+   "day": 248,
    "date": "2027-06-23",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4736,7 +4874,7 @@
    "status": "approved"
   },
   {
-   "day": 242,
+   "day": 249,
    "date": "2027-06-24",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4757,7 +4895,7 @@
    "status": "approved"
   },
   {
-   "day": 243,
+   "day": 250,
    "date": "2027-06-25",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4776,7 +4914,7 @@
    "status": "approved"
   },
   {
-   "day": 244,
+   "day": 251,
    "date": "2027-06-26",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4795,7 +4933,7 @@
    "status": "approved"
   },
   {
-   "day": 245,
+   "day": 252,
    "date": "2027-06-27",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4814,7 +4952,7 @@
    "status": "approved"
   },
   {
-   "day": 246,
+   "day": 253,
    "date": "2027-06-28",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4833,7 +4971,7 @@
    "status": "approved"
   },
   {
-   "day": 247,
+   "day": 254,
    "date": "2027-06-29",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4852,7 +4990,7 @@
    "status": "approved"
   },
   {
-   "day": 248,
+   "day": 255,
    "date": "2027-06-30",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -4872,7 +5010,7 @@
    "status": "approved"
   },
   {
-   "day": 249,
+   "day": 256,
    "date": "2027-07-01",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -4894,7 +5032,7 @@
    "status": "approved"
   },
   {
-   "day": 250,
+   "day": 257,
    "date": "2027-07-02",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -4913,7 +5051,7 @@
    "status": "approved"
   },
   {
-   "day": 251,
+   "day": 258,
    "date": "2027-07-03",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -4933,7 +5071,7 @@
    "status": "approved"
   },
   {
-   "day": 252,
+   "day": 259,
    "date": "2027-07-04",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -4952,7 +5090,7 @@
    "status": "approved"
   },
   {
-   "day": 253,
+   "day": 260,
    "date": "2027-07-05",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -4971,7 +5109,7 @@
    "status": "approved"
   },
   {
-   "day": 254,
+   "day": 261,
    "date": "2027-07-06",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -4990,7 +5128,7 @@
    "status": "approved"
   },
   {
-   "day": 255,
+   "day": 262,
    "date": "2027-07-07",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5009,7 +5147,7 @@
    "status": "approved"
   },
   {
-   "day": 256,
+   "day": 263,
    "date": "2027-07-08",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5030,7 +5168,7 @@
    "status": "approved"
   },
   {
-   "day": 257,
+   "day": 264,
    "date": "2027-07-09",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5049,7 +5187,7 @@
    "status": "approved"
   },
   {
-   "day": 258,
+   "day": 265,
    "date": "2027-07-10",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5068,7 +5206,7 @@
    "status": "approved"
   },
   {
-   "day": 259,
+   "day": 266,
    "date": "2027-07-11",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5087,7 +5225,7 @@
    "status": "approved"
   },
   {
-   "day": 260,
+   "day": 267,
    "date": "2027-07-12",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5106,7 +5244,7 @@
    "status": "approved"
   },
   {
-   "day": 261,
+   "day": 268,
    "date": "2027-07-13",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5125,7 +5263,7 @@
    "status": "approved"
   },
   {
-   "day": 262,
+   "day": 269,
    "date": "2027-07-14",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5144,7 +5282,7 @@
    "status": "approved"
   },
   {
-   "day": 263,
+   "day": 270,
    "date": "2027-07-15",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5165,7 +5303,7 @@
    "status": "approved"
   },
   {
-   "day": 264,
+   "day": 271,
    "date": "2027-07-16",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5184,7 +5322,7 @@
    "status": "approved"
   },
   {
-   "day": 265,
+   "day": 272,
    "date": "2027-07-17",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5203,7 +5341,7 @@
    "status": "approved"
   },
   {
-   "day": 266,
+   "day": 273,
    "date": "2027-07-18",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5223,7 +5361,7 @@
    "status": "approved"
   },
   {
-   "day": 267,
+   "day": 274,
    "date": "2027-07-19",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5243,7 +5381,7 @@
    "status": "approved"
   },
   {
-   "day": 268,
+   "day": 275,
    "date": "2027-07-20",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5263,7 +5401,7 @@
    "status": "approved"
   },
   {
-   "day": 269,
+   "day": 276,
    "date": "2027-07-21",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5282,7 +5420,7 @@
    "status": "approved"
   },
   {
-   "day": 270,
+   "day": 277,
    "date": "2027-07-22",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5304,7 +5442,7 @@
    "status": "approved"
   },
   {
-   "day": 271,
+   "day": 278,
    "date": "2027-07-23",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5323,7 +5461,7 @@
    "status": "approved"
   },
   {
-   "day": 272,
+   "day": 279,
    "date": "2027-07-24",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5342,7 +5480,7 @@
    "status": "approved"
   },
   {
-   "day": 273,
+   "day": 280,
    "date": "2027-07-25",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5362,7 +5500,7 @@
    "status": "approved"
   },
   {
-   "day": 274,
+   "day": 281,
    "date": "2027-07-26",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5382,7 +5520,7 @@
    "status": "approved"
   },
   {
-   "day": 275,
+   "day": 282,
    "date": "2027-07-27",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5401,7 +5539,7 @@
    "status": "approved"
   },
   {
-   "day": 276,
+   "day": 283,
    "date": "2027-07-28",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5420,7 +5558,7 @@
    "status": "approved"
   },
   {
-   "day": 277,
+   "day": 284,
    "date": "2027-07-29",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5440,7 +5578,7 @@
    "status": "approved"
   },
   {
-   "day": 278,
+   "day": 285,
    "date": "2027-07-30",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5459,7 +5597,7 @@
    "status": "approved"
   },
   {
-   "day": 279,
+   "day": 286,
    "date": "2027-07-31",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5478,7 +5616,7 @@
    "status": "approved"
   },
   {
-   "day": 280,
+   "day": 287,
    "date": "2027-08-01",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5498,7 +5636,7 @@
    "status": "approved"
   },
   {
-   "day": 281,
+   "day": 288,
    "date": "2027-08-02",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5519,7 +5657,7 @@
    "status": "approved"
   },
   {
-   "day": 282,
+   "day": 289,
    "date": "2027-08-03",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5538,7 +5676,7 @@
    "status": "approved"
   },
   {
-   "day": 283,
+   "day": 290,
    "date": "2027-08-04",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5557,7 +5695,7 @@
    "status": "approved"
   },
   {
-   "day": 284,
+   "day": 291,
    "date": "2027-08-05",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5577,7 +5715,7 @@
    "status": "approved"
   },
   {
-   "day": 285,
+   "day": 292,
    "date": "2027-08-06",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5596,7 +5734,7 @@
    "status": "approved"
   },
   {
-   "day": 286,
+   "day": 293,
    "date": "2027-08-07",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5615,7 +5753,7 @@
    "status": "approved"
   },
   {
-   "day": 287,
+   "day": 294,
    "date": "2027-08-08",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5635,7 +5773,7 @@
    "status": "approved"
   },
   {
-   "day": 288,
+   "day": 295,
    "date": "2027-08-09",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5656,7 +5794,7 @@
    "status": "approved"
   },
   {
-   "day": 289,
+   "day": 296,
    "date": "2027-08-10",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5676,7 +5814,7 @@
    "status": "approved"
   },
   {
-   "day": 290,
+   "day": 297,
    "date": "2027-08-11",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5695,7 +5833,7 @@
    "status": "approved"
   },
   {
-   "day": 291,
+   "day": 298,
    "date": "2027-08-12",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5717,7 +5855,7 @@
    "status": "approved"
   },
   {
-   "day": 292,
+   "day": 299,
    "date": "2027-08-13",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5736,7 +5874,7 @@
    "status": "approved"
   },
   {
-   "day": 293,
+   "day": 300,
    "date": "2027-08-14",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5755,7 +5893,7 @@
    "status": "approved"
   },
   {
-   "day": 294,
+   "day": 301,
    "date": "2027-08-15",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5774,7 +5912,7 @@
    "status": "approved"
   },
   {
-   "day": 295,
+   "day": 302,
    "date": "2027-08-16",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5794,7 +5932,7 @@
    "status": "approved"
   },
   {
-   "day": 296,
+   "day": 303,
    "date": "2027-08-17",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5813,7 +5951,7 @@
    "status": "approved"
   },
   {
-   "day": 297,
+   "day": 304,
    "date": "2027-08-18",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5833,7 +5971,7 @@
    "status": "approved"
   },
   {
-   "day": 298,
+   "day": 305,
    "date": "2027-08-19",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5852,7 +5990,7 @@
    "status": "approved"
   },
   {
-   "day": 299,
+   "day": 306,
    "date": "2027-08-20",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -5871,7 +6009,7 @@
    "status": "approved"
   },
   {
-   "day": 300,
+   "day": 307,
    "date": "2027-08-21",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -5890,7 +6028,7 @@
    "status": "approved"
   },
   {
-   "day": 301,
+   "day": 308,
    "date": "2027-08-22",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -5909,7 +6047,7 @@
    "status": "approved"
   },
   {
-   "day": 302,
+   "day": 309,
    "date": "2027-08-23",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -5928,7 +6066,7 @@
    "status": "approved"
   },
   {
-   "day": 303,
+   "day": 310,
    "date": "2027-08-24",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -5947,7 +6085,7 @@
    "status": "approved"
   },
   {
-   "day": 304,
+   "day": 311,
    "date": "2027-08-25",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -5966,7 +6104,7 @@
    "status": "approved"
   },
   {
-   "day": 305,
+   "day": 312,
    "date": "2027-08-26",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -5986,7 +6124,7 @@
    "status": "approved"
   },
   {
-   "day": 306,
+   "day": 313,
    "date": "2027-08-27",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6005,7 +6143,7 @@
    "status": "approved"
   },
   {
-   "day": 307,
+   "day": 314,
    "date": "2027-08-28",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6024,7 +6162,7 @@
    "status": "approved"
   },
   {
-   "day": 308,
+   "day": 315,
    "date": "2027-08-29",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6044,7 +6182,7 @@
    "status": "approved"
   },
   {
-   "day": 309,
+   "day": 316,
    "date": "2027-08-30",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6064,7 +6202,7 @@
    "status": "approved"
   },
   {
-   "day": 310,
+   "day": 317,
    "date": "2027-08-31",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6083,7 +6221,7 @@
    "status": "approved"
   },
   {
-   "day": 311,
+   "day": 318,
    "date": "2027-09-01",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6102,7 +6240,7 @@
    "status": "approved"
   },
   {
-   "day": 312,
+   "day": 319,
    "date": "2027-09-02",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6122,7 +6260,7 @@
    "status": "approved"
   },
   {
-   "day": 313,
+   "day": 320,
    "date": "2027-09-03",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6141,7 +6279,7 @@
    "status": "approved"
   },
   {
-   "day": 314,
+   "day": 321,
    "date": "2027-09-04",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6160,7 +6298,7 @@
    "status": "approved"
   },
   {
-   "day": 315,
+   "day": 322,
    "date": "2027-09-05",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6179,7 +6317,7 @@
    "status": "approved"
   },
   {
-   "day": 316,
+   "day": 323,
    "date": "2027-09-06",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6198,7 +6336,7 @@
    "status": "approved"
   },
   {
-   "day": 317,
+   "day": 324,
    "date": "2027-09-07",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6218,7 +6356,7 @@
    "status": "approved"
   },
   {
-   "day": 318,
+   "day": 325,
    "date": "2027-09-08",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6238,7 +6376,7 @@
    "status": "approved"
   },
   {
-   "day": 319,
+   "day": 326,
    "date": "2027-09-09",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6257,7 +6395,7 @@
    "status": "approved"
   },
   {
-   "day": 320,
+   "day": 327,
    "date": "2027-09-10",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6276,7 +6414,7 @@
    "status": "approved"
   },
   {
-   "day": 321,
+   "day": 328,
    "date": "2027-09-11",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6295,7 +6433,7 @@
    "status": "approved"
   },
   {
-   "day": 322,
+   "day": 329,
    "date": "2027-09-12",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6314,7 +6452,7 @@
    "status": "approved"
   },
   {
-   "day": 323,
+   "day": 330,
    "date": "2027-09-13",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6334,7 +6472,7 @@
    "status": "approved"
   },
   {
-   "day": 324,
+   "day": 331,
    "date": "2027-09-14",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6354,7 +6492,7 @@
    "status": "approved"
   },
   {
-   "day": 325,
+   "day": 332,
    "date": "2027-09-15",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6373,7 +6511,7 @@
    "status": "approved"
   },
   {
-   "day": 326,
+   "day": 333,
    "date": "2027-09-16",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6392,7 +6530,7 @@
    "status": "approved"
   },
   {
-   "day": 327,
+   "day": 334,
    "date": "2027-09-17",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6411,7 +6549,7 @@
    "status": "approved"
   },
   {
-   "day": 328,
+   "day": 335,
    "date": "2027-09-18",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6430,7 +6568,7 @@
    "status": "approved"
   },
   {
-   "day": 329,
+   "day": 336,
    "date": "2027-09-19",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6450,7 +6588,7 @@
    "status": "approved"
   },
   {
-   "day": 330,
+   "day": 337,
    "date": "2027-09-20",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6469,7 +6607,7 @@
    "status": "approved"
   },
   {
-   "day": 331,
+   "day": 338,
    "date": "2027-09-21",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6488,7 +6626,7 @@
    "status": "approved"
   },
   {
-   "day": 332,
+   "day": 339,
    "date": "2027-09-22",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6507,7 +6645,7 @@
    "status": "approved"
   },
   {
-   "day": 333,
+   "day": 340,
    "date": "2027-09-23",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6529,7 +6667,7 @@
    "status": "approved"
   },
   {
-   "day": 334,
+   "day": 341,
    "date": "2027-09-24",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6548,7 +6686,7 @@
    "status": "approved"
   },
   {
-   "day": 335,
+   "day": 342,
    "date": "2027-09-25",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6567,7 +6705,7 @@
    "status": "approved"
   },
   {
-   "day": 336,
+   "day": 343,
    "date": "2027-09-26",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6586,7 +6724,7 @@
    "status": "approved"
   },
   {
-   "day": 337,
+   "day": 344,
    "date": "2027-09-27",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6606,7 +6744,7 @@
    "status": "approved"
   },
   {
-   "day": 338,
+   "day": 345,
    "date": "2027-09-28",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6625,7 +6763,7 @@
    "status": "approved"
   },
   {
-   "day": 339,
+   "day": 346,
    "date": "2027-09-29",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6644,7 +6782,7 @@
    "status": "approved"
   },
   {
-   "day": 340,
+   "day": 347,
    "date": "2027-09-30",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6665,7 +6803,7 @@
    "status": "approved"
   },
   {
-   "day": 341,
+   "day": 348,
    "date": "2027-10-01",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6684,7 +6822,7 @@
    "status": "approved"
   },
   {
-   "day": 342,
+   "day": 349,
    "date": "2027-10-02",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6703,7 +6841,7 @@
    "status": "approved"
   },
   {
-   "day": 343,
+   "day": 350,
    "date": "2027-10-03",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6723,7 +6861,7 @@
    "status": "approved"
   },
   {
-   "day": 344,
+   "day": 351,
    "date": "2027-10-04",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6742,7 +6880,7 @@
    "status": "approved"
   },
   {
-   "day": 345,
+   "day": 352,
    "date": "2027-10-05",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6762,7 +6900,7 @@
    "status": "approved"
   },
   {
-   "day": 346,
+   "day": 353,
    "date": "2027-10-06",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6781,7 +6919,7 @@
    "status": "approved"
   },
   {
-   "day": 347,
+   "day": 354,
    "date": "2027-10-07",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6804,7 +6942,7 @@
    "status": "approved"
   },
   {
-   "day": 348,
+   "day": 355,
    "date": "2027-10-08",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6823,7 +6961,7 @@
    "status": "approved"
   },
   {
-   "day": 349,
+   "day": 356,
    "date": "2027-10-09",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6842,7 +6980,7 @@
    "status": "approved"
   },
   {
-   "day": 350,
+   "day": 357,
    "date": "2027-10-10",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6861,7 +6999,7 @@
    "status": "approved"
   },
   {
-   "day": 351,
+   "day": 358,
    "date": "2027-10-11",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -6880,7 +7018,7 @@
    "status": "approved"
   },
   {
-   "day": 352,
+   "day": 359,
    "date": "2027-10-12",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -6900,7 +7038,7 @@
    "status": "approved"
   },
   {
-   "day": 353,
+   "day": 360,
    "date": "2027-10-13",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -6920,7 +7058,7 @@
    "status": "approved"
   },
   {
-   "day": 354,
+   "day": 361,
    "date": "2027-10-14",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -6940,7 +7078,7 @@
    "status": "approved"
   },
   {
-   "day": 355,
+   "day": 362,
    "date": "2027-10-15",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -6959,7 +7097,7 @@
    "status": "approved"
   },
   {
-   "day": 356,
+   "day": 363,
    "date": "2027-10-16",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -6978,7 +7116,7 @@
    "status": "approved"
   },
   {
-   "day": 357,
+   "day": 364,
    "date": "2027-10-17",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -6998,7 +7136,7 @@
    "status": "approved"
   },
   {
-   "day": 358,
+   "day": 365,
    "date": "2027-10-18",
    "weekday": "Monday",
    "theme": "Commercial & QS",
@@ -7021,7 +7159,7 @@
    "status": "approved"
   },
   {
-   "day": 359,
+   "day": 366,
    "date": "2027-10-19",
    "weekday": "Tuesday",
    "theme": "Site, quality & handover",
@@ -7041,7 +7179,7 @@
    "status": "approved"
   },
   {
-   "day": 360,
+   "day": 367,
    "date": "2027-10-20",
    "weekday": "Wednesday",
    "theme": "Projects, programme & design",
@@ -7060,7 +7198,7 @@
    "status": "approved"
   },
   {
-   "day": 361,
+   "day": 368,
    "date": "2027-10-21",
    "weekday": "Thursday",
    "theme": "Contracts, claims & compliance",
@@ -7083,7 +7221,7 @@
    "status": "approved"
   },
   {
-   "day": 362,
+   "day": 369,
    "date": "2027-10-22",
    "weekday": "Friday",
    "theme": "Estimating, tendering & procurement",
@@ -7102,7 +7240,7 @@
    "status": "approved"
   },
   {
-   "day": 363,
+   "day": 370,
    "date": "2027-10-23",
    "weekday": "Saturday",
    "theme": "Health, safety & environment",
@@ -7121,7 +7259,7 @@
    "status": "approved"
   },
   {
-   "day": 364,
+   "day": 371,
    "date": "2027-10-24",
    "weekday": "Sunday",
    "theme": "AI tools, agents & the business",
@@ -7140,7 +7278,7 @@
    "status": "approved"
   },
   {
-   "day": 365,
+   "day": 372,
    "date": "2027-10-25",
    "weekday": "Monday",
    "theme": "Commercial & QS",

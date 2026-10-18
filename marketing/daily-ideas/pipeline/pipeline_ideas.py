@@ -68,6 +68,7 @@ MON = [  # Commercial & QS
     I("Write a commercial handover note when a QS leaves the job", [QS], 'handover', 'any', 'b', 'm', '', '', 'Cash flow 90-day calendar'),
     I("Explain a fluctuations option and what it means for the account", [QS, CM], 'contracts', 'claude', 'a', 'h', 'jct-db-2024, nec4-ecc', '', 'New', LEGAL),
     I("Work out late payment interest before you chase", [SUB], 'late-payment', 'any', 'b', 'm', 'late-payment-act', '', 'New', 'Links to the constructionrating.co.uk late payment calculator.'),
+    I("Explain what moved in this month's valuation", [QS, CM], 'valuations', 'claude', 'i', 'm', '', '/ai-workflows/create-cost-value-reconciliation', 'New', 'Launch week: new idea, as the Reserve sheet had no Monday idea.', '2026-10-19'),
 ]
 
 TUE = [  # Site, quality & handover
@@ -123,7 +124,7 @@ TUE = [  # Site, quality & handover
     I("Prepare the handover meeting agenda", [PM, SM], 'handover', 'any', 'b', 'l', '', '', 'New'),
     I("Plain-English home user guide for a new-build handover", [SM, PM], 'handover', 'claude', 'b', 'l', '', '', 'New'),
     I("Turn a client complaint into an investigation and reply", [PM, SM], 'communication', 'claude', 'i', 'm', '', '', 'pSEO database'),
-    I("Check the drawings on site are the latest revision", [SM, DOC], 'drawings', 'any', 'b', 'm', '', '', 'Design Manager research'),
+    I("Check the drawings on site are the latest revision", [SM, DOC], 'drawings', 'any', 'b', 'm', '', '', 'Design Manager research', 'Launch week, from the Reserve sheet.', '2026-10-20'),
 ]
 
 WED = [  # Project management, programme & design
@@ -179,7 +180,7 @@ WED = [  # Project management, programme & design
     I("Write the lessons-learned questions before the closeout meeting", [PM], 'closeout', 'any', 'b', 'l', '', '/ai-workflows/draft-lessons-learned-report', 'New'),
     I("Turn a dense programme into a one-page milestone summary", [PM, PLN], 'programme', 'any', 'b', 'l', '', '', 'New'),
     I("Prepare the agenda for a design team meeting", [DES], 'meetings', 'any', 'b', 'l', '', '', 'New'),
-    I("Write a recovery email when a key date is at risk", [PM], 'programme', 'claude', 'i', 'h', '', '/ai-workflows/create-recovery-programme-narrative', 'New'),
+    I("Write a recovery email when a key date is at risk", [PM], 'programme', 'claude', 'i', 'h', '', '/ai-workflows/create-recovery-programme-narrative', 'New', 'Launch week, from the Reserve sheet.', '2026-10-21'),
 ]
 
 THU = [  # Contracts, claims & compliance
@@ -235,7 +236,7 @@ THU = [  # Contracts, claims & compliance
     I("Track key contract dates: sectional completion, LDs and defects periods", [CTR, QS], 'contract-admin', 'any', 'b', 'm', 'jct-db-2024, nec4-ecc', '', 'New'),
     I("What to gather for an insurance claim after a site incident", [CTR, PM], 'insurance', 'any', 'i', 'm', '', '', 'New'),
     I("Write a contract summary for the site team at start-up", [CTR, SM], 'contract-review', 'claude', 'i', 'm', 'jct-db-2024, nec4-ecc', '/ai-workflows/summarise-contract-clauses', 'New', LEGAL),
-    I("Build the assessment date calendar under NEC4", [QS], 'payment-timing', 'any', 'i', 'h', 'nec4-ecc', '', 'New', LEGAL),
+    I("Build the assessment date calendar under NEC4", [QS], 'payment-timing', 'any', 'i', 'h', 'nec4-ecc', '', 'New', LEGAL, '2026-10-22'),
 ]
 
 FRI = [  # Estimating, tendering & procurement
@@ -275,7 +276,8 @@ FRI = [  # Estimating, tendering & procurement
     I("Generate scopes for every trade on a scheme in one go", [QS], 'scopes', 'claude', 'a', 'h', '', '/ai-workflows/generate-subcontractor-scope-of-works', 'QS assistant workflows'),
     I("Quote PDFs into a comparison workbook with gap analysis", [QS], 'tendering', 'claude-code', 'a', 'm', '', '/ai-workflows/analyse-subcontractor-quotes', 'QS assistant workflows'),
 ] + [
-    I(f"Scope of works for the {pkg} package", [QS], 'scopes', 'claude', 'i', 'h', '', '/ai-workflows/generate-subcontractor-scope-of-works', 'QS Command Centre trade list', 'Trade scope series: package-specific inclusions, exclusions and interfaces.')
+    I(f"Scope of works for the {pkg} package", [QS], 'scopes', 'claude', 'i', 'h', '', '/ai-workflows/generate-subcontractor-scope-of-works', 'QS Command Centre trade list', 'Trade scope series: package-specific inclusions, exclusions and interfaces.',
+      pin='2026-10-23' if pkg == 'hard and soft landscaping' else '')
     for pkg in ['groundworks', 'piling', 'below-ground drainage', 'RC frame', 'steel frame', 'masonry', 'roofing',
                 'windows and external doors', 'curtain walling and cladding', 'mechanical services', 'electrical services',
                 'drylining and plastering', 'fire alarm and detection', 'sprinklers', 'lifts', 'scaffolding', 'demolition',
@@ -319,7 +321,7 @@ SAT_TB = [
     TB('hand-arm vibration (HAVS)'), TB('fire prevention and hot works'), TB('electrical safety and 110V'),
     TB('working alone'), TB('PPE standards'), TB('reporting near misses'), TB('emergency procedures and first aid'),
     TB('COSHH basics'), TB('fuel storage and refuelling'), TB('spoil heaps'), TB('manual handling and repetitive strain'),
-    TB('permits to work'), TB("briefing the day's RAMS"),
+    TB('permits to work'), TB("briefing the day's RAMS", '2026-10-24'),
 ]
 
 # Interleave: core H&S ideas spread between toolbox talks.
@@ -383,5 +385,5 @@ SUN = [  # AI tools, agents & business
     I("Write a monthly AI progress update for the board", [DIR], 'reporting', 'claude', 'b', 'l', '', '', 'New'),
     I("Set up a shared team assistant with project instructions", [PM, QS], 'setup', 'claude', 'i', 'l', '', '', 'New'),
     I("Get Copilot to explain the formulas in a commercial spreadsheet", [QS], 'spreadsheets', 'copilot', 'b', 'm', '', '', 'New'),
-    I("Tidy a messy spreadsheet before you analyse it", [QS, CM], 'spreadsheets', 'claude-code', 'i', 'm', '', '', 'QS prompts guide #7', IN_GUIDE),
+    I("Tidy a messy spreadsheet before you analyse it", [QS, CM], 'spreadsheets', 'claude-code', 'i', 'm', '', '', 'QS prompts guide #7', IN_GUIDE, '2026-10-25'),
 ]
