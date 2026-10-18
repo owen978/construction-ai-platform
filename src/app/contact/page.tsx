@@ -5,7 +5,7 @@ import { features } from '@/lib/features'
 
 export const metadata: Metadata = pageMetadata({
   path: '/contact',
-  title: 'Contact Us — BuildCopilot',
+  title: 'Contact Us',
   description:
     'Get in touch with the BuildCopilot team. Questions, feedback, or partnership enquiries welcome.',
 })

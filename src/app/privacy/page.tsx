@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
   path: '/privacy',
-  title: 'Privacy Policy — BuildCopilot',
+  title: 'Privacy Policy',
   description:
     'How BuildCopilot collects, uses, and protects your data. Read our full privacy policy.',
 })

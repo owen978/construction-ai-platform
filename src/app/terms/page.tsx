@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
   path: '/terms',
-  title: 'Terms of Use — BuildCopilot',
+  title: 'Terms of Use',
   description:
     'Terms and conditions for using the BuildCopilot website and its content.',
 })

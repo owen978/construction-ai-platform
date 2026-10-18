@@ -6,7 +6,7 @@ import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
   path: '/newsletter',
-  title: 'Newsletter — BuildCopilot',
+  title: 'Newsletter',
   description:
     'Subscribe to the BuildCopilot newsletter. Get new AI workflows, prompts, and guides for construction professionals delivered to your inbox.',
 })

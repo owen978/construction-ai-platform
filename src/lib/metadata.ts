@@ -34,7 +34,9 @@ export function pageMetadata({
   type?: 'website' | 'article'
 }): Metadata {
   return {
-    title,
+    // Titles that already name the site (e.g. "About BuildCopilot", or a CMS
+    // meta_title ending "| BuildCopilot") skip the layout's "%s | BuildCopilot".
+    title: title.includes(SITE_NAME) ? { absolute: title } : title,
     description,
     alternates: {
       canonical: path,
