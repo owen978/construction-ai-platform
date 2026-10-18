@@ -11,7 +11,8 @@ import { breadcrumbSchema, collectionPageSchema, faqSchema, jsonLdScriptProps } 
 import { getAiForExtras } from '@/lib/ai-for-extras'
 import { AiForExtras } from '@/components/sections/ai-for-extras'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-import { getRelatedContent } from '@/lib/queries/related'
+import { getRelatedContent, withoutShown } from '@/lib/queries/related'
+import { getRelatedGuideSlugs } from '@/lib/related-guides'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
@@ -130,7 +131,12 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
-        {extras && <AiForExtras extras={extras} title={`How AI helps ${pluralRole(role.name)}`} />}
+        {extras && (
+          <AiForExtras
+            extras={extras}
+            title={pluralRole(role.name) === role.name ? `How AI helps with ${role.name.toLowerCase()}` : `How AI helps ${pluralRole(role.name)}`}
+          />
+        )}
 
         <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
         <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
@@ -157,7 +163,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
 
         <RelatedGuides section="ai-for" slug={slug} />
 
-        <RelatedResources items={relatedResources} />
+        <RelatedResources items={withoutShown(relatedResources, { workflows: workflows.map((w) => w.slug), guides: getRelatedGuideSlugs('ai-for', slug) })} />
 
         <NewsletterInline />
       </div>
@@ -250,7 +256,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
 
         <RelatedGuides section="ai-for" slug={slug} />
 
-        <RelatedResources items={relatedResources} />
+        <RelatedResources items={withoutShown(relatedResources, { workflows: workflows.map((w) => w.slug), guides: getRelatedGuideSlugs('ai-for', slug) })} />
 
         <NewsletterInline />
       </div>

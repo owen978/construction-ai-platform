@@ -10,7 +10,7 @@ import { Byline } from '@/components/ui/byline'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, articleSchema, faqSchema, extractFaqFromMarkdown, jsonLdScriptProps } from '@/lib/schema'
 import { MarkdownContent } from '@/components/markdown-content'
-import { getRelatedContent } from '@/lib/queries/related'
+import { getRelatedContent, withoutShown } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
@@ -151,7 +151,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
         </div>
       )}
 
-      <RelatedResources items={relatedResources} />
+      <RelatedResources items={withoutShown(relatedResources, { workflows: relatedWorkflows.map((w) => w.slug) })} />
 
       <NewsletterInline />
     </div>

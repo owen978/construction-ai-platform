@@ -42,6 +42,19 @@ export interface RelatedItem {
   href: string
 }
 
+/** Drop related items the page already links elsewhere, so no link appears twice. */
+export function withoutShown(
+  items: RelatedItem[],
+  shown: { workflows?: string[]; guides?: string[]; templates?: string[] }
+): RelatedItem[] {
+  const seen: Record<RelatedType, string[]> = {
+    workflow: shown.workflows ?? [],
+    guide: shown.guides ?? [],
+    template: shown.templates ?? [],
+  }
+  return items.filter((i) => !seen[i.type].includes(i.slug))
+}
+
 interface GetRelatedOptions {
   /** The page's own title or name; any shared word here qualifies a candidate. */
   title: string

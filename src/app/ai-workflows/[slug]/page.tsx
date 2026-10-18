@@ -4,7 +4,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getWorkflowBySlug, getWorkflowSlugs, getWorkflowsByRoleId } from '@/lib/queries/workflows'
-import { getRelatedContent } from '@/lib/queries/related'
+import { getRelatedContent, withoutShown } from '@/lib/queries/related'
+import { getRelatedGuideSlugs } from '@/lib/related-guides'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { Badge } from '@/components/ui/badge'
@@ -260,7 +261,12 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
 
       <RelatedGuides section="ai-workflows" slug={slug} />
 
-      <RelatedResources items={relatedResources} />
+      <RelatedResources
+        items={withoutShown(relatedResources, {
+          workflows: moreForRole.map((w) => w.slug),
+          guides: [...getRelatedGuideSlugs('ai-workflows', slug), ...(workflow.guide ? [workflow.guide.slug] : [])],
+        })}
+      />
     </div>
   )
 }

@@ -10,7 +10,8 @@ import { features } from '@/lib/features'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
-import { getRelatedContent } from '@/lib/queries/related'
+import { getRelatedContent, withoutShown } from '@/lib/queries/related'
+import { getRelatedGuideSlugs } from '@/lib/related-guides'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
@@ -271,7 +272,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
 
       <RelatedGuides section="templates" slug={slug} />
 
-      <RelatedResources items={relatedResources} />
+      <RelatedResources items={withoutShown(relatedResources, { guides: getRelatedGuideSlugs('templates', slug) })} />
     </div>
   )
 }
