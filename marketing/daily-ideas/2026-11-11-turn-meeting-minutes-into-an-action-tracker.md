@@ -11,6 +11,7 @@ timeWithAiMins: 15
 difficulty: "beginner"
 riskIfWrong: "low"
 relatedWorkflow: "generate-meeting-minutes"
+relatedPage: "/templates/meeting-minutes"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""

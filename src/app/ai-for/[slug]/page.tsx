@@ -12,6 +12,8 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
+import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
+import { dailyArchiveHref, getIdeasForRole } from '@/lib/daily-ideas'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
@@ -134,6 +136,13 @@ export default async function AIForPage({ params }: AIForPageProps) {
         ) : (
           <p className="text-slate-500">No workflows available for this role yet.</p>
         )}
+
+        <DailyIdeasStrip
+          ideas={getIdeasForRole(slug)}
+          title="Latest daily ideas for this role"
+          moreHref={dailyArchiveHref({ role: slug })}
+          moreLabel="All daily ideas for this role"
+        />
 
         <RelatedGuides section="ai-for" slug={slug} />
 

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CopyButton } from '@/components/ui/copy-button'
 import { IdeaChips } from '@/components/daily/idea-chips'
-import { IdeaTeaser } from '@/components/daily/idea-teaser'
+import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { pageMetadata } from '@/lib/metadata'
@@ -13,14 +13,23 @@ import { isDailyIdeasEnabled } from '@/lib/features'
 import { AUTHOR } from '@/lib/author'
 import { SITE_URL } from '@/lib/site'
 import { breadcrumbSchema, dailyIdeaSchema, jsonLdScriptProps } from '@/lib/schema'
+import { getRoles } from '@/lib/queries/roles'
+import { getToolBySlug, getToolSlugs } from '@/lib/queries/tools'
+import { getWorkflowBySlug } from '@/lib/queries/workflows'
+import { getGuideBySlug } from '@/lib/queries/guides'
+import { getTemplateBySlug } from '@/lib/queries/templates'
 import {
+  dailyArchiveHref,
   formatIdeaDate,
   getIdeaByParam,
   getPublishedIdeas,
   getRelatedIdeas,
   ideaParam,
   ideaPath,
+  roleLabel,
   toolLabel,
+  toolPageSlug,
+  type DailyIdea,
 } from '@/lib/daily-ideas'
 
 interface DailyIdeaPageProps {
@@ -47,6 +56,49 @@ export async function generateMetadata({ params }: DailyIdeaPageProps): Promise<
   })
 }
 
+/** A failed lookup drops the link rather than breaking the page. */
+async function safe<T>(p: Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await p
+  } catch {
+    return fallback
+  }
+}
+
+const RELATED_KIND = { guides: 'Guide', templates: 'Free template', 'ai-tools': 'Tool guide' } as const
+
+/** Links out to the rest of the site, using live page titles so nothing points at a missing page. */
+async function getLinks(idea: DailyIdea) {
+  const toolSlug = toolPageSlug(idea.tool)
+  const [roles, toolSlugs, workflow, related] = await Promise.all([
+    safe(getRoles(), []),
+    toolSlug ? safe(getToolSlugs(), []) : Promise.resolve([]),
+    idea.relatedWorkflow ? safe(getWorkflowBySlug(idea.relatedWorkflow), null) : Promise.resolve(null),
+    getRelatedPage(idea.relatedPage),
+  ])
+  const mainRole = roles.find((r) => r.slug === idea.roles[0])
+  return {
+    roleLinks: roles.map((r) => r.slug).filter((r) => idea.roles.includes(r)),
+    mainRolePage: mainRole ? { name: mainRole.name, href: `/ai-for/${mainRole.slug}` } : null,
+    toolHref: toolSlug && toolSlugs.some((t) => t.slug === toolSlug) ? `/ai-tools/${toolSlug}` : null,
+    workflow: workflow ? { title: workflow.title, href: `/ai-workflows/${workflow.slug}` } : null,
+    related,
+  }
+}
+
+async function getRelatedPage(path: string | null) {
+  const m = path?.match(/^\/(guides|templates|ai-tools)\/([a-z0-9-]+)$/)
+  if (!m) return null
+  const [, kind, slug] = m as unknown as [string, keyof typeof RELATED_KIND, string]
+  const title =
+    kind === 'guides'
+      ? (await safe(getGuideBySlug(slug), null))?.title
+      : kind === 'templates'
+        ? (await safe(getTemplateBySlug(slug), null))?.name
+        : (await safe(getToolBySlug(slug), null))?.name
+  return title ? { kind: RELATED_KIND[kind], title, href: path! } : null
+}
+
 const sectionHeading = 'mb-3 border-b border-slate-200 pb-2 text-xl font-semibold text-slate-900'
 
 export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
@@ -56,6 +108,8 @@ export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
 
   const related = getRelatedIdeas(idea, 3)
   const path = ideaPath(idea)
+  const links = await getLinks(idea)
+  const mainRole = idea.roles[0]
 
   return (
     <>
@@ -96,7 +150,7 @@ export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
               {AUTHOR.name}
             </Link>
           </p>
-          <IdeaChips idea={idea} maxRoles={4} className="mt-4" />
+          <IdeaChips idea={idea} maxRoles={4} roleLinks={links.roleLinks} toolHref={links.toolHref} className="mt-4" />
           <p className="mt-5 text-lg leading-relaxed text-slate-600">{idea.summary}</p>
 
           {idea.whenToUse && (
@@ -152,27 +206,46 @@ export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
             </p>
           )}
 
-          {idea.relatedWorkflow && (
-            <p className="mt-8 text-slate-600">
-              Want the longer version, with an example output and more detail?{' '}
-              <Link href={`/ai-workflows/${idea.relatedWorkflow}`} className="font-semibold text-primary hover:underline">
-                Read the full workflow
-              </Link>
-              .
-            </p>
-          )}
+          <section className="mt-8 rounded-lg border border-slate-200 bg-slate-50 px-5 py-4">
+            <h2 className="font-semibold text-slate-900">Go further</h2>
+            <ul className="mt-2 space-y-1.5 text-slate-600">
+              {links.workflow && (
+                <li>
+                  The full workflow, with an example output:{' '}
+                  <Link href={links.workflow.href} className="font-semibold text-primary hover:underline">
+                    {links.workflow.title}
+                  </Link>
+                </li>
+              )}
+              {links.related && (
+                <li>
+                  {links.related.kind}:{' '}
+                  <Link href={links.related.href} className="font-semibold text-primary hover:underline">
+                    {links.related.title}
+                  </Link>
+                </li>
+              )}
+              {links.mainRolePage && (
+                <li>
+                  Every workflow for this role:{' '}
+                  <Link href={links.mainRolePage.href} className="font-semibold text-primary hover:underline">
+                    AI for {links.mainRolePage.name}
+                  </Link>
+                </li>
+              )}
+              <li>
+                More ideas like this:{' '}
+                <Link href={dailyArchiveHref({ role: mainRole })} className="font-semibold text-primary hover:underline">
+                  daily ideas for {roleLabel(mainRole)}s
+                </Link>
+              </li>
+            </ul>
+          </section>
         </article>
 
         <ServiceCTA config={null} utmContent={`daily-${idea.slug}`} />
 
-        {related.length > 0 && (
-          <section className="mt-12">
-            <h2 className="mb-4 text-xl font-semibold text-slate-900">Related ideas</h2>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {related.map((r) => <IdeaTeaser key={r.slug} idea={r} />)}
-            </div>
-          </section>
-        )}
+        <DailyIdeasStrip ideas={related} title="Related ideas" moreHref="/daily" />
 
         <NewsletterBanner />
       </div>

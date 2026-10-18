@@ -15,6 +15,8 @@ import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
+import { getIdeasForPage } from '@/lib/daily-ideas'
 import { getServiceCta } from '@/lib/service-cta'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
@@ -131,6 +133,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
         {/* Guide content */}
         {guide.content && <MarkdownContent content={guide.content} />}
+        <DailyIdeasStrip ideas={getIdeasForPage(`/guides/${slug}`)} title="Daily ideas from this guide" moreHref="/daily" />
         <ServiceCTA config={serviceCta} utmContent={`guide-${slug}`} />
         <ConstructionRatingNote note={getConstructionRatingNote('guides', slug)} />
         <NewsletterBanner />

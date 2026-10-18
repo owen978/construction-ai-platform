@@ -45,13 +45,16 @@ function visible(): DailyIdea[] {
   return process.env.NODE_ENV === 'development' ? ALL : ALL.filter((i) => i.status === 'approved')
 }
 
-export function londonDate(at: Date = new Date()): string {
+export function londonDate(at?: Date): string {
+  // Local preview of a future day: DAILY_IDEAS_PREVIEW_DATE=2026-10-26 npm run dev
+  const preview = process.env.DAILY_IDEAS_PREVIEW_DATE
+  if (!at && preview && process.env.NODE_ENV === 'development' && /^\d{4}-\d{2}-\d{2}$/.test(preview)) return preview
   return new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Europe/London',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-  }).format(at)
+  }).format(at ?? new Date())
 }
 
 /** Ideas whose day has come, newest first. */
@@ -116,6 +119,51 @@ export function getIdeaByParam(param: string, today = londonDate()): DailyIdea |
   const m = param.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/)
   if (!m) return null
   return getPublishedIdeas(today).find((i) => i.publishDate === m[1] && i.slug === m[2]) ?? null
+}
+
+// ─── Links to and from the rest of the site ─────────────────────────
+
+/** Idea tool → its /ai-tools/ page slug, where the site has one. */
+const TOOL_PAGES: Record<string, string> = {
+  'chatgpt': 'chatgpt',
+  'claude': 'claude',
+  'copilot': 'microsoft-copilot',
+  'gemini': 'google-gemini',
+}
+
+export const toolPageSlug = (tool: string): string | null => TOOL_PAGES[tool] ?? null
+
+/** The idea tool behind an /ai-tools/ page, for filtering the archive. */
+export const toolForPage = (slug: string): string | null =>
+  Object.entries(TOOL_PAGES).find(([, page]) => page === slug)?.[0] ?? null
+
+/** Published ideas that build on a workflow, newest first. */
+export function getIdeasForWorkflow(slug: string, limit = 3, today = londonDate()): DailyIdea[] {
+  return getPublishedIdeas(today).filter((i) => i.relatedWorkflow === slug).slice(0, limit)
+}
+
+/** Published ideas for a role, newest first. */
+export function getIdeasForRole(role: string, limit = 3, today = londonDate()): DailyIdea[] {
+  return getPublishedIdeas(today).filter((i) => i.roles.includes(role)).slice(0, limit)
+}
+
+/** Published ideas that use the tool behind an /ai-tools/ page, newest first. */
+export function getIdeasForToolPage(slug: string, limit = 3, today = londonDate()): DailyIdea[] {
+  return getPublishedIdeas(today).filter((i) => toolPageSlug(i.tool) === slug).slice(0, limit)
+}
+
+/** Published ideas that link to a guide, template or tool page (their relatedPage), newest first. */
+export function getIdeasForPage(path: string, limit = 3, today = londonDate()): DailyIdea[] {
+  return getPublishedIdeas(today).filter((i) => i.relatedPage === path).slice(0, limit)
+}
+
+/** Archive link filtered to a role or tool. */
+export function dailyArchiveHref(filter: { role?: string; tool?: string } = {}) {
+  const q = new URLSearchParams()
+  if (filter.role) q.set('role', filter.role)
+  if (filter.tool) q.set('tool', filter.tool)
+  const qs = q.toString()
+  return qs ? `/daily?${qs}` : '/daily'
 }
 
 // ─── Labels ──────────────────────────────────────────────────────────

@@ -11,6 +11,7 @@ timeWithAiMins: 15
 difficulty: "beginner"
 riskIfWrong: "medium"
 relatedWorkflow: "write-toolbox-talk"
+relatedPage: "/guides/what-is-a-rams-construction-guide"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""

@@ -11,6 +11,7 @@ timeWithAiMins: 30
 difficulty: "intermediate"
 riskIfWrong: "medium"
 relatedWorkflow: ""
+relatedPage: "/guides/chatgpt-prompts-for-quantity-surveyors"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""

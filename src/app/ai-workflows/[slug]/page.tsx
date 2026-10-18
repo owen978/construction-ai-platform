@@ -23,6 +23,8 @@ import { getWorkflowExtras } from '@/lib/workflow-extras'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { RelatedGuides } from '@/components/sections/related-guides'
+import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
+import { getIdeasForWorkflow } from '@/lib/daily-ideas'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
@@ -204,6 +206,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           )}
 
           {extras && <WorkflowExtras extras={extras} />}
+
+          <DailyIdeasStrip ideas={getIdeasForWorkflow(slug)} title="Daily ideas that build on this workflow" moreHref="/daily" />
         </div>
 
         {/* Sidebar */}

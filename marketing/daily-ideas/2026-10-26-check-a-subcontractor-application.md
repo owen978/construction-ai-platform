@@ -12,6 +12,7 @@ timeWithAiMins: 45
 difficulty: "intermediate"
 riskIfWrong: "high"
 relatedWorkflow: "draft-valuation-payment-application"
+relatedPage: "/guides/ai-for-quantity-surveyors-guide"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""

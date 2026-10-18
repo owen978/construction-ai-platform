@@ -14,6 +14,8 @@ import { getRelatedContent } from '@/lib/queries/related'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
+import { getIdeasForPage } from '@/lib/daily-ideas'
 import { getServiceCta } from '@/lib/service-cta'
 import { FreeToolCallout } from '@/components/sections/free-tool-callout'
 import { SITE_URL } from '@/lib/site'
@@ -172,6 +174,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
+          <DailyIdeasStrip ideas={getIdeasForPage(`/templates/${slug}`)} title="Daily ideas that use this template" moreHref="/daily" />
           <ServiceCTA config={serviceCta} utmContent={`template-${slug}`} />
 
           <NewsletterBanner />

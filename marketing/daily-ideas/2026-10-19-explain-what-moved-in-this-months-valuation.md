@@ -11,6 +11,7 @@ timeWithAiMins: 25
 difficulty: "intermediate"
 riskIfWrong: "medium"
 relatedWorkflow: "create-cost-value-reconciliation"
+relatedPage: "/guides/ai-for-quantity-surveyors-guide"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""
