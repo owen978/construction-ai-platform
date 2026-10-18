@@ -10,6 +10,19 @@ const GHL_ORIGIN = 'https://link.contractorsystems.co.uk'
 /** Roadmap Review / 15-minute call booking widget. */
 export const GHL_BOOKING_URL = `${GHL_ORIGIN}/widget/booking/mzWN8jEzZDL5SxkY71ut`
 
+/**
+ * Booking link tagged with UTMs so bookings can be traced to the page that
+ * sent them. `content` is "{page-type}-{slug}", e.g. "workflow-write-daily-site-report".
+ */
+export function bookingUrl(content: string) {
+  const params = new URLSearchParams({
+    utm_source: 'buildcopilot',
+    utm_medium: 'cta',
+    utm_content: content,
+  })
+  return `${GHL_BOOKING_URL}?${params}`
+}
+
 export const GHL_NEWSLETTER_FORM_ID = 'rncFCtEjzs4hnT5jgHsB'
 export const GHL_NEWSLETTER_FORM_URL = `${GHL_ORIGIN}/widget/form/${GHL_NEWSLETTER_FORM_ID}`
 

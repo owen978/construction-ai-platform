@@ -114,7 +114,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
-        {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
+        {serviceCta && <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />}
 
         {workflows.length > 0 ? (
           <div>
@@ -198,7 +198,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
-        {serviceCta && <ServiceCTA config={serviceCta} className="max-w-3xl" />}
+        {serviceCta && <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />}
 
         {workflows.length > 0 ? (
           <div>

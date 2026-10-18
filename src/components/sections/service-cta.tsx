@@ -2,10 +2,12 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button-variants'
 import type { ServiceCtaConfig } from '@/lib/service-cta'
-import { GHL_BOOKING_URL } from '@/lib/ghl'
+import { bookingUrl } from '@/lib/ghl'
 
 interface ServiceCTAProps {
   config: ServiceCtaConfig
+  /** utm_content for the booking link: "{page-type}-{slug}". */
+  utmContent: string
   className?: string
 }
 
@@ -14,7 +16,7 @@ interface ServiceCTAProps {
  * Small kicker, one sentence with a price anchor, and two links:
  * the services page and the 15-minute booking call.
  */
-export function ServiceCTA({ config, className }: ServiceCTAProps) {
+export function ServiceCTA({ config, utmContent, className }: ServiceCTAProps) {
   const isFull = config.variant === 'full'
 
   return (
@@ -54,7 +56,7 @@ export function ServiceCTA({ config, className }: ServiceCTAProps) {
           See the service
         </Link>
         <a
-          href={GHL_BOOKING_URL}
+          href={bookingUrl(utmContent)}
           target="_blank"
           rel="noopener noreferrer"
           className={buttonVariants({ variant: 'outline' })}

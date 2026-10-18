@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { pageMetadata } from '@/lib/metadata'
-import { GHL_BOOKING_URL } from '@/lib/ghl'
+import { bookingUrl } from '@/lib/ghl'
 
 export const metadata: Metadata = pageMetadata({
   path: '/services',
@@ -310,7 +310,7 @@ export default function ServicesPage() {
 
           <div className="mt-8 flex flex-col items-center gap-3">
             <a
-              href={GHL_BOOKING_URL}
+              href={bookingUrl('services')}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
@@ -409,7 +409,7 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <a
-                  href={GHL_BOOKING_URL}
+                  href={bookingUrl('services')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonVariants({ className: 'mt-5 w-full px-8 py-3 text-base shadow-lg shadow-primary/25' })}
@@ -533,7 +533,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8">
             <a
-              href={GHL_BOOKING_URL}
+              href={bookingUrl('services')}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}

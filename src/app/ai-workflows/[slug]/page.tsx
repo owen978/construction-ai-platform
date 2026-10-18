@@ -164,7 +164,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
             </div>
           )}
 
-          {serviceCta && <ServiceCTA config={serviceCta} />}
+          {serviceCta && <ServiceCTA config={serviceCta} utmContent={`workflow-${slug}`} />}
 
           {/* Example Output */}
           {workflow.example_output && (
