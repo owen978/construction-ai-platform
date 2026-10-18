@@ -19,6 +19,11 @@ const STOP = new Set([
   'how', 'what', 'is', 'are', 'construction', 'guide', 'guides', 'template',
   'templates', 'generate', 'draft', 'write', 'create', 'build', 'building',
   'using', 'use', 'free', 'complete', 'step', 'by',
+  // Every page on the site is about workflows and prompts, so these never signal a topic.
+  'workflow', 'workflows', 'prompt', 'prompts', 'tool', 'tools', 'uk',
+  'example', 'explained', 'practical',
+  // Role names are 'X Manager': the shared 'manager' says nothing about the topic.
+  'manager',
 ])
 
 function tokens(s: string): string[] {
@@ -26,12 +31,16 @@ function tokens(s: string): string[] {
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, ' ')
     .split(/[\s-]+/)
-    .filter((t) => t.length > 2 && !STOP.has(t))
+    // Light plural folding, so "Toolbox Talks" matches "Toolbox Talk" and "Method Statements" matches "Method Statement".
+    .map((t) => (t.length > 4 && t.endsWith('s') && !t.endsWith('ss') ? t.slice(0, -1) : t))
+    .filter((t) => t.length > 2 && !STOP.has(t) && !/^\d+$/.test(t)) // drop years like "2026"
 }
 
 // Calibrated on the live content (Oct 2026): two shared description words need
 // a combined weight of 4.5, roughly two words that appear in under 5% of titles.
 const MIN_CONTEXT_SCORE = 4.5
+// A word in this many candidate titles or fewer is specific enough to match on alone.
+const RARE_WORD_TITLES = 3
 
 export type RelatedType = 'guide' | 'template' | 'workflow'
 
@@ -97,6 +106,13 @@ export async function getRelatedContent(opts: GetRelatedOptions): Promise<Relate
   for (const c of candidates) for (const t of new Set(tokens(c.title))) docFreq.set(t, (docFreq.get(t) ?? 0) + 1)
   const weight = (t: string) => Math.log((candidates.length + 1) / ((docFreq.get(t) ?? 0) + 1)) + 1
 
+  // A single shared title word only counts if it's the page's most distinctive
+  // word that other titles use, or a rare word (in 3 titles or fewer): "Write a
+  // Variation Assessment" should match variation pages, not every "assessment".
+  const anchor = [...primary]
+    .filter((t) => docFreq.has(t))
+    .sort((a, b) => weight(b) - weight(a))[0]
+
   const scored = candidates
     .filter((c) => !(c.type === opts.excludeType && c.slug === opts.excludeSlug))
     .map((c) => {
@@ -106,7 +122,9 @@ export async function getRelatedContent(opts: GetRelatedOptions): Promise<Relate
       const contextScore = contextHits.reduce((sum, t) => sum + weight(t), 0)
       const score = titleHits.reduce((sum, t) => sum + 2 * weight(t), 0) + contextScore
       const qualifies =
-        titleHits.length > 0 || (contextHits.length >= 2 && contextScore >= MIN_CONTEXT_SCORE)
+        titleHits.length >= 2 ||
+        (titleHits.length === 1 && (titleHits[0] === anchor || (docFreq.get(titleHits[0]) ?? 0) <= RARE_WORD_TITLES)) ||
+        (contextHits.length >= 2 && contextScore >= MIN_CONTEXT_SCORE)
       return { c, score, qualifies }
     })
     .filter((x) => x.qualifies)
