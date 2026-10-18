@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/terms',
   title: 'Terms of Use — BuildCopilot',
   description:
     'Terms and conditions for using the BuildCopilot website and its content.',
-}
+})
 
 export default function TermsPage() {
   return (

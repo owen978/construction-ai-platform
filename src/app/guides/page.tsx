@@ -7,12 +7,14 @@ import { GuideCard } from '@/components/cards/guide-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/guides',
   title: 'Guides',
   description:
     'Learn how to use AI effectively in construction. Step-by-step guides for professionals.',
-}
+})
 
 export default async function GuidesPage() {
   const guides = await getGuides()

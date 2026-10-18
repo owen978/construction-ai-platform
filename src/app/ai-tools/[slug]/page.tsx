@@ -12,6 +12,7 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { ToolCard } from '@/components/cards/tool-card'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
 export async function generateStaticParams() {
   const slugs = await getToolSlugs()
@@ -30,10 +31,11 @@ export async function generateMetadata({ params }: ToolDetailPageProps): Promise
     return { title: 'Tool Not Found' }
   }
 
-  return {
+  return pageMetadata({
+    path: `/ai-tools/${slug}`,
     title: tool.meta_title || tool.name,
     description: tool.meta_description || tool.description || undefined,
-  }
+  })
 }
 
 export default async function ToolDetailPage({ params }: ToolDetailPageProps) {

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/contact',
   title: 'Contact Us — BuildCopilot',
   description:
     'Get in touch with the BuildCopilot team. Questions, feedback, or partnership enquiries welcome.',
-}
+})
 
 export default function ContactPage() {
   return (

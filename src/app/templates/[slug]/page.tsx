@@ -18,6 +18,7 @@ import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { FreeToolCallout } from '@/components/sections/free-tool-callout'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
 /** Free interactive tools promoted from closely related template pages. */
 const FREE_TOOL_CALLOUTS: Record<
@@ -55,10 +56,11 @@ export async function generateMetadata({ params }: TemplateDetailPageProps): Pro
     return { title: 'Template Not Found' }
   }
 
-  return {
+  return pageMetadata({
+    path: `/templates/${slug}`,
     title: template.meta_title || template.name,
     description: template.meta_description || template.description || undefined,
-  }
+  })
 }
 
 export default async function TemplateDetailPage({ params }: TemplateDetailPageProps) {

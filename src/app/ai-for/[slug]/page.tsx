@@ -16,6 +16,7 @@ import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
 export async function generateStaticParams() {
   const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])
@@ -31,18 +32,20 @@ export async function generateMetadata({ params }: AIForPageProps): Promise<Meta
 
   const role = await getRoleBySlug(slug)
   if (role) {
-    return {
+    return pageMetadata({
+      path: `/ai-for/${slug}`,
       title: role.meta_title || `AI for ${role.name}`,
       description: role.meta_description || role.description || undefined,
-    }
+    })
   }
 
   const task = await getTaskBySlug(slug)
   if (task) {
-    return {
+    return pageMetadata({
+      path: `/ai-for/${slug}`,
       title: task.meta_title || `AI for ${task.name}`,
       description: task.meta_description || task.description || undefined,
-    }
+    })
   }
 
   return { title: 'Not Found' }

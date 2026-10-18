@@ -4,12 +4,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/prompt-pack',
   title: 'Construction AI Prompt Pack - 50 Prompts, 13 Templates, Role Cheat Sheets',
   description:
     'Download the complete Construction AI Prompt Pack. 50 ready-made prompts, 13 editable templates, role cheat sheets, and tool setup guides. Built for UK construction professionals.',
-}
+})
 
 const features = [
   {

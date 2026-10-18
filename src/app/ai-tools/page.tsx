@@ -7,12 +7,14 @@ import { ToolCard } from '@/components/cards/tool-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/ai-tools',
   title: 'AI Tools',
   description:
     'Discover the best AI tools for construction professionals. Compare features, pricing, and find the right tool for your needs.',
-}
+})
 
 export default async function ToolsPage() {
   const tools = await getTools()

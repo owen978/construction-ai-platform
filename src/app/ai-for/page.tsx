@@ -9,12 +9,14 @@ import { TaskCard } from '@/components/cards/task-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/ai-for',
   title: 'AI for Construction Roles & Tasks',
   description:
     'Find AI workflows tailored to your construction role. Browse by role or task — QS, Project Manager, Site Manager, Estimator, and more.',
-}
+})
 
 export default async function AIForPage() {
   const roles = await getRoles()

@@ -7,12 +7,14 @@ import { TemplateCard } from '@/components/cards/template-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/templates',
   title: 'Free Construction Templates - AI-Powered Document Generators',
   description:
     'Free construction document templates powered by AI. Method statements, RAMS, daily reports, toolbox talks, risk assessments, and more. Download and use instantly.',
-}
+})
 
 export default async function TemplatesPage() {
   const templates = await getTemplates()

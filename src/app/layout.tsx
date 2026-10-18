@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/footer'
 import './globals.css'
 import { cn } from "@/lib/utils";
 import { SITE_URL } from '@/lib/site'
+import { DEFAULT_OG_IMAGE, FEED_ALTERNATE, SITE_NAME } from '@/lib/metadata'
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,30 +28,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: SITE_URL,
-    siteName: 'BuildCopilot',
+    siteName: SITE_NAME,
     title: 'BuildCopilot: The AI Operating System for Construction',
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1536,
-        height: 1024,
-        alt: 'BuildCopilot — The AI Operating System for Construction',
-      },
-    ],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BuildCopilot: The AI Operating System for Construction',
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
-    images: ['/og-image.png'],
+    images: [DEFAULT_OG_IMAGE.url],
   },
   alternates: {
-    types: {
-      'application/rss+xml': '/feed.xml',
-    },
+    types: FEED_ALTERNATE,
   },
   robots: {
     index: true,

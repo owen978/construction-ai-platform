@@ -17,6 +17,7 @@ import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
 export async function generateStaticParams() {
   const slugs = await getGuideSlugs()
@@ -41,10 +42,12 @@ export async function generateMetadata({ params }: GuideDetailPageProps): Promis
     return { title: 'Guide Not Found' }
   }
 
-  return {
+  return pageMetadata({
+    path: `/guides/${slug}`,
     title: guide.meta_title || guide.title,
     description: guide.meta_description || guide.description || undefined,
-  }
+    type: 'article',
+  })
 }
 
 export default async function GuideDetailPage({ params }: GuideDetailPageProps) {

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/privacy',
   title: 'Privacy Policy — BuildCopilot',
   description:
     'How BuildCopilot collects, uses, and protects your data. Read our full privacy policy.',
-}
+})
 
 export default function PrivacyPage() {
   return (

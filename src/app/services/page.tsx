@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button-variants'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/services',
   title: 'Fixed-Fee Commercial & AI Services for Developers, Contractors & Subcontractors',
   description:
     'Fixed-outcome commercial and AI services for construction. QS services you already know, procurement packages, quote comparisons, cash flow forecasts, plus AI and systems services starting with a £950 AI Implementation Roadmap Review, credited in full against any build over £2,500.',
-}
+})
 
 const bookingHref =
   'https://link.contractorsystems.co.uk/widget/booking/mzWN8jEzZDL5SxkY71ut'

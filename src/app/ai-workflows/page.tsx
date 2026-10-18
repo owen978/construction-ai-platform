@@ -7,12 +7,14 @@ import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/ai-workflows',
   title: 'AI Workflows',
   description:
     'Browse AI-powered workflows for construction professionals. Ready-to-use prompts for Quantity Surveyors, Project Managers, and more.',
-}
+})
 
 export default async function WorkflowsPage() {
   const workflows = await getWorkflows()

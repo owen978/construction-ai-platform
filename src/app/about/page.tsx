@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/about',
   title: 'About BuildCopilot',
   description:
     'BuildCopilot provides free AI workflows, prompts, and guides built specifically for construction professionals. Learn more about our mission.',
-}
+})
 
 export default function AboutPage() {
   return (

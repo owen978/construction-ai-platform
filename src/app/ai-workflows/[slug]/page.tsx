@@ -18,6 +18,7 @@ import { getServiceCta } from '@/lib/service-cta'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
 export async function generateStaticParams() {
   const slugs = await getWorkflowSlugs()
@@ -42,10 +43,11 @@ export async function generateMetadata({ params }: WorkflowDetailPageProps): Pro
     return { title: 'Workflow Not Found' }
   }
 
-  return {
+  return pageMetadata({
+    path: `/ai-workflows/${slug}`,
     title: workflow.meta_title || workflow.title,
     description: workflow.meta_description || workflow.description || undefined,
-  }
+  })
 }
 
 export default async function WorkflowDetailPage({ params }: WorkflowDetailPageProps) {

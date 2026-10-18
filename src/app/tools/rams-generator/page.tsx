@@ -4,12 +4,14 @@ import { breadcrumbSchema, faqSchema, organizationSchema, jsonLdScriptProps } fr
 import { FormwiseEmbed } from '@/components/formwise-embed'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/tools/rams-generator',
   title: 'Free RAMS Generator: Risk Assessment & Method Statement',
   description:
     'Free AI RAMS generator for UK construction. Enter your task and get a structured Risk Assessment and Method Statement draft in minutes. Built around CDM 2015.',
-}
+})
 
 const FAQ = [
   {

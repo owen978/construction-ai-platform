@@ -11,6 +11,17 @@ import { LatestGuides } from '@/components/sections/latest-guides'
 import { CTASection } from '@/components/sections/cta-section'
 import { NewsletterCTA } from '@/components/sections/newsletter-cta'
 import { websiteSchema, jsonLdScriptProps } from '@/lib/schema'
+import type { Metadata } from 'next'
+import { FEED_ALTERNATE } from '@/lib/metadata'
+
+// Title and Open Graph tags come from the root layout, which already describes
+// the homepage; only the canonical URL is added here.
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+    types: FEED_ALTERNATE,
+  },
+}
 
 /** Flagship guides that must always be surfaced from the homepage. */
 const HOMEPAGE_GUIDE_SLUGS = [

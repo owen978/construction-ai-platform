@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
+import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/newsletter',
   title: 'Newsletter — BuildCopilot',
   description:
     'Subscribe to the BuildCopilot newsletter. Get new AI workflows, prompts, and guides for construction professionals delivered to your inbox.',
-}
+})
 
 export default function NewsletterPage() {
   return (
