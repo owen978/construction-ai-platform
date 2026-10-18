@@ -17,8 +17,8 @@ export const AUTHOR = {
   photo: null as string | null,
   /** Personal profiles, used on the author page and as Person.sameAs. */
   profiles: {
-    linkedin: null as string | null,
-    x: null as string | null,
+    linkedin: 'https://www.linkedin.com/in/owen-hagger/' as string | null,
+    x: 'https://x.com/owenhagger' as string | null,
   },
   company: {
     name: 'Contractor Systems',
