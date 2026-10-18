@@ -8,13 +8,16 @@ import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { getContentCounts } from '@/lib/queries/counts'
 
-export const metadata: Metadata = pageMetadata({
-  path: '/templates',
-  title: 'Free Construction Templates - AI-Powered Document Generators',
-  description:
-    'Free construction document templates powered by AI. Method statements, RAMS, daily reports, toolbox talks, risk assessments, and more. Download and use instantly.',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const { templates } = await getContentCounts()
+  return pageMetadata({
+    path: '/templates',
+    title: 'Free Construction Templates for UK Sites',
+    description: `${templates} free UK construction templates: RAMS, method statements, risk assessments, toolbox talks, site diaries and more, with tips for using AI.`,
+  })
+}
 
 export default async function TemplatesPage() {
   const templates = await getTemplates()

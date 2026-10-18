@@ -89,7 +89,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
       <div className="grid gap-12 lg:grid-cols-3">
         {/* Main content */}
         <div className="lg:col-span-2">
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{tool.name}</h1>
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{tool.name} for Construction</h1>
 
           {tool.description && (
             <p className="mb-6 text-lg leading-relaxed text-slate-600">

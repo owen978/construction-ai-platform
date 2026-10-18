@@ -8,13 +8,17 @@ import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { getContentCounts } from '@/lib/queries/counts'
 
-export const metadata: Metadata = pageMetadata({
-  path: '/ai-workflows',
-  title: 'AI Workflows',
-  description:
-    'Browse AI-powered workflows for construction professionals. Ready-to-use prompts for Quantity Surveyors, Project Managers, and more.',
-})
+// Live count in the description: specific numbers earn more clicks than generic copy.
+export async function generateMetadata(): Promise<Metadata> {
+  const { workflows } = await getContentCounts()
+  return pageMetadata({
+    path: '/ai-workflows',
+    title: 'AI Workflows for Construction: Free Copy-Paste Prompts',
+    description: `${workflows} free AI workflows for UK construction: copy-paste prompts for QSs, project managers, site managers and estimators, with what to check.`,
+  })
+}
 
 export default async function WorkflowsPage() {
   const workflows = await getWorkflows()
@@ -48,7 +52,7 @@ export default async function WorkflowsPage() {
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">AI Workflows</span>
           </nav>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Workflows</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Workflows for Construction</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-600">Ready-to-use AI workflows designed for construction professionals. Copy, paste, and save hours.</p>
         </div>
       </div>

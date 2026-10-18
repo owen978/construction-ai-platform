@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/ai-for',
   title: 'AI for Construction Roles & Tasks',
   description:
-    'Find AI workflows tailored to your construction role. Browse by role or task — QS, Project Manager, Site Manager, Estimator, and more.',
+    'Find AI workflows for your construction role or task: quantity surveyors, project managers, site managers, estimators, H&S managers and more.',
 })
 
 export default async function AIForPage() {
@@ -53,7 +53,7 @@ export default async function AIForPage() {
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">AI for Roles & Tasks</span>
           </nav>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI for Your Role</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI for Construction Roles and Tasks</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-600">Find AI workflows tailored to your construction role, or browse by task to find exactly what you need.</p>
         </div>
       </div>

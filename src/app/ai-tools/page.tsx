@@ -9,12 +9,14 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = pageMetadata({
-  path: '/ai-tools',
-  title: 'AI Tools',
-  description:
-    'Discover the best AI tools for construction professionals. Compare features, pricing, and find the right tool for your needs.',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const tools = await getTools()
+  return pageMetadata({
+    path: '/ai-tools',
+    title: 'AI Tools for UK Construction Teams',
+    description: `How ${tools.length} AI tools, from ChatGPT and Claude to Microsoft Copilot and Procore, fit UK construction work, with workflows to try in each.`,
+  })
+}
 
 export default async function ToolsPage() {
   const tools = await getTools()
@@ -48,7 +50,7 @@ export default async function ToolsPage() {
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">AI Tools</span>
           </nav>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Tools</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Tools for Construction</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-600">Discover the best AI tools for construction professionals. Compare features, pricing, and find the right tool.</p>
         </div>
       </div>

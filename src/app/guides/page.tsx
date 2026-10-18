@@ -8,13 +8,16 @@ import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { getContentCounts } from '@/lib/queries/counts'
 
-export const metadata: Metadata = pageMetadata({
-  path: '/guides',
-  title: 'Guides',
-  description:
-    'Learn how to use AI effectively in construction. Step-by-step guides for professionals.',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const { guides } = await getContentCounts()
+  return pageMetadata({
+    path: '/guides',
+    title: 'AI Guides for UK Construction Professionals',
+    description: `${guides} practical guides to using AI in UK construction: estimating, valuations, contracts, site reports, health and safety, BIM and more.`,
+  })
+}
 
 export default async function GuidesPage() {
   const guides = await getGuides()
@@ -48,7 +51,7 @@ export default async function GuidesPage() {
             <svg className="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             <span className="font-medium text-slate-900">Guides</span>
           </nav>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Guides</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Guides for Construction</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-600">Learn how to use AI effectively in construction. Step-by-step guides for professionals.</p>
         </div>
       </div>
