@@ -64,18 +64,21 @@ html {
   --card-foreground: oklch(0.18 0.02 280);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 280);
-  --primary: oklch(0.7 0.19 45);
+  /* #cc4300: 4.81:1 with white text, 4.60:1 as text on slate-50 (WCAG AA). */
+  --primary: oklch(0.57 0.19 45);
   --primary-foreground: oklch(1 0 0);
+  /* The original #fa6e1d, for orange text and marks on dark (charcoal) backgrounds, where it scores 5.95:1. */
+  --primary-bright: oklch(0.7 0.19 45);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.18 0.02 280);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.7 0.19 45);
+  --accent: oklch(0.57 0.19 45);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.7 0.19 45);
+  --ring: oklch(0.57 0.19 45);
   --chart-1: oklch(0.7 0.19 45);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -153,6 +156,7 @@ html {
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-primary-bright: var(--primary-bright);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);

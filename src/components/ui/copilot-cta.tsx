@@ -16,7 +16,7 @@ export function CopilotCTA({ className, variant = 'sidebar' }: CopilotCTAProps) 
       )}
     >
       <div className="relative">
-        <div className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+        <div className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-bright">
           Try our software
         </div>
         <h3 className="text-lg font-semibold text-white">
