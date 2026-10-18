@@ -1,7 +1,7 @@
 ---
 title: "Build the assessment date calendar under NEC4"
 slug: "build-the-assessment-date-calendar-under-nec4"
-summary: "Set out every assessment date for the job, with your application deadline, the certificate date and the payment dates either side, so nothing gets missed or applied for late."
+summary: "Set out every NEC4 assessment date for the job, with your application deadline, the certificate date and the payment dates, so nothing is missed."
 roles: [quantity-surveyor]
 task: "payment-timing"
 contractForms: [nec4-ecc]

@@ -1,7 +1,7 @@
 ---
 title: "Toolbox talk: briefing the day's RAMS"
 slug: "toolbox-talk-briefing-the-days-rams"
-summary: "Turn the RAMS for today's task into a five-minute pre-start briefing that covers the hazards, the controls and the stop points, with questions to check people have understood."
+summary: "Turn the RAMS for today's task into a five-minute pre-start briefing on the hazards, controls and stop points, with questions to check understanding."
 roles: [site-manager]
 task: "toolbox-talks"
 contractForms: []

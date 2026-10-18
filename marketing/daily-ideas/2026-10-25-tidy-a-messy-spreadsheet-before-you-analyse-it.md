@@ -1,7 +1,7 @@
 ---
 title: "Tidy a messy spreadsheet before you analyse it"
 slug: "tidy-a-messy-spreadsheet-before-you-analyse-it"
-summary: "Use Claude Code to turn a messy commercial spreadsheet into a clean table you can sort, filter and analyse, without touching the original and with a log of every change."
+summary: "Use Claude Code to turn a messy commercial spreadsheet into a clean table you can analyse, without touching the original and with a log of every change."
 roles: [quantity-surveyor, commercial-manager]
 task: "spreadsheets"
 contractForms: []

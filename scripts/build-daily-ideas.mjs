@@ -9,6 +9,10 @@
  * headed `## Prompt`, `## What it produced`, `## What you still check`,
  * `## Steps` and optionally `## When to use it`. See
  * marketing/daily-ideas/README.md for the full format.
+ *
+ * Approved ideas must also pass the search checks below (title and
+ * description lengths, enough substance, no em dashes), so a page that
+ * would show badly in Google never reaches the live site.
  */
 
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -26,6 +30,14 @@ const ENUMS = {
   status: ['draft', 'approved'],
   sourceKind: ['owen', 'community'],
 }
+// Search checks for approved ideas.
+const MAX_SEO_TITLE = 60 // Google shows about 60 characters of a title
+const DESCRIPTION_RANGE = [120, 160] // the summary is the meta description
+const MIN_WORDS = 330 // body text across all sections, so pages aren't thin
+const MIN_LIST_ITEMS = 3 // checks and steps
+const RELATED_PAGE = /^\/(guides|templates|ai-tools)\/[a-z0-9-]+$/
+const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+
 const SECTIONS = {
   'prompt': 'prompt',
   'what it produced': 'result',
@@ -52,6 +64,30 @@ function listItems(text) {
     .split('\n')
     .map((l) => l.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/)?.[1]?.trim())
     .filter(Boolean)
+}
+
+function checkSearchQuality(file, idea) {
+  const problems = []
+  const seoTitle = idea.metaTitle ?? idea.title
+  if (seoTitle.length > MAX_SEO_TITLE) {
+    problems.push(idea.metaTitle
+      ? `metaTitle is ${seoTitle.length} characters; keep it to ${MAX_SEO_TITLE} or fewer`
+      : `title is ${seoTitle.length} characters, too long for search results; add a metaTitle of ${MAX_SEO_TITLE} characters or fewer (the page heading keeps the full title)`)
+  }
+  const [lo, hi] = DESCRIPTION_RANGE
+  if (idea.summary.length < lo || idea.summary.length > hi) {
+    problems.push(`summary is ${idea.summary.length} characters; it is the meta description, so keep it between ${lo} and ${hi}`)
+  }
+  if (!idea.whenToUse) problems.push('add a "## When to use it" section')
+  if ((idea.whatToCheck?.length ?? 0) < MIN_LIST_ITEMS) problems.push(`"## What you still check" needs at least ${MIN_LIST_ITEMS} points`)
+  if ((idea.steps?.length ?? 0) < MIN_LIST_ITEMS) problems.push(`"## Steps" needs at least ${MIN_LIST_ITEMS} steps`)
+  const text = [idea.title, idea.metaTitle, idea.summary, idea.whenToUse, idea.prompt, idea.result, ...(idea.whatToCheck ?? []), ...(idea.steps ?? [])]
+    .filter(Boolean)
+    .join(' ')
+  const words = text.split(/\s+/).filter(Boolean).length
+  if (words < MIN_WORDS) problems.push(`only ${words} words; approved ideas need at least ${MIN_WORDS} so the page isn't thin`)
+  if (text.includes('\u2014')) problems.push('contains an em dash; use a comma, colon or full stop instead')
+  if (problems.length) throw new Error(`${file}:\n  - ${problems.join('\n  - ')}`)
 }
 
 function parseFile(file) {
@@ -88,11 +124,19 @@ function parseFile(file) {
   if (idea.status === 'approved' && (!idea.result || !idea.whatToCheck?.length)) {
     throw new Error(`${file}: approved ideas need "## What it produced" and "## What you still check"`)
   }
+  if (idea.relatedWorkflow != null && !SLUG.test(idea.relatedWorkflow)) {
+    throw new Error(`${file}: relatedWorkflow must be a workflow slug, e.g. "write-toolbox-talk"`)
+  }
+  if (idea.relatedPage != null && !RELATED_PAGE.test(idea.relatedPage)) {
+    throw new Error(`${file}: relatedPage must be a /guides/, /templates/ or /ai-tools/ path, e.g. "/guides/construction-daily-report-guide"`)
+  }
+  if (idea.status === 'approved') checkSearchQuality(file, idea)
 
   return {
     slug: idea.slug,
     publishDate: idea.publishDate,
     title: idea.title,
+    metaTitle: idea.metaTitle ?? null,
     summary: idea.summary,
     roles: idea.roles,
     task: idea.task,
@@ -111,6 +155,7 @@ function parseFile(file) {
       ? { kind: 'community', url: idea.sourceUrl ?? null, label: idea.sourceLabel ?? null }
       : { kind: 'owen', url: null, label: null },
     relatedWorkflow: idea.relatedWorkflow ?? null,
+    relatedPage: idea.relatedPage ?? null,
     status: idea.status,
   }
 }
@@ -122,7 +167,20 @@ try {
   // No ideas folder yet: write an empty list.
 }
 
-const ideas = files.map(parseFile)
+// Check every file before failing, so one run lists every problem.
+const ideas = []
+const errors = []
+for (const f of files) {
+  try {
+    ideas.push(parseFile(f))
+  } catch (e) {
+    errors.push(e.message)
+  }
+}
+if (errors.length) {
+  console.error(`daily ideas: ${errors.length} file(s) need fixing\n\n${errors.join('\n\n')}`)
+  process.exit(1)
+}
 const dates = new Map()
 for (const idea of ideas) {
   if (dates.has(idea.publishDate)) {

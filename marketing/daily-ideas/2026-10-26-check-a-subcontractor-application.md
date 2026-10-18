@@ -1,6 +1,7 @@
 ---
 title: "Check a subcontractor's interim application against your valuation"
 slug: "check-a-subcontractor-application"
+metaTitle: "Check a subcontractor's application against your valuation"
 summary: "Line up a subcontractor's application against your own measure and get a clear list of differences, the reasons for each, and the queries to send back."
 roles: [quantity-surveyor, commercial-manager]
 task: "valuations"

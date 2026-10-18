@@ -1,7 +1,7 @@
 ---
 title: "Explain what moved in this month's valuation"
 slug: "explain-what-moved-in-this-months-valuation"
-summary: "Paste last month's and this month's valuation and get a line-by-line explanation of what changed and why, ready for your CVR commentary or the valuation meeting."
+summary: "Paste last month's and this month's valuation and get a line-by-line explanation of what changed and why, ready for your CVR or the valuation meeting."
 roles: [quantity-surveyor, commercial-manager]
 task: "valuations"
 contractForms: []

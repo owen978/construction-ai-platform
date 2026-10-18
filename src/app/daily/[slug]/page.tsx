@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: DailyIdeaPageProps): Promise<
 
   return pageMetadata({
     path: ideaPath(idea),
-    title: idea.title,
+    title: idea.metaTitle ?? idea.title,
     description: idea.summary,
     type: 'article',
     routeImage: true,

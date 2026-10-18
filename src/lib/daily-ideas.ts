@@ -17,6 +17,7 @@ export interface DailyIdea {
   slug: string
   publishDate: string // YYYY-MM-DD, Europe/London
   title: string
+  metaTitle: string | null // shorter title for search results when `title` is over 60 characters
   summary: string
   roles: string[]
   task: string
@@ -33,6 +34,7 @@ export interface DailyIdea {
   steps: string[]
   source: { kind: 'owen' | 'community'; url: string | null; label: string | null }
   relatedWorkflow: string | null
+  relatedPage: string | null // a /guides/, /templates/ or /ai-tools/ path
   status: 'draft' | 'approved'
 }
 

@@ -1,7 +1,7 @@
 ---
 title: "Scope of works for the hard and soft landscaping package"
 slug: "scope-of-works-for-the-hard-and-soft-landscaping-package"
-summary: "Draft a landscaping subcontract scope with clear inclusions, exclusions and interfaces, so the gaps with groundworks, drainage and external services are closed before you tender."
+summary: "Draft a landscaping subcontract scope with clear inclusions, exclusions and interfaces, closing the gaps with groundworks and drainage before you tender."
 roles: [quantity-surveyor]
 task: "scopes"
 contractForms: []
