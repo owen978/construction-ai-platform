@@ -12,7 +12,7 @@
 export const ROADMAP_REVIEW_OFFER = {
   kicker: 'AI Roadmap Review',
   heading: 'Want this done for your team?',
-  body: "A QS with 25+ years' experience reviews your commercial and admin workflows and hands you a written roadmap: quick wins, costed options, what each step saves.",
+  body: "A QS with 25+ years' experience reviews your workflows across commercial, operations, site management and H&S, and hands you a written roadmap: quick wins, costed options, what each step saves.",
   points: [
     '£950 fixed, delivered in days, 45-minute walkthrough',
     "If we can't find 20+ hours a month of recoverable time, you don't pay",
