@@ -41,8 +41,11 @@ function filterHref(params: { role?: string; tool?: string; page?: number }) {
 export default async function DailyArchivePage({ searchParams }: DailyArchiveProps) {
   if (!isDailyIdeasEnabled()) notFound()
 
+  // Reading searchParams first keeps this page rendered per request, so the
+  // archive appears on the first idea's day without waiting for a deploy.
   const { role, tool, page: pageParam } = await searchParams
   const all = getPublishedIdeas()
+  if (all.length === 0) notFound()
   const filtered = all.filter((i) => (!role || i.roles.includes(role)) && (!tool || i.tool === tool))
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const page = Math.min(pages, Math.max(1, Number(pageParam) || 1))

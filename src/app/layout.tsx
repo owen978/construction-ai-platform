@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter, Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Header } from '@/components/layout/header'
+import { isDailyIdeasEnabled } from '@/lib/features'
+import { getPublishedIdeas } from '@/lib/daily-ideas'
 import { Footer } from '@/components/layout/footer'
 import './globals.css'
 import { cn } from "@/lib/utils";
@@ -58,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${inter.className} min-h-screen bg-white text-slate-600 antialiased`}>
-        <Header />
+        <Header showDailyIdeas={isDailyIdeasEnabled() && getPublishedIdeas().length > 0} />
         <main>{children}</main>
         <Footer />
         <Analytics />

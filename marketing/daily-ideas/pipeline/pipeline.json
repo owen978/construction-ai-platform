@@ -1,0 +1,7164 @@
+{
+ "approval": "Approved by Owen, 18 Oct 2026 (whole pipeline as proposed)",
+ "start": "2026-10-26",
+ "end": "2027-10-25",
+ "days": [
+  {
+   "day": 1,
+   "date": "2026-10-26",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Check a subcontractor's interim application against your valuation",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "valuations",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/draft-valuation-payment-application",
+   "source": "Brief seed #3",
+   "notes": "Sample draft already written.",
+   "status": "approved"
+  },
+  {
+   "day": 2,
+   "date": "2026-10-27",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn a voice note into a daily site log entry",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "daily-reports",
+   "contractForms": [],
+   "tool": "chatgpt",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/write-daily-site-report",
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 3,
+   "date": "2026-10-28",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "One set of facts, three versions: board, client and team",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/draft-monthly-progress-report",
+   "source": "/ai-for page copy",
+   "notes": "Lines up with the LinkedIn post on 28 Oct (trial one reporting task).",
+   "status": "approved"
+  },
+  {
+   "day": 4,
+   "date": "2026-10-29",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Turn a site issue into an NEC4 early warning notice",
+   "roles": [
+    "project-manager",
+    "site-manager",
+    "contracts-manager"
+   ],
+   "task": "contract-notices",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/draft-contractual-notice-for-delay",
+   "source": "Brief seed #5",
+   "notes": "Sample draft already written. Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 5,
+   "date": "2026-10-30",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "List your own tender qualifications and clarifications",
+   "roles": [
+    "estimator"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #23",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 6,
+   "date": "2026-10-31",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: lighting and visibility on dark mornings",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 7,
+   "date": "2026-11-01",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Run a fair two-week trial of one AI task",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "adoption",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "LinkedIn post 28 Oct",
+   "notes": "Lines up with the LinkedIn post on 28 Oct (trial one task properly).",
+   "status": "approved"
+  },
+  {
+   "day": 8,
+   "date": "2026-11-02",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Match supplier invoices to purchase orders and flag the differences",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "invoices",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot feature list",
+   "notes": "Lines up with the LinkedIn post on 4 Nov (invoice exceptions).",
+   "status": "approved"
+  },
+  {
+   "day": 9,
+   "date": "2026-11-03",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Ask AI what's missing from today's site diary before a delay claim needs it",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "daily-reports",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-daily-site-report",
+   "source": "/ai-tools page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 10,
+   "date": "2026-11-04",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Summarise the RFI log for a client meeting",
+   "roles": [
+    "project-manager",
+    "design-manager"
+   ],
+   "task": "rfis",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/draft-rfi-response",
+   "source": "Brief seed #29",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 11,
+   "date": "2026-11-05",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Draft an NEC4 compensation event notification",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "compensation-events",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #6",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 12,
+   "date": "2026-11-06",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Check a preliminaries build-up for gaps",
+   "roles": [
+    "quantity-surveyor",
+    "estimator"
+   ],
+   "task": "prelims",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #24",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 13,
+   "date": "2026-11-07",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: working at height in wet weather",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 14,
+   "date": "2026-11-08",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Claude Skill: an interim valuation checker for QSs",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #32",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 15,
+   "date": "2026-11-09",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Draft a payment notice from an interim valuation",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "payment-notices",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/draft-valuation-payment-application",
+   "source": "Brief seed #1",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 16,
+   "date": "2026-11-10",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn site diary entries into a delay record",
+   "roles": [
+    "site-manager",
+    "planning-engineer"
+   ],
+   "task": "delays",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/write-weather-delay-impact-assessment",
+   "source": "Brief seed #27",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 17,
+   "date": "2026-11-11",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Turn meeting minutes into an action tracker",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-meeting-minutes",
+   "source": "Brief seed #28",
+   "notes": "Sample draft already written. Lines up with the LinkedIn post on 11 Nov (meeting actions).",
+   "status": "approved"
+  },
+  {
+   "day": 18,
+   "date": "2026-11-12",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Build an NEC4 compensation event quotation narrative",
+   "roles": [
+    "quantity-surveyor",
+    "contracts-manager"
+   ],
+   "task": "compensation-events",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #7",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 19,
+   "date": "2026-11-13",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Find scope gaps between subcontract packages",
+   "roles": [
+    "quantity-surveyor",
+    "estimator"
+   ],
+   "task": "packages",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #25",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 20,
+   "date": "2026-11-14",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Review a subcontractor's RAMS against the task",
+   "roles": [
+    "health-and-safety-manager",
+    "site-manager"
+   ],
+   "task": "rams-review",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/templates/rams",
+   "source": "Construction prompts guide #8",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 21,
+   "date": "2026-11-15",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Grok routine: a Monday cash position email drafted for review",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "grok",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #33",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 22,
+   "date": "2026-11-16",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Build a cash flow S-curve from the programme",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "cash-flow",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/generate-cashflow-forecast",
+   "source": "Brief seed #22",
+   "notes": "Lines up with the LinkedIn post on 18 Nov (cash flow).",
+   "status": "approved"
+  },
+  {
+   "day": 23,
+   "date": "2026-11-17",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Start-of-shift briefing from tomorrow's plan",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "briefings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 24,
+   "date": "2026-11-18",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Question your progress report like a sceptical client PM",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 25,
+   "date": "2026-11-19",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Respond to a programme submitted for acceptance under NEC4",
+   "roles": [
+    "project-manager",
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #8",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 26,
+   "date": "2026-11-20",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Draft a subcontract order letter from an agreed quote",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #15",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 27,
+   "date": "2026-11-21",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Triage the 30 RAMS you get each month",
+   "roles": [
+    "health-and-safety-manager"
+   ],
+   "task": "rams-review",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 28,
+   "date": "2026-11-22",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Turn your weekly updates from four places into one",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "LinkedIn post 25 Nov",
+   "notes": "Lines up with the LinkedIn post on 25 Nov.",
+   "status": "approved"
+  },
+  {
+   "day": 29,
+   "date": "2026-11-23",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Draft a pay less notice with clear reasons",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "payment-notices",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #2",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 30,
+   "date": "2026-11-24",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Check tomorrow's weather risk against the programme",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "planning",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot feature list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 31,
+   "date": "2026-11-25",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Prepare the client monthly report",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/draft-monthly-progress-report",
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 32,
+   "date": "2026-11-26",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Keep the early warning register up to date",
+   "roles": [
+    "project-manager",
+    "contracts-manager"
+   ],
+   "task": "early-warnings",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 33,
+   "date": "2026-11-27",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Summarise a public sector tender notice under the Procurement Act 2023",
+   "roles": [
+    "estimator"
+   ],
+   "task": "tendering",
+   "contractForms": [
+    "procurement-act-2023"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #31",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 34,
+   "date": "2026-11-28",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Turn a recent near miss into a toolbox talk for your site",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Safety guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 35,
+   "date": "2026-11-29",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Claude Code: merge monthly cost reports into one clean table",
+   "roles": [
+    "commercial-manager",
+    "quantity-surveyor"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #34",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 36,
+   "date": "2026-11-30",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Work out Construction Act payment dates from a valuation date",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager",
+    "subcontractor"
+   ],
+   "task": "payment-timing",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #4",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 37,
+   "date": "2026-12-01",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Track O&M manuals and as-builts before practical completion",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "Lines up with the LinkedIn post on 2 Dec (outstanding records at closeout).",
+   "status": "approved"
+  },
+  {
+   "day": 38,
+   "date": "2026-12-02",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write a weekly client progress email",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Construction prompts guide #5",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 39,
+   "date": "2026-12-03",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Draft a JCT relevant event notice and extension of time application",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "eot",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/write-extension-of-time-assessment",
+   "source": "Brief seed #9",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 40,
+   "date": "2026-12-04",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Build an exclusions-by-bidder table from tender letters",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/analyse-tender-returns",
+   "source": "QS prompts guide #9",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 41,
+   "date": "2026-12-05",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: cold, ice and frost",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 42,
+   "date": "2026-12-06",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Hours saved per week, role by role: estimate your own",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "business-case",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "Lines up with the LinkedIn post on 9 Dec (bring one recurring task).",
+   "status": "approved"
+  },
+  {
+   "day": 43,
+   "date": "2026-12-07",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Review a payment notice you've received against your application",
+   "roles": [
+    "subcontractor",
+    "quantity-surveyor"
+   ],
+   "task": "payment-notices",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 44,
+   "date": "2026-12-08",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Concrete pour checklist: before, during and after",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 45,
+   "date": "2026-12-09",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Build the first activity list for a new programme",
+   "roles": [
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 46,
+   "date": "2026-12-10",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Write a loss and expense claim narrative from your records",
+   "roles": [
+    "quantity-surveyor",
+    "contracts-manager"
+   ],
+   "task": "loss-and-expense",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #10",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 47,
+   "date": "2026-12-11",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Cross-check a take-off against the specification",
+   "roles": [
+    "quantity-surveyor",
+    "estimator"
+   ],
+   "task": "takeoff",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 48,
+   "date": "2026-12-12",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: ladders and stepladders",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 49,
+   "date": "2026-12-13",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Outlook and Copilot: triage a commercial manager's inbox into actions",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "copilot",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-tools/microsoft-copilot",
+   "source": "Brief seed #35",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 50,
+   "date": "2026-12-14",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Reconcile the variation instruction log to the valuation",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "variations",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-variation-assessment",
+   "source": "Brief seed #13",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 51,
+   "date": "2026-12-15",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Plan the Christmas shutdown: security, notices and restart",
+   "roles": [
+    "site-manager",
+    "project-manager"
+   ],
+   "task": "planning",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Seasonal.",
+   "status": "approved"
+  },
+  {
+   "day": 52,
+   "date": "2026-12-16",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Sense-check programme logic in plain English",
+   "roles": [
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 53,
+   "date": "2026-12-17",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Build an adjudication chronology from emails and minutes",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "adjudication",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #12",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 54,
+   "date": "2026-12-18",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Convert take-off quantities into pack sizes for ordering",
+   "roles": [
+    "estimator",
+    "procurement-manager"
+   ],
+   "task": "takeoff",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 55,
+   "date": "2026-12-19",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: mobile scaffold towers",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 56,
+   "date": "2026-12-20",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Brief your AI assistant once per project",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "setup",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/guides/how-to-use-ai-in-construction",
+   "source": "BIM assistant guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 57,
+   "date": "2026-12-21",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write CVR commentary that answers the questions before they're asked",
+   "roles": [
+    "commercial-manager",
+    "quantity-surveyor"
+   ],
+   "task": "cvr",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/create-cost-value-reconciliation",
+   "source": "QS prompts guide #16",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 58,
+   "date": "2026-12-22",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a scaffold inspection record",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "inspections",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "Inspection must be by a competent person; AI only formats the record.",
+   "status": "approved"
+  },
+  {
+   "day": 59,
+   "date": "2026-12-23",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Draft the programme assumptions and exclusions register",
+   "roles": [
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 60,
+   "date": "2026-12-24",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Adjudication referral summary (not legal advice)",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "adjudication",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief contract admin list",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 61,
+   "date": "2026-12-25",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Count symbols across a drawing set for take-off",
+   "roles": [
+    "estimator"
+   ],
+   "task": "takeoff",
+   "contractForms": [],
+   "tool": "bluebeam",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-tools/bluebeam-revu",
+   "source": "/ai-tools page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 62,
+   "date": "2026-12-26",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Find patterns in a year of near-miss reports",
+   "roles": [
+    "health-and-safety-manager"
+   ],
+   "task": "incidents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Safety guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 63,
+   "date": "2026-12-27",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "One standing instruction: flag gaps, never fill them",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "prompting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/guides/effective-ai-prompts-for-construction",
+   "source": "Golden thread guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 64,
+   "date": "2026-12-28",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Question your CVR commentary like a sceptical finance director",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "cvr",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/create-cost-value-reconciliation",
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 65,
+   "date": "2026-12-29",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Prepare a lift plan briefing with the appointed person",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "lifting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "The appointed person owns the lift plan; AI drafts the briefing only.",
+   "status": "approved"
+  },
+  {
+   "day": 66,
+   "date": "2026-12-30",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Flag durations that look optimistic for the quantities",
+   "roles": [
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 67,
+   "date": "2026-12-31",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Find every claim statement that isn't backed by a document",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "claims",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 68,
+   "date": "2027-01-01",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "What AI can and can't read on construction drawings",
+   "roles": [
+    "estimator",
+    "quantity-surveyor"
+   ],
+   "task": "takeoff",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-construction-estimating",
+   "source": "Keyword research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 69,
+   "date": "2027-01-02",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: MEWPs",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 70,
+   "date": "2027-01-03",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Keep project data safe: business accounts and data controls",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "governance",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Guide FAQs",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 71,
+   "date": "2027-01-04",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write a cost-to-complete forecast narrative",
+   "roles": [
+    "commercial-manager",
+    "quantity-surveyor"
+   ],
+   "task": "forecasting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #20",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 72,
+   "date": "2027-01-05",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write the restart briefing after the Christmas shutdown",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "briefings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Seasonal.",
+   "status": "approved"
+  },
+  {
+   "day": 73,
+   "date": "2027-01-06",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Compare a revised programme against the baseline",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager",
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Real client workflow",
+   "notes": "Anonymise.",
+   "status": "approved"
+  },
+  {
+   "day": 74,
+   "date": "2027-01-07",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Compare a schedule of amendments with the standard form",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "contract-review",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/summarise-contract-clauses",
+   "source": "/ai-for page copy",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 75,
+   "date": "2027-01-08",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Review the tender pack: what's in the ITT and what's missing",
+   "roles": [
+    "estimator"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "AI estimating guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 76,
+   "date": "2027-01-09",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: housekeeping, slips and trips",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 77,
+   "date": "2027-01-10",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write an AI use policy for your team",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "governance",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Generative AI guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 78,
+   "date": "2027-01-11",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write the monthly commercial report for the board",
+   "roles": [
+    "commercial-manager",
+    "construction-director"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #21",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 79,
+   "date": "2027-01-12",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Statutory inspection schedule: scaffolds, excavations and lifting",
+   "roles": [
+    "site-manager",
+    "health-and-safety-manager"
+   ],
+   "task": "inspections",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 80,
+   "date": "2027-01-13",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Review a subcontractor's programme before you accept it",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 81,
+   "date": "2027-01-14",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Build a contract risk register from the amendments",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 82,
+   "date": "2027-01-15",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Find testing and certification obligations in a long spec before you price",
+   "roles": [
+    "estimator"
+   ],
+   "task": "specification",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 83,
+   "date": "2027-01-16",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: edge protection",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 84,
+   "date": "2027-01-17",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "AI readiness checklist for a construction business",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "adoption",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Topic bank",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 85,
+   "date": "2027-01-18",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Cut a month of commercial detail down to a five-line board summary",
+   "roles": [
+    "commercial-manager",
+    "project-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 86,
+   "date": "2027-01-19",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Prepare the practical completion snagging list four weeks out",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "snagging",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/generate-snagging-list-template",
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 87,
+   "date": "2027-01-20",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Monthly programme review: master against actual",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 88,
+   "date": "2027-01-21",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Spot what's missing compared with standard NEC4 Option A",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 89,
+   "date": "2027-01-22",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Structure a rate build-up (you supply the rates)",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pricing",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "AI estimating guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 90,
+   "date": "2027-01-23",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Write up a near miss clearly the same day",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "incidents",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Construction prompts guide #9",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 91,
+   "date": "2027-01-24",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Microsoft 365 Copilot for contractors: five first jobs",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "tools",
+   "contractForms": [],
+   "tool": "copilot",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-tools/microsoft-copilot",
+   "source": "Brief agents section",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 92,
+   "date": "2027-01-25",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Show what a six-week delay does to the forecast",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "forecasting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/generate-cashflow-forecast",
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 93,
+   "date": "2027-01-26",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn a site walk voice memo into a snagging list",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "snagging",
+   "contractForms": [],
+   "tool": "chatgpt",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-snagging-list-template",
+   "source": "/ai-tools page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 94,
+   "date": "2027-01-27",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write a handover note when a PM leaves the job",
+   "roles": [
+    "construction-director",
+    "project-manager"
+   ],
+   "task": "knowledge",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 95,
+   "date": "2027-01-28",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Check the payment schedule matches the payment clause",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "contract-review",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 96,
+   "date": "2027-01-29",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Generate an assumptions log for an estimate",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pricing",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 97,
+   "date": "2027-01-30",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: fragile roofs",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 98,
+   "date": "2027-01-31",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Research a regulation or product with sources using Perplexity",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "research",
+   "contractForms": [],
+   "tool": "perplexity",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-tools/perplexity",
+   "source": "/ai-tools page",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 99,
+   "date": "2027-02-01",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Run a weekly cash review that looks eight weeks ahead",
+   "roles": [
+    "construction-director",
+    "subcontractor"
+   ],
+   "task": "cash-flow",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old welcome email sequence",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 100,
+   "date": "2027-02-02",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Issue a defects notice to a subcontractor",
+   "roles": [
+    "quantity-surveyor",
+    "site-manager"
+   ],
+   "task": "defects",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #18",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 101,
+   "date": "2027-02-03",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Ask questions across a project's emails and documents",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "knowledge",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS assistant workflows",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 102,
+   "date": "2027-02-04",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Translate a dense clause into plain English for the site team",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 103,
+   "date": "2027-02-05",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Structure a pricing narrative for a submission",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pricing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/prepare-bid-pricing-schedule",
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 104,
+   "date": "2027-02-06",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: dropped objects",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 105,
+   "date": "2027-02-07",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Build a project knowledge-base assistant",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "assistants",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 106,
+   "date": "2027-02-08",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Request retention release at practical completion",
+   "roles": [
+    "quantity-surveyor",
+    "subcontractor"
+   ],
+   "task": "retention",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #11",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 107,
+   "date": "2027-02-09",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a clear defect report",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "defects",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 108,
+   "date": "2027-02-10",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "A nightly project email digest with actions (read-only)",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "inbox",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Your nightly digest task",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 109,
+   "date": "2027-02-11",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Check an email for contract risk before you send it",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "correspondence",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Topic bank",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 110,
+   "date": "2027-02-12",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Compare two estimates for the same job and explain the gap",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pricing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 111,
+   "date": "2027-02-13",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Working at height assessment",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "working-at-height",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/templates/risk-assessment",
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 112,
+   "date": "2027-02-14",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "A read-only agent that builds the monthly applications ledger",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Your monthly applications task",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 113,
+   "date": "2027-02-15",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Build a retention tracker: half at PC, half at the end of defects",
+   "roles": [
+    "quantity-surveyor",
+    "subcontractor"
+   ],
+   "task": "retention",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 114,
+   "date": "2027-02-16",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Defects period tracker after handover",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "defects",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 115,
+   "date": "2027-02-17",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Sort project emails by project, trade and consultant",
+   "roles": [
+    "quantity-surveyor",
+    "document-control"
+   ],
+   "task": "inbox",
+   "contractForms": [],
+   "tool": "copilot",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS assistant prompts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 116,
+   "date": "2027-02-18",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Confirm a verbal instruction in writing",
+   "roles": [
+    "site-manager",
+    "contracts-manager"
+   ],
+   "task": "correspondence",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Contract admin guide",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 117,
+   "date": "2027-02-19",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Write a tender quality submission answer",
+   "roles": [
+    "estimator"
+   ],
+   "task": "bid-writing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 118,
+   "date": "2027-02-20",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: trench collapse and shoring",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 119,
+   "date": "2027-02-21",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "A read-only nightly email digest agent",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Your nightly digest task",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 120,
+   "date": "2027-02-22",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Check daywork sheets against site records",
+   "roles": [
+    "quantity-surveyor",
+    "site-manager"
+   ],
+   "task": "dayworks",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief seed #14",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 121,
+   "date": "2027-02-23",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Compile the handover pack and O&M checklist",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 122,
+   "date": "2027-02-24",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Stakeholder update email",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "communication",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-stakeholder-management-plan",
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 123,
+   "date": "2027-02-25",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Keep the correspondence register up to date",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-admin",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 124,
+   "date": "2027-02-26",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Rework a previous bid answer to fit a new question",
+   "roles": [
+    "estimator"
+   ],
+   "task": "bid-writing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Generative AI guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 125,
+   "date": "2027-02-27",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: underground services and CAT scanning",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 126,
+   "date": "2027-02-28",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Claude Skills for site managers: daily report, toolbox talk and permit",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Brief agents section",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 127,
+   "date": "2027-03-01",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Issue a contra-charge notice to a subcontractor",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "contra-charges",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #16",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 128,
+   "date": "2027-03-02",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Warranty and guarantee tracker",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 129,
+   "date": "2027-03-03",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Weekly risk summary for the team",
+   "roles": [
+    "project-manager",
+    "design-manager"
+   ],
+   "task": "risk",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-project-risk-register",
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 130,
+   "date": "2027-03-04",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Formal notice log and timetable",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-admin",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 131,
+   "date": "2027-03-05",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Build a PQQ answer library once and reuse it",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pqq",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/draft-pre-qualification-questionnaire",
+   "source": "PQQ guide",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 132,
+   "date": "2027-03-06",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Permit to work for hot works",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "permits",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 133,
+   "date": "2027-03-07",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Claude Skills for commercial managers",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Brief agents section",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 134,
+   "date": "2027-03-08",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Draft a final account agreement letter",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "final-accounts",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/draft-final-account-summary",
+   "source": "Brief seed #17",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 135,
+   "date": "2027-03-09",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Tag and caption site progress photos",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "records",
+   "contractForms": [],
+   "tool": "gemini",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Old CoPilot feature list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 136,
+   "date": "2027-03-10",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Weekly progress meeting minutes: status by trade, blockers and look-ahead",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-meeting-minutes",
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 137,
+   "date": "2027-03-11",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Review the bonds and guarantees register",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "contract-admin",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 138,
+   "date": "2027-03-12",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Prepare a tender enquiry pack and cover letter",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 139,
+   "date": "2027-03-13",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: confined spaces",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 140,
+   "date": "2027-03-14",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Claude Code for construction spreadsheets and reports",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief agents section",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 141,
+   "date": "2027-03-15",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Year end: sense-check every job's forecast before the accounts close",
+   "roles": [
+    "commercial-manager",
+    "construction-director"
+   ],
+   "task": "forecasting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Seasonal: March year end.",
+   "status": "approved"
+  },
+  {
+   "day": 142,
+   "date": "2027-03-16",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Crew check-in and timesheet summary",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "labour",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 143,
+   "date": "2027-03-17",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Client progress meeting minutes: budget, decisions and risks",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 144,
+   "date": "2027-03-18",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Monthly insurance certificates review",
+   "roles": [
+    "quantity-surveyor",
+    "contracts-manager"
+   ],
+   "task": "contract-admin",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 145,
+   "date": "2027-03-19",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Plan procurement backwards from each trade's lead time",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/generate-material-procurement-schedule",
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 146,
+   "date": "2027-03-20",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: reversing vehicles and banksmen",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 147,
+   "date": "2027-03-21",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Which AI tool connects to Excel, Outlook, Xero, Sage, Procore, Asite and COINS",
+   "roles": [
+    "construction-director",
+    "project-manager"
+   ],
+   "task": "agents",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Brief agents section",
+   "notes": "Check every connection against the vendor docs and date it.",
+   "status": "approved"
+  },
+  {
+   "day": 148,
+   "date": "2027-03-22",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Issue preliminary final accounts to subcontractors",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "final-accounts",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/draft-final-account-summary",
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 149,
+   "date": "2027-03-23",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Plant hire register with off-hire reminders",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "plant",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO import files",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 150,
+   "date": "2027-03-24",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Design review meeting minutes: who decided what",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 151,
+   "date": "2027-03-25",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Collateral warranty schedule and chasing",
+   "roles": [
+    "quantity-surveyor",
+    "contracts-manager"
+   ],
+   "task": "warranties",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 152,
+   "date": "2027-03-26",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "An enquiry chase sequence that doesn't rely on memory",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS assistant email templates",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 153,
+   "date": "2027-03-27",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Confined space risk assessment",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "confined-spaces",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 154,
+   "date": "2027-03-28",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Calculate your true overhead rate",
+   "roles": [
+    "construction-director",
+    "subcontractor"
+   ],
+   "task": "business-finance",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old welcome email sequence",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 155,
+   "date": "2027-03-29",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Prepare a subcontract final account negotiation pack",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "final-accounts",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 156,
+   "date": "2027-03-30",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Delivery schedule and material call-off programme",
+   "roles": [
+    "site-manager",
+    "procurement-manager"
+   ],
+   "task": "logistics",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 157,
+   "date": "2027-03-31",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Subcontractor coordination meeting minutes",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 158,
+   "date": "2027-04-01",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Generate consultant appointment documents from an input sheet",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager"
+   ],
+   "task": "appointments",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Real client workflow",
+   "notes": "Anonymise.",
+   "status": "approved"
+  },
+  {
+   "day": 159,
+   "date": "2027-04-02",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Set up an enquiry tracker",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS assistant templates",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 160,
+   "date": "2027-04-03",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: exclusion zones",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 161,
+   "date": "2027-04-04",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Which jobs made money and why",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "business-finance",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 162,
+   "date": "2027-04-05",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Final account documentation checklist",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "final-accounts",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 163,
+   "date": "2027-04-06",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a construction logistics plan",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "logistics",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 164,
+   "date": "2027-04-07",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Change review meeting minutes",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 165,
+   "date": "2027-04-08",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Draft a contract negotiation email",
+   "roles": [
+    "construction-director",
+    "contracts-manager"
+   ],
+   "task": "negotiation",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 166,
+   "date": "2027-04-09",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Subcontractor register with ratings and trade coverage",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "supply-chain",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS assistant templates",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 167,
+   "date": "2027-04-10",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: telehandler safety",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 168,
+   "date": "2027-04-11",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Is an AI tool worth it for your team? A simple ROI check",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "adoption",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 169,
+   "date": "2027-04-12",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Turn a messy variation register into a clean monthly variation report",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "variations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-variation-assessment",
+   "source": "Contract admin guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 170,
+   "date": "2027-04-13",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Draft a traffic management plan briefing",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "logistics",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "Competent person signs off the plan.",
+   "status": "approved"
+  },
+  {
+   "day": 171,
+   "date": "2027-04-14",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "RFI ageing report and chase list",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "rfis",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 172,
+   "date": "2027-04-15",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Check which party carries which Building Safety Act duties",
+   "roles": [
+    "contracts-manager",
+    "design-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/guides/golden-thread-construction-explained",
+   "source": "Golden thread guide",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 173,
+   "date": "2027-04-16",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Prepare for subcontractor clarification interviews",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 174,
+   "date": "2027-04-17",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Training and certificate expiry tracker: CSCS, SSSTS and SMSTS",
+   "roles": [
+    "health-and-safety-manager"
+   ],
+   "task": "competence",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 175,
+   "date": "2027-04-18",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write a 30-day plan to roll out AI",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "adoption",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": "/guides/generative-ai-in-construction",
+   "source": "Generative AI guide",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 176,
+   "date": "2027-04-19",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Log and acknowledge a variation instruction the same day",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "variations",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 177,
+   "date": "2027-04-20",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Summarise subcontractor performance for the monthly review",
+   "roles": [
+    "site-manager",
+    "quantity-surveyor"
+   ],
+   "task": "subcontractor-management",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 178,
+   "date": "2027-04-21",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Draft RFIs where compliance information is missing",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "rfis",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 179,
+   "date": "2027-04-22",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Building Safety Act Gateway 2 submission checklist",
+   "roles": [
+    "design-manager",
+    "project-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/guides/golden-thread-construction-explained",
+   "source": "Brief seed #30",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 180,
+   "date": "2027-04-23",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Collect insurances and warranties from awarded subcontractors",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 181,
+   "date": "2027-04-24",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: excavator quick hitches",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 182,
+   "date": "2027-04-25",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Keep documents to the same standard across every site",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "standards",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 183,
+   "date": "2027-04-26",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Draft a variation quotation to the employer's agent",
+   "roles": [
+    "quantity-surveyor",
+    "contracts-manager"
+   ],
+   "task": "variations",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/write-variation-assessment",
+   "source": "Old CoPilot tool list",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 184,
+   "date": "2027-04-27",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Subcontractor progress meeting notes",
+   "roles": [
+    "site-manager",
+    "quantity-surveyor"
+   ],
+   "task": "subcontractor-management",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 185,
+   "date": "2027-04-28",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Draft an RFI that gets a usable answer",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "rfis",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Construction prompts guide #19",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 186,
+   "date": "2027-04-29",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Gateway 3 completion gap check",
+   "roles": [
+    "project-manager",
+    "design-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/guides/golden-thread-construction-explained",
+   "source": "Golden thread guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 187,
+   "date": "2027-04-30",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Build a subcontract inclusions and clarifications schedule",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Real client workflow",
+   "notes": "Anonymise.",
+   "status": "approved"
+  },
+  {
+   "day": 188,
+   "date": "2027-05-01",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: pedestrian segregation",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 189,
+   "date": "2027-05-02",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write a job description for a new site manager",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "hr",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 190,
+   "date": "2027-05-03",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Issue an instruction to proceed once a variation is agreed",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "variations",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 191,
+   "date": "2027-05-04",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Check a subcontractor's labour numbers against the programme",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "subcontractor-management",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 192,
+   "date": "2027-05-05",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Information required schedule with consultant chases built in",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "coordination",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 193,
+   "date": "2027-05-06",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Draft a mandatory occurrence report from rough notes",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Golden thread guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 194,
+   "date": "2027-05-07",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Draft a post-tender clarification letter",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "QS assistant templates",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 195,
+   "date": "2027-05-08",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk attendance and sign-off record",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 196,
+   "date": "2027-05-09",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Prepare for a performance review",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "hr",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 197,
+   "date": "2027-05-10",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Set up a consistent variation account structure",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "variations",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Contract admin guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 198,
+   "date": "2027-05-11",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a weekly site summary email for the project manager",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 199,
+   "date": "2027-05-12",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Compare consultant submissions against the brief and appointment",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "consultants",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 200,
+   "date": "2027-05-13",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Golden thread change record from rough notes",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Golden thread guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 201,
+   "date": "2027-05-14",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Write the tender report and award recommendation",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/analyse-tender-returns",
+   "source": "QS prompts guide #11",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 202,
+   "date": "2027-05-15",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: mental health and fatigue",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 203,
+   "date": "2027-05-16",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Add an AI section to your employee handbook",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "hr",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Formwise strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 204,
+   "date": "2027-05-17",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write the payment recommendation narrative for the client",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Contract admin guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 205,
+   "date": "2027-05-18",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Prepare for a client site visit",
+   "roles": [
+    "site-manager",
+    "project-manager"
+   ],
+   "task": "client",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 206,
+   "date": "2027-05-19",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Pull design risks out of meeting minutes into the risk register",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "risk",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 207,
+   "date": "2027-05-20",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Plain-English handover summary for the Accountable Person",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Golden thread guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 208,
+   "date": "2027-05-21",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Subcontractor evaluation scorecard",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "procurement",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 209,
+   "date": "2027-05-22",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: safe lifting and team lifts",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 210,
+   "date": "2027-05-23",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Contractor marketing plan for the next quarter",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "marketing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 211,
+   "date": "2027-05-24",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write a payment application cover letter",
+   "roles": [
+    "subcontractor",
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Construction prompts guide #13",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 212,
+   "date": "2027-05-25",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Draft a neighbour letter about noisy works",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "community",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 213,
+   "date": "2027-05-26",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Weekly design management report: drawings, RFIs and compliance",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 214,
+   "date": "2027-05-27",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Variation assessment under JCT DB 2024 for a commercial manager",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "variations",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/write-variation-assessment",
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 215,
+   "date": "2027-05-28",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Build a tender scoring matrix that stands up to challenge",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-tender-analysis-guide",
+   "source": "Tender analysis guide",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 216,
+   "date": "2027-05-29",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: silica dust and RPE",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 217,
+   "date": "2027-05-30",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write a case study from a completed project",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "marketing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "No invented figures: use the project records only.",
+   "status": "approved"
+  },
+  {
+   "day": 218,
+   "date": "2027-05-31",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Month-end valuation checklist from your valuation calendar",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 219,
+   "date": "2027-06-01",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Generate a quality plan outline for a new job",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 220,
+   "date": "2027-06-02",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Track design review comments: issued against resolved",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/create-design-review-checklist",
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 221,
+   "date": "2027-06-03",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Compensation event assessment under NEC4 Option A for a QS",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "compensation-events",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 222,
+   "date": "2027-06-04",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Turn a job description into a priced quote",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "quoting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 223,
+   "date": "2027-06-05",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Safety briefing record: hazards, near misses and actions",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "briefings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "SiteBrief research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 224,
+   "date": "2027-06-06",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Answer client objections before a pricing meeting",
+   "roles": [
+    "construction-director",
+    "estimator"
+   ],
+   "task": "sales",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 225,
+   "date": "2027-06-07",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Build the monthly subcontractor applications ledger from your inbox",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Your monthly applications task",
+   "notes": "Anonymise: based on a real client workflow.",
+   "status": "approved"
+  },
+  {
+   "day": 226,
+   "date": "2027-06-08",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Review a material submittal against the specification",
+   "roles": [
+    "design-manager",
+    "project-manager"
+   ],
+   "task": "submittals",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 227,
+   "date": "2027-06-09",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Check specifications for conflicts between trades",
+   "roles": [
+    "design-manager",
+    "quantity-surveyor"
+   ],
+   "task": "specification",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 228,
+   "date": "2027-06-10",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Payment notice timing under a JCT subcontract for a subcontractor",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "payment-notices",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 229,
+   "date": "2027-06-11",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Estimate a project timeline at pre-construction",
+   "roles": [
+    "estimator"
+   ],
+   "task": "pre-construction",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 230,
+   "date": "2027-06-12",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: cement burns",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 231,
+   "date": "2027-06-13",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Turn a completed job into a LinkedIn post",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "marketing",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 232,
+   "date": "2027-06-14",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Summarise liquidated damages exposure from the programme",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "lads",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief seed #19",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 233,
+   "date": "2027-06-15",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Hold point and inspection checklist for one work package",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/generate-quality-inspection-checklist",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 234,
+   "date": "2027-06-16",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Flag deliverables that don't match the design responsibility matrix",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 235,
+   "date": "2027-06-17",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Early warnings under NEC4 for a site manager",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "early-warnings",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 236,
+   "date": "2027-06-18",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Generate scopes for every trade on a scheme in one go",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS assistant workflows",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 237,
+   "date": "2027-06-19",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: heat stress and hydration",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 238,
+   "date": "2027-06-20",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Business plan outline for a growing contractor",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "business",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Formwise strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 239,
+   "date": "2027-06-21",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Review the risk and opportunity register alongside the CVR",
+   "roles": [
+    "commercial-manager"
+   ],
+   "task": "risk",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-commercial-risk-summary",
+   "source": "QS Command Centre",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 240,
+   "date": "2027-06-22",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a non-conformance report and corrective action",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "quality",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 241,
+   "date": "2027-06-23",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "What changed between Rev C and Rev D",
+   "roles": [
+    "quantity-surveyor",
+    "design-manager"
+   ],
+   "task": "drawings",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-tools page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 242,
+   "date": "2027-06-24",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Extension of time under JCT SBC for a contracts manager",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "eot",
+   "contractForms": [
+    "jct-sbc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 243,
+   "date": "2027-06-25",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Quote PDFs into a comparison workbook with gap analysis",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "tendering",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/analyse-subcontractor-quotes",
+   "source": "QS assistant workflows",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 244,
+   "date": "2027-06-26",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: asbestos awareness",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 245,
+   "date": "2027-06-27",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Construction business health check",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "business",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Product strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 246,
+   "date": "2027-06-28",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Explain a commercial position to someone who isn't a QS",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "communication",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "QS prompts guide #22",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 247,
+   "date": "2027-06-29",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Temporary works register and permit check",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "temporary-works",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "The temporary works coordinator owns this; AI only organises the register.",
+   "status": "approved"
+  },
+  {
+   "day": 248,
+   "date": "2027-06-30",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Drawing register, transmittals and superseded drawings",
+   "roles": [
+    "document-control",
+    "design-manager"
+   ],
+   "task": "drawings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Design Manager research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 249,
+   "date": "2027-07-01",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Explain the Price for Work Done to Date under NEC4 Option C to the site team",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager"
+   ],
+   "task": "payment",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 250,
+   "date": "2027-07-02",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the groundworks package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 251,
+   "date": "2027-07-03",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Draft an H&S policy outline for a small contractor",
+   "roles": [
+    "health-and-safety-manager",
+    "construction-director"
+   ],
+   "task": "policy",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 252,
+   "date": "2027-07-04",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Work out what a delay is costing the business",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "business-finance",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Mastery strategy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 253,
+   "date": "2027-07-05",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Break down preliminaries for a valuation",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "prelims",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 254,
+   "date": "2027-07-06",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a permit to dig briefing",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "permits",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 255,
+   "date": "2027-07-07",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write a design brief",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "brief",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 256,
+   "date": "2027-07-08",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Check a month of Defined Cost records under NEC4 Option C",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "compensation-events",
+   "contractForms": [
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 257,
+   "date": "2027-07-09",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the piling package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 258,
+   "date": "2027-07-10",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: noise and hearing protection",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 259,
+   "date": "2027-07-11",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Build a letter template library for your business",
+   "roles": [
+    "document-control"
+   ],
+   "task": "correspondence",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 260,
+   "date": "2027-07-12",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write invoice descriptions that get paid first time",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "invoices",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 261,
+   "date": "2027-07-13",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Hoarding and site security checklist",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "security",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 262,
+   "date": "2027-07-14",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write a pre-construction report",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "pre-construction",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 263,
+   "date": "2027-07-15",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "A one-page notices checklist for a JCT Design and Build contract",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-notices",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 264,
+   "date": "2027-07-16",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the below-ground drainage package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 265,
+   "date": "2027-07-17",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: hand-arm vibration (HAVS)",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 266,
+   "date": "2027-07-18",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write prompts that name the UK standard: NRM, JCT, CDM",
+   "roles": [
+    "quantity-surveyor",
+    "project-manager"
+   ],
+   "task": "prompting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/guides/effective-ai-prompts-for-construction",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 267,
+   "date": "2027-07-19",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Track CIS deductions month by month",
+   "roles": [
+    "subcontractor",
+    "quantity-surveyor"
+   ],
+   "task": "cis",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 268,
+   "date": "2027-07-20",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Update the site fire plan as the building changes",
+   "roles": [
+    "site-manager",
+    "health-and-safety-manager"
+   ],
+   "task": "fire",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 269,
+   "date": "2027-07-21",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Turn the client's emails into a project brief",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "pre-construction",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 270,
+   "date": "2027-07-22",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Pass an early warning down the chain under an NEC4 subcontract",
+   "roles": [
+    "contracts-manager",
+    "subcontractor"
+   ],
+   "task": "early-warnings",
+   "contractForms": [
+    "nec4-ecs"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Brief: contract x role x task",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 271,
+   "date": "2027-07-23",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the RC frame package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 272,
+   "date": "2027-07-24",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Pollution incident response plan",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "environmental",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 273,
+   "date": "2027-07-25",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "How to check an AI answer before you rely on it",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "prompting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 274,
+   "date": "2027-07-26",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Job costing: actual against quoted margin",
+   "roles": [
+    "construction-director",
+    "subcontractor"
+   ],
+   "task": "job-costing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "App feature research",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 275,
+   "date": "2027-07-27",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "End-of-job site clearance checklist",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 276,
+   "date": "2027-07-28",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Pre-construction planning checklist",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "pre-construction",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 277,
+   "date": "2027-07-29",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Prepare a dispute summary for a without-prejudice meeting",
+   "roles": [
+    "contracts-manager",
+    "construction-director"
+   ],
+   "task": "disputes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-dispute-summary-document",
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 278,
+   "date": "2027-07-30",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the steel frame package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 279,
+   "date": "2027-07-31",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: fire prevention and hot works",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 280,
+   "date": "2027-08-01",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Turn a long PDF into a one-page brief",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "documents",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 281,
+   "date": "2027-08-02",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write a late payment chaser that stays firm and polite",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "late-payment",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Formwise strategy",
+   "notes": "Links to the constructionrating.co.uk late payment calculator.",
+   "status": "approved"
+  },
+  {
+   "day": 282,
+   "date": "2027-08-03",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Plan a site set-up: welfare, cabins and compound",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "set-up",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 283,
+   "date": "2027-08-04",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Commissioning plan outline",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "commissioning",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 284,
+   "date": "2027-08-05",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Write a delay event summary for the monthly report",
+   "roles": [
+    "contracts-manager",
+    "project-manager"
+   ],
+   "task": "delays",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 285,
+   "date": "2027-08-06",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the masonry package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 286,
+   "date": "2027-08-07",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: electrical safety and 110V",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 287,
+   "date": "2027-08-08",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Prepare for a difficult conversation with a client",
+   "roles": [
+    "construction-director",
+    "project-manager"
+   ],
+   "task": "communication",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 288,
+   "date": "2027-08-09",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Check a materials-on-site claim before you pay it",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [
+    "jct-db-2024"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 289,
+   "date": "2027-08-10",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn delivery notes into a goods-received log",
+   "roles": [
+    "site-manager",
+    "procurement-manager"
+   ],
+   "task": "logistics",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 290,
+   "date": "2027-08-11",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Clash report triage and week-on-week comparison",
+   "roles": [
+    "bim-manager"
+   ],
+   "task": "clash",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-for-bim-workflows",
+   "source": "BIM guides",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 291,
+   "date": "2027-08-12",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Variation entitlement analysis summary",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "variations",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "LinkedIn launch posts",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 292,
+   "date": "2027-08-13",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the roofing package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 293,
+   "date": "2027-08-14",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Explain an environmental permit or exemption in plain English",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "environmental",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 294,
+   "date": "2027-08-15",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Build a reusable prompt library for your team",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "prompting",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 295,
+   "date": "2027-08-16",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Reconcile a supplier statement against your ledger",
+   "roles": [
+    "quantity-surveyor",
+    "procurement-manager"
+   ],
+   "task": "invoices",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 296,
+   "date": "2027-08-17",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write a waste segregation briefing",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "environmental",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/create-waste-management-plan",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 297,
+   "date": "2027-08-18",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "ISO 19650 naming and status audit",
+   "roles": [
+    "bim-manager",
+    "document-control"
+   ],
+   "task": "naming",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": "/guides/ai-for-bim-workflows",
+   "source": "BIM guides",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 298,
+   "date": "2027-08-19",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Standard letters for variations, EOT and payment notices",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "correspondence",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 299,
+   "date": "2027-08-20",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the windows and external doors package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 300,
+   "date": "2027-08-21",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: working alone",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 301,
+   "date": "2027-08-22",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Use AI on your phone on site: voice in, text out",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "tools",
+   "contractForms": [],
+   "tool": "chatgpt",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 302,
+   "date": "2027-08-23",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Prepare for the monthly valuation meeting with the client's QS",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 303,
+   "date": "2027-08-24",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Write the dust, noise and water controls briefing",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "environmental",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 304,
+   "date": "2027-08-25",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Turn the EIRs into a responsibility matrix",
+   "roles": [
+    "bim-manager"
+   ],
+   "task": "bim",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-for-bim-workflows",
+   "source": "BIM guides",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 305,
+   "date": "2027-08-26",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Check your appointment covers the scope you're being asked to do",
+   "roles": [
+    "design-manager",
+    "contracts-manager"
+   ],
+   "task": "appointments",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 306,
+   "date": "2027-08-27",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the curtain walling and cladding package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 307,
+   "date": "2027-08-28",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: PPE standards",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 308,
+   "date": "2027-08-29",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Compare ChatGPT, Claude and Copilot on one real task",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "tools",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Complements the queued \"ChatGPT vs Claude for construction\" guide.",
+   "status": "approved"
+  },
+  {
+   "day": 309,
+   "date": "2027-08-30",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Answer the client's valuation queries point by point",
+   "roles": [
+    "quantity-surveyor",
+    "subcontractor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 310,
+   "date": "2027-08-31",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn waste transfer notes into monthly reporting",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "environmental",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "/ai-for page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 311,
+   "date": "2027-09-01",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "COBie completeness check",
+   "roles": [
+    "bim-manager"
+   ],
+   "task": "cobie",
+   "contractForms": [],
+   "tool": "claude-code",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-for-bim-workflows",
+   "source": "BIM guides",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 312,
+   "date": "2027-09-02",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Subcontract enquiry: list the amendments you won't accept",
+   "roles": [
+    "subcontractor",
+    "contracts-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 313,
+   "date": "2027-09-03",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the mechanical services package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 314,
+   "date": "2027-09-04",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Carbon tracking and ESG reporting for a project",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "esg",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 315,
+   "date": "2027-09-05",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Gemini in Google Workspace for small contractors",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "tools",
+   "contractForms": [],
+   "tool": "gemini",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-tools/google-gemini",
+   "source": "/ai-tools page",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 316,
+   "date": "2027-09-06",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Turn site photos and records into evidence for a disputed valuation item",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "valuations",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 317,
+   "date": "2027-09-07",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Find every site record about one area or gridline",
+   "roles": [
+    "site-manager",
+    "project-manager"
+   ],
+   "task": "records",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "/ai-tools page copy",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 318,
+   "date": "2027-09-08",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Check the drawing register against the MIDP",
+   "roles": [
+    "bim-manager",
+    "document-control"
+   ],
+   "task": "cde",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/guides/ai-for-bim-workflows",
+   "source": "BIM guides",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 319,
+   "date": "2027-09-09",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Summarise a framework agreement's call-off procedure",
+   "roles": [
+    "contracts-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 320,
+   "date": "2027-09-10",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the electrical services package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 321,
+   "date": "2027-09-11",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: reporting near misses",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 322,
+   "date": "2027-09-12",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "A project tracker with Notion AI",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "tools",
+   "contractForms": [],
+   "tool": "notion",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-tools/notion-ai",
+   "source": "/ai-tools page",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 323,
+   "date": "2027-09-13",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Draft the monthly cost report from your cost ledger",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "cost-reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 324,
+   "date": "2027-09-14",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Weekly look-ahead email to subcontractors in plain English",
+   "roles": [
+    "site-manager",
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/generate-lookahead-schedule-summary",
+   "source": "AI use cases guide",
+   "notes": "Already a short prompt inside a published guide. Untick if you don't want a deeper standalone version.",
+   "status": "approved"
+  },
+  {
+   "day": 325,
+   "date": "2027-09-15",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Map golden thread duties to your information deliverables",
+   "roles": [
+    "bim-manager"
+   ],
+   "task": "building-safety",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": "/guides/golden-thread-construction-explained",
+   "source": "BIM assistant guide",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 326,
+   "date": "2027-09-16",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Prepare for a final account meeting with the main contractor",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "final-accounts",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 327,
+   "date": "2027-09-17",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the drylining and plastering package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 328,
+   "date": "2027-09-18",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: emergency procedures and first aid",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 329,
+   "date": "2027-09-19",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "What not to paste into an AI tool",
+   "roles": [
+    "construction-director",
+    "project-manager"
+   ],
+   "task": "governance",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 330,
+   "date": "2027-09-20",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Build a budget summary for a new job from the tender",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "budget",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Old CoPilot tool list",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 331,
+   "date": "2027-09-21",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "A short site induction for visitors",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "induction",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/draft-site-induction-briefing",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 332,
+   "date": "2027-09-22",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Massing and layout options at RIBA Stages 1 and 2",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "design",
+   "contractForms": [],
+   "tool": "chatgpt",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "Generative AI guide",
+   "notes": "Experimental: early options only.",
+   "status": "approved"
+  },
+  {
+   "day": 333,
+   "date": "2027-09-23",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Explain set-off and abatement in plain English",
+   "roles": [
+    "quantity-surveyor",
+    "subcontractor"
+   ],
+   "task": "payment",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 334,
+   "date": "2027-09-24",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the fire alarm and detection package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 335,
+   "date": "2027-09-25",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: COSHH basics",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 336,
+   "date": "2027-09-26",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Make AI write in your company's voice",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "writing",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 337,
+   "date": "2027-09-27",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Cash flow view across all your projects",
+   "roles": [
+    "construction-director",
+    "commercial-manager"
+   ],
+   "task": "cash-flow",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 338,
+   "date": "2027-09-28",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Snagging walk-round plan by floor and trade",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "snagging",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 339,
+   "date": "2027-09-29",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Turn a report into a client presentation with Gamma",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "presentations",
+   "contractForms": [],
+   "tool": "gamma",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-tools/gamma-ai",
+   "source": "/ai-tools page",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 340,
+   "date": "2027-09-30",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Non-payment: what to check before suspending performance",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "payment",
+   "contractForms": [
+    "construction-act"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line. High risk: advice strongly recommended.",
+   "status": "approved"
+  },
+  {
+   "day": 341,
+   "date": "2027-10-01",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the sprinklers package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 342,
+   "date": "2027-10-02",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: fuel storage and refuelling",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 343,
+   "date": "2027-10-03",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Test a prompt on an awkward example before you trust it",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "testing",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "LinkedIn posts (testing with awkward examples)",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 344,
+   "date": "2027-10-04",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Cost-value reconciliation for a subcontractor business",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "cvr",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/create-cost-value-reconciliation",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 345,
+   "date": "2027-10-05",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Prepare the handover meeting agenda",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 346,
+   "date": "2027-10-06",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Write the lessons-learned questions before the closeout meeting",
+   "roles": [
+    "project-manager"
+   ],
+   "task": "closeout",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": "/ai-workflows/draft-lessons-learned-report",
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 347,
+   "date": "2027-10-07",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Track key contract dates: sectional completion, LDs and defects periods",
+   "roles": [
+    "contracts-manager",
+    "quantity-surveyor"
+   ],
+   "task": "contract-admin",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 348,
+   "date": "2027-10-08",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the lifts package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 349,
+   "date": "2027-10-09",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: spoil heaps",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 350,
+   "date": "2027-10-10",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Write a monthly AI progress update for the board",
+   "roles": [
+    "construction-director"
+   ],
+   "task": "reporting",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 351,
+   "date": "2027-10-11",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Write a commercial handover note when a QS leaves the job",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "Cash flow 90-day calendar",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 352,
+   "date": "2027-10-12",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Plain-English home user guide for a new-build handover",
+   "roles": [
+    "site-manager",
+    "project-manager"
+   ],
+   "task": "handover",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 353,
+   "date": "2027-10-13",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Turn a dense programme into a one-page milestone summary",
+   "roles": [
+    "project-manager",
+    "planning-engineer"
+   ],
+   "task": "programme",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 354,
+   "date": "2027-10-14",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "What to gather for an insurance claim after a site incident",
+   "roles": [
+    "contracts-manager",
+    "project-manager"
+   ],
+   "task": "insurance",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 355,
+   "date": "2027-10-15",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the scaffolding package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 356,
+   "date": "2027-10-16",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: manual handling and repetitive strain",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 357,
+   "date": "2027-10-17",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Set up a shared team assistant with project instructions",
+   "roles": [
+    "project-manager",
+    "quantity-surveyor"
+   ],
+   "task": "setup",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 358,
+   "date": "2027-10-18",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Explain a fluctuations option and what it means for the account",
+   "roles": [
+    "quantity-surveyor",
+    "commercial-manager"
+   ],
+   "task": "contracts",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "advanced",
+   "riskIfWrong": "high",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 359,
+   "date": "2027-10-19",
+   "weekday": "Tuesday",
+   "theme": "Site, quality & handover",
+   "title": "Turn a client complaint into an investigation and reply",
+   "roles": [
+    "project-manager",
+    "site-manager"
+   ],
+   "task": "communication",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "pSEO database",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 360,
+   "date": "2027-10-20",
+   "weekday": "Wednesday",
+   "theme": "Projects, programme & design",
+   "title": "Prepare the agenda for a design team meeting",
+   "roles": [
+    "design-manager"
+   ],
+   "task": "meetings",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "low",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 361,
+   "date": "2027-10-21",
+   "weekday": "Thursday",
+   "theme": "Contracts, claims & compliance",
+   "title": "Write a contract summary for the site team at start-up",
+   "roles": [
+    "contracts-manager",
+    "site-manager"
+   ],
+   "task": "contract-review",
+   "contractForms": [
+    "jct-db-2024",
+    "nec4-ecc"
+   ],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/summarise-contract-clauses",
+   "source": "New",
+   "notes": "Contract notice: needs the \"check your contract and get advice\" line.",
+   "status": "approved"
+  },
+  {
+   "day": 362,
+   "date": "2027-10-22",
+   "weekday": "Friday",
+   "theme": "Estimating, tendering & procurement",
+   "title": "Scope of works for the demolition package",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "scopes",
+   "contractForms": [],
+   "tool": "claude",
+   "difficulty": "intermediate",
+   "riskIfWrong": "high",
+   "relatedPage": "/ai-workflows/generate-subcontractor-scope-of-works",
+   "source": "QS Command Centre trade list",
+   "notes": "Trade scope series: package-specific inclusions, exclusions and interfaces.",
+   "status": "approved"
+  },
+  {
+   "day": 363,
+   "date": "2027-10-23",
+   "weekday": "Saturday",
+   "theme": "Health, safety & environment",
+   "title": "Toolbox talk: permits to work",
+   "roles": [
+    "site-manager"
+   ],
+   "task": "toolbox-talks",
+   "contractForms": [],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": "/ai-workflows/write-toolbox-talk",
+   "source": "Toolbox talks guide topic list",
+   "notes": "Toolbox talk series. Parent workflow: write a toolbox talk.",
+   "status": "approved"
+  },
+  {
+   "day": 364,
+   "date": "2027-10-24",
+   "weekday": "Sunday",
+   "theme": "AI tools, agents & the business",
+   "title": "Get Copilot to explain the formulas in a commercial spreadsheet",
+   "roles": [
+    "quantity-surveyor"
+   ],
+   "task": "spreadsheets",
+   "contractForms": [],
+   "tool": "copilot",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "",
+   "status": "approved"
+  },
+  {
+   "day": 365,
+   "date": "2027-10-25",
+   "weekday": "Monday",
+   "theme": "Commercial & QS",
+   "title": "Work out late payment interest before you chase",
+   "roles": [
+    "subcontractor"
+   ],
+   "task": "late-payment",
+   "contractForms": [
+    "late-payment-act"
+   ],
+   "tool": "any",
+   "difficulty": "beginner",
+   "riskIfWrong": "medium",
+   "relatedPage": null,
+   "source": "New",
+   "notes": "Links to the constructionrating.co.uk late payment calculator.",
+   "status": "approved"
+  }
+ ]
+}

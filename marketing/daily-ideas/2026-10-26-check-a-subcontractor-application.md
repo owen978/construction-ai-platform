@@ -14,7 +14,7 @@ relatedWorkflow: "draft-valuation-payment-application"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""
-status: "draft"
+status: "approved"
 ---
 
 ## When to use it

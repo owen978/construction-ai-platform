@@ -14,7 +14,7 @@ relatedWorkflow: "draft-contractual-notice-for-delay"
 sourceKind: "owen"
 sourceUrl: ""
 sourceLabel: ""
-status: "draft"
+status: "approved"
 ---
 
 ## When to use it
