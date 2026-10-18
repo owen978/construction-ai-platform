@@ -27,6 +27,15 @@ In the template branch, the same with publish-template.mjs:
 
 > Before publishing, run: node scripts/publish-template.mjs marketing/templates/<slug>.md --check and fix every ERROR.
 
+## Tell Bing about new pages (IndexNow)
+
+Once the branch is live (the key file has to be on the site first), add to the end of each task, after the push and the live check:
+
+> Daily idea writer, STEP 6: run node scripts/indexnow.mjs --today
+> Content task, after the page is live: run node scripts/indexnow.mjs /guides/<slug> (or /templates/<slug>)
+
+It submits only buildcopilot.ai URLs. A 200 or 202 response means accepted. Google doesn't use IndexNow; Bing, Yandex and the services built on Bing (including ChatGPT search and Copilot) do.
+
 ## Gold-standard examples the tasks copy from
 
 The content task copies the frontmatter of two example files, and both currently fail the new checks. Fixing them changes live copy, so they wait for you:

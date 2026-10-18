@@ -9,7 +9,8 @@
     "lint": "eslint",
     "predev": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs",
     "prebuild": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs",
-    "daily-ideas": "node scripts/build-daily-ideas.mjs"
+    "daily-ideas": "node scripts/build-daily-ideas.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
