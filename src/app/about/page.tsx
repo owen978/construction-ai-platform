@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { pageMetadata } from '@/lib/metadata'
+import { AUTHOR } from '@/lib/author'
 
 export const metadata: Metadata = pageMetadata({
   path: '/about',
   title: 'About BuildCopilot',
   description:
-    'BuildCopilot provides free AI workflows, prompts, and guides built specifically for construction professionals. Learn more about our mission.',
+    'BuildCopilot is a free library of AI workflows, prompts and templates for UK construction, run by quantity surveyor Owen Hagger.',
 })
 
 export default function AboutPage() {
@@ -21,7 +22,7 @@ export default function AboutPage() {
             <span className="font-medium text-slate-900">About</span>
           </nav>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">About BuildCopilot</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-600">Helping construction professionals work smarter with AI.</p>
+          <p className="mt-4 max-w-2xl text-lg text-slate-600">Free AI workflows for UK construction, run by a quantity surveyor.</p>
         </div>
       </div>
 
@@ -29,19 +30,29 @@ export default function AboutPage() {
       <div className="mx-auto max-w-3xl px-4 py-12">
         <div className="space-y-8 text-slate-600 leading-relaxed">
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">Our Mission</h2>
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Why I built it</h2>
             <p>
-              BuildCopilot exists to help construction professionals save time using artificial intelligence. We believe AI is one of the most powerful tools available to the construction industry today — but only if people know how to use it effectively.
+              I&apos;m{' '}
+              <Link href={AUTHOR.path} className="font-semibold text-primary hover:text-primary/90 transition-colors">
+                Owen Hagger
+              </Link>
+              , a quantity surveyor with 25 years in UK construction.
             </p>
             <p className="mt-4">
-              That&apos;s why we build free, practical AI workflows and guides tailored to the specific needs of Quantity Surveyors, Project Managers, Site Managers, Estimators, and other construction professionals.
+              Most AI advice is written for marketers and software people. Very little of it knows what a valuation is, or why a buried exclusion in a subbie&apos;s quote matters.
+            </p>
+            <p className="mt-4">
+              So I built BuildCopilot. Free prompts, workflows and templates for the people who actually run construction jobs.
             </p>
           </div>
 
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">What We Do</h2>
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">What you&apos;ll find here</h2>
             <p>
-              We create ready-to-use AI prompts and workflows that construction professionals can copy, paste, and immediately use with tools like ChatGPT, Claude, and Microsoft Copilot. Every workflow is designed by people who understand construction — not generic AI templates, but prompts that reference real standards, real processes, and real project scenarios.
+              Ready-to-use prompts and workflows you can copy into ChatGPT, Claude or Microsoft Copilot. Each one tells you when to use it, what to give it, and what to check before you trust the output.
+            </p>
+            <p className="mt-4">
+              They&apos;re written around how UK jobs actually run, and reference standards and contracts like NRM, JCT, NEC and CDM where it matters.
             </p>
           </div>
 
@@ -50,44 +61,46 @@ export default function AboutPage() {
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">📊</span>
-                <span><strong className="text-slate-900">Quantity Surveyors</strong> — cost plans, BOQs, valuations, tender analysis, final accounts</span>
+                <span><strong className="text-slate-900">Quantity Surveyors</strong>: cost plans, BOQs, valuations, tender analysis, final accounts</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">📋</span>
-                <span><strong className="text-slate-900">Project Managers</strong> — progress reports, risk registers, stakeholder communication, closeout reports</span>
+                <span><strong className="text-slate-900">Project Managers</strong>: progress reports, risk registers, stakeholder communication, closeout reports</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">🏗️</span>
-                <span><strong className="text-slate-900">Site Managers</strong> — daily reports, method statements, toolbox talks, snagging lists</span>
+                <span><strong className="text-slate-900">Site Managers</strong>: daily reports, method statements, toolbox talks, snagging lists</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">🧮</span>
-                <span><strong className="text-slate-900">Estimators</strong> — bid pricing, scope documents, PQQs, cost benchmarking</span>
+                <span><strong className="text-slate-900">Estimators</strong>: bid pricing, scope documents, PQQs, cost benchmarking</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">📄</span>
-                <span><strong className="text-slate-900">Contracts Managers</strong> — notices, EOT assessments, claims, contract summaries</span>
+                <span><strong className="text-slate-900">Contracts Managers</strong>: notices, EOT assessments, claims, contract summaries</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-sm">👔</span>
-                <span><strong className="text-slate-900">Construction Directors</strong> — executive summaries, portfolio reviews, strategic planning</span>
+                <span><strong className="text-slate-900">Construction Directors</strong>: executive summaries, portfolio reviews, strategic planning</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">Our Approach</h2>
-            <p>
-              Every workflow on this platform follows the same principle: <strong className="text-slate-900">practical over theoretical</strong>. We don&apos;t write about AI in vague, abstract terms. We give you the exact prompt to copy, explain when to use it, and show you what to expect back.
-            </p>
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Why it&apos;s free</h2>
+            <p>Everything here is free. No login, no paywall.</p>
             <p className="mt-4">
-              All our content is free to access. We believe the construction industry benefits most when AI knowledge is shared openly, not locked behind paywalls.
+              If you want these workflows built into your own systems, I do that through {AUTHOR.company.name}, starting with a paid{' '}
+              <Link href="/services" className="font-semibold text-primary hover:text-primary/90 transition-colors">
+                Roadmap Review
+              </Link>
+              .
             </p>
           </div>
 
           <div className="rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
             <h2 className="mb-2 text-xl font-bold text-white">Ready to get started?</h2>
-            <p className="mb-6 text-slate-300">Browse our library of AI workflows built for construction professionals.</p>
+            <p className="mb-6 text-slate-300">Browse the library of AI workflows built for construction professionals.</p>
             <Link
               href="/ai-workflows"
               className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"

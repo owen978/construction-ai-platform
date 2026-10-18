@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getWorkflowBySlug, getWorkflowSlugs } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
+import { Byline } from '@/components/ui/byline'
 import { CopyButton } from '@/components/ui/copy-button'
 import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
@@ -94,6 +95,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       difficulty: workflow.difficulty,
       tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
       estimatedTime: 'PT10M',
+      dateModified: workflow.updated_at,
     }),
   ]
 
@@ -137,6 +139,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               <Badge variant="info">{workflow.task.name}</Badge>
             )}
           </div>
+
+          <Byline updatedAt={workflow.updated_at} className="mt-4" />
 
           {/* Long description */}
           {workflow.long_description && (

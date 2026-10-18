@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { getGuideBySlug, getGuideSlugs } from '@/lib/queries/guides'
 import { getWorkflowsByGuideId } from '@/lib/queries/workflows'
 import { Badge } from '@/components/ui/badge'
+import { Byline } from '@/components/ui/byline'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, articleSchema, faqSchema, extractFaqFromMarkdown, jsonLdScriptProps } from '@/lib/schema'
 import { MarkdownContent } from '@/components/markdown-content'
@@ -112,6 +113,8 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
             {guide.description}
           </p>
         )}
+
+        <Byline updatedAt={guide.updated_at} className="mb-4" />
 
         <div className="mb-8 flex flex-wrap items-center gap-3">
           <Badge variant={guide.difficulty ? difficultyVariant[guide.difficulty] : 'info'}>
