@@ -44,3 +44,4 @@ next-env.d.ts
 
 # Compiled from marketing/daily-ideas by scripts/build-daily-ideas.mjs (runs before dev and build)
 /src/content/daily-ideas.generated.json
+/src/content/workflow-results.generated.json

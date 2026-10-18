@@ -18,6 +18,14 @@ export function formatDate(dateString: string): string {
   })
 }
 
+/** 45 -> "45m", 120 -> "2h", 75 -> "1h 15m". */
+export function formatMins(mins: number) {
+  if (mins < 60) return `${mins}m`
+  const h = Math.floor(mins / 60)
+  const m = mins % 60
+  return m ? `${h}h ${m}m` : `${h}h`
+}
+
 export function truncate(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text
   return text.slice(0, maxLength).trimEnd() + '...'

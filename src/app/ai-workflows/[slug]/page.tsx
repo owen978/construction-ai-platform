@@ -16,6 +16,8 @@ import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
 import { getServiceCta } from '@/lib/service-cta'
+import { TypicalResult } from '@/components/sections/typical-result'
+import { getWorkflowResult } from '@/lib/workflow-results'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { RelatedGuides } from '@/components/sections/related-guides'
@@ -63,6 +65,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
   }
 
   const serviceCta = getServiceCta('ai-workflows', slug)
+  const result = getWorkflowResult(slug)
 
   // Build HowTo steps from the prompt (split into logical steps)
   const promptSteps = workflow.prompt
@@ -96,7 +99,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       steps: howToSteps.slice(0, 10), // Google recommends max ~10 steps
       difficulty: workflow.difficulty,
       tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
-      estimatedTime: 'PT10M',
+      estimatedTime: result ? `PT${result.timeWithAiMins}M` : undefined,
       dateModified: workflow.updated_at,
     }),
   ]
@@ -170,6 +173,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
               </div>
             </div>
           )}
+
+          {result && <TypicalResult result={result} />}
 
           <ServiceCTA config={serviceCta} utmContent={`workflow-${slug}`} />
           <ConstructionRatingNote note={getConstructionRatingNote('ai-workflows', slug)} />
