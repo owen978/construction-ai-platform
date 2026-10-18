@@ -36,14 +36,6 @@ export function websiteSchema() {
     description:
       'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
     publisher: organizationSchema(),
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/ai-workflows?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   }
 }
 
