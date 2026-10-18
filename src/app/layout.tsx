@@ -57,12 +57,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const showDailyIdeas = isDailyIdeasEnabled() && getPublishedIdeas().length > 0
+
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${inter.className} min-h-screen bg-white text-slate-600 antialiased`}>
-        <Header showDailyIdeas={isDailyIdeasEnabled() && getPublishedIdeas().length > 0} />
+        <Header showDailyIdeas={showDailyIdeas} />
         <main>{children}</main>
-        <Footer />
+        <Footer showDailyIdeas={showDailyIdeas} />
         <Analytics />
       </body>
     </html>

@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 const resourceLinks = [
   { href: '/ai-workflows', label: 'AI Workflows' },
+  { href: '/daily', label: 'Workflow of the Day', dailyOnly: true },
   { href: '/templates', label: 'Templates' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/guides', label: 'Guides' },
@@ -10,12 +11,28 @@ const resourceLinks = [
 ]
 
 const roleLinks = [
-  { href: '/ai-for/quantity-surveyor', label: 'QS' },
+  { href: '/ai-for/quantity-surveyor', label: 'Quantity Surveyor' },
+  { href: '/ai-for/commercial-manager', label: 'Commercial Manager' },
   { href: '/ai-for/project-manager', label: 'Project Manager' },
   { href: '/ai-for/site-manager', label: 'Site Manager' },
   { href: '/ai-for/estimator', label: 'Estimator' },
   { href: '/ai-for/contracts-manager', label: 'Contracts Manager' },
   { href: '/ai-for/construction-director', label: 'Construction Director' },
+  { href: '/ai-for/health-and-safety-manager', label: 'H&S Manager' },
+  { href: '/ai-for/planning-engineer', label: 'Planning Engineer' },
+  { href: '/ai-for/design-manager', label: 'Design Manager' },
+  { href: '/ai-for/bim-manager', label: 'BIM Manager' },
+  { href: '/ai-for/procurement-manager', label: 'Procurement Manager' },
+]
+
+const templateLinks = [
+  { href: '/templates/rams', label: 'RAMS Template' },
+  { href: '/templates/method-statement', label: 'Method Statement' },
+  { href: '/templates/risk-assessment', label: 'Risk Assessment' },
+  { href: '/templates/toolbox-talk', label: 'Toolbox Talk' },
+  { href: '/templates/construction-phase-plan', label: 'Construction Phase Plan' },
+  { href: '/templates/site-diary', label: 'Site Diary' },
+  { href: '/templates', label: 'All templates' },
 ]
 
 const companyLinks = [
@@ -28,11 +45,14 @@ const companyLinks = [
   { href: '/terms', label: 'Terms of Use' },
 ]
 
-export function Footer() {
+/** `showDailyIdeas` mirrors the header: the link appears once the first idea is live. */
+export function Footer({ showDailyIdeas = false }: { showDailyIdeas?: boolean }) {
+  const resources = resourceLinks.filter((l) => !l.dailyOnly || showDailyIdeas)
+
   return (
     <footer className="bg-charcoal geometric-grid">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
           <div>
             <Link href="/" className="text-xl font-bold text-white">
               <span className="inline-block h-2 w-2 rounded-sm bg-primary-bright mr-2" />
@@ -48,7 +68,7 @@ export function Footer() {
               Resources
             </h3>
             <ul className="mt-4 space-y-3">
-              {resourceLinks.map((link) => (
+              {resources.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -67,6 +87,24 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               {roleLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-slate-400 hover:text-primary-bright transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+              Free Templates
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {templateLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
