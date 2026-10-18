@@ -6,6 +6,7 @@
  */
 
 import { SITE_URL } from '@/lib/site'
+import { AUTHOR } from '@/lib/author'
 const SITE_NAME = 'BuildCopilot'
 
 // ─── Organization (shared across schemas) ───────────────────────────
@@ -56,6 +57,31 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       name: item.name,
       ...(item.url ? { item: item.url } : {}),
     })),
+  }
+}
+
+// ─── Person (the site's editor) ─────────────────────────────────────
+
+export function personSchema() {
+  const sameAs = [AUTHOR.profiles.linkedin, AUTHOR.profiles.x].filter((u): u is string => Boolean(u))
+  return {
+    '@type': 'Person',
+    '@id': `${SITE_URL}${AUTHOR.path}#person`,
+    name: AUTHOR.name,
+    jobTitle: AUTHOR.jobTitle,
+    url: `${SITE_URL}${AUTHOR.path}`,
+    ...(AUTHOR.photo ? { image: `${SITE_URL}${AUTHOR.photo}` } : {}),
+    worksFor: { '@type': 'Organization', name: AUTHOR.company.name, url: AUTHOR.company.url },
+    ...(sameAs.length ? { sameAs } : {}),
+  }
+}
+
+export function profilePageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: `${SITE_URL}${AUTHOR.path}`,
+    mainEntity: personSchema(),
   }
 }
 
