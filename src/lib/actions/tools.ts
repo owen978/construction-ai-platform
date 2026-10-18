@@ -3,10 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { requireAdmin } from '@/lib/auth'
 import { generateSlug } from '@/lib/utils'
 import type { ToolInsert, ToolUpdate } from '@/types'
 
 export async function createTool(formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const name = formData.get('name') as string
@@ -39,6 +41,7 @@ export async function createTool(formData: FormData) {
 }
 
 export async function updateTool(id: string, formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const name = formData.get('name') as string
@@ -72,6 +75,7 @@ export async function updateTool(id: string, formData: FormData) {
 }
 
 export async function deleteTool(id: string) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const { error } = await supabase

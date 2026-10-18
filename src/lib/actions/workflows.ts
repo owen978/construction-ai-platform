@@ -3,10 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { requireAdmin } from '@/lib/auth'
 import { generateSlug } from '@/lib/utils'
 import type { WorkflowInsert, WorkflowUpdate } from '@/types'
 
 export async function createWorkflow(formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const title = formData.get('title') as string
@@ -48,6 +50,7 @@ export async function createWorkflow(formData: FormData) {
 }
 
 export async function updateWorkflow(id: string, formData: FormData) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const title = formData.get('title') as string
@@ -90,6 +93,7 @@ export async function updateWorkflow(id: string, formData: FormData) {
 }
 
 export async function deleteWorkflow(id: string) {
+  await requireAdmin()
   const supabase = createAdminClient()
 
   const { error } = await supabase
