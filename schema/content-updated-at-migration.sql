@@ -6,9 +6,11 @@
 -- only moves when a content column changes. The site reads
 -- content_updated_at, falling back to updated_at.
 --
--- A caller can set content_updated_at explicitly in the same update (e.g. a
--- punctuation clean-up that shouldn't re-date the page); the trigger then
--- leaves it alone.
+-- An update that changes content_updated_at itself is left alone. So to make a
+-- maintenance edit (e.g. a punctuation clean-up) without re-dating the page,
+-- follow it with a second update that sets only content_updated_at back to its
+-- old value. (Sending the old value in the same update doesn't work: it's equal
+-- to OLD, so the trigger can't tell it was meant.)
 --
 -- Run once in the Supabase SQL editor. Safe to re-run.
 
