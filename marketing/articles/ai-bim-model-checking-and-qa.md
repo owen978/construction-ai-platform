@@ -1,18 +1,20 @@
 ---
-title: "AI for BIM Model Checking and QA: What It Can Check, What It Cannot"
+title: "AI for BIM Model Checking and QA: Rule Setup, Checks and Limits"
 slug: "ai-bim-model-checking-and-qa"
-description: "AI assisted BIM quality assurance uses language models to check the information layer of a model: naming, metadata, classification, parameter completeness, and clash report triage. This guide covers what AI can genuinely check, what still needs a rule engine or a human, and how to build a weekly QA loop on a UK project."
+description: "AI assisted BIM quality assurance uses language models to check the information layer of a model: naming, metadata, classification, parameter completeness and clash report triage. This guide covers turning EIRs into checking rules, natural language checks on model exports, batch checking, what still needs a rule engine or a human, and a weekly QA loop on a UK project."
 difficulty: "intermediate"
-reading_time_minutes: 13
+reading_time_minutes: 16
 featured: false
 sort_order: 15
-meta_title: "AI for BIM Model Checking and QA: What It Can Actually Check"
-meta_description: "AI for BIM model checking and QA in practice: metadata and naming checks, clash triage, EIR compliance, ISO 19650 guardrails and a UK worked example."
+meta_title: "AI for BIM Model Checking and QA: Rules, Checks and Limits"
+meta_description: "AI-assisted BIM quality assurance: turning EIRs into checking rules, natural language checks on model exports, clash triage and a UK worked example."
 ---
 
 **AI assisted BIM model checking uses a language model to audit the information layer of a model: element naming, classification codes, parameter completeness, status codes, and the consistency between the model and the documents that govern it.** It does not check geometry. It cannot see whether a duct physically clashes with a beam, and it cannot judge whether a clash matters on site. What it does exceptionally well is read the tens of thousands of rows that come out of a model export or a clash report and tell you, in seconds, which ones break the rules your project agreed to follow.
 
-That distinction is the whole subject. Most BIM QA effort is not spent looking at geometry. It is spent checking that the information attached to the geometry is complete, correctly named, correctly classified, and matches what the client asked for in the exchange information requirements. That work is text and pattern matching, and it is exactly where AI is strongest. This guide sets out what AI can genuinely check, where a traditional rule engine still beats it, how to build a weekly checking loop on a live UK project, and the ISO 19650 guardrails that keep the whole thing defensible.
+That distinction is the whole subject. Most BIM QA effort is not spent looking at geometry. It is spent checking that the information attached to the geometry is complete, correctly named, correctly classified, and matches what the client asked for in the exchange information requirements. That work is text and pattern matching, and it is exactly where AI is strongest. This guide sets out what AI can genuinely check, how to use it to configure your checking rules, where a traditional rule engine still beats it, how to build a weekly checking loop on a live UK project, and the ISO 19650 guardrails that keep the whole thing defensible.
+
+This is the model checking guide in our BIM AI series. For the wider set of BIM tasks AI can take on, see [AI for BIM workflows](/guides/ai-for-bim-workflows). For choosing the tool itself, see the [BIM AI copilot guide](/guides/bim-ai-copilot-guide), and for the questions to ask at each RIBA stage, see [AI assistant for BIM](/guides/ai-assistant-for-bim).
 
 ## What BIM model checking actually involves
 
@@ -26,7 +28,7 @@ That distinction is the whole subject. Most BIM QA effort is not spent looking a
 
 **Judgement.** Is this clash real or a modelling artefact? Is this level of detail appropriate for Stage 4? Should this element have been in the architectural model or the structural one?
 
-AI is useless at the first, unnecessary at the second, transformative at the third, and dangerous if you let it do the fourth unsupervised. Nearly all the value is in the third layer, which happens to be the layer that consumes the most BIM coordinator hours and gets skipped most often when the deadline is tight.
+AI is useless at the first, unnecessary for running the second (though useful for setting its rules up), transformative at the third, and dangerous if you let it do the fourth unsupervised. Nearly all the value is in the third layer, which happens to be the layer that consumes the most BIM coordinator hours and gets skipped most often when the deadline is tight.
 
 ## What AI can and cannot check
 
@@ -73,7 +75,52 @@ At each information exchange the client's exchange information requirements say 
 
 Give the AI the EIR, the relevant section of the BEP, and the model export or drawing register, and ask it to produce a table of required deliverable, responsible party, delivered yes or no, and gap. This turns a compliance exercise nobody enjoys into a fifteen minute job that produces an auditable record. It is also the check that most often surfaces a genuine problem before the exchange rather than after it.
 
-## Rule engines vs AI vs manual review
+## Configuring BIM checking rules with AI
+
+Rule configuration is where most model checking set-ups stall. The client's EIR says something like "all doors shall carry fire resistance data at Stage 4", and somebody has to turn that sentence into a rule a checker can run: which element class, which property set, which property, what counts as a pass, and from which stage. That translation is text work, so it suits AI well.
+
+The workflow:
+
+1. **Give it the source.** Paste the EIR, or the information requirements section of the BEP, along with your classification system and property naming convention.
+2. **Ask for a rule table.** One row per checkable requirement: rule ID, the source clause quoted word for word, element class (IFC entity or Uniclass table), property set and property, the pass condition, the stage it applies from, and a severity.
+3. **Ask for the requirements it could not turn into rules.** Some clauses are too vague ("an appropriate level of detail"), some need geometry, and some need a person's judgement. This list is often the most useful output, because it shows where the EIR needs clarifying before anyone can check against it.
+4. **Build the rules in your checker.** In Solibri that means ruleset parameters; in Navisworks or a CDE checking tool, search sets and property checks. If the client issues its requirements as an IDS file (the buildingSMART Information Delivery Specification format), AI can draft IDS requirements from the same table, but validate the file in your checking tool before you rely on it.
+5. **Test every rule on a model where you already know the answer**, including at least one element that should fail.
+
+A prompt that works:
+
+> You are helping a BIM coordinator on a UK project set up model checking rules. Attached are the client's EIR and our property naming convention. Produce a table with these columns: Rule ID, EIR clause (quote it exactly), element class, property set, property, pass condition, applies from stage, severity. Only include requirements that can be checked from element properties. List separately every requirement you could not turn into a rule and say why. Do not invent property names that are not in the convention.
+
+AI also helps when a ruleset already exists and nobody remembers why each rule is there. Paste a description of the ruleset alongside the EIR and ask three questions: which rules trace back to a requirement, which requirements have no rule, and which rules check something nobody asked for. That keeps the ruleset tied to this appointment rather than to whatever the last project needed.
+
+What AI should not do is run the rule. Once a rule is configured, the checking itself should be deterministic, so the same model gives the same answer every time. That is the rule engine's job.
+
+## Natural language checks on a model export
+
+Natural language BIM checking, sometimes called conversational checking, means asking questions of the model data in plain English instead of building a rule first. Which fire doors on level 2 have no fire rating? Which rooms have no floor finish recorded? Are any mechanical elements still using the old originator code?
+
+With a general-purpose model this works on an export, not on the live model. Export the element schedule with the properties you care about, plus a unique element ID such as the IFC GlobalId or the Revit element ID, and ask your question against it. Two habits make the answers usable:
+
+- **Always ask for element IDs back.** A list of IDs can go straight into a selection set or a viewer search so you can see the elements. A sentence saying "several doors are missing data" cannot.
+- **Ask it to state its count.** "How many rows did you check, and how many matched?" catches the cases where it has only read part of a large file.
+
+This is good for one-off questions, spot checks before a coordination meeting, and getting to know a model you have just inherited. It is not a replacement for a ruleset. A question asked in a chat is not repeatable unless you save it, and the answer can vary slightly between runs. If a question turns out to matter every week, turn it into a rule.
+
+Questions that need geometry, such as "which ducts sit within 50mm of a beam" or "does this corridor meet the required clear width", cannot be answered from a schedule export. Some copilots built into model viewers and CDEs can answer component queries against the live model, and the [BIM AI copilot guide](/guides/bim-ai-copilot-guide) compares what each type can see.
+
+## Batch and unattended model checking
+
+Once the rules are configured, the checking can run without anyone watching it. Most rule engines can run a saved ruleset against a batch of models, and some can be started from the command line or on a schedule, so the check runs overnight against the latest uploads. That is deterministic BIM validation: the same model and the same rules give the same result every time, which is what you want for pass or fail compliance.
+
+AI fits after the batch run, not inside it. The pattern that works:
+
+1. **The rule engine runs** the ruleset against the latest models and exports the results.
+2. **A language model reads the results** with the project brief and writes a short summary: what failed, grouped by originator and by rule, what is new since last week, and what has been failing for three weeks or more.
+3. **The coordinator reviews the summary**, checks the high severity items in the model, and issues the actions.
+
+You can automate step 2 as well, with a script that picks up the results file and sends it to a model through its API. If you do, keep the prompt fixed, log every input and output, and keep a person reviewing the summary before it goes to anyone. The language model step is the one that can vary between runs, so it should never be the step that decides whether a deliverable passes.
+
+## Deterministic validation vs AI checking vs manual review
 
 AI does not replace Solibri. The three approaches solve different problems and the right setup uses all three.
 
@@ -117,13 +164,13 @@ Two constraints matter on UK projects, and neither is a reason not to do this. T
 
 You do not need a platform. You need four saved prompts, the relevant project documents, and a fixed slot in the week.
 
-1. **Write down the rules once.** Extract the naming convention, status code table, classification requirement, and the EIR deliverable list into a single plain text project brief. This is the reference the AI needs on every run, and writing it down usually exposes at least one ambiguity in the BEP.
+1. **Write down the rules once.** Extract the naming convention, status code table, classification requirement, and the EIR deliverable list into a single plain text project brief, together with the rule table from the configuration step above. This is the reference the AI needs on every run, and writing it down usually exposes at least one ambiguity in the BEP.
 2. **Save four prompts.** Naming and metadata check, clash triage and grouping, EIR deliverable check, coordination report draft. Each one takes the project brief plus that week's export.
 3. **Fix the slot.** Run the checks the same day each week, before the exchange, not after. Checking after the exchange is auditing. Checking before it is quality assurance.
 4. **Log everything.** Save the export, the output, and what you did about it. This is your evidence trail, and on a higher-risk building it is not optional.
 5. **Review every output.** Especially anything reported as compliant. Spot-check five rows a week against the model. If the AI is wrong, you want to find out on a spot check rather than at handover.
 
-The prompts themselves are the fiddly part. The wider set of [construction AI workflows](/ai-workflows) gives you tested starting points, and new prompts go out in our [free weekly newsletter](/newsletter). If you want the assistant layer that runs these continuously rather than weekly, that is covered in the [BIM AI copilot guide](/guides/bim-ai-copilot-guide), and the role-level view is in the [AI for BIM managers collection](/ai-for/bim-manager).
+The prompts themselves are the fiddly part. The wider set of [construction AI workflows](/ai-workflows) gives you tested starting points, the [stage by stage asks for an AI assistant for BIM](/guides/ai-assistant-for-bim) cover the checks that change through the project, and new prompts go out in our [free weekly newsletter](/newsletter). If you want the assistant layer that runs these continuously rather than weekly, that is covered in the [BIM AI copilot guide](/guides/bim-ai-copilot-guide), and the role-level view is in the [AI for BIM managers collection](/ai-for/bim-manager).
 
 ## Common mistakes
 
@@ -143,6 +190,14 @@ No. AI language models cannot read geometry and cannot perform clash detection. 
 ### What can AI actually check in a BIM model?
 
 The information layer. Element and file naming against your convention, suitability and status codes, classification code completeness and consistency, parameter and property set gaps, duplicate or orphaned entries in a schedule, and whether what the model delivers matches the exchange information requirements. All of these are checks on exported text and schedules rather than on the geometry itself.
+
+### Can AI write model checking rules for Solibri or other checkers?
+
+Yes, as a first draft. Give it the EIR and your property naming convention and it will turn each checkable requirement into a rule: element class, property, pass condition, stage and severity, with the source clause quoted. Ask it to list the requirements it could not turn into rules as well. Then build the rules in your checker, test them on a model where you already know the answer, and let the rule engine run them.
+
+### What is natural language BIM checking?
+
+Asking questions of model data in plain English, such as "which fire doors on level 2 have no fire rating?", instead of building a rule first. With a general-purpose AI model it works on an exported element schedule rather than the live model, so ask for element IDs in every answer. It suits spot checks and one-off questions. Anything you need to check every week should become a rule in your checker.
 
 ### Does AI replace Solibri or Navisworks for model checking?
 
