@@ -16,6 +16,13 @@ export const RELATED_GUIDES_MAP: Record<string, string[]> = {
     'construction-cost-plan-guide',
     'ai-tender-analysis-guide',
   ],
+  // One guide per BIM search cluster: workflows, model checking, copilots, assistants.
+  'ai-for/bim-manager': [
+    'ai-for-bim-workflows',
+    'ai-bim-model-checking-and-qa',
+    'bim-ai-copilot-guide',
+    'ai-assistant-for-bim',
+  ],
   'ai-workflows/generate-bill-of-quantities': [
     'ai-for-quantity-surveyors-guide',
     'construction-cost-plan-guide',
