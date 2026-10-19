@@ -1,16 +1,16 @@
 ---
-title: "BIM AI Copilot: What It Actually Does, and How to Set One Up"
+title: "BIM AI Copilot: The 3 Types Compared, and How to Set One Up"
 slug: "bim-ai-copilot-guide"
-description: "A BIM AI copilot is an assistant that sits alongside your model and CDE and answers questions about the information in them, drafts the documents that surround them, and triages the outputs they produce. This guide covers the three kinds of copilot, what to feed one, a UK worked example, and how to set one up in a week."
+description: "A BIM AI copilot is an assistant that sits alongside your model and CDE, answers questions about the information in them, drafts the documents around them and triages the outputs they produce. This guide compares the three kinds of copilot, covers component queries and project memory, and shows how to set one up in a week."
 difficulty: "intermediate"
-reading_time_minutes: 12
+reading_time_minutes: 14
 featured: false
 sort_order: 14
-meta_title: "BIM AI Copilot: What It Does + How to Set One Up (UK Guide)"
-meta_description: "What a BIM AI copilot does, the three types (embedded, general-purpose, custom), what data to give it, ISO 19650 guardrails and a UK worked example."
+meta_title: "BIM AI Copilot: 3 Types Compared + How to Set One Up (UK)"
+meta_description: "What a BIM AI copilot does: the 3 types compared (embedded, general-purpose, custom), component queries, what data to give it and a UK worked example."
 ---
 
-**A BIM AI copilot is an assistant that sits alongside your federated model and common data environment and answers questions about the information inside them, drafts the documents that surround them, and triages the outputs they produce.** It does not model. It reads exports, schedules, clash reports, drawing registers, and specifications, then gives you answers and first drafts in seconds instead of the hour it takes to dig them out yourself. The good ones behave like a very fast graduate who has read every document on the project and forgotten none of them.
+**A BIM AI copilot is an assistant that sits alongside your federated model and common data environment and answers questions about the information inside them, drafts the documents that surround them, and triages the outputs they produce.** It does not do the modelling. It reads exports, schedules, clash reports, drawing registers, and specifications, then gives you answers and first drafts in seconds instead of the hour it takes to dig them out yourself. The good ones behave like a very fast graduate who has read every document on the project and forgotten none of them.
 
 The word "copilot" is doing a lot of work in the market right now, and it means at least three different things depending on who is selling it. This guide separates them, explains what each is genuinely good for, and shows you how to stand one up on a live UK project without breaching your ISO 19650 information protocols or your client's data terms.
 
@@ -27,11 +27,15 @@ For BIM specifically, the boundary falls in a very consistent place:
 | Draft BEPs, TIDPs, coordination reports, RFI responses | Yes, with review | Document generation from templates plus project facts |
 | Triage and group large clash exports | Yes, with review | Pattern matching across thousands of rows |
 | Flag naming, status, and metadata non-compliance | Yes, reliably | String checking against a stated convention |
-| Author or edit geometry in Revit, Archicad, or Tekla | No | It cannot see or manipulate the model |
+| Answer component queries ("which doors have no fire rating?") | Yes, on exported or platform data | Filtering and counting across element properties |
+| Make simple model changes from a plain English command | Only some embedded add-ins, in a limited way | They act through the authoring tool's API, like a script |
+| Design or author geometry in Revit, Archicad, or Tekla | No | Design decisions and modelling stay with the modeller |
 | Judge whether a clash is physically acceptable on site | No | Spatial judgement, needs eyes on the model |
 | Sign off information for the golden thread | No | A legal accountability, not a task |
 
-Everything in the "yes" column is text, structure, and pattern. Everything in the "no" column is geometry or accountability. A copilot that claims to cross that line is either using a different definition of BIM or overselling. Our companion guide on [AI for BIM workflows](/guides/ai-for-bim-workflows) goes deeper on the individual workflows themselves. This guide is about the assistant layer that runs them.
+Everything in the "yes" column is text, structure, and pattern. Everything in the "no" column is geometry or accountability. The one grey area is the small number of add-ins for authoring tools that take a plain English command and carry it out through the tool's API: select these elements, set this parameter, rename these views. Treat those like any script: run them on a copy of the model first and check what changed. A copilot that claims to do the design work itself is overselling.
+
+Our companion guide on [AI for BIM workflows](/guides/ai-for-bim-workflows) goes deeper on the individual workflows themselves, and [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) covers the checking side. This guide is about the copilot layer that runs them: which type to use, what to give it, and how to set it up.
 
 ## The three kinds of BIM AI copilot
 
@@ -72,6 +76,36 @@ Weaknesses: it is a build. Budget a few weeks of a competent developer, a monthl
 | Realistic verdict for most UK teams | Use what is bundled | Start here | Only at scale |
 
 The honest recommendation for a typical UK contractor or consultant: start with option two, use option one where it is already bundled with software you pay for, and only consider option three when you can point at a specific recurring question that costs the team hours every week.
+
+## Component queries: asking a copilot about model elements
+
+A component query is a question about the elements in a model. How many fire doors on level 3 have no fire rating? Which rooms have no floor finish recorded? Which wall types have no U-value? It is one of the most common things people want from a BIM AI copilot, and each of the three types answers it differently.
+
+| Copilot type | How it answers a component query | Watch out for |
+|---|---|---|
+| Embedded vendor copilot | Queries the model data inside its own platform | It only sees that platform, so check which model version it read |
+| General-purpose model | Reads an element schedule you export: element ID, category, type, level and the properties you care about | It only knows the columns you exported, and may read only part of a very large file |
+| Custom build | Queries an index of exported schedules, refreshed on a set cycle | Answers are only as current as the last refresh |
+
+Three habits make component queries reliable, whatever the tool:
+
+- **Ask for element IDs in every answer**, so you can select the elements in the model and look at them.
+- **Ask for the number of elements it checked**, as well as the number that matched, so you know it read the whole schedule.
+- **Keep geometry questions in the model tool.** "Which ducts sit within 50mm of a beam?" is a clash or proximity check, not a component query.
+
+If the same component query matters every week, it should become a checking rule rather than a chat. Our guide to [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) covers configuring those rules and running them in batch.
+
+## Project memory: copilots that remember the project
+
+Much of the difference between a copilot that feels useful and one that feels like hard work is memory. A general-purpose model in a plain chat starts every session empty. A session-aware set-up keeps the project context between conversations, so the brief, the naming convention and last week's results are already there.
+
+There are three ways to get it, from cheapest to most capable:
+
+1. **A saved context pack** that you paste in at the start of each session. Free, and it works with any tool.
+2. **A project space in the AI tool**, such as Projects in Claude, where the documents and standing instructions are attached once and every new conversation starts already briefed.
+3. **A custom build** with an index of the project documents, which can also handle issue and RFI navigation ("what did we agree about the riser at plot 4?") with references back to the source.
+
+Whichever you use, memory needs housekeeping. When the BEP is revised or the naming convention changes, replace the old version rather than adding the new one alongside it, or the copilot may answer from the superseded document.
 
 ## What to give a copilot before you ask it anything
 
@@ -131,7 +165,7 @@ You do not need a project. You need five hours spread across a week.
 
 **Day 4.** Run it against a week you already understand, and check the answer against what you know to be true. You are calibrating trust, not testing the tool. Where it is wrong, the fix is almost always missing context rather than a bad model.
 
-**Day 5.** Write the prompt down somewhere the team can reuse it, with a note on what context to paste. A prompt that lives in one person's head is not a workflow. The [AI for BIM managers collection](/ai-for/bim-manager) covers the role-specific prompts, and new ones go out in our [free weekly newsletter](/newsletter). The broader [AI workflows library](/ai-workflows) has the adjacent tasks, including [generating coordination meeting minutes](/ai-workflows/generate-meeting-minutes), which is usually the second thing people automate.
+**Day 5.** Write the prompt down somewhere the team can reuse it, with a note on what context to paste. A prompt that lives in one person's head is not a workflow. The [AI for BIM managers collection](/ai-for/bim-manager) covers the role-specific prompts, and new ones go out in our [free weekly newsletter](/newsletter). The broader [AI workflows library](/ai-workflows) has the adjacent tasks, including [generating coordination meeting minutes](/ai-workflows/generate-meeting-minutes), which is usually the second thing people automate. Once the copilot is running, our guide to [what to ask an AI assistant for BIM at each RIBA stage](/guides/ai-assistant-for-bim) has the questions worth asking from Stage 2 to handover.
 
 By the end of that week you will have one workflow that reliably saves a few hours, which is a far better outcome than five workflows that half work.
 
@@ -153,7 +187,11 @@ A BIM AI copilot is an AI assistant that works alongside your model and common d
 
 ### Can a BIM copilot create or edit the model?
 
-No. Current copilots cannot author geometry in Revit, Archicad, or Tekla. They work with text and structured data: schedules, exports, registers, specifications, and reports. Anything requiring spatial judgement or model manipulation stays with the modeller.
+Not in the way a modeller does. General-purpose copilots such as Claude or ChatGPT cannot author or edit geometry in Revit, Archicad, or Tekla. They work with text and structured data: schedules, exports, registers, specifications, and reports. A small number of add-ins for authoring tools can make simple changes from a plain English command, such as selecting elements or setting parameter values, through the tool's API. Test those on a copy of the model and check what changed. Design decisions and spatial judgement stay with the modeller.
+
+### What is a component query in BIM?
+
+A question about the elements in a model, such as how many doors on a level have no fire rating, or which rooms have no finish recorded. An embedded copilot answers from the model data inside its own platform. A general-purpose model answers from an element schedule you export. Either way, ask for element IDs in the answer so you can find the elements in the model.
 
 ### Which BIM copilot is best for a UK contractor?
 
