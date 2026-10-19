@@ -12,7 +12,7 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { ToolCard } from '@/components/cards/tool-card'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
-import { dailyArchiveHref, getIdeasForToolPage, toolForPage } from '@/lib/daily-ideas'
+import { dailyArchiveHref, getIdeasForToolPage } from '@/lib/daily-ideas'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
@@ -139,7 +139,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
           <DailyIdeasStrip
             ideas={getIdeasForToolPage(slug)}
             title={`Daily ideas using ${tool.name}`}
-            moreHref={dailyArchiveHref({ tool: toolForPage(slug) ?? undefined })}
+            moreHref={dailyArchiveHref({ tool: slug })}
             moreLabel={`All ${tool.name} ideas`}
           />
         </div>

@@ -133,10 +133,6 @@ const TOOL_PAGES: Record<string, string> = {
 
 export const toolPageSlug = (tool: string): string | null => TOOL_PAGES[tool] ?? null
 
-/** The idea tool behind an /ai-tools/ page, for filtering the archive. */
-export const toolForPage = (slug: string): string | null =>
-  Object.entries(TOOL_PAGES).find(([, page]) => page === slug)?.[0] ?? null
-
 /** Published ideas that build on a workflow, newest first. */
 export function getIdeasForWorkflow(slug: string, limit = 3, today = londonDate()): DailyIdea[] {
   return getPublishedIdeas(today).filter((i) => i.relatedWorkflow === slug).slice(0, limit)
