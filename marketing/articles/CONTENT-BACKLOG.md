@@ -69,9 +69,9 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 | # | Status | Target keyword | Volume / KD | Slug | Internal links |
 |---|--------|----------------|-------------|------|----------------|
 | 30 | queued | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /newsletter |
-| 31 | queued | free ai for construction estimating | US 250 / KD 7 / $4.50 | free-ai-for-construction-estimating | /guides/ai-for-cost-estimation, /ai-tools/claude, /ai-workflows/generate-bill-of-quantities |
+| 31 | queued | free ai for construction estimating | US 250 / KD 7 / $4.50 | free-ai-for-construction-estimating | /guides/ai-construction-estimating, /ai-tools/claude, /ai-workflows/generate-bill-of-quantities |
 | 32 | queued | ai construction software | US 350 / KD 52 | best-ai-construction-software | /ai-tools, /ai-tools/autodesk-construction-cloud, /ai-tools/procore |
-| 33 | queued | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-for-cost-estimation, /templates/cost-plan |
+| 33 | queued | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-construction-estimating, /templates/cost-plan |
 | 34 | queued | chatgpt vs claude for construction | comparison intent | chatgpt-vs-claude-for-construction | /ai-tools/chatgpt, /ai-tools/claude, /newsletter |
 | 35 | queued | best ai tools for project management construction | US 200 | best-ai-tools-for-construction-project-management | /ai-tools, /ai-workflows/generate-project-risk-register |
 | 36 | queued | ai construction scheduling software | US 150 / KD 30 | best-ai-tools-for-construction-scheduling | /ai-workflows/generate-lookahead-schedule-summary, /ai-tools |
