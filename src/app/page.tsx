@@ -53,7 +53,7 @@ export default async function HomePage() {
   return (
     <>
       <script {...jsonLdScriptProps(websiteSchema())} />
-      <Hero />
+      <Hero idea={ideaOfTheDay?.idea} rotated={ideaOfTheDay?.rotated} />
       {ideaOfTheDay && (
         <DailyIdeaCard
           idea={ideaOfTheDay.idea}

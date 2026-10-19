@@ -22,25 +22,25 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: '%s | BuildCopilot',
-    default: 'BuildCopilot: The AI Operating System for Construction',
+    default: 'BuildCopilot: Free AI Workflows for UK Construction',
   },
   description:
-    'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
+    'Free AI workflows, prompts and templates for UK construction teams. Copy-paste prompts for QSs, project managers and site managers, edited by a working QS.',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'BuildCopilot: The AI Operating System for Construction',
+    title: 'BuildCopilot: Free AI Workflows for UK Construction',
     description:
-      'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
+      'Free AI workflows, prompts and templates for UK construction teams. Copy-paste prompts for QSs, project managers and site managers, edited by a working QS.',
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BuildCopilot: The AI Operating System for Construction',
+    title: 'BuildCopilot: Free AI Workflows for UK Construction',
     description:
-      'Ready-to-use AI workflows, prompts, and guides for construction professionals. Save hours every week with BuildCopilot.',
+      'Free AI workflows, prompts and templates for UK construction teams. Copy-paste prompts for QSs, project managers and site managers, edited by a working QS.',
     images: [DEFAULT_OG_IMAGE.url],
   },
   alternates: {

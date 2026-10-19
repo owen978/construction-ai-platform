@@ -23,7 +23,7 @@ export function DailyIdeaCard({
   more: DailyIdea[]
 }) {
   return (
-    <section aria-labelledby="daily-idea-heading" className="bg-white py-16 sm:py-20">
+    <section id="workflow-of-the-day" aria-labelledby="daily-idea-heading" className="scroll-mt-16 bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
