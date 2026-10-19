@@ -17,11 +17,11 @@ On construction projects, fire risk changes constantly as the works progress, so
 ## key_sections
 A complete fire risk assessment follows the five steps recommended by UK fire safety guidance:
 
-- **Step 1 — Identify the fire hazards.** Sources of ignition (hot works, electrical equipment, smoking), sources of fuel (timber, packaging, flammable liquids, waste), and sources of oxygen.
-- **Step 2 — Identify people at risk.** Operatives, visitors, neighbours, and anyone especially at risk (lone workers, those working at height or in confined spaces).
-- **Step 3 — Evaluate, remove or reduce the risk.** Control measures: hot works permits, safe storage of flammables, housekeeping and waste control, fire detection, extinguishers, and escape routes.
-- **Step 4 — Record findings, plan and train.** Document the significant findings, the action plan, and the emergency procedures. Brief everyone on site.
-- **Step 5 — Review and update.** Re-assess when the site, the works, or the occupancy changes. On a live construction site this is frequent.
+- **Step 1: Identify the fire hazards.** Sources of ignition (hot works, electrical equipment, smoking), sources of fuel (timber, packaging, flammable liquids, waste), and sources of oxygen.
+- **Step 2: Identify people at risk.** Operatives, visitors, neighbours, and anyone especially at risk (lone workers, those working at height or in confined spaces).
+- **Step 3, Evaluate, remove or reduce the risk.** Control measures: hot works permits, safe storage of flammables, housekeeping and waste control, fire detection, extinguishers, and escape routes.
+- **Step 4: Record findings, plan and train.** Document the significant findings, the action plan, and the emergency procedures. Brief everyone on site.
+- **Step 5: Review and update.** Re-assess when the site, the works, or the occupancy changes. On a live construction site this is frequent.
 
 ## template_content
 FIRE RISK ASSESSMENT
@@ -32,16 +32,16 @@ Responsible person: ____________________
 Assessor name and competence: ____________________
 Date of assessment: __________  Review date: __________
 
-STEP 1 — FIRE HAZARDS
+STEP 1: FIRE HAZARDS
 Sources of ignition: ____________________
 Sources of fuel: ____________________
 Sources of oxygen: ____________________
 
-STEP 2 — PEOPLE AT RISK
+STEP 2: PEOPLE AT RISK
 Who is at risk: ____________________
 Anyone especially at risk: ____________________
 
-STEP 3 — EVALUATE AND CONTROL
+STEP 3: EVALUATE AND CONTROL
 | Hazard | Existing controls | Risk rating | Further action needed |
 | ------ | ----------------- | ----------- | --------------------- |
 |        |                   |             |                       |
@@ -53,13 +53,13 @@ Hot works controls / permits: ____________________
 Storage of flammables: ____________________
 Housekeeping and waste: ____________________
 
-STEP 4 — RECORD, PLAN, TRAIN
+STEP 4: RECORD, PLAN, TRAIN
 Significant findings: ____________________
 Action plan (action / owner / date): ____________________
 Emergency procedures and assembly point: ____________________
 Briefing record: ____________________
 
-STEP 5 — REVIEW
+STEP 5: REVIEW
 Trigger for review: ____________________
 Signature of responsible person: ____________________
 
