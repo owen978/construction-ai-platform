@@ -1,5 +1,5 @@
 ---
-status: "draft"
+status: "approved"
 ---
 
 ## When not to use it
