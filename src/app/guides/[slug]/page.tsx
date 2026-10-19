@@ -23,6 +23,7 @@ import { getConstructionRatingNote } from '@/lib/construction-rating'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { contentDate } from '@/lib/utils'
 
 export async function generateStaticParams() {
   const slugs = await getGuideSlugs()
@@ -86,7 +87,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
       description: guide.description || `Construction AI guide: ${guide.title}`,
       slug: guide.slug,
       datePublished: guide.created_at,
-      dateModified: guide.updated_at,
+      dateModified: contentDate(guide),
       readingTimeMinutes: guide.reading_time_minutes,
     }),
     ...(faqItems.length > 0 ? [faqSchema(faqItems)] : []),
@@ -118,7 +119,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           </p>
         )}
 
-        <Byline updatedAt={guide.updated_at} className="mb-4" />
+        <Byline updatedAt={contentDate(guide)} className="mb-4" />
 
         <div className="mb-8 flex flex-wrap items-center gap-3">
           <Badge variant={guide.difficulty ? difficultyVariant[guide.difficulty] : 'info'}>

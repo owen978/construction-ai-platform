@@ -37,3 +37,11 @@ export function pluralRole(name: string) {
     ? `${name}s`
     : name
 }
+
+/**
+ * When a page's content last changed: content_updated_at moves only on content
+ * edits (not titles, meta or status), so SEO tweaks don't re-date pages.
+ */
+export function contentDate(row: { content_updated_at?: string | null; updated_at: string }) {
+  return row.content_updated_at ?? row.updated_at
+}

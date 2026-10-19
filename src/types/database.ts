@@ -23,6 +23,7 @@ export type Database = {
           sort_order: number
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -37,6 +38,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -51,6 +53,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: []
       }
@@ -68,6 +71,7 @@ export type Database = {
           sort_order: number
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -82,6 +86,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -96,6 +101,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: []
       }
@@ -117,6 +123,7 @@ export type Database = {
           sort_order: number
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -135,6 +142,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -153,6 +161,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: []
       }
@@ -173,6 +182,7 @@ export type Database = {
           sort_order: number
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -190,6 +200,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -207,6 +218,7 @@ export type Database = {
           sort_order?: number
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: []
       }
@@ -233,6 +245,7 @@ export type Database = {
           guide_id: string | null
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -256,6 +269,7 @@ export type Database = {
           guide_id?: string | null
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -279,6 +293,7 @@ export type Database = {
           guide_id?: string | null
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: [
           {
@@ -467,6 +482,7 @@ export type Database = {
           sort_order: number | null
           created_at: string
           updated_at: string
+          content_updated_at: string
         }
         Insert: {
           id?: string
@@ -487,6 +503,7 @@ export type Database = {
           sort_order?: number | null
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Update: {
           id?: string
@@ -507,6 +524,7 @@ export type Database = {
           sort_order?: number | null
           created_at?: string
           updated_at?: string
+          content_updated_at?: string
         }
         Relationships: []
       }

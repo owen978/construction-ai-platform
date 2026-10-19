@@ -32,7 +32,7 @@ import { getIdeasForWorkflow } from '@/lib/daily-ideas'
 import type { DifficultyLevel } from '@/types'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
-import { pluralRole } from '@/lib/utils'
+import { contentDate, pluralRole } from '@/lib/utils'
 
 export async function generateStaticParams() {
   const slugs = await getWorkflowSlugs()
@@ -110,7 +110,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
       difficulty: workflow.difficulty,
       tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
       estimatedTime: result ? `PT${result.timeWithAiMins}M` : undefined,
-      dateModified: workflow.updated_at,
+      dateModified: contentDate(workflow),
     }),
     ...(extras && extras.faqs.length > 0 ? [faqSchema(extras.faqs)] : []),
   ]
@@ -160,7 +160,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
             )}
           </div>
 
-          <Byline updatedAt={workflow.updated_at} className="mt-4" />
+          <Byline updatedAt={contentDate(workflow)} className="mt-4" />
 
           {/* Long description */}
           {workflow.long_description && (

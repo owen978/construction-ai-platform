@@ -21,6 +21,7 @@ import { getServiceCta } from '@/lib/service-cta'
 import { FreeToolCallout } from '@/components/sections/free-tool-callout'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { contentDate } from '@/lib/utils'
 
 /** Free interactive tools promoted from closely related template pages. */
 const FREE_TOOL_CALLOUTS: Record<
@@ -104,7 +105,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
       url: `${SITE_URL}/templates/${template.slug}`,
       isAccessibleForFree: true,
       inLanguage: 'en-GB',
-      dateModified: template.updated_at,
+      dateModified: contentDate(template),
       image: `${SITE_URL}/templates/${template.slug}/opengraph-image`,
       publisher: {
         '@type': 'Organization',
