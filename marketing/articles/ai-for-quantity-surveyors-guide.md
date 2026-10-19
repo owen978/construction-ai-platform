@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 11
 featured: false
 sort_order: 5
-meta_title: "AI for Quantity Surveyors: Uses, Tools & Prompts (Free Guide)"
-meta_description: "How quantity surveyors use AI for bills of quantities, tender analysis, valuations, and cost reporting. Real UK use cases, a worked example, and prompts to start with. Free guide."
+meta_title: "AI for Quantity Surveyors: Uses, Tools & Prompts"
+meta_description: "How quantity surveyors use AI for bills of quantities, tender analysis, valuations and cost reporting. UK use cases, a worked example and starter prompts."
 ---
 
 **AI for quantity surveyors** means using large language model tools, such as Claude, to speed up the repetitive, document-heavy parts of the QS role: drafting bills of quantities, analysing tender returns, summarising contract clauses, preparing valuations, and writing cost reports. It does not replace your commercial judgement or your measurement standards. It removes the hours you spend formatting, comparing, and writing up work you have already thought through, so you can spend more time on the decisions that actually move the numbers.

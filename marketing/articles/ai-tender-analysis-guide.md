@@ -6,8 +6,8 @@ difficulty: "intermediate"
 reading_time_minutes: 11
 featured: false
 sort_order: 9
-meta_title: "AI Tender Analysis for Construction: Evaluate Bids Faster (Guide)"
-meta_description: "How to use AI for construction tender analysis: normalising bids, spotting qualifications, building a scoring matrix, and a UK worked example. Free workflow and template."
+meta_title: "AI Tender Analysis for Construction: Evaluate Bids Faster"
+meta_description: "How to use AI for construction tender analysis: normalise bids, spot qualifications, build a scoring matrix, plus a UK worked example. Free template."
 ---
 
 **AI tender analysis** is the use of artificial intelligence, usually large language models, to read, compare, and evaluate construction tender returns quickly and consistently. Instead of manually reading hundreds of pages across several bids, you feed the returns to an AI that normalises the pricing, flags qualifications and exclusions, checks compliance against the tender documents, and drafts a structured comparison you can defend. Used well, it turns a two-day evaluation into a two-hour one while making the process more transparent, not less.

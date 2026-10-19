@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 11
 featured: false
 sort_order: 6
-meta_title: "Construction Method Statement Template + Example (Free Guide)"
-meta_description: "What to include in a construction method statement, a free template, a worked UK example, and how to write a safe system of work in minutes with AI. UK construction guide."
+meta_title: "Construction Method Statement Template + Example (Free)"
+meta_description: "What to include in a construction method statement, with a free template, a worked UK example and how to write a safe system of work with AI."
 ---
 
 A **construction method statement** is a written, step-by-step plan that sets out how a specific task will be carried out safely from start to finish. It describes the sequence of work, the people and plant involved, the hazards present, and the control measures that keep everyone safe. In UK practice a method statement is almost always paired with a risk assessment to form a [RAMS document](/templates/rams), and it is one of the documents a principal contractor will ask for before any subcontractor is allowed to start on site.

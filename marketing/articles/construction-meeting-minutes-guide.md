@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 11
 featured: false
 sort_order: 4
-meta_title: "Construction Meeting Minutes Template + Examples (Free Guide)"
-meta_description: "What to include in construction meeting minutes, a free template, a worked UK example, and how to write site and progress meeting minutes in minutes with AI. UK construction guide."
+meta_title: "Construction Meeting Minutes Template + Examples (Free)"
+meta_description: "What to include in construction meeting minutes, with a free template, a worked UK example and how to write site and progress minutes with AI."
 ---
 
 **Construction meeting minutes** are the formal written record of a construction meeting: the decisions made, the actions agreed, who owns each action, and when it is due. They turn a room full of discussion into a clear, dated, accountable record that everyone can act on and that protects the project if a dispute arises later. Good minutes are short, action-focused, and circulated within 24 hours while memories are fresh.

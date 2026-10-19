@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 18
 meta_title: "AI in Construction Safety: Uses, Examples + UK Guide"
-meta_description: "How UK construction teams use AI for safety: drafting RAMS and COSHH assessments, hazard detection, incident analysis, and toolbox talks. Worked example and the legal limits."
+meta_description: "AI in construction safety: how UK teams use it for RAMS, COSHH assessments, hazard detection, incident analysis and toolbox talks, plus the legal limits."
 ---
 
 **AI in construction safety** means using artificial intelligence to reduce the time, inconsistency, and blind spots in how a site manages risk. In practice that splits into three things: generating and reviewing safety documentation (RAMS, risk assessments, COSHH assessments, toolbox talks), analysing site imagery and data to flag hazards, and finding patterns across incident and near-miss records that a human reading them one by one would miss. AI does not make safety decisions and it does not carry legal duties. The competent person named in your CDM 2015 arrangements still does.

@@ -7,7 +7,7 @@ reading_time_minutes: 11
 featured: false
 sort_order: 19
 meta_title: "Will AI Replace Construction Workers? (Honest 2026 Answer)"
-meta_description: "Will AI replace construction workers? The honest answer, which roles are most exposed, what AI genuinely cannot do on site, and how to stay ahead. UK construction guide."
+meta_description: "Will AI replace construction workers? The honest answer, which roles are most exposed, what AI cannot do on site and how to stay ahead. A UK guide."
 ---
 
 **AI will not replace construction workers, but it will replace a large share of construction admin.** The work most at risk is the desk work: writing method statements, drafting reports, summarising contracts, chasing information, formatting documents, and rekeying the same data into four systems. The work least at risk is anything involving hands, judgement in a physical space, and responsibility for other people's safety. In practice, the realistic outcome for most people in UK construction is not redundancy: it is that the paperwork half of the job shrinks and the site half of the job stays.

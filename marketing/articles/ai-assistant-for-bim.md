@@ -6,8 +6,8 @@ difficulty: "intermediate"
 reading_time_minutes: 13
 featured: false
 sort_order: 16
-meta_title: "AI Assistant for BIM: Stage by Stage Prompts for UK BIM Managers"
-meta_description: "What to ask a BIM AI assistant at RIBA Stages 2 to 7, a copy-ready prompt library, an assistant capability table, a UK worked example, and how to verify the output before you issue it."
+meta_title: "AI Assistant for BIM: Stage by Stage Prompts (UK Guide)"
+meta_description: "What to ask an AI assistant for BIM at RIBA Stages 2 to 7: copy-ready prompts, a capability table, a UK worked example and how to verify the output."
 ---
 
 An **AI assistant for BIM** is a large language model that you brief with your project's information standard, then ask to draft, check, and summarise the documents and data that surround the model. It does not model, it does not run clash detection, and it does not replace your rule engine. What it does is absorb the EIRs, the BEP, the naming convention, and the exported schedules, and then answer questions and produce documents against them in minutes rather than days.

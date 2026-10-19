@@ -7,7 +7,7 @@ reading_time_minutes: 11
 featured: false
 sort_order: 12
 meta_title: "CDM Construction Phase Plan Template + Example (Free Guide)"
-meta_description: "What a construction phase plan must include under CDM 2015, a free template, a worked UK example, and how to write one in minutes with AI. UK construction guide."
+meta_description: "What a construction phase plan must include under CDM 2015, with a free template, a worked UK example and how to write one with AI."
 ---
 
 A **construction phase plan** is the health and safety document that the principal contractor must prepare before any construction work starts on a project under the Construction (Design and Management) Regulations 2015 (CDM 2015). It sets out how the specific risks of the project will be managed during the build: the site rules, the arrangements for controlling significant risks, the site set-up, and who is responsible for what. It is a legal requirement on every construction project in Great Britain, however small, and work must not begin until it is in place.

@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 26
 meta_title: "22 ChatGPT Prompts for Quantity Surveyors (UK, Copy-Paste)"
-meta_description: "22 copy-paste ChatGPT prompts for quantity surveyors: NRM1 cost plans, NRM2 bill items, tender comparisons, interim valuations, variations, JCT and NEC4 contract work. Built for UK QS teams."
+meta_description: "22 copy-paste ChatGPT prompts for UK quantity surveyors: NRM1 cost plans, NRM2 bill items, tender comparisons, valuations, variations and JCT/NEC4 work."
 ---
 
 **ChatGPT prompts for quantity surveyors** are structured instructions that get ChatGPT, Claude or Copilot to do the document-heavy parts of QS work: wording bill items, comparing tender returns, checking an interim application, drafting a variation assessment or summarising a contract. The prompts that work give the AI four things: a QS role, the real commercial facts, the rules it must follow (NRM1, NRM2, the JCT or NEC4 form in use), and an instruction to flag anything missing rather than invent it. The QS still makes every commercial judgement. The AI removes the hours of formatting, cross-checking and first drafts.

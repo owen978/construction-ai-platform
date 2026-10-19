@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 22
 meta_title: "AI for Construction Project Management (UK Guide + Examples)"
-meta_description: "How UK construction project managers use AI for progress reports, risk registers, programmes, meetings and change control. Use cases, a worked example, prompts and limits."
+meta_description: "AI for construction project management: how UK PMs use it for progress reports, risk registers, programmes, meetings and change control, with prompts."
 ---
 
 **AI for construction project management** is the use of AI tools, mainly general assistants like Claude and ChatGPT plus the AI features now built into platforms such as Procore and Autodesk Construction Cloud, to handle the written and analytical work that surrounds a construction project. In practice that means drafting monthly progress reports, building and updating risk registers, summarising programmes, writing meeting minutes and tracking change. It does not replace the project manager's judgement: it removes the hours of admin that sit between the PM and the decisions that matter.

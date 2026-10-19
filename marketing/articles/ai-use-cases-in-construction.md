@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 23
 meta_title: "15 AI Use Cases in Construction (UK Examples + Prompts)"
-meta_description: "15 practical AI use cases in construction, ranked by time saved and ease of starting. Real UK examples for site managers, QSs, estimators and H&S, plus how to start this week."
+meta_description: "15 practical AI use cases in construction, ranked by time saved and ease of starting, with UK examples for site managers, QSs, estimators and H&S teams."
 ---
 
 **AI use cases in construction** are the specific, everyday tasks where artificial intelligence saves time or improves quality on a project. Today the most valuable use cases are not robots or self-driving plant, they are the document-heavy jobs that eat into every site manager's, quantity surveyor's and estimator's week: daily reports, RAMS, bills of quantities, tender comparisons, risk registers, meeting minutes and contract correspondence. A general AI assistant such as ChatGPT or Claude can handle most of these right now, with no new software and no IT project.

@@ -6,9 +6,9 @@ import { bookingUrl } from '@/lib/ghl'
 
 export const metadata: Metadata = pageMetadata({
   path: '/services',
-  title: 'Fixed-Fee Commercial & AI Services for Developers, Contractors & Subcontractors',
+  title: 'Fixed-Fee Commercial & AI Services for Construction',
   description:
-    'Fixed-outcome commercial and AI services for construction. QS services you already know, procurement packages, quote comparisons, cash flow forecasts, plus AI and systems services starting with a £950 AI Implementation Roadmap Review, credited in full against any build over £2,500.',
+    'Fixed-fee commercial and AI services for UK construction: QS services, procurement packages, quote comparisons, cash flow forecasts and an AI Roadmap Review.',
 })
 
 const ctaHref =

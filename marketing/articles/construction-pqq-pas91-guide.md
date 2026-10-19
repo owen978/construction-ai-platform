@@ -6,8 +6,8 @@ difficulty: "intermediate"
 reading_time_minutes: 12
 featured: false
 sort_order: 11
-meta_title: "Construction PQQ Guide: PAS 91 and the Common Assessment Standard"
-meta_description: "What a construction PQQ is, why PAS 91 was withdrawn, how the Common Assessment Standard works, and how to answer pre-qualification questionnaires faster with AI. UK guide."
+meta_title: "Construction PQQ Guide: PAS 91 + Common Assessment Standard"
+meta_description: "What a construction PQQ is, why PAS 91 was withdrawn, how the Common Assessment Standard works and how to answer PQQs faster with AI. UK guide."
 ---
 
 A **pre-qualification questionnaire (PQQ)** is the first stage of a construction tender, where a buyer checks whether your business is financially sound, legally compliant, competent, and safe enough to be invited to price the job. It is a pass or fail gate, not a competition on price. **PAS 91** was the UK's standardised PQQ for construction, but it was formally withdrawn by BSI in 2022 and replaced in practice by Build UK's **Common Assessment Standard**, which most major UK buyers now use.

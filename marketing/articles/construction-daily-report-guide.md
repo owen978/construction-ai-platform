@@ -7,7 +7,7 @@ reading_time_minutes: 10
 featured: false
 sort_order: 2
 meta_title: "Construction Daily Report Template + Examples (Free Guide)"
-meta_description: "What to include in a construction daily report, a free template, a worked example, and how to write a daily site report in minutes with AI. UK construction guide."
+meta_description: "What to include in a construction daily report, with a free template, a worked example and how to write a daily site report with AI."
 ---
 
 A **construction daily report** (also called a daily site report or site diary) is a written record of everything that happened on a construction site during a single day. It captures the labour and plant on site, materials delivered, work completed, weather conditions, visitors, and any delays or incidents. A good daily report is the single most useful contemporaneous record a project keeps: it protects you in disputes, supports delay and payment claims, and gives the team a clear day-by-day history of the job.

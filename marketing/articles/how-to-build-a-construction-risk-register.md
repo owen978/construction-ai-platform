@@ -7,7 +7,7 @@ reading_time_minutes: 11
 featured: false
 sort_order: 3
 meta_title: "Construction Risk Register: Free Template + How to Build One"
-meta_description: "What a construction risk register is, what to include, how to score and own each risk, a worked UK example, and how to build one in minutes with AI. UK construction guide."
+meta_description: "What a construction risk register is, what to include, how to score and own each risk, a worked UK example and how to build one with AI."
 ---
 
 A **construction risk register** is a living document that records every risk that could affect a project, scores each one by likelihood and impact, and assigns an owner and a planned response. It is the central tool for managing risk across the whole job, from tender through to handover. A good register turns vague worries ("the ground might be bad", "the steel might be late") into a ranked, owned, actionable list that the team reviews and updates throughout the project.

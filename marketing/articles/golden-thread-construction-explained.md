@@ -6,8 +6,8 @@ difficulty: "intermediate"
 reading_time_minutes: 13
 featured: false
 sort_order: 25
-meta_title: "Golden Thread Construction Explained (Building Safety Act Guide)"
-meta_description: "What the golden thread of building safety information is, what to include, who owns it at each gateway, a UK worked example, and how AI helps keep it accurate. Free guide."
+meta_title: "Golden Thread Construction Explained (Building Safety Act)"
+meta_description: "The golden thread in construction: what building safety information to include, who owns it at each gateway, a UK worked example and how AI helps."
 ---
 
 The **golden thread** is the accurate, up-to-date, digital record of information about a building that shows it was designed and built safely and lets the people responsible keep it safe once occupied. It became a legal requirement in England for higher-risk buildings under the Building Safety Act 2022, with the detailed duties in force from 1 October 2023. In plain terms: if you design, build or manage a residential building 18 metres or 7 storeys and above, you must keep a controlled, digital, single source of truth for its safety information, and hand it over intact.

@@ -7,7 +7,7 @@ reading_time_minutes: 13
 featured: false
 sort_order: 15
 meta_title: "AI for BIM Model Checking and QA: What It Can Actually Check"
-meta_description: "How AI assisted BIM quality assurance works in practice: metadata and naming checks, clash triage, EIR compliance, ISO 19650 guardrails, and a UK worked example. Free guide."
+meta_description: "AI for BIM model checking and QA in practice: metadata and naming checks, clash triage, EIR compliance, ISO 19650 guardrails and a UK worked example."
 ---
 
 **AI assisted BIM model checking uses a language model to audit the information layer of a model: element naming, classification codes, parameter completeness, status codes, and the consistency between the model and the documents that govern it.** It does not check geometry. It cannot see whether a duct physically clashes with a beam, and it cannot judge whether a clash matters on site. What it does exceptionally well is read the tens of thousands of rows that come out of a model export or a clash report and tell you, in seconds, which ones break the rules your project agreed to follow.

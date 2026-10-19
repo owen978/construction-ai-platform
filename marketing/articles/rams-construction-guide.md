@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: true
 sort_order: 1
 meta_title: "What Is a RAMS? Complete Guide + Free Template (2026)"
-meta_description: "What is a RAMS in construction? A full guide to Risk Assessment Method Statements: what to include, RAMS vs method statement, real examples, and a free editable template."
+meta_description: "What is a RAMS in construction? A guide to Risk Assessment Method Statements: what to include, RAMS vs method statement, real examples and a free template."
 ---
 
 A **RAMS** (Risk Assessment and Method Statement) is a combined health and safety document used in construction and other high-risk industries. It brings together two things in one document: a **risk assessment** that identifies the hazards of a task and how likely they are to cause harm, and a **method statement** that explains, step by step, the safe way to carry the work out. In short, the risk assessment says what could go wrong, and the method statement says how you will stop it going wrong.

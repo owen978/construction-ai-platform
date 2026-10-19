@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 11
 featured: false
 sort_order: 8
-meta_title: "Construction Toolbox Talks: Template, Topics + Examples (Free Guide)"
-meta_description: "What a toolbox talk is, a free template, 40+ topic ideas, an attendance record, and how to write a toolbox talk in minutes with AI. UK construction guide aligned to CDM 2015."
+meta_title: "Construction Toolbox Talks: Template, Topics + Examples"
+meta_description: "What a construction toolbox talk is, a free template, 40+ topic ideas, an attendance record and how to write one with AI. Aligned to CDM 2015."
 ---
 
 A **toolbox talk** is a short, focused safety briefing, usually 5 to 15 minutes, delivered to site workers before or during the working day to cover a specific hazard, task, or safe system of work. It is one of the simplest and most effective ways a construction site communicates risk to the people actually exposed to it. A good toolbox talk is practical, relevant to the work happening that day, and recorded with an attendance sheet so you can prove the briefing took place.

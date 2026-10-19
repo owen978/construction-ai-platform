@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 20
 meta_title: "How to Use AI in Construction: Step-by-Step Guide (2026)"
-meta_description: "How to actually use AI in construction, from your first prompt to a company-wide rollout. Real UK examples, a worked RAMS case study, prompt structure, and the checks that keep you compliant."
+meta_description: "How to use AI in construction, from first prompt to company-wide rollout. UK examples, a worked RAMS case study and the checks that keep you compliant."
 ---
 
 **To use AI in construction, start with one repetitive document-heavy task, give the AI your real project information in a structured prompt, then review and correct everything it produces before it leaves your desk.** The tools that work today are general assistants such as Claude and ChatGPT, used on writing, summarising, checking and analysing tasks: RAMS, daily reports, tender analysis, meeting minutes, variation assessments and cost plan narratives. You do not need new software, a data science team, or a budget. You need a clear task, good input, and a review step.

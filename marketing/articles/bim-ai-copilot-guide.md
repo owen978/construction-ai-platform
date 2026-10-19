@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 14
 meta_title: "BIM AI Copilot: What It Does + How to Set One Up (UK Guide)"
-meta_description: "What a BIM AI copilot actually does, the three types (embedded, general-purpose, custom), what data to give it, ISO 19650 guardrails, and a UK worked example. Free guide."
+meta_description: "What a BIM AI copilot does, the three types (embedded, general-purpose, custom), what data to give it, ISO 19650 guardrails and a UK worked example."
 ---
 
 **A BIM AI copilot is an assistant that sits alongside your federated model and common data environment and answers questions about the information inside them, drafts the documents that surround them, and triages the outputs they produce.** It does not model. It reads exports, schedules, clash reports, drawing registers, and specifications, then gives you answers and first drafts in seconds instead of the hour it takes to dig them out yourself. The good ones behave like a very fast graduate who has read every document on the project and forgotten none of them.

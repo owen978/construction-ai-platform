@@ -6,7 +6,7 @@ difficulty: "beginner"
 reading_time_minutes: 12
 featured: false
 sort_order: 17
-meta_title: "Generative AI in Construction: Use Cases and How to Start (2026)"
+meta_title: "Generative AI in Construction: Use Cases and How to Start"
 meta_description: "What generative AI means for construction, the use cases that actually work today, a worked UK example, the risks, and a 30-day plan to start. Free guide."
 ---
 

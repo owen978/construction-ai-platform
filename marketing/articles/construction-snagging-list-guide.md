@@ -7,7 +7,7 @@ reading_time_minutes: 11
 featured: false
 sort_order: 7
 meta_title: "Construction Snagging List Template + Examples (Free Guide)"
-meta_description: "What a snagging list is, what to include, a free template, a UK worked example, and how to produce a snag list in minutes with AI. Practical UK construction guide."
+meta_description: "What a construction snagging list is, what to include, a free template, a UK worked example and how to produce a snag list with AI."
 ---
 
 A **construction snagging list** (also called a snag list, punch list, or defects list) is a written record of every defect, incomplete item, or piece of poor workmanship found on a project before it is handed over. Each entry names the location, the trade responsible, a clear description of the snag, a priority, and its status from raised to closed. A good snagging list is what stands between a project that looks finished and one that is actually finished to the contracted standard.

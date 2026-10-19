@@ -23,7 +23,7 @@ Construction contracts generate enormous volumes of correspondence. Early warnin
 
 AI is good at this because the form is conventional and the content is factual. Give it the contract form, the facts, and the clause you are acting under, and you get a structured draft in seconds.
 
-The value is not speed for its own sake. It is that a blank page makes people delay, and delay is what actually loses notices. A draft in front of you at 4pm gets issued. A blank page at 4pm gets issued next Tuesday, by which time you are out of time.
+The value is not speed for its own sake. It is that a blank page makes people delay, and delay is what actually loses notices. A draft in front of you at 4pm gets issued. A blank page at 4pm gets issued next Tuesday, by which time you are out of time. Our [contractual notice for delay workflow](/ai-workflows/draft-contractual-notice-for-delay) gives you a ready prompt for the most common one.
 
 It is also genuinely useful for junior staff learning the conventions of contractual letter writing. Reading a competent draft and correcting it teaches faster than staring at a template.
 
@@ -86,7 +86,7 @@ For pricing, AI is good at structure. Ask it to build the shape of a variation a
 
 For record-keeping, this is where the real value is and nobody talks about it. Variation registers, status summaries, monthly variation reports. Dull, repetitive, and the single most common cause of a final account argument is that nobody kept them properly. AI will happily reformat a messy register into a clean monthly report in seconds.
 
-Consistency is the benefit. Forty variations documented the same way is worth more at final account than forty variations documented brilliantly but differently.
+Consistency is the benefit. Forty variations documented the same way is worth more at final account than forty variations documented brilliantly but differently. The [variation assessment](/ai-workflows/write-variation-assessment) and [change control notice](/ai-workflows/write-change-control-notice) workflows give you that consistent format to start from.
 
 ## AI for claims and disputes
 
@@ -94,7 +94,7 @@ Delay claims need structured arguments backed by evidence. An extension of time 
 
 AI is genuinely strong at the structure. Give it the facts, the clauses and the relief sought, and it will produce a submission with a chronology, the contractual basis, the particulars, and the relief. That skeleton would have taken you half a day.
 
-For NEC4 it can help shape clause 61.3 notifications, clause 62.2 quotations, and clause 63 assessments. For JCT, clause 2.27 relevant event notices and clause 4.23 loss and expense.
+For NEC4 it can help shape clause 61.3 notifications, clause 62.2 quotations, and clause 63 assessments. For JCT, clause 2.27 relevant event notices and clause 4.23 loss and expense. The [extension of time assessment workflow](/ai-workflows/write-extension-of-time-assessment) sets out the time side in a structure an assessor can follow.
 
 What it cannot do is the analysis. Whether the delay is critical, whether it is concurrent, whether your as-built programme supports the narrative. That is expert work and an AI guessing at it will produce something that reads well and falls over the first time anyone with a copy of the programme reads it properly.
 
@@ -104,7 +104,7 @@ There is also a confidentiality point worth thinking about here. Before you past
 
 Payment runs to strict timelines. Applications, payment notices, pay less notices and final accounts all have prescribed periods under the Housing Grants, Construction and Regeneration Act 1996 as amended, plus whatever the contract says.
 
-AI can prepare interim valuation summaries, structure final account statements, and write the narrative sections of a payment recommendation that explain adjustments to the client. Feed in quantities, rates and variation values and you get a formatted document.
+AI can prepare interim valuation summaries, structure final account statements, and write the narrative sections of a payment recommendation that explain adjustments to the client. Feed in quantities, rates and variation values and you get a formatted document. The [valuation and payment application workflow](/ai-workflows/draft-valuation-payment-application) is a good place to start, and every contract workflow is collected on [AI for contracts managers](/ai-for/contracts-manager).
 
 But do not let AI near the dates. Payless notice deadlines are the sharpest edges in UK construction and they are counted in days from a specific trigger in your specific contract. Get one wrong and the amount applied for becomes the notified sum. An AI that hallucinates "typically seven days" has just cost you a payment cycle. Count them yourself, off the contract, every time.
 

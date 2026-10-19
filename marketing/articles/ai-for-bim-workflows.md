@@ -7,7 +7,7 @@ reading_time_minutes: 13
 featured: false
 sort_order: 13
 meta_title: "AI for BIM Workflows: 8 Practical Uses + Prompts (UK Guide)"
-meta_description: "How UK BIM managers use AI in real workflows: BEP drafting, clash detection triage, ISO 19650 naming audits, COBie data cleaning, and coordination reports. Worked examples and prompts."
+meta_description: "How UK BIM managers use AI in BIM workflows: BEP drafting, clash triage, ISO 19650 naming audits, COBie cleaning and coordination reports, with prompts."
 ---
 
 **AI for BIM is the use of large language models to automate the document, data, and coordination work that surrounds the model, not the modelling itself.** In practice that means drafting BIM Execution Plans from Exchange Information Requirements, triaging thousands of clash results into a prioritised list, auditing file and object naming against ISO 19650, cleaning COBie asset data, and writing coordination reports. The modelling stays in Revit, Archicad, or Tekla. The paperwork, which is where most BIM managers actually lose their week, moves to AI.

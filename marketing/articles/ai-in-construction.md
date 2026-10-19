@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 12
 featured: false
 sort_order: 13
-meta_title: "AI in Construction: Uses, Tools, and How to Start (2026 Guide)"
-meta_description: "What AI in construction actually means, the real use cases, the best tools, and a practical way for UK contractors and consultants to start using AI today. Free guide."
+meta_title: "AI in Construction: Uses, Tools, and How to Start (2026)"
+meta_description: "What AI in construction actually means, real use cases, the best tools and a practical way for UK contractors and consultants to start today. Free guide."
 ---
 
 **AI in construction** means using artificial intelligence, and large language models in particular, to do the thinking and writing work that eats up a construction professional's day: estimating, scheduling, safety documentation, tender analysis, reporting, and contract review. It is not robots laying bricks. The biggest, fastest gains today come from software that reads, drafts, checks, and summarises the mountain of documents every project produces. A quantity surveyor who uses AI well can turn a two-hour bill of quantities review into twenty minutes. A site manager can turn a 30-minute daily report into 5.

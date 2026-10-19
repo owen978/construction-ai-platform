@@ -6,8 +6,8 @@ difficulty: "beginner"
 reading_time_minutes: 13
 featured: false
 sort_order: 24
-meta_title: "25 ChatGPT Prompts for Construction (Copy-Paste, UK Examples)"
-meta_description: "25 copy-paste ChatGPT prompts for construction: daily reports, RAMS, COSHH, tender analysis, variations, cost plans and meeting minutes. Built for UK site and commercial teams."
+meta_title: "25 ChatGPT Prompts for Construction (UK, Copy-Paste)"
+meta_description: "25 copy-paste ChatGPT prompts for construction: daily reports, RAMS, COSHH, tender analysis, variations and cost plans. For UK site and commercial teams."
 ---
 
 **ChatGPT prompts for construction** are written instructions that tell ChatGPT (or Claude, or Copilot) exactly how to produce a piece of construction work, such as a daily site report, a method statement, a tender comparison or a variation letter. The prompts that work give the AI four things: a role, the real project facts, a fixed output format, and a rule not to invent anything it was not told. Get those four right and a 40 minute document becomes a 5 minute review.

@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 27
 meta_title: "22 ChatGPT Prompts for Construction Project Managers (UK)"
-meta_description: "22 copy-paste ChatGPT prompts for UK construction project managers: risk registers, look-ahead programmes, monthly reports, meeting minutes, early warnings, change control and client updates."
+meta_description: "22 copy-paste ChatGPT prompts for UK construction project managers: risk registers, look-ahead programmes, monthly reports, minutes and early warnings."
 ---
 
 **ChatGPT prompts for project managers** are structured instructions that get ChatGPT, Claude or Copilot to do the writing-heavy parts of construction project management: building a risk register, summarising a programme, drafting a monthly progress report, turning meeting notes into minutes or preparing an early warning notice. The prompts that work give the AI five things: a PM role, the real project facts, the contract and programme context, a fixed output format, and an instruction to flag anything missing rather than invent it. The project manager still owns every decision. The AI removes the hours of drafting, chasing and reformatting.
