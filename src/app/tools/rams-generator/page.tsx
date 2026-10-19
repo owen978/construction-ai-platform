@@ -8,9 +8,9 @@ import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
   path: '/tools/rams-generator',
-  title: 'Free RAMS Generator: Risk Assessment & Method Statement',
+  title: 'Free AI RAMS Generator: Risk Assessment & Method Statement',
   description:
-    'Free AI RAMS generator for UK construction. Enter your task and get a structured Risk Assessment and Method Statement draft in minutes. Built around CDM 2015.',
+    'Free AI RAMS generator for UK construction. Enter your task and get a structured Risk Assessment and Method Statement draft to check and complete. Built around CDM 2015.',
 })
 
 const FAQ = [
