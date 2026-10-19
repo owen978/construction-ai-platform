@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header'
 import { isDailyIdeasEnabled } from '@/lib/features'
 import { getPublishedIdeas } from '@/lib/daily-ideas'
 import { Footer } from '@/components/layout/footer'
+import { StickyCallBar } from '@/components/leads/sticky-call-bar'
 import './globals.css'
 import { cn } from "@/lib/utils";
 import { SITE_URL } from '@/lib/site'
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Header showDailyIdeas={showDailyIdeas} />
         <main>{children}</main>
         <Footer showDailyIdeas={showDailyIdeas} />
+        <StickyCallBar />
         <Analytics />
       </body>
     </html>
