@@ -2,6 +2,18 @@ import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button-variants'
 import type { DailyIdea } from '@/lib/daily-ideas'
 
+/** The roles most visitors come for, each linking to its /ai-for/ hub. */
+const ROLE_PICKER = [
+  { slug: 'quantity-surveyor', label: 'Quantity Surveyor' },
+  { slug: 'project-manager', label: 'Project Manager' },
+  { slug: 'site-manager', label: 'Site Manager' },
+  { slug: 'estimator', label: 'Estimator' },
+  { slug: 'commercial-manager', label: 'Commercial Manager' },
+  { slug: 'contracts-manager', label: 'Contracts Manager' },
+  { slug: 'health-and-safety-manager', label: 'H&S Manager' },
+  { slug: 'planning-engineer', label: 'Planner' },
+]
+
 /**
  * Homepage hero. The pill above the headline points to the workflow of the
  * day, which sits just below the hero, so first-time visitors know it's
@@ -68,17 +80,23 @@ export function Hero({ idea, rotated = false }: { idea?: DailyIdea | null; rotat
           </Link>
         </div>
 
-        <div className="mt-10 border-t border-slate-700/60 pt-6">
-          <p className="mb-4 text-center text-sm font-medium uppercase tracking-wider text-slate-500">
-            Workflows for professionals using
+        <nav aria-label="Find workflows for your role" className="mt-10 border-t border-slate-700/60 pt-6">
+          <p className="mb-4 text-center text-sm font-medium uppercase tracking-wider text-slate-400">
+            I&apos;m a&hellip;
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-3 opacity-50">
-            <span className="text-lg font-semibold text-slate-400">ChatGPT</span>
-            <span className="text-lg font-semibold text-slate-400">Claude</span>
-            <span className="text-lg font-semibold text-slate-400">Gemini</span>
-            <span className="text-lg font-semibold text-slate-400">Copilot</span>
-          </div>
-        </div>
+          <ul className="flex flex-wrap items-center justify-center gap-2">
+            {ROLE_PICKER.map((r) => (
+              <li key={r.slug}>
+                <Link
+                  href={`/ai-for/${r.slug}`}
+                  className="inline-flex rounded-full bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 ring-1 ring-slate-600 transition-colors hover:bg-primary/15 hover:text-white hover:ring-primary/50"
+                >
+                  {r.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </section>
   )
