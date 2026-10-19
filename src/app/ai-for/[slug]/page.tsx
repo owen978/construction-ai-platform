@@ -37,6 +37,20 @@ function withHubWorkflows<T extends { slug: string }>(own: T[], extra: T[]): T[]
   return [...own, ...extra.filter((w) => !seen.has(w.slug))]
 }
 
+/** Quick links under the hub heading: straight to the workflows, or down to the reading. */
+function HubJumpLinks({ workflows, guide, faqs }: { workflows: number; guide: boolean; faqs: boolean }) {
+  if (workflows === 0 && !guide) return null
+  const link = 'font-semibold text-primary hover:underline'
+  return (
+    <p className="-mt-4 mb-8 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
+      <span>Jump to:</span>
+      {workflows > 0 && <a href="#workflows" className={link}>{workflows} workflows</a>}
+      {guide && <a href="#how-ai-helps" className={link}>How AI helps</a>}
+      {faqs && <a href="#faqs" className={link}>FAQs</a>}
+    </p>
+  )
+}
+
 interface AIForPageProps {
   params: Promise<{ slug: string }>
 }
@@ -129,37 +143,29 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </p>
         )}
 
-        {role.long_description && (
-          <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
-            <div className="whitespace-pre-wrap text-slate-600">
-              {role.long_description}
-            </div>
-          </div>
-        )}
-
-        {extras && (
-          <AiForExtras
-            extras={extras}
-            title={pluralRole(role.name) === role.name ? `How AI helps with ${role.name.toLowerCase()}` : `How AI helps ${pluralRole(role.name)}`}
-          />
-        )}
-
-        <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
-        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
+        <HubJumpLinks
+          workflows={workflows.length}
+          guide={Boolean(role.long_description || extras)}
+          faqs={Boolean(extras?.faqs.length)}
+        />
 
         {workflows.length > 0 ? (
-          <div>
-            <h2 className="mb-6 border-b border-slate-200 pb-3 text-2xl font-bold text-slate-900">Workflows</h2>
+          <section id="workflows" className="scroll-mt-20">
+            <h2 className="mb-6 border-b border-slate-200 pb-3 text-2xl font-bold text-slate-900">
+              {workflows.length} AI workflows for {pluralRole(role.name)}
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {workflows.map((workflow) => (
                 <WorkflowCard key={workflow.id} workflow={workflow} />
               ))}
             </div>
-          </div>
+          </section>
         ) : (
           <p className="text-slate-500">No workflows available for this role yet.</p>
         )}
+
+        <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
+        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
 
         <DailyIdeasStrip
           ideas={getIdeasForRole(slug)}
@@ -167,6 +173,26 @@ export default async function AIForPage({ params }: AIForPageProps) {
           moreHref={dailyArchiveHref({ role: slug })}
           moreLabel="All daily ideas for this role"
         />
+
+        {(role.long_description || extras) && (
+          <div id="how-ai-helps" className="mt-12 scroll-mt-20">
+          {role.long_description && (
+            <div className="mb-10 max-w-3xl">
+              <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
+              <div className="whitespace-pre-wrap text-slate-600">
+                {role.long_description}
+              </div>
+            </div>
+          )}
+
+          {extras && (
+            <AiForExtras
+              extras={extras}
+              title={pluralRole(role.name) === role.name ? `How AI helps with ${role.name.toLowerCase()}` : `How AI helps ${pluralRole(role.name)}`}
+            />
+          )}
+          </div>
+        )}
 
         <RelatedGuides section="ai-for" slug={slug} />
 
@@ -234,31 +260,43 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </p>
         )}
 
-        {task.long_description && (
-          <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
-            <div className="whitespace-pre-wrap text-slate-600">
-              {task.long_description}
-            </div>
-          </div>
-        )}
-
-        {extras && <AiForExtras extras={extras} title={`How AI helps with ${task.name.toLowerCase()}`} />}
-
-        <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
-        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
+        <HubJumpLinks
+          workflows={workflows.length}
+          guide={Boolean(task.long_description || extras)}
+          faqs={Boolean(extras?.faqs.length)}
+        />
 
         {workflows.length > 0 ? (
-          <div>
-            <h2 className="mb-6 border-b border-slate-200 pb-3 text-2xl font-bold text-slate-900">Workflows</h2>
+          <section id="workflows" className="scroll-mt-20">
+            <h2 className="mb-6 border-b border-slate-200 pb-3 text-2xl font-bold text-slate-900">
+              {workflows.length} AI workflows for {task.name.toLowerCase()}
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {workflows.map((workflow) => (
                 <WorkflowCard key={workflow.id} workflow={workflow} />
               ))}
             </div>
-          </div>
+          </section>
         ) : (
           <p className="text-slate-500">No workflows available for this task yet.</p>
+        )}
+
+        <ServiceCTA config={serviceCta} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
+        <ConstructionRatingNote note={getConstructionRatingNote('ai-for', slug)} className="max-w-3xl" />
+
+        {(task.long_description || extras) && (
+          <div id="how-ai-helps" className="mt-12 scroll-mt-20">
+          {task.long_description && (
+            <div className="mb-10 max-w-3xl">
+              <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">Overview</h2>
+              <div className="whitespace-pre-wrap text-slate-600">
+                {task.long_description}
+              </div>
+            </div>
+          )}
+
+          {extras && <AiForExtras extras={extras} title={`How AI helps with ${task.name.toLowerCase()}`} />}
+          </div>
         )}
 
         <RelatedGuides section="ai-for" slug={slug} />

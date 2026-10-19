@@ -34,7 +34,7 @@ export function AiForExtras({ extras, title }: { extras: Extras; title: string }
       )}
 
       {extras.faqs.length > 0 && (
-        <section className="mt-8">
+        <section id="faqs" className="mt-8 scroll-mt-20">
           <h2 className={heading}>Frequently asked questions</h2>
           <dl className="space-y-5">
             {extras.faqs.map((f) => (
