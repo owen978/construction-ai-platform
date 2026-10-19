@@ -70,7 +70,7 @@ export const SERVICE_CTA_MAP: Record<string, ServiceCtaConfig> = {
   'ai-for/tender-analysis': TENDER_REVIEW,
   'ai-workflows/analyse-tender-returns': TENDER_REVIEW,
   'ai-workflows/analyse-subcontractor-quotes': TENDER_REVIEW,
-  'guides/ai-for-cost-estimation': CASHFLOW_FORECAST,
+  'guides/ai-construction-estimating': CASHFLOW_FORECAST,
   'ai-for/cost-estimation': CASHFLOW_FORECAST,
   'ai-for/estimator': CASHFLOW_FORECAST,
   'guides/construction-cost-plan-guide': CASHFLOW_FORECAST,

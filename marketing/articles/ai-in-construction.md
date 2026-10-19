@@ -31,7 +31,7 @@ Construction is a document-heavy, deadline-driven, low-margin industry, which ma
 
 ### Estimating and cost planning
 
-Estimators spend hours reading specifications, taking off quantities, and building cost plans. AI accelerates the reading and structuring work: summarising a specification, drafting a preliminary cost plan against NRM1 order-of-cost formats, sense-checking a bill of quantities, and pulling together tender comparison schedules. It does not replace the estimator's judgement or price database, but it removes the slow admin around them. The [AI for cost estimation guide](/guides/ai-for-cost-estimation) walks through this in detail.
+Estimators spend hours reading specifications, taking off quantities, and building cost plans. AI accelerates the reading and structuring work: summarising a specification, drafting a preliminary cost plan against NRM1 order-of-cost formats, sense-checking a bill of quantities, and pulling together tender comparison schedules. It does not replace the estimator's judgement or price database, but it removes the slow admin around them. The [AI construction estimating guide](/guides/ai-construction-estimating) walks through this in detail.
 
 ### Health, safety, and compliance documentation
 

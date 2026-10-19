@@ -12,7 +12,7 @@ meta_description: "How AI construction estimating works in practice: take-off, p
 
 **AI construction estimating** is the use of artificial intelligence tools to speed up and check the work of producing a construction cost estimate: reading drawings and specifications, drafting quantities, building a bill of quantities, applying rates, spotting scope gaps, and comparing subcontract quotes. It does not replace the estimator. It removes the slow, repetitive parts of the job so the estimator spends their time on judgement: risk, buildability, market conditions, and the price the business is actually willing to commit to.
 
-This guide explains where AI genuinely helps in estimating, where it is dangerous, how the main tool types compare, and walks through a realistic UK worked example on a small commercial fit-out. If you want the wider picture of AI in cost work first, start with our [guide to AI for cost estimation](/guides/ai-for-cost-estimation).
+This guide explains where AI genuinely helps in estimating, where it is dangerous, how the main tool types compare, and walks through a realistic UK worked example on a small commercial fit-out. For every estimating and cost workflow in one place, see [AI for cost estimation](/ai-for/cost-estimation).
 
 ## Why estimating is a good fit for AI
 

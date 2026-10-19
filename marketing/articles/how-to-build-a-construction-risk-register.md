@@ -75,7 +75,7 @@ These three terms get mixed up constantly, so here is how they differ.
 | **Risk assessment** | A specific task or activity | Present, how to do it safely | Health and safety hazards |
 | **Issue log** | Whole project | Now, what has already happened | Problems that have already occurred |
 
-A risk assessment is a health and safety document focused on a particular activity, such as working at height or operating a particular piece of plant, and it underpins your RAMS. The risk register is broader and forward-looking, covering commercial, programme, design, and statutory risk as well as safety. An issue log records risks that have already materialised and become live problems. You can read more on the safety side in our [AI risk assessment for construction guide](/guides/ai-risk-assessment-construction).
+A risk assessment is a health and safety document focused on a particular activity, such as working at height or operating a particular piece of plant, and it underpins your RAMS. The risk register is broader and forward-looking, covering commercial, programme, design, and statutory risk as well as safety. An issue log records risks that have already materialised and become live problems. You can read more on the safety side in our [AI in construction safety guide](/guides/ai-in-construction-safety).
 
 ## A worked UK risk register example
 

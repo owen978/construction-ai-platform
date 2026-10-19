@@ -33,6 +33,19 @@ const nextConfig: NextConfig = {
         destination: "/newsletter",
         statusCode: 301,
       },
+      // Thin April 2026 guides (about 200 words each) merged into the full
+      // versions on 19 Oct 2026; the database rows are archived.
+      ...[
+        ['getting-started-with-ai-in-construction', '/guides/how-to-use-ai-in-construction'],
+        ['ai-for-cost-estimation', '/guides/ai-construction-estimating'],
+        ['effective-ai-prompts-for-construction', '/guides/chatgpt-prompts-for-construction'],
+        ['ai-for-progress-reports', '/ai-for/progress-reporting'],
+        ['ai-risk-assessment-construction', '/guides/how-to-build-a-construction-risk-register'],
+      ].map(([slug, destination]) => ({
+        source: `/guides/${slug}`,
+        destination,
+        statusCode: 301 as const,
+      })),
       // AI Construction Copilot is hidden until its relaunch (src/lib/features.ts).
       ...(features.copilot
         ? []
