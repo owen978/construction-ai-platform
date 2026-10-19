@@ -1,18 +1,20 @@
 ---
-title: "AI for BIM Workflows: The Practical Guide for UK BIM Managers"
+title: "AI for BIM Workflows: 8 BIM Tasks Worth Automating First"
 slug: "ai-for-bim-workflows"
-description: "AI for BIM means using large language models to handle the document and data work that surrounds the model: BEP drafting, clash triage, ISO 19650 naming audits, COBie cleaning, and coordination reporting. This guide covers the eight workflows worth setting up first, with UK worked examples and prompts."
+description: "AI for BIM means using large language models to handle the document and data work that surrounds the model: BEP drafting, clash triage, ISO 19650 naming audits, COBie cleaning and coordination reporting. This guide covers the eight BIM workflows worth automating first, how to make them repeatable, and UK worked examples with prompts."
 difficulty: "intermediate"
-reading_time_minutes: 13
+reading_time_minutes: 14
 featured: false
 sort_order: 13
-meta_title: "AI for BIM Workflows: 8 Practical Uses + Prompts (UK Guide)"
-meta_description: "How UK BIM managers use AI in BIM workflows: BEP drafting, clash triage, ISO 19650 naming audits, COBie cleaning and coordination reports, with prompts."
+meta_title: "AI for BIM Workflows: 8 to Automate First, With Prompts"
+meta_description: "The 8 AI BIM workflows UK BIM managers should automate first: BEP drafting, clash triage, naming audits, COBie and coordination reports, with prompts."
 ---
 
 **AI for BIM is the use of large language models to automate the document, data, and coordination work that surrounds the model, not the modelling itself.** In practice that means drafting BIM Execution Plans from Exchange Information Requirements, triaging thousands of clash results into a prioritised list, auditing file and object naming against ISO 19650, cleaning COBie asset data, and writing coordination reports. The modelling stays in Revit, Archicad, or Tekla. The paperwork, which is where most BIM managers actually lose their week, moves to AI.
 
 This distinction matters because most articles on this topic promise AI that generates buildings. That is not what is shipping in UK practice in 2026. What is shipping is a set of unglamorous but genuinely time-saving workflows, and this guide covers the eight that deliver the fastest return, with the prompts and the guardrails you need to run them safely.
+
+This is the overview guide in our BIM AI series, and three companion guides go deeper. [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) covers checking the information in the model, including how to turn EIR clauses into checking rules. The [BIM AI copilot guide](/guides/bim-ai-copilot-guide) compares the three types of copilot and how to set one up. [AI assistant for BIM](/guides/ai-assistant-for-bim) sets out what to ask an assistant at each RIBA stage.
 
 ## Where AI actually fits in a BIM workflow
 
@@ -58,11 +60,13 @@ Export the clash report to CSV, then give the model the columns and ask it to gr
 
 The severity call is where you stay in the loop. AI will reasonably rank a 5mm duct clash as low, which is right until you know that duct sits inside a fire-rated shaft where tolerance is zero. Give it that context up front and the ranking improves sharply.
 
-### 4. ISO 19650 naming and model audit
+### 4. ISO 19650 naming audit
 
 ISO 19650-2 naming conventions are strict, tedious, and exactly the kind of pattern a language model handles well. Paste a file list or an object schedule export, state the convention (project, originator, functional breakdown, spatial breakdown, form, discipline, number), and ask for every non-compliant string with the specific field that fails and a suggested correction.
 
 This catches the drift that creeps into every project by Stage 4, when a new starter at a subconsultant begins uploading files named their own way. Run it monthly against the CDE export. It takes ten minutes and prevents the pre-handover panic where nobody can find anything.
+
+Naming is the first of several information checks. Classification, parameter completeness and checks against the EIR follow the same pattern, and our guide to [AI-assisted BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) covers them, along with how to configure the rules your model checker runs.
 
 ### 5. Coordination meeting minutes and action tracking
 
@@ -101,6 +105,8 @@ AI drafts that narrative from your records: what was designed, what changed, wha
 
 The practical setup for most UK BIM managers is a model checker for the deterministic work and a long-context language model for everything textual. They are complements, not competitors. A ruleset knows whether a door is 900mm wide. It does not know whether the EIR asked for that to be recorded at Stage 3.
 
+If you are choosing between a copilot built into your platform and a general-purpose model you brief yourself, the [BIM AI copilot guide](/guides/bim-ai-copilot-guide) compares the options side by side.
+
 ## A worked UK example: clash triage on a school project
 
 A BIM manager on a two-form entry primary school in Birmingham, RIBA Stage 4, runs a federated clash on the architectural, structural, and MEP models in Navisworks. The result is 3,180 hard clashes. The coordination meeting is in two days.
@@ -138,7 +144,29 @@ Four things separate a prompt that produces something usable from one that produ
 
 **Specify the output shape.** A table with named columns, sorted a stated way. BIM outputs almost always feed into another system, whether that is a coordination log, an issue tracker, or a report, so shape matters more than prose quality.
 
-The [risk register workflow](/ai-workflows/generate-project-risk-register) shows the same structure applied to project risk, and new prompts go out in our [free weekly newsletter](/newsletter).
+The [risk register workflow](/ai-workflows/generate-project-risk-register) shows the same structure applied to project risk, and new prompts go out in our [free weekly newsletter](/newsletter). For the prompts that change through the project, see [what to ask an AI assistant for BIM at each RIBA stage](/guides/ai-assistant-for-bim).
+
+## Turning a prompt into a repeatable BIM workflow
+
+A prompt that worked once is not yet a workflow. BIM workflow automation starts when the same task runs the same way every week, whoever runs it. The simplest way to get there is a workflow file: one saved document per workflow that holds everything needed to run it.
+
+| Part of the workflow file | What it holds | Why it matters |
+|---|---|---|
+| Purpose | One sentence on the question the workflow answers | Stops it drifting into a different job |
+| Inputs | The exact export, its columns, and where to get it | The output is only as consistent as the input |
+| Project brief | Naming convention, status codes, stage, EIR extracts | Saves re-explaining the project on every run |
+| Prompt | The fixed wording, including the "do not invent" line | The same wording gives comparable results week to week |
+| Output format | Table columns and sort order | The result drops straight into the log or report |
+| Checks | What the reviewer verifies before anything is issued | Keeps a named person accountable for the output |
+| Log | Date, who ran it, and what changed as a result | The audit trail for ISO 19650 and the golden thread |
+
+Keep the workflow files in the CDE or a shared team folder, not in one person's chat history. Once they exist, there are three levels of automation to choose from:
+
+1. **Manual, from the saved file.** Someone exports the data, pastes the brief and the prompt, and reviews the result. Every workflow should start here.
+2. **A project space in the AI tool.** With Projects in Claude, or the equivalent in other tools, the brief and the prompt are saved once, so each run only needs the new export.
+3. **Scripted.** A script picks up the export, sends it to a model through its API and saves the output for review. Only worth doing for workflows that run every week and have been stable for a while, such as naming audits or automated coordination reports.
+
+Automation on the model side, such as Dynamo or pyRevit scripts that rename views or fill in parameters, is a separate discipline. A language model can help write and explain those scripts, but the script makes the change, not the model, and it should be tested on a copy of the model first.
 
 ## Compliance guardrails you should not skip
 
@@ -177,9 +205,13 @@ Two of these workflows running reliably will save a BIM manager most of a day a 
 
 AI for BIM is the use of artificial intelligence, mostly large language models, to automate the document and data work around a BIM process: drafting BIM Execution Plans, triaging clash detection results, auditing ISO 19650 naming, cleaning COBie asset data, and producing coordination reports. It does not generate or edit model geometry, which stays in authoring tools such as Revit, Archicad, and Tekla.
 
-### Can AI do clash detection?
+### Which BIM workflows should you automate first?
 
-No, and this is a common misunderstanding. Clash detection is a geometric calculation performed by tools like Navisworks, Solibri, or Autodesk Construction Cloud. What AI adds is triage after the fact: grouping thousands of clash instances by root cause, ranking them by severity, identifying the likely owning party, and drafting the coordination report. The detection is deterministic, the prioritisation is where AI helps.
+Start with the ones where the input is a single export and the output is easy to check by hand. An ISO 19650 naming audit against the CDE file list is the lowest risk first step, then clash triage on the next clash export, then BEP drafting from the EIRs. Coordination minutes make a good fourth. Leave COBie cleaning until the others are running reliably, because bad asset data carries the highest risk.
+
+### How do you automate a BIM workflow with AI?
+
+Write the workflow down first: the input export, the project brief, the fixed prompt, the output format, the reviewer's checks and a log. Run it by hand from that file for a few weeks. Once it is stable, save the brief and prompt in a project space in your AI tool, and only script it through an API for workflows that run every week. A person still reviews every output before it is issued.
 
 ### Is using AI compatible with ISO 19650?
 

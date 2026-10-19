@@ -1,16 +1,16 @@
 ---
-title: "AI Assistant for BIM: What to Ask It, Stage by Stage"
+title: "AI Assistant for BIM: What to Ask It at Each RIBA Stage"
 slug: "ai-assistant-for-bim"
-description: "An AI assistant for BIM is a language model you brief with your project information standard and then ask to draft, check, and summarise the documents and data around the model. This guide covers what to ask it at each RIBA stage, a copy-ready prompt library, and the verification routine that keeps the output safe to issue."
+description: "An AI assistant for BIM is a language model you brief with your project information standard and then ask to draft, check and summarise the documents and data around the model. This guide covers what to ask a BIM AI assistant at each RIBA stage, copy-ready prompts for each one, and the verification routine that keeps the output safe to issue."
 difficulty: "intermediate"
-reading_time_minutes: 13
+reading_time_minutes: 14
 featured: false
 sort_order: 16
-meta_title: "AI Assistant for BIM: Stage by Stage Prompts (UK Guide)"
-meta_description: "What to ask an AI assistant for BIM at RIBA Stages 2 to 7: copy-ready prompts, a capability table, a UK worked example and how to verify the output."
+meta_title: "AI Assistant for BIM: What to Ask at Each RIBA Stage (UK)"
+meta_description: "How to use an AI-powered BIM assistant from RIBA Stage 2 to 7: what to ask it, copy-ready prompts, a UK naming audit example and how to check the output."
 ---
 
-An **AI assistant for BIM** is a large language model that you brief with your project's information standard, then ask to draft, check, and summarise the documents and data that surround the model. It does not model, it does not run clash detection, and it does not replace your rule engine. What it does is absorb the EIRs, the BEP, the naming convention, and the exported schedules, and then answer questions and produce documents against them in minutes rather than days.
+An **AI assistant for BIM**, also called a BIM AI assistant or an AI-powered BIM assistant, is a large language model that you brief with your project's information standard, then ask to draft, check, and summarise the documents and data that surround the model. It does not model, it does not run clash detection, and it does not replace your rule engine. What it does is absorb the EIRs, the BEP, the naming convention, and the exported schedules, and then answer questions and produce documents against them in minutes rather than days.
 
 The question most BIM managers ask is not "what is it" but "what do I actually ask it on a Tuesday morning". This guide answers that: a stage-by-stage map of the asks that pay off, a prompt library you can copy, and the verification routine that stops a plausible wrong answer from reaching the client. If you are still choosing between an embedded vendor tool and a general model, start with the [BIM AI copilot guide](/guides/bim-ai-copilot-guide) instead, then come back here for the daily use.
 
@@ -31,7 +31,7 @@ The single most useful mental model is this: an AI assistant works on the **info
 
 Read that table as a boundary, not a limitation. The information layer is where BIM managers lose most of their week. On a typical UK contractor project the BEP, the responsibility matrix, the naming audit, the weekly clash narrative, and the handover data checks are all information layer work, and all of them shrink dramatically once an assistant is briefed properly.
 
-## Brief the assistant once, benefit all project
+## Brief the assistant once, benefit for the whole project
 
 The difference between an assistant that produces usable output and one that produces confident nonsense is almost always the brief, not the model. Before you ask anything on a project, give it a standing context pack:
 
@@ -58,23 +58,37 @@ A prompt that works:
 
 > You are reviewing our BIM Execution Plan against the client's EIRs, both attached. Produce a table with three columns: EIR requirement (quote it), where our BEP responds (section number and a short quote), and status (Answered, Partially answered, Not answered). Do not summarise or paraphrase the EIR requirements. Where you find nothing in the BEP, write Not answered rather than guessing.
 
+Stage 3 is also the time to ask it to turn the EIR's information requirements into checking rules for your model checker, so the checks exist before the models fill up. Our guide to [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) has the rule configuration prompt.
+
 ### RIBA Stage 4: coordination and technical design
 
 Weekly clash triage is the highest volume ask at this stage. Export the clash report to CSV, strip anything commercially sensitive, and give the assistant the file with the model and level structure.
 
 Ask it to group clashes by system pair and location, rank the groups by likely construction impact, and draft a short narrative per group naming the discipline that owns the resolution. Ask it to compare this week's report against last week's and tell you which groups are new, which have closed, and which have been open for three weeks or more. That last one is the question nobody has time to answer manually, and it is the one that changes the coordination meeting.
 
-The [AI for BIM workflows guide](/guides/ai-for-bim-workflows) covers the full triage workflow, and the [model checking and QA guide](/guides/ai-bim-model-checking-and-qa) covers where the line sits between an assistant and a rule engine like Solibri.
+A prompt for the week on week comparison:
+
+> Attached are this week's and last week's clash exports as CSV, with the same columns. Group the clashes in each by system pair and location. Then give me three tables: groups that are new this week, groups that have closed since last week, and groups that appear in both, with the number of weeks each has been open if the files show it. For every group give the clash count, the disciplines involved and the likely owner. Do not invent locations or element names that are not in the files.
+
+Stage 4 is also when people start asking component questions, such as which doors on a level have no fire rating. Those work on an exported element schedule, and the [BIM AI copilot guide](/guides/bim-ai-copilot-guide) covers how each type of copilot handles them. The [AI for BIM workflows guide](/guides/ai-for-bim-workflows) covers the full triage workflow, and the [model checking and QA guide](/guides/ai-bim-model-checking-and-qa) covers where the line sits between an assistant and a rule engine like Solibri.
 
 ### RIBA Stage 5: construction
 
 The asks shift from design coordination to information supply. Ask it to check the drawing register against the MIDP and list what is late, what is issued but unreviewed, and what has no revision history. Ask it to turn the weekly coordination meeting notes into minutes with a clean action table, owners, and dates. Ask it to draft the RFI response summary for the design team from the thread history.
+
+A prompt for the register check:
+
+> Attached are the current drawing and model register exported from the CDE, and the Master Information Delivery Plan. For every container the MIDP says is due by today's date, tell me whether it is in the register, its current revision and suitability code, and whether it is late. Give me three lists: late, issued but not yet reviewed, and in the register with no revision history. Group each list by task team. Where a container ID in the MIDP does not match anything in the register, list it separately rather than guessing a match.
 
 Site facing teams get value here too, and the same briefing approach applies across roles. The [AI for BIM managers hub](/ai-for/bim-manager) collects the role specific workflows.
 
 ### RIBA Stage 6 to 7: handover and the golden thread
 
 COBie and asset data are tabular, which suits an assistant well. Ask it to check every asset record for missing mandatory fields, inconsistent manufacturer naming, duplicate serials, and classification codes that do not exist in the Uniclass table you are using. Ask it to draft the handover narrative explaining how the information model satisfies each EIR requirement, which is otherwise a two-day writing job.
+
+A prompt for the COBie check:
+
+> Attached is our COBie export and the list of mandatory fields from the EIR. Check every row in the Component and Type sheets. Return a table of rows with a missing mandatory field, naming the field. Separately, list manufacturer names that look like variants of each other, any duplicate serial numbers, and any classification codes that are not in the Uniclass table attached. Do not fill in missing values or suggest likely ones. Write MISSING where data is absent.
 
 For higher risk residential buildings, ask it to map your information deliverables against the golden thread duties under the Building Safety Act 2022, and to flag which records have no clear owner. The assistant will not make you compliant, but it will find the holes far faster than a manual read through.
 
@@ -136,6 +150,10 @@ Pick one ask, not six. The naming and status audit is the best first choice beca
 ### What is an AI assistant for BIM?
 
 An AI assistant for BIM is a large language model briefed with your project information standard, EIRs, BEP, and naming convention, which you then ask to draft, audit, and summarise the documents and data around the model. It works on the information layer, meaning text, tables, and exported parameters, rather than on the geometry itself.
+
+### What should I ask a BIM AI assistant first?
+
+A naming and status audit. The input is a single container list exported from the CDE, the rules are written down in your naming convention, the output is easy to check by hand, and the result is useful straight away in a conversation with the supply chain. Once that works, add weekly clash triage, then coordination minutes.
 
 ### Can an AI assistant edit the BIM model?
 
