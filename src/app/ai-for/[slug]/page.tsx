@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getRoleBySlug, getRoleSlugs } from '@/lib/queries/roles'
 import { getTaskBySlug, getTaskSlugs } from '@/lib/queries/tasks'
-import { getWorkflowsByRoleId, getWorkflowsByTaskId } from '@/lib/queries/workflows'
+import { getWorkflowsByRoleId, getWorkflowsBySlugs, getWorkflowsByTaskId } from '@/lib/queries/workflows'
+import { getHubWorkflowSlugs } from '@/lib/hub-workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, faqSchema, jsonLdScriptProps } from '@/lib/schema'
 import { getAiForExtras } from '@/lib/ai-for-extras'
@@ -28,6 +29,12 @@ import { pluralRole } from '@/lib/utils'
 export async function generateStaticParams() {
   const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])
   return [...roles, ...tasks].map(({ slug }) => ({ slug }))
+}
+
+/** The hub's own workflows, then the extra ones it should also list (no repeats). */
+function withHubWorkflows<T extends { slug: string }>(own: T[], extra: T[]): T[] {
+  const seen = new Set(own.map((w) => w.slug))
+  return [...own, ...extra.filter((w) => !seen.has(w.slug))]
 }
 
 interface AIForPageProps {
@@ -68,7 +75,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
   // Try role first
   const role = await getRoleBySlug(slug)
   if (role) {
-    const workflows = await getWorkflowsByRoleId(role.id)
+    const workflows = withHubWorkflows(await getWorkflowsByRoleId(role.id), await getWorkflowsBySlugs(getHubWorkflowSlugs(slug)))
     const relatedResources = await getRelatedContent({
       title: role.name,
       context: role.description ?? '',
@@ -173,7 +180,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
   // Try task
   const task = await getTaskBySlug(slug)
   if (task) {
-    const workflows = await getWorkflowsByTaskId(task.id)
+    const workflows = withHubWorkflows(await getWorkflowsByTaskId(task.id), await getWorkflowsBySlugs(getHubWorkflowSlugs(slug)))
     const relatedResources = await getRelatedContent({
       title: task.name,
       context: task.description ?? '',

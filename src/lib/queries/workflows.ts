@@ -46,6 +46,22 @@ export async function getFeaturedWorkflows(limit: number = 6): Promise<Workflow[
   return data ?? []
 }
 
+/** Published workflows by slug, in the order given. */
+export async function getWorkflowsBySlugs(slugs: string[]): Promise<Workflow[]> {
+  if (slugs.length === 0) return []
+  const supabase = createPublicClient()
+
+  const { data, error } = await supabase
+    .from('workflows')
+    .select('*')
+    .eq('status', 'published')
+    .in('slug', slugs)
+
+  if (error) throw error
+  const bySlug = new Map((data ?? []).map((w) => [w.slug, w]))
+  return slugs.map((s) => bySlug.get(s)).filter((w): w is Workflow => Boolean(w))
+}
+
 export async function getWorkflowsByRoleId(roleId: string): Promise<Workflow[]> {
   const supabase = createPublicClient()
 
