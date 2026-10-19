@@ -78,10 +78,13 @@ Links between the four guides (in-body Markdown):
 
 Words: workflows 3,119 → 3,792; QA 2,960 → 4,237; copilot 2,889 → 3,669; assistant 2,727 → 3,181. All four pass `publish-guide --check` with no errors or warnings.
 
+## Done
+
+- **Four guides republished** on 19 Oct at 10:02 BST, with Owen's go-ahead. Just before publishing, the live rows were re-checked and still matched main's Markdown on every field. Afterwards they matched this branch on every field.
+
 ## Not done (needs Owen's go-ahead)
 
-1. **Republish the four guides.** The live rows matched the pre-edit Markdown on every field (checked 19 Oct, rows last updated 08:10 that morning), so a republish carries only these changes. Re-check just before publishing in case anything else touches them first.
-   `node scripts/publish-guide.mjs marketing/articles/<slug>.md` for each, then request indexing for the four URLs in Search Console.
+1. **Request indexing** for the four guide URLs in Search Console.
 2. **Deploy the hub block.** It needs the branch merged and `main` pushed.
 3. **Backlog row 64** ("chatgpt prompts for bim managers", queued) will be a fifth BIM page and overlaps the assistant guide's prompts. When it is written, it should link to /guides/ai-assistant-for-bim and stick to ChatGPT prompt wording, not RIBA stage asks, or it will split the assistant queries again.
 4. **Optional hub description (database).** It still says "clash detection processes". A possible replacement (147 characters): "AI workflows and guides for UK BIM managers: BEP drafting, clash triage, model checking, naming audits and coordination reports, with free prompts."
