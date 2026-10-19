@@ -42,15 +42,15 @@ export default function PrivacyPage() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Email address</strong> — if you voluntarily subscribe to our newsletter or contact us.</span>
+                <span><strong className="text-slate-900">Email address</strong>: if you voluntarily subscribe to our newsletter or contact us.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Usage data</strong> — anonymous analytics data such as pages visited, time on site, and referral sources, collected via privacy-friendly analytics.</span>
+                <span><strong className="text-slate-900">Usage data</strong>: anonymous analytics data such as pages visited, time on site, and referral sources, collected via privacy-friendly analytics.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Device information</strong> — browser type, operating system, and screen resolution for optimising our website experience.</span>
+                <span><strong className="text-slate-900">Device information</strong>: browser type, operating system, and screen resolution for optimising our website experience.</span>
               </li>
             </ul>
           </div>
@@ -98,15 +98,15 @@ export default function PrivacyPage() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Email marketing platform</strong> — to manage newsletter subscriptions and send updates.</span>
+                <span><strong className="text-slate-900">Email marketing platform</strong>: to manage newsletter subscriptions and send updates.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Website hosting</strong> — to serve our website securely and reliably.</span>
+                <span><strong className="text-slate-900">Website hosting</strong>: to serve our website securely and reliably.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span><strong className="text-slate-900">Analytics</strong> — to understand how visitors use our site (anonymised data only).</span>
+                <span><strong className="text-slate-900">Analytics</strong>: to understand how visitors use our site (anonymised data only).</span>
               </li>
             </ul>
             <p className="mt-3">

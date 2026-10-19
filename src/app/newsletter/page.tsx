@@ -39,7 +39,7 @@ export default function NewsletterPage() {
             </div>
             <h3 className="font-semibold text-slate-900">New Workflows</h3>
             <p className="mt-2 text-sm text-slate-600">
-              Ready-to-use AI prompts for QS, PM, Site Managers, and more — delivered as we publish them.
+              Ready-to-use AI prompts for QS, PM, Site Managers, and more, delivered as we publish them.
             </p>
           </div>
           <div className="rounded-lg border border-slate-200/60 bg-white p-6 shadow-sm">

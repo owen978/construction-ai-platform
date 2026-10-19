@@ -23,7 +23,7 @@ export function CopilotCTA({ className, variant = 'sidebar' }: CopilotCTAProps) 
           Want these prompts pre-built?
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-300">
-          AI Construction Copilot has all these workflows ready to run — no copy-pasting needed. Built specifically for construction professionals.
+          AI Construction Copilot has all these workflows ready to run, with no copy-pasting needed. Built specifically for construction professionals.
         </p>
         <a
           href="https://aiconstructioncopilot.com"

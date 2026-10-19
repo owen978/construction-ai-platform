@@ -35,7 +35,7 @@ export default async function AIForPage() {
     collectionPageSchema({
       name: 'AI for Construction Roles & Tasks',
       description:
-        'Find AI workflows tailored to your construction role. Browse by role or task — QS, Project Manager, Site Manager, Estimator, and more.',
+        'Find AI workflows tailored to your construction role. Browse by role or task: QS, Project Manager, Site Manager, Estimator, and more.',
       url: `${SITE_URL}/ai-for`,
       items: allItems,
     }),
