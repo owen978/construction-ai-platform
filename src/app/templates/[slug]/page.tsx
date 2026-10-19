@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getTemplateBySlug, getTemplateSlugs } from '@/lib/queries/templates'
 import { CopyButton } from '@/components/ui/copy-button'
+import { TemplateDownload } from '@/components/leads/template-download'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features } from '@/lib/features'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
@@ -143,6 +144,13 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </p>
           )}
 
+          {template.template_content && (
+            <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">
+              <TemplateDownload slug={template.slug} name={template.name} />
+              <a href="#template" className="text-sm font-semibold text-primary hover:underline">Or copy it from the page &darr;</a>
+            </div>
+          )}
+
           {freeTool && <FreeToolCallout {...freeTool} />}
 
           {/* What is it */}
@@ -171,10 +179,11 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
 
           {/* Template Content */}
           {template.template_content && (
-            <div className="mt-8">
-              <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">
-                Free Template
-              </h2>
+            <div id="template" className="mt-8 scroll-mt-20">
+              <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-slate-200 pb-3">
+                <h2 className="text-xl font-semibold text-slate-900">Free Template</h2>
+                <TemplateDownload slug={template.slug} name={template.name} className="h-8" />
+              </div>
               <div className="relative">
                 <div className="absolute top-4 right-4">
                   <CopyButton text={template.template_content} />
@@ -243,7 +252,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
               </div>
               <div>
                 <dt className="font-medium text-slate-900">Format</dt>
-                <dd className="text-slate-600">Copy-paste ready</dd>
+                <dd className="text-slate-600">Word download or copy-paste</dd>
               </div>
               <div>
                 <dt className="font-medium text-slate-900">Industry</dt>
