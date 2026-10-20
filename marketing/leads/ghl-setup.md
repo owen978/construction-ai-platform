@@ -3,7 +3,8 @@
 What to set up in GoHighLevel for the two new site features on branch `claude/lead-capture`:
 
 1. **"Download in Word"** on every template page: a short form (work email required; first name, role, company size and an optional marketing opt-in), then the download starts. The site posts each sign-up to a GHL workflow.
-2. **A sticky "Book a 15-min call"** card or bar on content pages, linking to your existing calendar with `utm_content=sticky-<section>`.
+2. **A sticky "Book a 15-min call"** card or bar on content pages, linking to the 15-minute calendar with `utm_content=sticky-<section>`.
+3. **Calls to action on every page:** "Book a 15-minute call" goes to the calendar (`SYGqnM5OyTFztWt7yQUg`, "BuildCopilot 15mins"); "Request your Roadmap Review" and "Send an enquiry" go to the services form (`6HJLSFrH7Q61nDZ72Tn1`).
 
 Do steps 1 to 3 first. Then tell me, and I'll merge and deploy and we'll run the test in step 7 together. Until the webhook URL is in Vercel, downloads still work but the sign-ups are only logged, not sent to GHL.
 
@@ -67,9 +68,10 @@ Five short emails. Exit as soon as the tag `bc-call-booked` is added.
 | Day 9 | "Making the case for AI on your team": what a Roadmap Review covers. Written to be forwarded to a manager |
 | Day 14 | "Worth a 15-minute chat?": your calendar link with `?utm_source=buildcopilot&utm_medium=email&utm_content=nurture` |
 
-## 5. Calendar (your existing booking widget, mzWN8jEzZDL5SxkY71ut)
+## 5. Calendar ("BuildCopilot 15mins", SYGqnM5OyTFztWt7yQUg)
 
-- Name it so it reads well on the booking page, e.g. "15-minute AI chat with Owen", 15 minutes, with a 10-minute buffer.
+- **On 20 Oct 2026 it showed no free slots at all** ("No slot available" through April 2027). Check it has you assigned as the team member, opening hours set, and a booking window that starts now.
+- 15 minutes, with a 10-minute buffer.
 - Add a custom booking form with these questions:
   - First name and Email (required)
   - Company
@@ -83,9 +85,23 @@ Five short emails. Exit as soon as the tag `bc-call-booked` is added.
   - Send a confirmation email, plus reminders 24 hours and 1 hour before.
   - On no-show: a follow-up email with the rebooking link.
 
+## 5a. Services form (6HJLSFrH7Q61nDZ72Tn1)
+
+Fields: first and last name, phone (required), email (required), "Services you're interested in" (AI Implementation Roadmap, Commercial & QS Services, AI & Systems Services, Ongoing Commercial Cover) and two SMS consent boxes.
+
+- **Workflow D "Services enquiry"** (trigger: form submitted, this form): add tags `buildcopilot` and `bc-services-enquiry`, notify you by email and SMS, create the opportunity at "Enquiry", and send the contact your calendar link so they can pick a time.
+- The SMS consent text says "from BuildCopilot about Construction Systems". Check that's the wording you want (Contractor Systems?).
+- Phone is required. If enquiries are slow, try making it optional.
+
 ## 6. See which button works
 
-- The site adds `utm_source=buildcopilot&utm_medium=cta&utm_content=<placement>` to every booking link. Placements are `sticky-guides`, `sticky-templates`, `sticky-ai-workflows`, `sticky-ai-for`, `sticky-daily`, plus the existing page-specific boxes.
+- The site adds `utm_source=buildcopilot&utm_medium=cta&utm_content=<placement>` to every calendar and form link. Placements:
+  - `sticky-<section>`: the floating card or bar
+  - `workflow-sidebar-<slug>`, `template-sidebar-<slug>`, `tool-sidebar-<slug>`: the sidebar card
+  - `guide-inline-<slug>`, `ai-for-inline-<slug>`: the box halfway down
+  - `workflow-<slug>`, `template-<slug>`, `guide-<slug>`, `ai-for-<slug>`, `tool-<slug>`, `daily-<slug>`: the done-for-you box
+  - `hub-<section>`: the band above the newsletter on each hub
+  - `services-hero`, `services-roadmap`, `services-qs`, `services-ai`, `services-ongoing`, `services-final`, `home`, `about`, `contact`, `newsletter`
 - In GHL, turn on attribution (Settings → Business Profile / Attribution) and build smart lists by `utm_content`. That shows which placement brings the bookings.
 - Vercel Analytics also records `call_bar_click`, `call_bar_dismiss`, `template_download_click` and `template_download_lead`. Custom events need a Vercel plan that includes them.
 
