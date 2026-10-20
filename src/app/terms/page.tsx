@@ -21,7 +21,7 @@ export default function TermsPage() {
             <span className="font-medium text-slate-900">Terms of Use</span>
           </nav>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Terms of Use</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-600">Last updated: March 2026</p>
+          <p className="mt-4 max-w-2xl text-lg text-slate-600">Last updated: October 2026</p>
         </div>
       </div>
 
@@ -124,8 +124,8 @@ export default function TermsPage() {
             <h2 className="mb-4 text-2xl font-bold text-slate-900">12. Contact</h2>
             <p>
               If you have any questions about these terms, please contact us at{' '}
-              <a href="mailto:hello@buildcopilot.ai" className="font-semibold text-primary hover:text-primary/90 transition-colors">
-                hello@buildcopilot.ai
+              <a href="mailto:hello@contractorsystems.co.uk" className="font-semibold text-primary hover:text-primary/90 transition-colors">
+                hello@contractorsystems.co.uk
               </a>.
             </p>
           </div>

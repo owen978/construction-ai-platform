@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { pageMetadata } from '@/lib/metadata'
 import { features } from '@/lib/features'
+import { bookingUrl, servicesFormUrl } from '@/lib/ghl'
+import { buttonVariants } from '@/components/ui/button-variants'
 
 export const metadata: Metadata = pageMetadata({
   path: '/contact',
@@ -9,6 +11,13 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Get in touch with the BuildCopilot team. Questions, feedback, or partnership enquiries welcome.',
 })
+
+/** buildcopilot.ai has no mailbox yet, so email goes to Contractor Systems. */
+const CONTACT_EMAIL = 'hello@contractorsystems.co.uk'
+
+function mailto(subject: string) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`
+}
 
 export default function ContactPage() {
   return (
@@ -27,8 +36,28 @@ export default function ContactPage() {
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-3xl px-4 py-12">
-        <div className="grid gap-8 sm:grid-cols-2">
+      <div className="mx-auto max-w-4xl px-4 py-12">
+        {/* Work with us: the call and the services enquiry form */}
+        <div data-cta className="rounded-lg border border-primary/30 bg-orange-50/60 p-6 sm:p-8">
+          <h2 className="text-xl font-semibold text-slate-900">Want AI working in your construction business?</h2>
+          <p className="mt-2 text-slate-600">
+            Book a 15-minute call with Owen to talk it through, or send an enquiry about a service and
+            we&apos;ll come back to you.
+          </p>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+            <a href={bookingUrl('contact')} target="_blank" rel="noopener noreferrer" className={buttonVariants({ className: 'px-6' })}>
+              Book a 15-minute call
+            </a>
+            <a href={servicesFormUrl('contact')} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'outline', className: 'border-slate-300 px-6' })}>
+              Send an enquiry
+            </a>
+          </div>
+          <p className="mt-4 text-sm text-slate-500">
+            Or <Link href="/services" className="font-medium text-primary hover:underline">see what we offer</Link>.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-8 sm:grid-cols-3">
           {/* General Enquiries */}
           <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
@@ -38,11 +67,8 @@ export default function ContactPage() {
             <p className="mt-2 text-sm text-slate-600">
               Questions about our workflows, guides, or how to use AI in construction.
             </p>
-            <a
-              href="mailto:hello@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
-            >
-              hello@buildcopilot.ai
+            <a href={mailto('BuildCopilot enquiry')} className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors">
+              Email us
             </a>
           </div>
 
@@ -55,28 +81,8 @@ export default function ContactPage() {
             <p className="mt-2 text-sm text-slate-600">
               Interested in contributing workflows, tools, or partnering with us.
             </p>
-            <a
-              href="mailto:partners@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
-            >
-              partners@buildcopilot.ai
-            </a>
-          </div>
-
-          {/* Consulting */}
-          <div className="rounded-lg border border-slate-200/60 border-l-4 border-l-transparent bg-white p-6 shadow-sm hover:border-l-primary transition-all">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-lg">
-              👔
-            </div>
-            <h2 className="text-lg font-semibold text-slate-900">Consulting & Implementation</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Need help deploying AI workflows in your construction business.
-            </p>
-            <a
-              href="mailto:consulting@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
-            >
-              consulting@buildcopilot.ai
+            <a href={mailto('BuildCopilot partnership')} className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors">
+              Email us
             </a>
           </div>
 
@@ -89,14 +95,14 @@ export default function ContactPage() {
             <p className="mt-2 text-sm text-slate-600">
               Got an idea for a workflow or spotted something we can improve.
             </p>
-            <a
-              href="mailto:feedback@buildcopilot.ai"
-              className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors"
-            >
-              feedback@buildcopilot.ai
+            <a href={mailto('BuildCopilot feedback')} className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/90 transition-colors">
+              Email us
             </a>
           </div>
         </div>
+        <p className="mt-6 text-center text-sm text-slate-500">
+          All email goes to <a href={mailto('BuildCopilot enquiry')} className="font-medium text-primary hover:underline">{CONTACT_EMAIL}</a>.
+        </p>
 
         {/* CTA */}
         {features.copilot && (
