@@ -6,6 +6,7 @@ import { getGuides } from '@/lib/queries/guides'
 import { GuideCard } from '@/components/cards/guide-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { CtaBand } from '@/components/leads/call-cta'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 import { getContentCounts } from '@/lib/queries/counts'
@@ -71,6 +72,12 @@ export default async function GuidesPage() {
         )}
       </div>
 
+      <CtaBand
+        heading="How could this work in your business?"
+        body="A 15-minute call with Owen, a QS with 25+ years in UK construction, about how it could work in your business. No obligation."
+        utmContent="hub-guides"
+        kind="call"
+      />
       <NewsletterInline />
     </>
   )

@@ -67,8 +67,8 @@ export default async function HomePage() {
       <FeaturedTemplates templates={templates} />
       <RoleGrid roles={roles} />
       <LatestGuides guides={latestGuides} />
-      <NewsletterCTA />
       <CTASection />
+      <NewsletterCTA />
     </>
   )
 }

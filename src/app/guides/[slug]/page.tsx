@@ -15,6 +15,8 @@ import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { CallCtaInline } from '@/components/leads/call-cta'
+import { splitAtMiddleHeading } from '@/lib/markdown-split'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { getIdeasForPage } from '@/lib/daily-ideas'
 import { getServiceCta } from '@/lib/service-cta'
@@ -66,6 +68,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
   }
 
   const serviceCta = getServiceCta('guides', slug)
+  const contentParts = guide.content ? splitAtMiddleHeading(guide.content) : null
   const relatedWorkflows = await getWorkflowsByGuideId(guide.id)
   const relatedResources = await getRelatedContent({
     title: guide.title,
@@ -132,8 +135,16 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           )}
         </div>
 
-        {/* Guide content */}
-        {guide.content && <MarkdownContent content={guide.content} />}
+        {/* Guide content, with the call box halfway through on longer guides */}
+        {contentParts ? (
+          <>
+            <MarkdownContent content={contentParts[0]} />
+            <CallCtaInline heading="How could this work in your business?" utmContent={`guide-inline-${slug}`} />
+            <MarkdownContent content={contentParts[1]} />
+          </>
+        ) : (
+          guide.content && <MarkdownContent content={guide.content} />
+        )}
         <DailyIdeasStrip ideas={getIdeasForPage(`/guides/${slug}`)} title="Daily ideas from this guide" moreHref="/daily" />
         <ServiceCTA config={serviceCta} utmContent={`guide-${slug}`} />
         <ConstructionRatingNote note={getConstructionRatingNote('guides', slug)} />

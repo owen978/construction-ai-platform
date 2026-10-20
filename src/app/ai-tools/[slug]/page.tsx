@@ -12,6 +12,8 @@ import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { ToolCard } from '@/components/cards/tool-card'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
+import { ServiceCTA } from '@/components/sections/service-cta'
+import { CallCtaCard } from '@/components/leads/call-cta'
 import { dailyArchiveHref, getIdeasForToolPage } from '@/lib/daily-ideas'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
@@ -136,6 +138,8 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
             </div>
           )}
 
+          <ServiceCTA config={null} utmContent={`tool-${slug}`} />
+
           <DailyIdeasStrip
             ideas={getIdeasForToolPage(slug)}
             title={`Daily ideas using ${tool.name}`}
@@ -144,8 +148,8 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
           />
         </div>
 
-        {/* Sidebar */}
-        <div className="space-y-6 lg:sticky lg:top-24">
+        {/* Sidebar: the call card and newsletter follow the reader down the page. */}
+        <div className="space-y-6">
           {otherTools.length > 0 && (
             <div>
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
@@ -159,7 +163,10 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
             </div>
           )}
 
-          <NewsletterSidebar />
+          <div className="space-y-6 lg:sticky lg:top-24">
+            <CallCtaCard heading="Not sure which AI tools fit your team?" utmContent={`tool-sidebar-${slug}`} />
+            <NewsletterSidebar />
+          </div>
         </div>
       </div>
 

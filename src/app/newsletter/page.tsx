@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
-import { GHL_FORM_EMBED_SCRIPT, GHL_NEWSLETTER_FORM_ID, GHL_NEWSLETTER_FORM_URL } from '@/lib/ghl'
+import { GHL_FORM_EMBED_SCRIPT, GHL_NEWSLETTER_FORM_ID, GHL_NEWSLETTER_FORM_URL, bookingUrl } from '@/lib/ghl'
 import { pageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
@@ -101,6 +101,13 @@ export default function NewsletterPage() {
             <Link href="/privacy" className="text-primary hover:text-primary/90 transition-colors">
               Privacy Policy
             </Link>.
+          </p>
+          <p className="mt-3 text-sm text-slate-500">
+            Want to talk about your team now?{' '}
+            <a href={bookingUrl('newsletter')} target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">
+              Book a 15-minute call
+            </a>
+            .
           </p>
         </div>
       </div>

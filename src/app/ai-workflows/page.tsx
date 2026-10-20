@@ -6,6 +6,7 @@ import { getWorkflows } from '@/lib/queries/workflows'
 import { WorkflowCard } from '@/components/cards/workflow-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { CtaBand } from '@/components/leads/call-cta'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 import { getContentCounts } from '@/lib/queries/counts'
@@ -72,6 +73,12 @@ export default async function WorkflowsPage() {
         )}
       </div>
 
+      <CtaBand
+        heading="Want these workflows built into your team's systems?"
+        body="Start with an AI Roadmap Review: a written plan of what to automate first and what each step saves. Or see everything we do."
+        utmContent="hub-ai-workflows"
+        kind="services"
+      />
       <NewsletterInline />
     </>
   )

@@ -6,6 +6,7 @@ import { getTemplates } from '@/lib/queries/templates'
 import { TemplateCard } from '@/components/cards/template-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { CtaBand } from '@/components/leads/call-cta'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 import { getContentCounts } from '@/lib/queries/counts'
@@ -71,6 +72,12 @@ export default async function TemplatesPage() {
         )}
       </div>
 
+      <CtaBand
+        heading="Want paperwork like this off your team's desk?"
+        body="We build the systems that fill in the documents your team repeats every week. Start with an AI Roadmap Review, or see everything we do."
+        utmContent="hub-templates"
+        kind="services"
+      />
       <NewsletterInline />
     </>
   )

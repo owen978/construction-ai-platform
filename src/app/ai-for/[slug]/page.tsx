@@ -19,6 +19,7 @@ import { RelatedGuides } from '@/components/sections/related-guides'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { dailyArchiveHref, getIdeasForRole } from '@/lib/daily-ideas'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { CallCtaInline } from '@/components/leads/call-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
@@ -194,6 +195,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
+        <CallCtaInline heading={`How could AI work for ${pluralRole(role.name).toLowerCase()} in your business?`} utmContent={`ai-for-inline-${slug}`} className="max-w-3xl" />
+
         <RelatedGuides section="ai-for" slug={slug} />
 
         <RelatedResources items={withoutShown(relatedResources, { workflows: workflows.map((w) => w.slug), guides: getRelatedGuideSlugs('ai-for', slug) })} />
@@ -298,6 +301,8 @@ export default async function AIForPage({ params }: AIForPageProps) {
           {extras && <AiForExtras extras={extras} title={`How AI helps with ${task.name.toLowerCase()}`} />}
           </div>
         )}
+
+        <CallCtaInline heading={`How could AI handle ${task.name.toLowerCase()} in your business?`} utmContent={`ai-for-inline-${slug}`} className="max-w-3xl" />
 
         <RelatedGuides section="ai-for" slug={slug} />
 

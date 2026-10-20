@@ -8,6 +8,7 @@ import { RoleCard } from '@/components/cards/role-card'
 import { TaskCard } from '@/components/cards/task-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
+import { CtaBand } from '@/components/leads/call-cta'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
@@ -100,6 +101,12 @@ export default async function AIForPage() {
         )}
       </div>
 
+      <CtaBand
+        heading="Want AI set up across your team?"
+        body="Start with an AI Roadmap Review: a written plan of what to automate first and what each step saves. Or see everything we do."
+        utmContent="hub-ai-for"
+        kind="services"
+      />
       <NewsletterInline />
     </>
   )

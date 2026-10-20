@@ -9,8 +9,19 @@ import { cn } from '@/lib/utils'
 
 const DISMISS_KEY = 'bc_call_bar_dismissed'
 const HIDE_FOR_DAYS = 7
-/** Content pages only: not the homepage, services, contact, newsletter or admin. */
-const SHOW_ON = /^\/(ai-workflows|guides|templates|ai-for|ai-tools|daily|tools)\//
+/** Content pages and their hubs: not the homepage, services, about, contact, newsletter, legal or admin. */
+const SHOW_ON = /^\/(ai-workflows|guides|templates|ai-for|ai-tools|daily|tools)(\/|$)/
+
+/** The question the card asks, matched to what the reader is looking at. */
+const HEADINGS: Record<string, string> = {
+  'ai-workflows': 'Want workflows like this running in your team?',
+  templates: "Want this built into your team's systems?",
+  guides: 'How could this work in your business?',
+  'ai-for': 'Want AI set up for your team?',
+  'ai-tools': 'Not sure which AI tools fit your team?',
+  daily: 'Want ideas like this working in your business?',
+  tools: 'Want tools like this built for your team?',
+}
 
 function dismissedRecently() {
   try {
@@ -28,7 +39,7 @@ function dismissedRecently() {
  */
 export function StickyCallBar() {
   const pathname = usePathname()
-  if (!SHOW_ON.test(`${pathname}/`)) return null
+  if (!SHOW_ON.test(pathname)) return null
   // Keyed by page, so each new page starts hidden until the reader scrolls.
   return <CallBar key={pathname} pathname={pathname} />
 }
@@ -36,6 +47,9 @@ export function StickyCallBar() {
 function CallBar({ pathname }: { pathname: string }) {
   const [visible, setVisible] = useState(false)
   const [dismissed, setDismissed] = useState(false)
+  // Step aside while another call to action (sidebar card, inline box, band)
+  // is on screen, so the same offer never shows twice at once.
+  const [otherCtaInView, setOtherCtaInView] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
@@ -49,9 +63,25 @@ function CallBar({ pathname }: { pathname: string }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  if (dismissed || !visible) return null
+  useEffect(() => {
+    const ctas = document.querySelectorAll('[data-cta]')
+    if (ctas.length === 0 || !('IntersectionObserver' in window)) return
+    const inView = new Set<Element>()
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) inView.add(entry.target)
+        else inView.delete(entry.target)
+      }
+      setOtherCtaInView(inView.size > 0)
+    })
+    ctas.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
+  if (dismissed || !visible || otherCtaInView) return null
 
   const section = pathname.split('/')[1] || 'page'
+  const heading = HEADINGS[section] ?? 'Want this set up for your team?'
   const href = bookingUrl(`sticky-${section}`)
 
   function dismiss() {
@@ -81,9 +111,9 @@ function CallBar({ pathname }: { pathname: string }) {
       </button>
       <div className="flex items-center gap-3 pr-6 sm:block sm:pr-4">
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-slate-900">Want this set up for your team?</p>
+          <p className="text-sm font-semibold text-slate-900">{heading}</p>
           <p className="hidden text-sm text-slate-600 sm:mt-1 sm:block">
-            A 15-minute call with Owen, a QS with 25+ years in UK construction. No obligation.
+            A 15-minute call with Owen, a QS with 25+ years in UK construction, about how it could work in your business. No obligation.
           </p>
         </div>
         <a

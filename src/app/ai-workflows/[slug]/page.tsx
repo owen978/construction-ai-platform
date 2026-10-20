@@ -19,6 +19,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, jsonLdScriptProps } from '@/l
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { CallCtaCard } from '@/components/leads/call-cta'
 import { getServiceCta } from '@/lib/service-cta'
 import { TypicalResult } from '@/components/sections/typical-result'
 import { getWorkflowResult } from '@/lib/workflow-results'
@@ -219,8 +220,8 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           <DailyIdeasStrip ideas={getIdeasForWorkflow(slug)} title="Daily ideas that build on this workflow" moreHref="/daily" />
         </div>
 
-        {/* Sidebar */}
-        <div className="space-y-6 lg:sticky lg:top-24">
+        {/* Sidebar: the call card and newsletter follow the reader down the page. */}
+        <div className="space-y-6">
           {workflow.tool && (
             <div>
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
@@ -241,7 +242,10 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
 
           {features.copilot && <CopilotCTA />}
 
-          <NewsletterSidebar />
+          <div className="space-y-6 lg:sticky lg:top-24">
+            <CallCtaCard heading="Want this workflow running in your team?" utmContent={`workflow-sidebar-${slug}`} />
+            <NewsletterSidebar />
+          </div>
         </div>
       </div>
 

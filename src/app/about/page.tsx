@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { pageMetadata } from '@/lib/metadata'
 import { AUTHOR } from '@/lib/author'
+import { bookingUrl } from '@/lib/ghl'
+import { buttonVariants } from '@/components/ui/button-variants'
+import { NewsletterInline } from '@/components/sections/newsletter-inline'
 
 export const metadata: Metadata = pageMetadata({
   path: '/about',
@@ -98,18 +101,35 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
-            <h2 className="mb-2 text-xl font-bold text-white">Ready to get started?</h2>
-            <p className="mb-6 text-slate-300">Browse the library of AI workflows built for construction professionals.</p>
-            <Link
-              href="/ai-workflows"
-              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all"
-            >
-              Explore Workflows
-            </Link>
+          <div data-cta className="rounded-lg border border-primary/20 bg-gradient-to-br from-charcoal to-charcoal/95 p-8 text-center">
+            <h2 className="mb-2 text-xl font-bold text-white">Want to talk it through?</h2>
+            <p className="mb-6 text-slate-300">
+              Book a 15-minute call about how AI could work in your business, or see the services we offer.
+            </p>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href={bookingUrl('about')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonVariants({ className: 'px-6 py-3 h-auto shadow-lg shadow-primary/25' })}
+              >
+                Book a 15-minute call
+              </a>
+              <Link href="/services" className={buttonVariants({ variant: 'outline-dark', className: 'px-6 py-3 h-auto' })}>
+                See our services
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-slate-400">
+              Or{' '}
+              <Link href="/ai-workflows" className="font-medium text-primary-bright hover:underline">
+                explore the free workflows
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </div>
+      <NewsletterInline />
     </>
   )
 }
