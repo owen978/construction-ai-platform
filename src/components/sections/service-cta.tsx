@@ -3,7 +3,7 @@ import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { ROADMAP_REVIEW_OFFER, type ServiceCtaConfig } from '@/lib/service-cta'
-import { bookingUrl } from '@/lib/ghl'
+import { bookingUrl, servicesFormUrl } from '@/lib/ghl'
 
 interface ServiceCTAProps {
   /** Page-specific offer from SERVICE_CTA_MAP; null shows the Roadmap Review. */
@@ -41,6 +41,7 @@ function ExternalLinkIcon() {
 export function ServiceCTA({ config, utmContent, className }: ServiceCTAProps) {
   return (
     <aside
+      data-cta
       aria-label="Done-for-you service"
       className={cn(
         'my-10 rounded-lg border border-slate-200 bg-slate-50 px-6 py-6 sm:px-8',
@@ -120,7 +121,7 @@ function RoadmapReviewOffer({ utmContent }: { utmContent: string }) {
 
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <a
-          href={bookingUrl(utmContent)}
+          href={servicesFormUrl(utmContent)}
           target="_blank"
           rel="noopener noreferrer"
           className={buttonVariants()}

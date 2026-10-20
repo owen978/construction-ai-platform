@@ -7,20 +7,36 @@
  */
 const GHL_ORIGIN = 'https://link.contractorsystems.co.uk'
 
-/** Roadmap Review / 15-minute call booking widget. */
-export const GHL_BOOKING_URL = `${GHL_ORIGIN}/widget/booking/mzWN8jEzZDL5SxkY71ut`
+/** The 15-minute call calendar ("Book a 15-minute call"). */
+export const GHL_BOOKING_URL = `${GHL_ORIGIN}/widget/booking/SYGqnM5OyTFztWt7yQUg`
 
 /**
- * Booking link tagged with UTMs so bookings can be traced to the page that
- * sent them. `content` is "{page-type}-{slug}", e.g. "workflow-write-daily-site-report".
+ * Services enquiry form: name, contact details and which service they're
+ * interested in. Owen follows up and books the call. Used wherever the site
+ * offers a paid service (the Roadmap Review and the done-for-you offers).
  */
-export function bookingUrl(content: string) {
+export const GHL_SERVICES_FORM_URL = `${GHL_ORIGIN}/widget/form/6HJLSFrH7Q61nDZ72Tn1`
+
+function withUtm(url: string, content: string) {
   const params = new URLSearchParams({
     utm_source: 'buildcopilot',
     utm_medium: 'cta',
     utm_content: content,
   })
-  return `${GHL_BOOKING_URL}?${params}`
+  return `${url}?${params}`
+}
+
+/**
+ * 15-minute call link tagged with UTMs so bookings can be traced to the page
+ * that sent them. `content` is "{page-type}-{slug}", e.g. "workflow-write-daily-site-report".
+ */
+export function bookingUrl(content: string) {
+  return withUtm(GHL_BOOKING_URL, content)
+}
+
+/** Services enquiry form link, tagged the same way as bookingUrl(). */
+export function servicesFormUrl(content: string) {
+  return withUtm(GHL_SERVICES_FORM_URL, content)
 }
 
 export const GHL_NEWSLETTER_FORM_ID = 'rncFCtEjzs4hnT5jgHsB'

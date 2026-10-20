@@ -3,7 +3,7 @@ import { CopyButton } from '@/components/ui/copy-button'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { IdeaChips } from '@/components/daily/idea-chips'
 import { IdeaTeaser } from '@/components/daily/idea-teaser'
-import { bookingUrl } from '@/lib/ghl'
+import { servicesFormUrl } from '@/lib/ghl'
 import { formatIdeaDate, ideaPath, type DailyIdea } from '@/lib/daily-ideas'
 
 /**
@@ -85,12 +85,12 @@ export function DailyIdeaCard({
             <p className="mt-5 text-sm text-slate-500">
               Want this built into your team&apos;s systems?{' '}
               <a
-                href={bookingUrl(`daily-${idea.slug}`)}
+                href={servicesFormUrl(`daily-${idea.slug}`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-primary hover:underline"
               >
-                Book a Roadmap Review
+                Request a Roadmap Review
               </a>
             </p>
           </div>

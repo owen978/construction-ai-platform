@@ -18,7 +18,7 @@ export const ROADMAP_REVIEW_OFFER = {
     "If we can't find 20+ hours a month of recoverable time, you don't pay",
     'Credited in full against any build over £2,500 within 60 days',
   ],
-  bookLabel: 'Book your Roadmap Review',
+  bookLabel: 'Request your Roadmap Review',
   newsletterLabel: 'Get the free weekly newsletter',
 }
 
