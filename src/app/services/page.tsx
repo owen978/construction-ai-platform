@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { pageMetadata } from '@/lib/metadata'
-import { bookingUrl } from '@/lib/ghl'
+import { bookingUrl, servicesFormUrl } from '@/lib/ghl'
 
 export const metadata: Metadata = pageMetadata({
   path: '/services',
@@ -289,6 +289,39 @@ function ServiceCard({ service }: { service: Service }) {
   )
 }
 
+/** The call and the enquiry form, side by side, under each group of services. */
+function SectionCta({ lead, utmContent, primary }: { lead: string; utmContent: string; primary: 'call' | 'form' | 'roadmap' }) {
+  const call = (
+    <a
+      href={bookingUrl(utmContent)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={buttonVariants({ variant: primary === 'call' ? 'default' : 'outline', className: primary === 'call' ? 'px-6' : 'border-slate-300 px-6' })}
+    >
+      Book a 15-minute call
+    </a>
+  )
+  const form = (
+    <a
+      href={servicesFormUrl(utmContent)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={buttonVariants({ variant: primary === 'call' ? 'outline' : 'default', className: primary === 'call' ? 'border-slate-300 px-6' : 'px-6' })}
+    >
+      {primary === 'roadmap' ? 'Request your Roadmap Review' : 'Send an enquiry'}
+    </a>
+  )
+  return (
+    <div className="mt-12 flex flex-col items-center gap-4 text-center">
+      <p className="max-w-xl text-slate-700">{lead}</p>
+      <div className="flex flex-col items-center gap-3 sm:flex-row">
+        {primary === 'call' ? call : form}
+        {primary === 'call' ? form : call}
+      </div>
+    </div>
+  )
+}
+
 export default function ServicesPage() {
   return (
     <>
@@ -309,14 +342,24 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3">
-            <a
-              href={bookingUrl('services')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
-            >
-              Book a 15-minute call
-            </a>
+            <div className="flex flex-col items-center gap-3 sm:flex-row">
+              <a
+                href={bookingUrl('services-hero')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
+              >
+                Book a 15-minute call
+              </a>
+              <a
+                href={servicesFormUrl('services-hero')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonVariants({ variant: 'outline', className: 'border-slate-300 px-8 py-3 text-base' })}
+              >
+                Send an enquiry
+              </a>
+            </div>
             <p className="text-sm text-slate-400">
               Fixed fee agreed up front. Delivered in days, not weeks.{' '}
               <a href={ctaHref} className="text-primary hover:underline">Prefer email?</a>
@@ -409,12 +452,12 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <a
-                  href={bookingUrl('services')}
+                  href={servicesFormUrl('services-roadmap')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonVariants({ className: 'mt-5 w-full px-8 py-3 text-base shadow-lg shadow-primary/25' })}
                 >
-                  Book your Roadmap Review
+                  Request your Roadmap Review
                 </a>
                 <p className="mt-3 text-center text-xs text-slate-400">
                   Delivered in days. 45-minute walkthrough included.{' '}
@@ -447,6 +490,12 @@ export default function ServicesPage() {
               <ServiceCard key={service.name} service={service} />
             ))}
           </div>
+
+          <SectionCta
+            lead="Need one of these? Tell us the job and we'll come back with a fixed fee."
+            utmContent="services-qs"
+            primary="form"
+          />
         </div>
       </div>
 
@@ -471,6 +520,12 @@ export default function ServicesPage() {
               <ServiceCard key={service.name} service={service} />
             ))}
           </div>
+
+          <SectionCta
+            lead="Not sure which of these you need? The Roadmap Review tells you, in writing, before you spend anything on a build."
+            utmContent="services-ai"
+            primary="roadmap"
+          />
         </div>
       </div>
 
@@ -502,6 +557,12 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
+
+          <SectionCta
+            lead="Want to talk through monthly cover for your projects?"
+            utmContent="services-ongoing"
+            primary="call"
+          />
         </div>
       </div>
 
@@ -531,14 +592,22 @@ export default function ServicesPage() {
             Send us the job that keeps getting pushed to the bottom of the pile. A 15-minute call
             is enough to scope it and put a fixed fee on it.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={bookingUrl('services')}
+              href={bookingUrl('services-final')}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonVariants({ className: 'px-8 py-3 text-base shadow-lg shadow-primary/25' })}
             >
               Book a 15-minute call
+            </a>
+            <a
+              href={servicesFormUrl('services-final')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({ variant: 'outline', className: 'border-slate-300 px-8 py-3 text-base' })}
+            >
+              Send an enquiry
             </a>
           </div>
           <p className="mt-4 text-sm text-slate-400">
