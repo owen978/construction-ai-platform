@@ -22,6 +22,15 @@ export function isDailyIdeasEnabled() {
   return features.dailyIdeas || process.env.NODE_ENV === 'development'
 }
 
+/**
+ * "Download in Word" on template pages. Shows once GHL_DOWNLOAD_WEBHOOK_URL is
+ * set in Vercel, so no sign-up is taken before GHL can receive it. Always on
+ * in local development so it can be reviewed.
+ */
+export function isTemplateDownloadEnabled() {
+  return Boolean(process.env.GHL_DOWNLOAD_WEBHOOK_URL?.trim()) || process.env.NODE_ENV === 'development'
+}
+
 export const COPILOT_TOOL_SLUG = 'ai-construction-copilot'
 
 /** False for tools hidden by a feature switch: they must not list, render or appear in feeds. */

@@ -7,7 +7,7 @@ import { getTemplateBySlug, getTemplateSlugs } from '@/lib/queries/templates'
 import { CopyButton } from '@/components/ui/copy-button'
 import { TemplateDownload } from '@/components/leads/template-download'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
-import { features } from '@/lib/features'
+import { features, isTemplateDownloadEnabled } from '@/lib/features'
 import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
@@ -16,6 +16,7 @@ import { getRelatedGuideSlugs } from '@/lib/related-guides'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
+import { CallCtaCard } from '@/components/leads/call-cta'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { getIdeasForPage } from '@/lib/daily-ideas'
 import { getServiceCta } from '@/lib/service-cta'
@@ -84,6 +85,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
   }
 
   const serviceCta = getServiceCta('templates', slug)
+  const downloads = isTemplateDownloadEnabled() && Boolean(template.template_content)
   const freeTool = FREE_TOOL_CALLOUTS[slug]
   const relatedResources = await getRelatedContent({
     title: `${template.name} ${template.primary_keyword ?? ''}`,
@@ -144,7 +146,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </p>
           )}
 
-          {template.template_content && (
+          {downloads && (
             <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">
               <TemplateDownload slug={template.slug} name={template.name} />
               <a href="#template" className="text-sm font-semibold text-primary hover:underline">Or copy it from the page &darr;</a>
@@ -182,7 +184,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             <div id="template" className="mt-8 scroll-mt-20">
               <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-slate-200 pb-3">
                 <h2 className="text-xl font-semibold text-slate-900">Free Template</h2>
-                <TemplateDownload slug={template.slug} name={template.name} className="h-8" />
+                {downloads && <TemplateDownload slug={template.slug} name={template.name} className="h-8" />}
               </div>
               <div className="relative">
                 <div className="absolute top-4 right-4">
@@ -239,8 +241,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           )}
         </div>
 
-        {/* Sidebar */}
-        <div className="space-y-6 lg:sticky lg:top-24">
+        {/* Sidebar: the call card and newsletter follow the reader down the page. */}
+        <div className="space-y-6">
           <div className="rounded-lg border border-slate-200 bg-slate-50 p-6">
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
               Template Details
@@ -252,7 +254,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
               </div>
               <div>
                 <dt className="font-medium text-slate-900">Format</dt>
-                <dd className="text-slate-600">Word download or copy-paste</dd>
+                <dd className="text-slate-600">{downloads ? 'Word download or copy-paste' : 'Copy-paste ready'}</dd>
               </div>
               <div>
                 <dt className="font-medium text-slate-900">Industry</dt>
@@ -276,7 +278,10 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
 
           {features.copilot && <CopilotCTA />}
 
-          <NewsletterSidebar />
+          <div className="space-y-6 lg:sticky lg:top-24">
+            <CallCtaCard heading="Want this built into your team's systems?" utmContent={`template-sidebar-${slug}`} />
+            <NewsletterSidebar />
+          </div>
         </div>
       </div>
 
