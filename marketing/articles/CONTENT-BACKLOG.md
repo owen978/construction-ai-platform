@@ -56,7 +56,7 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 |---|--------|----------------|------|----------------|
 | 23 | PUBLISHED | chatgpt prompts for quantity surveyors | chatgpt-prompts-for-quantity-surveyors | /ai-for/quantity-surveyor, /ai-workflows/generate-bill-of-quantities, /newsletter |
 | 24 | PUBLISHED | chatgpt prompts for project managers | chatgpt-prompts-for-project-managers | /ai-for/project-manager, /ai-workflows/generate-project-risk-register, /newsletter |
-| 25 | queued | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /newsletter |
+| 25 | PUBLISHED | chatgpt prompts for site managers | chatgpt-prompts-for-site-managers | /ai-for/site-manager, /ai-workflows/write-daily-site-report, /newsletter |
 | 26 | queued | chatgpt prompts for estimators | chatgpt-prompts-for-estimators | /ai-for/estimator, /ai-workflows/generate-preliminary-cost-plan, /newsletter |
 | 27 | queued | chatgpt prompts for contract managers | chatgpt-prompts-for-contract-managers | /ai-for/contracts-manager, /ai-workflows/write-variation-assessment, /newsletter |
 | 28 | queued | chatgpt prompts for health and safety managers | chatgpt-prompts-for-health-and-safety-managers | /ai-for/health-and-safety-manager, /ai-workflows/generate-coshh-risk-assessment, /newsletter |
