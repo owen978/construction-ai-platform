@@ -1,8 +1,13 @@
+// Hourly, like the hubs, so the live content counts in "Track record" stay current.
+export const revalidate = 3600
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { pageMetadata } from '@/lib/metadata'
 import { AUTHOR } from '@/lib/author'
 import { bookingUrl } from '@/lib/ghl'
+import { getContentCounts } from '@/lib/queries/counts'
+import { AI_START_LABEL, AUTHOR_CREDENTIALS, PROOF, yearsUsingAi } from '@/lib/proof'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 
@@ -13,7 +18,24 @@ export const metadata: Metadata = pageMetadata({
     'BuildCopilot is a free library of AI workflows, prompts and templates for UK construction, run by quantity surveyor Owen Hagger.',
 })
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const { workflows, guides, templates } = await getContentCounts()
+  // Live published counts, shown as floors.
+  const contentLine =
+    workflows > 0 && guides > 0 && templates > 0
+      ? `${workflows}+ AI workflows, ${guides}+ guides and ${templates}+ templates`
+      : null
+
+  const leadFigures = [
+    { value: `${yearsUsingAi()}+ years`, label: `using AI since ${AI_START_LABEL}` },
+    PROOF.builtWithAi,
+  ]
+  const moreFigures = [
+    ...(contentLine ? [`${contentLine} published on BuildCopilot`] : []),
+    `${PROOF.weeklyAutomations.value} ${PROOF.weeklyAutomations.label}`,
+    `${PROOF.linesOfCode.value} ${PROOF.linesOfCode.label}`,
+  ]
+
   return (
     <>
       {/* Header */}
@@ -48,6 +70,27 @@ export default function AboutPage() {
               So I built BuildCopilot. Free prompts, workflows and templates for the people who actually run construction jobs.
             </p>
           </div>
+
+          <section aria-labelledby="track-record-heading">
+            <h2 id="track-record-heading" className="mb-4 text-2xl font-bold text-slate-900">Track record</h2>
+            <p>{AUTHOR_CREDENTIALS}</p>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {leadFigures.map((figure) => (
+                <li key={figure.label} className="rounded-lg border border-slate-200 bg-white p-6">
+                  <div className="text-3xl font-bold text-slate-900 sm:text-4xl">{figure.value}</div>
+                  <div className="mt-1 text-sm text-slate-500">{figure.label}</div>
+                </li>
+              ))}
+            </ul>
+            <ul className="mt-6 list-disc space-y-2 pl-5">
+              {moreFigures.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-slate-500">
+              Figures are rounded down. The build figures were counted in October 2026, and the workflow, guide and template counts update from the site itself.
+            </p>
+          </section>
 
           <div>
             <h2 className="mb-4 text-2xl font-bold text-slate-900">What you&apos;ll find here</h2>
