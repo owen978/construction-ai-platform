@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   path: AUTHOR.path,
   title: `${AUTHOR.name}, ${AUTHOR.jobTitle}`,
   description:
-    'Owen Hagger, quantity surveyor with 25 years in UK construction and founder of Contractor Systems: AI systems for commercial, operations, site and H&S teams.',
+    'Owen Hagger, quantity surveyor with 25 years in UK construction and founder of Contractor Systems: AI systems for commercial, operations, site and H&S.',
 })
 
 export default function OwenHaggerPage() {

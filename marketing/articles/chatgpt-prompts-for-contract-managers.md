@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 30
 meta_title: "20 ChatGPT Prompts for Contract Managers (UK JCT & NEC)"
-meta_description: "20 copy-paste ChatGPT prompts for UK contract managers: clause summaries, notice registers, NEC4 compensation events, variations, EOT claims and final accounts."
+meta_description: "20 copy-paste ChatGPT prompts for UK contract managers: clause summaries, NEC4 compensation events, variations, EOT claims and final accounts."
 ---
 
 **ChatGPT prompts for contract managers** are structured instructions that get ChatGPT, Claude or Copilot to handle the reading, tracking and drafting side of running a construction contract: summarising the conditions and amendments, building a notice and time bar register, drafting early warnings and compensation event notifications, assessing variations and structuring an extension of time submission. The prompts that work give the AI five things: a contract manager role, the real contract text or site records, the contract form (JCT or NEC4 and the main option), a fixed output format, and an instruction never to invent facts, dates or clause numbers. The contract manager still owns every notice and every judgement. The AI clears the paperwork so you catch entitlement before the clock runs out.

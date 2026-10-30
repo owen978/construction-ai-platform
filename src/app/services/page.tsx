@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/services',
   title: 'Fixed-Fee Commercial & AI Services for Construction',
   description:
-    'Fixed-fee commercial and AI services for UK construction: QS services, procurement packages, quote comparisons, cash flow forecasts and an AI Roadmap Review.',
+    'Fixed-fee commercial and AI services for UK construction: procurement packages, quote comparisons, cash flow forecasts and an AI Roadmap Review.',
 })
 
 const ctaHref =

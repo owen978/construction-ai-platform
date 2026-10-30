@@ -10,7 +10,8 @@
     "predev": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs && node scripts/build-ai-for-extras.mjs",
     "prebuild": "node scripts/build-daily-ideas.mjs && node scripts/build-workflow-results.mjs && node scripts/build-workflow-extras.mjs && node scripts/build-ai-for-extras.mjs",
     "daily-ideas": "node scripts/build-daily-ideas.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "check:seo": "node scripts/check-seo-lengths.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",

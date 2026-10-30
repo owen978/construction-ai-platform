@@ -2,7 +2,7 @@
 title: "Ask AI what's missing from today's site diary before a delay claim needs it"
 slug: "ask-ai-whats-missing-from-todays-site-diary"
 metaTitle: "Ask AI what's missing from today's site diary entry"
-summary: "Paste in today's diary entry and get a list of the gaps, vague lines and missing facts someone would need months from now if the day ends up in a delay claim."
+summary: "Paste in today's diary entry and get a list of the gaps, vague lines and missing facts someone would need months later if the day ends up in a claim."
 roles: [site-manager]
 task: "daily-reports"
 contractForms: []

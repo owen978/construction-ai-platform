@@ -1,7 +1,7 @@
 ---
 title: "Write a recovery email when a key date is at risk"
 slug: "write-a-recovery-email-when-a-key-date-is-at-risk"
-summary: "Turn the facts about a slipping key date into a calm, factual email that explains what's happened, what you're doing about it and what you need from the reader."
+summary: "Turn a slipping key date into a calm, factual email that explains what's happened, what you're doing about it and what you need from the reader."
 roles: [project-manager]
 task: "programme"
 contractForms: []

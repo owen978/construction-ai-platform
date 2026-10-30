@@ -9,7 +9,7 @@
  */
 
 export const MAX_TITLE = 60 // Google shows about 60 characters of a title
-export const DESCRIPTION_RANGE = [120, 160] // and about 160 of a description
+export const DESCRIPTION_RANGE = [120, 155] // and about 155 of a description
 
 const INTERNAL_LINK = /\]\((?:https:\/\/buildcopilot\.ai)?\/(?:guides|ai-workflows|templates|ai-for|ai-tools|daily|services|newsletter)\b[^)]*\)/g
 

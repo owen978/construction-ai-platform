@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/tools/rams-generator',
   title: 'Free AI RAMS Generator: Risk Assessment & Method Statement',
   description:
-    'Free AI RAMS generator for UK construction. Enter your task and get a structured Risk Assessment and Method Statement draft to check and complete. Built around CDM 2015.',
+    'Free AI RAMS generator for UK construction. Describe the task and get a risk assessment and method statement draft to review and sign off. CDM 2015 aware.',
 })
 
 const FAQ = [

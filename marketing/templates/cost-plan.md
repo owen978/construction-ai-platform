@@ -5,7 +5,7 @@ description: "A free NRM1 cost plan template for UK construction, with a worked 
 icon: "💰"
 primary_keyword: "construction cost plan template"
 meta_title: "Cost Plan Template: NRM1 Elemental Breakdown"
-meta_description: "Free NRM1 cost plan template with a worked Stage 2 example for a 1,850 m2 GP surgery: elemental costs per m2, risk allowances, tender inflation and exclusions."
+meta_description: "Free NRM1 cost plan template with a worked Stage 2 example for a 1,850 m2 GP surgery: elemental costs, risk allowances, tender inflation and exclusions."
 sort_order: 12
 ---
 ## what_is_it

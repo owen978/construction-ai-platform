@@ -7,7 +7,7 @@ reading_time_minutes: 12
 featured: false
 sort_order: 28
 meta_title: "22 ChatGPT Prompts for Construction Site Managers (UK)"
-meta_description: "22 copy-paste ChatGPT prompts for UK site managers: daily reports, site diaries, toolbox talks, RAMS reviews, snag lists, look-aheads and subcontractor emails."
+meta_description: "22 copy-paste ChatGPT prompts for UK site managers: daily reports, site diaries, toolbox talks, RAMS reviews, snag lists and subcontractor emails."
 ---
 
 **ChatGPT prompts for site managers** are structured instructions that get ChatGPT, Claude or Copilot to handle the paperwork side of running a construction site: turning phone notes into a daily site report, writing a toolbox talk, reviewing a subcontractor's RAMS, building a snag list or drafting a firm email to a trade that is behind. The prompts that work give the AI five things: a site manager role, the real facts from today, the site context (CDM 2015 role, phase, trades), a fixed output format, and an instruction to flag anything missing rather than invent it. The site manager still runs the site and signs off every record. The AI gets the writing done in minutes instead of at 7pm in the cabin.

@@ -32,7 +32,7 @@ const ENUMS = {
 }
 // Search checks for approved ideas.
 const MAX_SEO_TITLE = 60 // Google shows about 60 characters of a title
-const DESCRIPTION_RANGE = [120, 160] // the summary is the meta description
+const DESCRIPTION_RANGE = [120, 155] // the summary is the meta description
 const MIN_WORDS = 330 // body text across all sections, so pages aren't thin
 const MIN_LIST_ITEMS = 3 // checks and steps
 const RELATED_PAGE = /^\/(guides|templates|ai-tools)\/[a-z0-9-]+$/

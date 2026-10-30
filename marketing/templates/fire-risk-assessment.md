@@ -5,7 +5,7 @@ description: "A free fire risk assessment template for UK construction sites and
 icon: "🔥"
 primary_keyword: "fire risk assessment template uk"
 meta_title: "Fire Risk Assessment Template (Free, UK) | BuildCopilot"
-meta_description: "Free UK fire risk assessment template covering all five steps required by the Fire Safety Order 2005. Editable structure for construction sites and premises."
+meta_description: "Free UK fire risk assessment template following the five-step approach used under the Fire Safety Order 2005. Editable for construction sites and premises."
 sort_order: 1
 ---
 

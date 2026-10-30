@@ -1,7 +1,7 @@
 ---
 title: "Summarise the RFI log for a client meeting"
 slug: "summarise-the-rfi-log-for-a-client-meeting"
-summary: "Turn a long RFI log into a short, client-ready summary of what's open, what's overdue and what's holding up design or site, so the meeting goes on decisions."
+summary: "Turn a long RFI log into a short, client-ready summary of what's open, what's overdue and what's holding up design or site, so the meeting is on decisions."
 roles: [project-manager, design-manager]
 task: "rfis"
 contractForms: []
