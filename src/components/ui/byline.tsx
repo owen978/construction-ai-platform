@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { AUTHOR } from '@/lib/author'
+import { AUTHOR, isReviewed } from '@/lib/author'
 
 const dateFormat = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
@@ -10,17 +10,19 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
 })
 
 /**
- * "Editor: Owen Hagger · Last updated 15 October 2026" under guide and
- * workflow titles. Pass the same updated_at the page's JSON-LD uses as
- * dateModified so the two always agree.
+ * "Editor: Owen Hagger · Last updated 15 October 2026" under page titles, or
+ * "Reviewed by Owen Hagger, QS" on pages in REVIEWED_PAGES. Pass the same
+ * date the page's JSON-LD uses as dateModified so the two always agree.
  */
-export function Byline({ updatedAt, className }: { updatedAt?: string | null; className?: string }) {
+export function Byline({ path, updatedAt, className }: { path: string; updatedAt?: string | null; className?: string }) {
+  const reviewed = isReviewed(path)
   return (
     <p className={cn('text-sm text-slate-500', className)}>
-      {AUTHOR.bylineLabel}:{' '}
+      {reviewed ? 'Reviewed by ' : `${AUTHOR.bylineLabel}: `}
       <Link href={AUTHOR.path} className="font-medium text-slate-700 hover:text-primary transition-colors">
         {AUTHOR.name}
       </Link>
+      {reviewed && `, ${AUTHOR.credential}`}
       {updatedAt && (
         <>
           <span aria-hidden="true"> · </span>

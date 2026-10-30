@@ -1,6 +1,15 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Link from 'next/link'
+import { QsTakeBox } from '@/components/ui/qs-take'
+
+/** Plain text of a Markdown (hast) node, for spotting a "QS take:" blockquote. */
+function textOf(node: unknown): string {
+  if (!node || typeof node !== 'object') return ''
+  const n = node as { type?: string; value?: string; children?: unknown[] }
+  if (n.type === 'text') return n.value ?? ''
+  return (n.children ?? []).map(textOf).join('')
+}
 
 /**
  * Renders Markdown guide/article content with BuildCopilot styling.
@@ -56,11 +65,14 @@ export function MarkdownContent({ content }: { content: string }) {
             )
           },
           strong: ({ children }) => <strong className="font-semibold text-slate-900">{children}</strong>,
-          blockquote: ({ children }) => (
-            <blockquote className="my-6 border-l-4 border-primary bg-slate-50 py-2 pl-4 pr-3 text-slate-600 italic">
-              {children}
-            </blockquote>
-          ),
+          blockquote: ({ node, children }) =>
+            textOf(node).trimStart().startsWith('QS take:') ? (
+              <QsTakeBox>{children}</QsTakeBox>
+            ) : (
+              <blockquote className="my-6 border-l-4 border-primary bg-slate-50 py-2 pl-4 pr-3 text-slate-600 italic">
+                {children}
+              </blockquote>
+            ),
           table: ({ children }) => (
             <div className="my-6 overflow-x-auto rounded-lg border border-slate-200">
               <table className="w-full border-collapse text-left text-sm">{children}</table>

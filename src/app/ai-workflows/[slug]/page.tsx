@@ -161,7 +161,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
             )}
           </div>
 
-          <Byline updatedAt={contentDate(workflow)} className="mt-4" />
+          <Byline path={`/ai-workflows/${slug}`} updatedAt={contentDate(workflow)} className="mt-4" />
 
           {/* Long description */}
           {workflow.long_description && (

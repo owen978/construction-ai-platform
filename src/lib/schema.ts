@@ -6,7 +6,7 @@
  */
 
 import { SITE_URL } from '@/lib/site'
-import { AUTHOR } from '@/lib/author'
+import { AUTHOR, isReviewed } from '@/lib/author'
 const SITE_NAME = 'BuildCopilot'
 
 // ─── Organization (shared across schemas) ───────────────────────────
@@ -88,12 +88,14 @@ export function profilePageSchema() {
 }
 
 /**
- * Credit for guides and workflows, matching the visible byline
- * ("Editor: Owen Hagger"): the site is the author and Owen the editor.
- * If AUTHOR.bylineLabel becomes "Written by", make Owen the author here too.
+ * Credit matching the visible byline. Pages Owen has reviewed himself
+ * (REVIEWED_PAGES) name him as the author; everything else, published by the
+ * content tasks, has the site as author and Owen as editor ("Editor: Owen Hagger").
  */
-function contentCredits() {
-  return { author: organizationSchema(), editor: personSchema() }
+function contentCredits(path: string) {
+  return isReviewed(path)
+    ? { author: personSchema() }
+    : { author: organizationSchema(), editor: personSchema() }
 }
 
 // ─── HowTo (for workflow pages) ─────────────────────────────────────
@@ -123,7 +125,7 @@ export function howToSchema(options: HowToOptions) {
       text: step,
     })),
     publisher: organizationSchema(),
-    ...contentCredits(),
+    ...contentCredits(`/ai-workflows/${options.slug}`),
   }
 
   if (options.estimatedTime) {
@@ -167,7 +169,7 @@ export function dailyIdeaSchema(options: DailyIdeaSchemaOptions) {
     url,
     datePublished: options.publishDate,
     publisher: organizationSchema(),
-    ...contentCredits(),
+    ...contentCredits(options.path),
     tool: { '@type': 'HowToTool', name: options.tool },
     isAccessibleForFree: true,
   }
@@ -201,7 +203,7 @@ export function articleSchema(options: ArticleOptions) {
     image: `${SITE_URL}/guides/${options.slug}/opengraph-image`,
     inLanguage: 'en-GB',
     publisher: organizationSchema(),
-    ...contentCredits(),
+    ...contentCredits(`/guides/${options.slug}`),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${SITE_URL}/guides/${options.slug}`,

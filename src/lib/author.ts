@@ -9,10 +9,13 @@ export const AUTHOR = {
   path: '/about/owen-hagger',
   /**
    * Byline role. "Editor" credits Owen as responsible for the content without
-   * claiming he wrote or checked each page (the content task publishes
-   * automatically). Change to "Reviewed by" only if every page gets reviewed.
+   * claiming he wrote or checked each page (the content tasks publish
+   * automatically). Pages he has read himself are listed in REVIEWED_PAGES
+   * and say "Reviewed by" instead.
    */
   bylineLabel: 'Editor',
+  /** Short credential after his name on reviewed pages: "Reviewed by Owen Hagger, QS". */
+  credential: 'QS',
   /** Square headshot in /public, e.g. '/owen-hagger.jpg'. Initials show until set. */
   photo: '/owen-hagger.jpg' as string | null,
   /** Personal profiles, used on the author page and as Person.sameAs. */
@@ -24,4 +27,16 @@ export const AUTHOR = {
     name: 'Contractor Systems',
     url: 'https://contractorsystems.co.uk',
   },
+}
+
+/**
+ * Pages Owen has read and signed off himself, by path, with the date he did.
+ * They show "Reviewed by Owen Hagger, QS" and name him as the author in the
+ * structured data. Everything the content tasks publish keeps "Editor".
+ * Only add a page once Owen has actually reviewed it (his rule, 30 Oct 2026).
+ */
+export const REVIEWED_PAGES: Record<string, string> = {}
+
+export function isReviewed(path: string) {
+  return path in REVIEWED_PAGES
 }

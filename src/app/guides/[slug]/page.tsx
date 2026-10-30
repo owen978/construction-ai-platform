@@ -122,7 +122,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           </p>
         )}
 
-        <Byline updatedAt={contentDate(guide)} className="mb-4" />
+        <Byline path={`/guides/${slug}`} updatedAt={contentDate(guide)} className="mb-4" />
 
         <div className="mb-8 flex flex-wrap items-center gap-3">
           <Badge variant={guide.difficulty ? difficultyVariant[guide.difficulty] : 'info'}>
