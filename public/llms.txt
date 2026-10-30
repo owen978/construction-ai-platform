@@ -1,0 +1,24 @@
+# BuildCopilot
+
+> Free AI workflows, prompts, templates and guides for UK construction teams, edited by Owen Hagger, a quantity surveyor with 25+ years in UK construction (Contractor Systems).
+
+## Start here
+- [AI for quantity surveyors](https://buildcopilot.ai/guides/ai-for-quantity-surveyors-guide): where AI helps a QS and where it doesn't
+- [AI cost estimation](https://buildcopilot.ai/guides/ai-construction-estimating): take-off, BoQ, rates and quote comparison
+- [AI BIM model checking and QA](https://buildcopilot.ai/guides/ai-bim-model-checking-and-qa)
+- [Claude for construction](https://buildcopilot.ai/ai-tools/claude)
+- [AI RAMS generator](https://buildcopilot.ai/tools/rams-generator)
+
+## Sections
+- [Guides](https://buildcopilot.ai/guides)
+- [AI workflows](https://buildcopilot.ai/ai-workflows)
+- [AI by role and task](https://buildcopilot.ai/ai-for)
+- [AI tools](https://buildcopilot.ai/ai-tools)
+- [Templates](https://buildcopilot.ai/templates)
+- [Daily ideas](https://buildcopilot.ai/daily)
+
+## About
+- [Owen Hagger](https://buildcopilot.ai/about/owen-hagger)
+- [Contractor Systems](https://contractorsystems.co.uk/)
+- [Services](https://buildcopilot.ai/services): fixed-fee commercial and AI services, including the AI Roadmap Review
+- [Free 20-minute Business Roadmap or Commercial Benchmark](https://link.contractorsystems.co.uk/widget/form/6HJLSFrH7Q61nDZ72Tn1): request either one through this form

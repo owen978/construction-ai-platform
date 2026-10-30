@@ -17,6 +17,8 @@ import { FreeOfferCard } from '@/components/leads/free-offer'
 import { dailyArchiveHref, getIdeasForToolPage } from '@/lib/daily-ideas'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
+import { contentDate } from '@/lib/utils'
+import { Byline } from '@/components/ui/byline'
 
 export async function generateStaticParams() {
   const slugs = await getToolSlugs()
@@ -94,10 +96,12 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{tool.name} for Construction</h1>
 
           {tool.description && (
-            <p className="mb-6 text-lg leading-relaxed text-slate-600">
+            <p className="mb-4 text-lg leading-relaxed text-slate-600">
               {tool.description}
             </p>
           )}
+
+          <Byline path={`/ai-tools/${slug}`} updatedAt={contentDate(tool)} className="mb-6" />
 
           <div className="mb-6 flex flex-wrap gap-2">
             {tool.category && <Badge variant="info">{tool.category}</Badge>}

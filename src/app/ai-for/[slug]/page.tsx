@@ -25,7 +25,8 @@ import { ConstructionRatingNote } from '@/components/sections/construction-ratin
 import { getConstructionRatingNote } from '@/lib/construction-rating'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
-import { pluralRole } from '@/lib/utils'
+import { contentDate, pluralRole } from '@/lib/utils'
+import { Byline } from '@/components/ui/byline'
 
 export async function generateStaticParams() {
   const [roles, tasks] = await Promise.all([getRoleSlugs(), getTaskSlugs()])
@@ -139,10 +140,11 @@ export default async function AIForPage({ params }: AIForPageProps) {
           AI for {pluralRole(role.name)}
         </h1>
         {role.description && (
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mb-4 max-w-2xl text-lg leading-relaxed text-slate-600">
             {role.description}
           </p>
         )}
+        <Byline path={`/ai-for/${slug}`} updatedAt={contentDate(role)} className="mb-8" />
 
         <HubJumpLinks
           workflows={workflows.length}
@@ -258,10 +260,11 @@ export default async function AIForPage({ params }: AIForPageProps) {
           AI for {task.name}
         </h1>
         {task.description && (
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mb-4 max-w-2xl text-lg leading-relaxed text-slate-600">
             {task.description}
           </p>
         )}
+        <Byline path={`/ai-for/${slug}`} updatedAt={contentDate(task)} className="mb-8" />
 
         <HubJumpLinks
           workflows={workflows.length}

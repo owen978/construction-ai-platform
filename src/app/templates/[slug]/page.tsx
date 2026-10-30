@@ -24,6 +24,7 @@ import { FreeToolCallout } from '@/components/sections/free-tool-callout'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 import { contentDate } from '@/lib/utils'
+import { Byline } from '@/components/ui/byline'
 
 /** Free interactive tools promoted from closely related template pages. */
 const FREE_TOOL_CALLOUTS: Record<
@@ -141,10 +142,12 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{template.name}</h1>
 
           {template.description && (
-            <p className="mb-6 text-lg leading-relaxed text-slate-600">
+            <p className="mb-4 text-lg leading-relaxed text-slate-600">
               {template.description}
             </p>
           )}
+
+          <Byline path={`/templates/${slug}`} updatedAt={contentDate(template)} className="mb-6" />
 
           {downloads && (
             <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">
