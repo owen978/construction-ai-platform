@@ -13,7 +13,7 @@ import { isDailyIdeasEnabled } from '@/lib/features'
 import { AUTHOR } from '@/lib/author'
 import { SITE_URL } from '@/lib/site'
 import { pluralRole } from '@/lib/utils'
-import { breadcrumbSchema, dailyIdeaSchema, jsonLdScriptProps } from '@/lib/schema'
+import { articleSchema, breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
 import { getRoles } from '@/lib/queries/roles'
 import { getToolBySlug, getToolSlugs } from '@/lib/queries/tools'
 import { getWorkflowBySlug } from '@/lib/queries/workflows'
@@ -28,7 +28,6 @@ import {
   ideaParam,
   ideaPath,
   roleLabel,
-  toolLabel,
   toolPageSlug,
   type DailyIdea,
 } from '@/lib/daily-ideas'
@@ -116,14 +115,11 @@ export default async function DailyIdeaPage({ params }: DailyIdeaPageProps) {
     <>
       <script
         {...jsonLdScriptProps([
-          dailyIdeaSchema({
+          articleSchema({
             title: idea.title,
-            summary: idea.summary,
+            description: idea.summary,
             path,
-            publishDate: idea.publishDate,
-            steps: idea.steps,
-            tool: toolLabel(idea.tool),
-            timeWithAiMins: idea.timeWithAiMins,
+            datePublished: idea.publishDate,
           }),
           breadcrumbSchema([
             { name: 'Home', url: SITE_URL },

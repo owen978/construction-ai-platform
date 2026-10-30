@@ -98,115 +98,36 @@ function contentCredits(path: string) {
     : { author: organizationSchema(), editor: personSchema() }
 }
 
-// ─── HowTo (for workflow pages) ─────────────────────────────────────
-
-interface HowToOptions {
-  name: string
-  description: string
-  slug: string
-  steps: string[]
-  difficulty?: string | null
-  tool?: { name: string; url?: string | null } | null
-  estimatedTime?: string // ISO 8601 duration e.g. "PT10M"
-  /** Same updated_at the page's byline shows. */
-  dateModified?: string | null
-}
-
-export function howToSchema(options: HowToOptions) {
-  const schema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: options.name,
-    description: options.description,
-    url: `${SITE_URL}/ai-workflows/${options.slug}`,
-    step: options.steps.map((step, index) => ({
-      '@type': 'HowToStep',
-      position: index + 1,
-      text: step,
-    })),
-    publisher: organizationSchema(),
-    ...contentCredits(`/ai-workflows/${options.slug}`),
-  }
-
-  if (options.estimatedTime) {
-    schema.totalTime = options.estimatedTime
-  }
-
-  if (options.dateModified) {
-    schema.dateModified = options.dateModified
-  }
-
-  if (options.tool) {
-    schema.tool = {
-      '@type': 'HowToTool',
-      name: options.tool.name,
-      ...(options.tool.url ? { url: options.tool.url } : {}),
-    }
-  }
-
-  return schema
-}
-
-// ─── HowTo (for /daily idea pages) ──────────────────────────────────
-
-interface DailyIdeaSchemaOptions {
-  title: string
-  summary: string
-  path: string // e.g. "/daily/2026-10-20-check-a-subcontractor-application"
-  publishDate: string
-  steps: string[]
-  tool: string
-  timeWithAiMins: number | null
-}
-
-export function dailyIdeaSchema(options: DailyIdeaSchemaOptions) {
-  const url = `${SITE_URL}${options.path}`
-  const schema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: options.title,
-    description: options.summary,
-    url,
-    datePublished: options.publishDate,
-    publisher: organizationSchema(),
-    ...contentCredits(options.path),
-    tool: { '@type': 'HowToTool', name: options.tool },
-    isAccessibleForFree: true,
-  }
-  if (options.steps.length > 0) {
-    schema.step = options.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text }))
-  }
-  if (options.timeWithAiMins) {
-    schema.totalTime = `PT${options.timeWithAiMins}M`
-  }
-  return schema
-}
-
-// ─── Article (for guide pages) ──────────────────────────────────────
+// ─── Article (guides, workflows, daily ideas) ───────────────────────
+//
+// Workflows and daily ideas used to be HowTo. Google stopped showing HowTo
+// results in 2023, so every content page is now an Article (30 Oct 2026 brief).
 
 interface ArticleOptions {
   title: string
   description: string
-  slug: string
+  /** Site path, e.g. "/guides/ai-construction-estimating". Its share image is `${path}/opengraph-image`. */
+  path: string
   datePublished?: string | null
   dateModified?: string | null
   readingTimeMinutes?: number | null
 }
 
 export function articleSchema(options: ArticleOptions) {
+  const url = `${SITE_URL}${options.path}`
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: options.title,
     description: options.description,
-    url: `${SITE_URL}/guides/${options.slug}`,
-    image: `${SITE_URL}/guides/${options.slug}/opengraph-image`,
+    url,
+    image: `${url}/opengraph-image`,
     inLanguage: 'en-GB',
     publisher: organizationSchema(),
-    ...contentCredits(`/guides/${options.slug}`),
+    ...contentCredits(options.path),
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/guides/${options.slug}`,
+      '@id': url,
     },
     isAccessibleForFree: true,
   }

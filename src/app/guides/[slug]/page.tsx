@@ -88,7 +88,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
     articleSchema({
       title: guide.title,
       description: guide.description || `Construction AI guide: ${guide.title}`,
-      slug: guide.slug,
+      path: `/guides/${guide.slug}`,
       datePublished: guide.created_at,
       dateModified: contentDate(guide),
       readingTimeMinutes: guide.reading_time_minutes,

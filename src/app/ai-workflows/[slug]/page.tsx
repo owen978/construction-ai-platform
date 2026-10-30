@@ -15,7 +15,7 @@ import { ToolCard } from '@/components/cards/tool-card'
 import { GuideCard } from '@/components/cards/guide-card'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features } from '@/lib/features'
-import { breadcrumbSchema, faqSchema, howToSchema, jsonLdScriptProps } from '@/lib/schema'
+import { articleSchema, breadcrumbSchema, faqSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
@@ -88,29 +88,17 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
   ])
   const moreForRole = roleWorkflows.filter((w) => w.slug !== slug).slice(0, 4)
 
-  // HowTo steps describe using the workflow. (Splitting the prompt itself gave
-  // steps like "4. Materials", which are headings inside the prompt, not steps.)
-  const howToSteps = [
-    `Open your preferred AI tool (e.g. ChatGPT, Claude, or Microsoft Copilot)`,
-    `Copy the ${workflow.title} prompt below and paste it into the AI tool`,
-    `Customise the placeholders with your project-specific details`,
-    `Review the AI output and refine as needed for your project`,
-  ]
-
   const schemas = [
     breadcrumbSchema([
       { name: 'Home', url: SITE_URL },
       { name: 'AI Workflows', url: `${SITE_URL}/ai-workflows` },
       { name: workflow.title },
     ]),
-    howToSchema({
-      name: workflow.title,
+    articleSchema({
+      title: workflow.title,
       description: workflow.description || `AI workflow for construction professionals: ${workflow.title}`,
-      slug: workflow.slug,
-      steps: howToSteps.slice(0, 10), // Google recommends max ~10 steps
-      difficulty: workflow.difficulty,
-      tool: workflow.tool ? { name: workflow.tool.name, url: workflow.tool.url } : null,
-      estimatedTime: result ? `PT${result.timeWithAiMins}M` : undefined,
+      path: `/ai-workflows/${workflow.slug}`,
+      datePublished: workflow.created_at,
       dateModified: contentDate(workflow),
     }),
     ...(extras && extras.faqs.length > 0 ? [faqSchema(extras.faqs)] : []),
