@@ -16,7 +16,7 @@ import { getRelatedGuideSlugs } from '@/lib/related-guides'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { ServiceCTA } from '@/components/sections/service-cta'
-import { CallCtaCard } from '@/components/leads/call-cta'
+import { FreeOfferCard } from '@/components/leads/free-offer'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { getIdeasForPage } from '@/lib/daily-ideas'
 import { getServiceCta } from '@/lib/service-cta'
@@ -279,7 +279,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           {features.copilot && <CopilotCTA />}
 
           <div className="space-y-6 lg:sticky lg:top-24">
-            <CallCtaCard heading="Want this built into your team's systems?" utmContent={`template-sidebar-${slug}`} />
+            <FreeOfferCard path={`/templates/${slug}`} utmContent={`template-${slug}`} />
             <NewsletterSidebar />
           </div>
         </div>

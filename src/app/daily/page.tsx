@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-import { CtaBand } from '@/components/leads/call-cta'
+import { FreeOfferBand } from '@/components/leads/free-offer'
 import { pageMetadata } from '@/lib/metadata'
 import { isDailyIdeasEnabled } from '@/lib/features'
 import { SITE_URL } from '@/lib/site'
@@ -220,12 +220,7 @@ export default async function DailyArchivePage({ searchParams }: DailyArchivePro
         )}
       </div>
 
-      <CtaBand
-        heading="Want ideas like these working in your business?"
-        body="A 15-minute call with Owen, a QS with 25+ years in UK construction, about how it could work in your business. No obligation."
-        utmContent="hub-daily"
-        kind="call"
-      />
+      <FreeOfferBand utmContent="hub-daily" />
       <NewsletterInline />
     </>
   )

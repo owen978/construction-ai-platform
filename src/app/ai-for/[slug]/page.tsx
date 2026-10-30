@@ -19,7 +19,7 @@ import { RelatedGuides } from '@/components/sections/related-guides'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { dailyArchiveHref, getIdeasForRole } from '@/lib/daily-ideas'
 import { ServiceCTA } from '@/components/sections/service-cta'
-import { CallCtaInline } from '@/components/leads/call-cta'
+import { FreeOfferBlock } from '@/components/leads/free-offer'
 import { getServiceCta } from '@/lib/service-cta'
 import { ConstructionRatingNote } from '@/components/sections/construction-rating-note'
 import { getConstructionRatingNote } from '@/lib/construction-rating'
@@ -195,7 +195,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
-        <CallCtaInline heading={`How could AI work for ${pluralRole(role.name).toLowerCase()} in your business?`} utmContent={`ai-for-inline-${slug}`} className="max-w-3xl" />
+        <FreeOfferBlock path={`/ai-for/${slug}`} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
 
         <RelatedGuides section="ai-for" slug={slug} />
 
@@ -302,7 +302,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </div>
         )}
 
-        <CallCtaInline heading={`How could AI handle ${task.name.toLowerCase()} in your business?`} utmContent={`ai-for-inline-${slug}`} className="max-w-3xl" />
+        <FreeOfferBlock path={`/ai-for/${slug}`} utmContent={`ai-for-${slug}`} className="max-w-3xl" />
 
         <RelatedGuides section="ai-for" slug={slug} />
 

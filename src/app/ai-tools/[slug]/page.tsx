@@ -13,7 +13,7 @@ import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { ToolCard } from '@/components/cards/tool-card'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { ServiceCTA } from '@/components/sections/service-cta'
-import { CallCtaCard } from '@/components/leads/call-cta'
+import { FreeOfferCard } from '@/components/leads/free-offer'
 import { dailyArchiveHref, getIdeasForToolPage } from '@/lib/daily-ideas'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
@@ -164,7 +164,7 @@ export default async function ToolDetailPage({ params }: ToolDetailPageProps) {
           )}
 
           <div className="space-y-6 lg:sticky lg:top-24">
-            <CallCtaCard heading="Not sure which AI tools fit your team?" utmContent={`tool-sidebar-${slug}`} />
+            <FreeOfferCard path={`/ai-tools/${slug}`} utmContent={`tool-${slug}`} />
             <NewsletterSidebar />
           </div>
         </div>

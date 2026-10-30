@@ -4,24 +4,14 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { track } from '@vercel/analytics'
 import { buttonVariants } from '@/components/ui/button-variants'
-import { bookingUrl } from '@/lib/ghl'
+import { servicesFormUrl } from '@/lib/ghl'
+import { FREE_OFFERS, freeOfferFor } from '@/lib/service-cta'
 import { cn } from '@/lib/utils'
 
 const DISMISS_KEY = 'bc_call_bar_dismissed'
 const HIDE_FOR_DAYS = 7
 /** Content pages and their hubs: not the homepage, services, about, contact, newsletter, legal or admin. */
 const SHOW_ON = /^\/(ai-workflows|guides|templates|ai-for|ai-tools|daily|tools)(\/|$)/
-
-/** The question the card asks, matched to what the reader is looking at. */
-const HEADINGS: Record<string, string> = {
-  'ai-workflows': 'Want workflows like this running in your team?',
-  templates: "Want this built into your team's systems?",
-  guides: 'How could this work in your business?',
-  'ai-for': 'Want AI set up for your team?',
-  'ai-tools': 'Not sure which AI tools fit your team?',
-  daily: 'Want ideas like this working in your business?',
-  tools: 'Want tools like this built for your team?',
-}
 
 function dismissedRecently() {
   try {
@@ -33,8 +23,8 @@ function dismissedRecently() {
 }
 
 /**
- * One quiet, dismissible call to action: appears once a reader is a third of
- * the way down a content page. A bar along the bottom on phones, a small card
+ * One quiet, dismissible offer of the free 20-minute Roadmap (the Benchmark on
+ * commercial pages): appears once a reader is a third of the way down a content page. A bar along the bottom on phones, a small card
  * in the corner on larger screens. Dismissing hides it for a week.
  */
 export function StickyCallBar() {
@@ -81,20 +71,21 @@ function CallBar({ pathname }: { pathname: string }) {
   if (dismissed || !visible || otherCtaInView) return null
 
   const section = pathname.split('/')[1] || 'page'
-  const heading = HEADINGS[section] ?? 'Want this set up for your team?'
-  const href = bookingUrl(`sticky-${section}`)
+  const key = freeOfferFor(pathname)
+  const offer = FREE_OFFERS[key]
+  const href = servicesFormUrl(`${key}-sticky-${section}`)
 
   function dismiss() {
     try {
       window.localStorage.setItem(DISMISS_KEY, String(Date.now()))
     } catch {}
     setDismissed(true)
-    track('call_bar_dismiss', { section })
+    track('call_bar_dismiss', { section, offer: key })
   }
 
   return (
     <aside
-      aria-label="Book a call"
+      aria-label={offer.heading}
       className={cn(
         'fixed z-40 border-slate-200 bg-white shadow-xl motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4',
         'inset-x-0 bottom-0 border-t px-4 py-3',
@@ -111,19 +102,21 @@ function CallBar({ pathname }: { pathname: string }) {
       </button>
       <div className="flex items-center gap-3 pr-6 sm:block sm:pr-4">
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-slate-900">{heading}</p>
-          <p className="hidden text-sm text-slate-600 sm:mt-1 sm:block">
-            A 15-minute call with Owen, a QS with 25+ years in UK construction, about how it could work in your business. No obligation.
+          <p className="text-sm font-semibold text-slate-900">
+            <span className="sm:hidden">{offer.shortHeading}</span>
+            <span className="hidden sm:inline">{offer.heading}</span>
           </p>
+          <p className="hidden text-sm text-slate-600 sm:mt-1 sm:block">{offer.shortBody}</p>
         </div>
         <a
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => track('call_bar_click', { section })}
+          onClick={() => track('call_bar_click', { section, offer: key })}
           className={cn(buttonVariants(), 'shrink-0 sm:mt-3 sm:w-full')}
         >
-          Book a 15-min call
+          <span className="sm:hidden">Request it</span>
+          <span className="hidden sm:inline">{offer.button}</span>
         </a>
       </div>
     </aside>

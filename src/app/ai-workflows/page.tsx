@@ -77,7 +77,6 @@ export default async function WorkflowsPage() {
         heading="Want these workflows built into your team's systems?"
         body="Start with an AI Roadmap Review: a written plan of what to automate first and what each step saves. Or see everything we do."
         utmContent="hub-ai-workflows"
-        kind="services"
       />
       <NewsletterInline />
     </>

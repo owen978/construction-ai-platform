@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { breadcrumbSchema, faqSchema, organizationSchema, jsonLdScriptProps } from '@/lib/schema'
 import { FormwiseEmbed } from '@/components/formwise-embed'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-import { CallCtaInline } from '@/components/leads/call-cta'
+import { FreeOfferBlock } from '@/components/leads/free-offer'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
@@ -141,7 +141,7 @@ export default function RamsGeneratorPage() {
         </div>
       </div>
 
-      <CallCtaInline heading="Want tools like this built for your team?" utmContent="tool-rams-generator" />
+      <FreeOfferBlock path="/tools/rams-generator" utmContent="tool-rams-generator" />
       <NewsletterInline />
     </div>
   )

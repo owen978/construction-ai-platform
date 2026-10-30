@@ -19,7 +19,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, jsonLdScriptProps } from '@/l
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { ServiceCTA } from '@/components/sections/service-cta'
-import { CallCtaCard } from '@/components/leads/call-cta'
+import { FreeOfferCard } from '@/components/leads/free-offer'
 import { getServiceCta } from '@/lib/service-cta'
 import { TypicalResult } from '@/components/sections/typical-result'
 import { getWorkflowResult } from '@/lib/workflow-results'
@@ -243,7 +243,7 @@ export default async function WorkflowDetailPage({ params }: WorkflowDetailPageP
           {features.copilot && <CopilotCTA />}
 
           <div className="space-y-6 lg:sticky lg:top-24">
-            <CallCtaCard heading="Want this workflow running in your team?" utmContent={`workflow-sidebar-${slug}`} />
+            <FreeOfferCard path={`/ai-workflows/${slug}`} utmContent={`workflow-${slug}`} />
             <NewsletterSidebar />
           </div>
         </div>

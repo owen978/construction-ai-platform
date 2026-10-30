@@ -10,6 +10,7 @@
  * only here and must match what /services promises.
  */
 export const ROADMAP_REVIEW_OFFER = {
+  price: '£950',
   kicker: 'AI Roadmap Review',
   heading: 'Want this done for your team?',
   body: "A QS with 25+ years' experience reviews your workflows across commercial, operations, site management and H&S, and hands you a written roadmap: quick wins, costed options, what each step saves.",
@@ -20,6 +21,57 @@ export const ROADMAP_REVIEW_OFFER = {
   ],
   bookLabel: 'Request your Roadmap Review',
   newsletterLabel: 'Get the free weekly newsletter',
+}
+
+/**
+ * The free 20-minute sessions that sit on content pages instead of the
+ * 15-minute call (Owen, 30 Oct 2026). Requests go through the services form;
+ * Owen added an option for each one there. The Benchmark goes on commercial
+ * pages (BENCHMARK_PAGES), the Roadmap everywhere else.
+ */
+export const FREE_OFFERS = {
+  roadmap: {
+    heading: 'Free 20-minute Business Roadmap',
+    shortHeading: 'Free 20-minute Roadmap',
+    body: `Not sure where AI would actually save your team time? Request one and I'll take you through 30 quick checks across six areas: pre-construction, commercial, site, finance, admin and comms, and people and growth. You'll come away with a clear picture of where the gaps are. If you then want the fixes designed, that's the ${ROADMAP_REVIEW_OFFER.price} AI Roadmap Review.`,
+    shortBody: 'Not sure where AI would save your team time? 30 quick checks across six areas of the business, and a clear picture of where the gaps are.',
+    button: 'Request my free Roadmap',
+  },
+  benchmark: {
+    heading: 'Free 20-minute Commercial Benchmark',
+    shortHeading: 'Free 20-minute Benchmark',
+    body: "Not sure how tight your commercial side really is? Request one and I'll take you through 38 commercial tasks, from valuations and variations to CVR, applications and cash flow, each one scored Covered, Stretched or Exposed. You'll see exactly where money is leaking before it shows up in the margin.",
+    shortBody: '38 commercial tasks, from valuations to cash flow, each scored Covered, Stretched or Exposed. See where money is leaking before it hits the margin.',
+    button: 'Request my free Benchmark',
+  },
+} as const
+
+export type FreeOfferKey = keyof typeof FREE_OFFERS
+
+/** Commercial pages that offer the Benchmark rather than the Roadmap (from the 30 Oct brief). */
+export const BENCHMARK_PAGES = new Set([
+  '/ai-workflows/create-cost-value-reconciliation',
+  '/ai-workflows/draft-valuation-payment-application',
+  '/ai-workflows/generate-bill-of-quantities',
+  '/ai-workflows/generate-cashflow-forecast',
+  '/ai-workflows/write-variation-assessment',
+  '/ai-workflows/draft-contract-change-order',
+  '/ai-workflows/draft-final-account-summary',
+  '/ai-workflows/analyse-subcontractor-quotes',
+  '/ai-workflows/write-commercial-risk-summary',
+  '/ai-workflows/prepare-bid-pricing-schedule',
+  '/ai-workflows/generate-preliminary-cost-plan',
+  '/ai-for/quantity-surveyor',
+  '/ai-for/commercial-manager',
+  '/ai-for/valuation-and-payment-applications',
+  '/ai-for/variation-management',
+  '/ai-for/budget-forecasting',
+  '/ai-for/cost-estimation',
+  '/ai-for/material-takeoff',
+])
+
+export function freeOfferFor(path: string): FreeOfferKey {
+  return BENCHMARK_PAGES.has(path) ? 'benchmark' : 'roadmap'
 }
 
 export interface ServiceCtaItem {

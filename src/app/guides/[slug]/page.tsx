@@ -15,7 +15,7 @@ import { RelatedResources } from '@/components/sections/related-resources'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { ServiceCTA } from '@/components/sections/service-cta'
-import { CallCtaInline } from '@/components/leads/call-cta'
+import { FreeOfferBlock } from '@/components/leads/free-offer'
 import { splitAtMiddleHeading } from '@/lib/markdown-split'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
 import { getIdeasForPage } from '@/lib/daily-ideas'
@@ -139,7 +139,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
         {contentParts ? (
           <>
             <MarkdownContent content={contentParts[0]} />
-            <CallCtaInline heading="How could this work in your business?" utmContent={`guide-inline-${slug}`} />
+            <FreeOfferBlock path={`/guides/${slug}`} utmContent={`guide-${slug}`} />
             <MarkdownContent content={contentParts[1]} />
           </>
         ) : (

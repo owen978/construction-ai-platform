@@ -76,7 +76,6 @@ export default async function TemplatesPage() {
         heading="Want paperwork like this off your team's desk?"
         body="We build the systems that fill in the documents your team repeats every week. Start with an AI Roadmap Review, or see everything we do."
         utmContent="hub-templates"
-        kind="services"
       />
       <NewsletterInline />
     </>

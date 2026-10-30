@@ -105,7 +105,6 @@ export default async function AIForPage() {
         heading="Want AI set up across your team?"
         body="Start with an AI Roadmap Review: a written plan of what to automate first and what each step saves. Or see everything we do."
         utmContent="hub-ai-for"
-        kind="services"
       />
       <NewsletterInline />
     </>

@@ -6,7 +6,7 @@ import { getTools } from '@/lib/queries/tools'
 import { ToolCard } from '@/components/cards/tool-card'
 import { breadcrumbSchema, collectionPageSchema, jsonLdScriptProps } from '@/lib/schema'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
-import { CtaBand } from '@/components/leads/call-cta'
+import { FreeOfferBand } from '@/components/leads/free-offer'
 import { SITE_URL } from '@/lib/site'
 import { pageMetadata } from '@/lib/metadata'
 
@@ -71,12 +71,7 @@ export default async function ToolsPage() {
         )}
       </div>
 
-      <CtaBand
-        heading="Not sure which AI tools fit your team?"
-        body="A 15-minute call with Owen, a QS with 25+ years in UK construction, about how it could work in your business. No obligation."
-        utmContent="hub-ai-tools"
-        kind="call"
-      />
+      <FreeOfferBand utmContent="hub-ai-tools" />
       <NewsletterInline />
     </>
   )
