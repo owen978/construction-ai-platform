@@ -1,13 +1,13 @@
 ---
-title: "Construction Method Statement: Free Template, Examples, and How to Write One"
+title: "How to Write a Construction Method Statement (UK Guide With Example)"
 slug: "construction-method-statement-guide"
-description: "A construction method statement is a step-by-step plan of how a specific task will be carried out safely. This guide covers what to include, a free template, a worked UK example, and how to write one in minutes with AI."
+description: "A construction method statement is a step-by-step plan of how a specific task will be carried out safely. This guide shows how to write one: what to include, a worked UK example, and how to draft it in minutes with AI."
 difficulty: "beginner"
 reading_time_minutes: 11
 featured: false
 sort_order: 6
-meta_title: "Construction Method Statement Template + Example (Free)"
-meta_description: "What to include in a construction method statement, with a free template, a worked UK example and how to write a safe system of work with AI."
+meta_title: "How to Write a Method Statement: UK Guide With Example"
+meta_description: "How to write a construction method statement in the UK: what to include, a worked example, who signs it off, and how to draft one faster with AI."
 ---
 
 A **construction method statement** is a written, step-by-step plan that sets out how a specific task will be carried out safely from start to finish. It describes the sequence of work, the people and plant involved, the hazards present, and the control measures that keep everyone safe. In UK practice a method statement is almost always paired with a risk assessment to form a [RAMS document](/templates/rams), and it is one of the documents a principal contractor will ask for before any subcontractor is allowed to start on site.
@@ -16,7 +16,7 @@ This guide explains exactly what a method statement should contain, gives you a 
 
 ## What is a method statement and why does it matter
 
-A method statement, sometimes called a safe system of work or a safe work method statement (SWMS), is the practical "how" that sits alongside the risk assessment's "what could go wrong". The risk assessment identifies hazards and rates their risk. The method statement explains, in plain sequence, how the work will actually be done so that those risks are controlled.
+A method statement, sometimes called a safe system of work (Safe Work Method Statement, or SWMS, is the Australian term), is the practical "how" that sits alongside the risk assessment's "what could go wrong". The risk assessment identifies hazards and rates their risk. The method statement explains, in plain sequence, how the work will actually be done so that those risks are controlled.
 
 It matters for three reasons:
 
@@ -40,7 +40,7 @@ In short, the risk assessment is the analysis and the method statement is the pl
 
 ## What to include in a construction method statement
 
-A complete method statement covers the same core sections every time, which is exactly why a template is so useful. Include:
+A complete method statement covers the same core sections every time, which is exactly why a [method statement template](/templates/method-statement) is so useful. Include:
 
 - **Project and task details.** Project name and address, the specific task covered, the contractor carrying it out, and the dates.
 - **Scope of works.** A clear definition of what this method statement covers, and just as importantly what it does not.
