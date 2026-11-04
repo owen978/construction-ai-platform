@@ -36,6 +36,18 @@ export const RELATED_GUIDES_MAP: Record<string, string[]> = {
   ],
 }
 
+/**
+ * "Start here" line under an /ai-for hub's heading, pointing to the guide
+ * that owns the hub's main search, with the exact anchor text to use. The
+ * hub stays the home for workflows; the guide owns the topic.
+ */
+export const START_HERE: Record<string, { lead: string; links: { href: string; anchor: string }[] }> = {
+  'ai-for/cost-estimation': {
+    lead: 'New to this? Start with our',
+    links: [{ href: '/guides/ai-construction-estimating', anchor: 'AI cost estimation guide' }],
+  },
+}
+
 export function getRelatedGuideSlugs(
   section: RelatedGuidesSection,
   slug: string

@@ -109,6 +109,8 @@ For most QS work, a capable general-purpose assistant like [Claude](/ai-tools/cl
 
 Specialist estimating and measurement software has its place for full digital take-off and cost databases, but for the language-heavy 60 percent of the QS role, a general assistant plus a saved set of prompts delivers most of the benefit with none of the procurement overhead. Start there, prove the time saving on your own work, and expand from what works.
 
+For pricing work in particular, our guide to [AI cost estimation](/guides/ai-construction-estimating) covers take-off, bill of quantities drafting, rates and quote comparison, and where AI goes wrong on an estimate.
+
 ## Frequently asked questions
 
 ### Will AI replace quantity surveyors?
