@@ -1,7 +1,7 @@
 ---
 title: "Draft a payment notice from an interim valuation"
 slug: "draft-a-payment-notice-from-an-interim-valuation"
-summary: "Turn your finished interim valuation into a payment notice that states the sum you consider due and how you worked it out, ready to check and issue on time."
+summary: "Turn a finished interim valuation into a payment notice that states the sum you consider due and how you worked it out, ready to check and issue on time."
 roles: [quantity-surveyor, commercial-manager]
 task: "payment-notices"
 contractForms: [construction-act]

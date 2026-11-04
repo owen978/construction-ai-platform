@@ -1,7 +1,7 @@
 ---
 title: "Claude Skill: an interim valuation checker for QSs"
 slug: "claude-skill-interim-valuation-checker-for-qss"
-summary: "Set up a reusable Claude Skill that checks every interim valuation the same way, from arithmetic to retention and variations, and flags issues for you to check."
+summary: "Set up a reusable Claude Skill that checks every interim valuation the same way, from arithmetic to retention and variations, and flags issues to check."
 roles: [quantity-surveyor]
 task: "agents"
 contractForms: []
