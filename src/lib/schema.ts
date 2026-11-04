@@ -112,6 +112,10 @@ interface ArticleOptions {
   datePublished?: string | null
   dateModified?: string | null
   readingTimeMinutes?: number | null
+  /** Absolute image URL, for pages without their own share-image route. */
+  image?: string
+  /** What the article is about, e.g. the SoftwareApplication a tool guide covers. */
+  about?: Record<string, unknown>
 }
 
 export function articleSchema(options: ArticleOptions) {
@@ -122,10 +126,11 @@ export function articleSchema(options: ArticleOptions) {
     headline: options.title,
     description: options.description,
     url,
-    image: `${url}/opengraph-image`,
+    image: options.image ?? `${url}/opengraph-image`,
     inLanguage: 'en-GB',
     publisher: organizationSchema(),
     ...contentCredits(options.path),
+    ...(options.about ? { about: options.about } : {}),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,

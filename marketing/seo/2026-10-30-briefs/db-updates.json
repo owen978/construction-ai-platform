@@ -7,5 +7,9 @@
  },
  "tasks/cost-estimation": {
   "meta_title": "Cost Estimation AI Workflows and Prompts for UK Teams"
+ },
+ "tools/claude": {
+  "meta_title": "Claude for Construction: How UK Teams Use It, With Prompts",
+  "meta_description": "How to use Claude in construction management, QS and site work: what it does well, where it goes wrong, data safety, and 19 workflows with prompts."
  }
 }

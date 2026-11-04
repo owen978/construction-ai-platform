@@ -13,7 +13,8 @@ import { getAiForExtras } from '@/lib/ai-for-extras'
 import { AiForExtras } from '@/components/sections/ai-for-extras'
 import { NewsletterInline } from '@/components/sections/newsletter-inline'
 import { getRelatedContent, withoutShown } from '@/lib/queries/related'
-import { getRelatedGuideSlugs, START_HERE } from '@/lib/related-guides'
+import { getRelatedGuideSlugs } from '@/lib/related-guides'
+import { StartHere } from '@/components/ui/start-here'
 import { RelatedResources } from '@/components/sections/related-resources'
 import { RelatedGuides } from '@/components/sections/related-guides'
 import { DailyIdeasStrip } from '@/components/daily/daily-ideas-strip'
@@ -37,24 +38,6 @@ export async function generateStaticParams() {
 function withHubWorkflows<T extends { slug: string }>(own: T[], extra: T[]): T[] {
   const seen = new Set(own.map((w) => w.slug))
   return [...own, ...extra.filter((w) => !seen.has(w.slug))]
-}
-
-/** "New to this? Start with our ... guide." under the hub heading, where START_HERE has one. */
-function StartHere({ path }: { path: string }) {
-  const entry = START_HERE[path]
-  if (!entry) return null
-  return (
-    <p className="-mt-4 mb-8 max-w-2xl text-base text-slate-700">
-      {entry.lead}{' '}
-      {entry.links.map((l, i) => (
-        <span key={l.href}>
-          {i > 0 && (i === entry.links.length - 1 ? ' and ' : ', ')}
-          <Link href={l.href} className="font-semibold text-primary hover:underline">{l.anchor}</Link>
-        </span>
-      ))}
-      .
-    </p>
-  )
 }
 
 /** Quick links under the hub heading: straight to the workflows, or down to the reading. */
@@ -163,7 +146,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </p>
         )}
         <Byline path={`/ai-for/${slug}`} updatedAt={contentDate(role)} className="mb-8" />
-        <StartHere path={`ai-for/${slug}`} />
+        <StartHere path={`ai-for/${slug}`} className="-mt-4 mb-8" />
 
         <HubJumpLinks
           workflows={workflows.length}
@@ -284,7 +267,7 @@ export default async function AIForPage({ params }: AIForPageProps) {
           </p>
         )}
         <Byline path={`/ai-for/${slug}`} updatedAt={contentDate(task)} className="mb-8" />
-        <StartHere path={`ai-for/${slug}`} />
+        <StartHere path={`ai-for/${slug}`} className="-mt-4 mb-8" />
 
         <HubJumpLinks
           workflows={workflows.length}

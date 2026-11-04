@@ -1,5 +1,6 @@
 ---
 status: "approved"
+updated: "2026-11-04"
 h1: "Free Method Statement Template for UK Construction"
 intro: "This free method statement template sets out how a task will be done safely: the scope, the people and their competence, plant and materials, a step-by-step sequence with controls, PPE, permits and emergency arrangements. Copy it below, fill it in for your task and site, and have it reviewed and signed off before work starts."
 ---

@@ -30,3 +30,27 @@ export function splitAtMiddleHeading(md: string): [string, string] | null {
     .reduce((best, start) => (Math.abs(start - middle) < Math.abs(best - middle) ? start : best))
   return [md.slice(0, at), md.slice(at)]
 }
+
+export type BodySegment = { kind: 'markdown'; text: string } | { kind: 'marker'; name: string }
+
+/**
+ * Splits a page body at marker lines such as "<!-- workflows -->" or
+ * "<!-- cta -->", so the page can drop its own blocks in at those points.
+ * Lines inside code fences are left alone.
+ */
+export function splitAtMarkers(md: string): BodySegment[] {
+  const segments: BodySegment[] = []
+  let buffer: string[] = []
+  let inFence = false
+  for (const line of md.split('\n')) {
+    if (/^\s*(```|~~~)/.test(line)) inFence = !inFence
+    const marker = !inFence && line.trim().match(/^<!--\s*([a-z-]+)\s*-->$/)
+    if (marker) {
+      if (buffer.join('').trim()) segments.push({ kind: 'markdown', text: buffer.join('\n') })
+      segments.push({ kind: 'marker', name: marker[1] })
+      buffer = []
+    } else buffer.push(line)
+  }
+  if (buffer.join('').trim()) segments.push({ kind: 'markdown', text: buffer.join('\n') })
+  return segments
+}

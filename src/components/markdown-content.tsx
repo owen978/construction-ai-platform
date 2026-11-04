@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Link from 'next/link'
 import { QsTakeBox } from '@/components/ui/qs-take'
+import { CopyButton } from '@/components/ui/copy-button'
 
 /** Plain text of a Markdown (hast) node, for spotting a "QS take:" blockquote. */
 function textOf(node: unknown): string {
@@ -89,6 +90,19 @@ export function MarkdownContent({ content }: { content: string }) {
             <code className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-sm text-slate-800">{children}</code>
           ),
           hr: () => <hr className="my-10 border-slate-200" />,
+          pre: ({ node }) => {
+            const text = textOf(node).replace(/\n$/, '')
+            return (
+              <div className="relative my-6">
+                <div className="absolute top-4 right-4">
+                  <CopyButton text={text} />
+                </div>
+                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-slate-900 p-6 pr-28 font-mono text-sm leading-relaxed text-slate-100 shadow-lg">
+                  {text}
+                </pre>
+              </div>
+            )
+          },
         }}
       >
         {content}

@@ -9,6 +9,8 @@
  * File format:
  *   ---
  *   status: "approved"          # or "draft"; drafts only show in local development
+ *   slug: "claude"              # optional; defaults to the file name (see below)
+ *   updated: "2026-11-04"       # the day the copy last really changed: the page's "Last updated"
  *   h1: "Free Method Statement Template for UK Construction"
  *   intro: "The opening answer, under 60 words."
  *   ---
@@ -19,7 +21,9 @@
  *   The answer, 40 to 80 words.
  *
  * Sections are <section>/<slug>, e.g. templates/method-statement or
- * ai-tools/claude. Errors stop the build.
+ * ai-tools/claude. Errors stop the build. Never name a file claude.md: macOS
+ * ignores case, so Claude Code would load it as a CLAUDE.md instruction file.
+ * Use another name with a slug field instead (ai-tools/claude-ai.md).
  */
 
 import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -51,8 +55,12 @@ function parse(section, file) {
   if (status !== 'draft' && status !== 'approved') throw new Error(`${path}: status must be "draft" or "approved"`)
   const h1 = field(front, 'h1')
   const intro = field(front, 'intro')
+  const slug = field(front, 'slug') || file.replace(/\.md$/, '')
+  if (file.toLowerCase() === 'claude.md') throw new Error(`${path}: rename this file; see the note at the top`)
   if (!h1) throw new Error(`${path}: add an h1`)
   if (!intro) throw new Error(`${path}: add an intro (the opening answer)`)
+  const updated = field(front, 'updated')
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(updated ?? '')) throw new Error(`${path}: add updated: "YYYY-MM-DD", the day the copy last changed`)
 
   const problems = []
   if (words(intro) > MAX_INTRO_WORDS) problems.push(`intro is ${words(intro)} words; keep the opening answer to ${MAX_INTRO_WORDS} or fewer`)
@@ -64,7 +72,7 @@ function parse(section, file) {
   }
   if (problems.length) throw new Error(`${path}:\n  - ${problems.join('\n  - ')}`)
 
-  return { status, h1, intro, body: body.trim() }
+  return { slug, status, updated, h1, intro, body: body.trim() }
 }
 
 const out = {}
@@ -72,7 +80,9 @@ for (const section of SECTIONS) {
   const dir = join(SRC, section)
   if (!existsSync(dir)) continue
   for (const file of readdirSync(dir).filter((f) => f.endsWith('.md')).sort()) {
-    out[`${section}/${file.replace(/\.md$/, '')}`] = parse(section, file)
+    const { slug, ...page } = parse(section, file)
+    if (out[`${section}/${slug}`]) throw new Error(`${section}/${slug}: two page bodies for the same page`)
+    out[`${section}/${slug}`] = page
   }
 }
 

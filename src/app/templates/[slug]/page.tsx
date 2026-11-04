@@ -9,7 +9,7 @@ import { TemplateDownload } from '@/components/leads/template-download'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features, isTemplateDownloadEnabled } from '@/lib/features'
 import { breadcrumbSchema, creditsFor, extractFaqFromMarkdown, faqSchema, jsonLdScriptProps } from '@/lib/schema'
-import { getPageBody } from '@/lib/page-bodies'
+import { getPageBody, pageUpdatedAt } from '@/lib/page-bodies'
 import { MarkdownContent } from '@/components/markdown-content'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
@@ -93,6 +93,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
   const pageBody = getPageBody('templates', slug)
   const h1 = pageBody?.h1 ?? template.name
   const faqItems = pageBody ? extractFaqFromMarkdown(pageBody.body) : []
+  const updatedAt = pageUpdatedAt(contentDate(template), pageBody)
   const freeTool = FREE_TOOL_CALLOUTS[slug]
   const relatedResources = await getRelatedContent({
     title: `${template.name} ${template.primary_keyword ?? ''}`,
@@ -115,7 +116,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
       url: `${SITE_URL}/templates/${template.slug}`,
       isAccessibleForFree: true,
       inLanguage: 'en-GB',
-      dateModified: contentDate(template),
+      dateModified: updatedAt,
       image: `${SITE_URL}/templates/${template.slug}/opengraph-image`,
       ...creditsFor(`/templates/${template.slug}`),
       publisher: {
@@ -172,7 +173,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </p>
           )}
 
-          <Byline path={`/templates/${slug}`} updatedAt={contentDate(template)} className="mb-6" />
+          <Byline path={`/templates/${slug}`} updatedAt={updatedAt} className="mb-6" />
 
           {downloads && (
             <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">

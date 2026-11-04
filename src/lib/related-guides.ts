@@ -46,6 +46,10 @@ export const START_HERE: Record<string, { lead: string; links: { href: string; a
     lead: 'New to this? Start with our',
     links: [{ href: '/guides/ai-construction-estimating', anchor: 'AI cost estimation guide' }],
   },
+  'ai-tools/chatgpt': {
+    lead: 'Weighing up assistants? See',
+    links: [{ href: '/ai-tools/claude', anchor: 'Claude for construction' }],
+  },
 }
 
 export function getRelatedGuideSlugs(
