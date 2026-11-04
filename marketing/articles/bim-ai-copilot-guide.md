@@ -35,7 +35,7 @@ For BIM specifically, the boundary falls in a very consistent place:
 
 Everything in the "yes" column is text, structure, and pattern. Everything in the "no" column is geometry or accountability. The one grey area is the small number of add-ins for authoring tools that take a plain English command and carry it out through the tool's API: select these elements, set this parameter, rename these views. Treat those like any script: run them on a copy of the model first and check what changed. A copilot that claims to do the design work itself is overselling.
 
-Our companion guide on [AI for BIM workflows](/guides/ai-for-bim-workflows) goes deeper on the individual workflows themselves, and [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) covers the checking side. This guide is about the copilot layer that runs them: which type to use, what to give it, and how to set it up.
+Our companion guide on [AI for BIM workflows](/guides/ai-for-bim-workflows) goes deeper on the individual workflows themselves, and our guide to [AI BIM model checking](/guides/ai-bim-model-checking-and-qa) covers the checking side. This guide is about the copilot layer that runs them: which type to use, what to give it, and how to set it up.
 
 ## The three kinds of BIM AI copilot
 
@@ -77,7 +77,7 @@ Weaknesses: it is a build. Budget a few weeks of a competent developer, a monthl
 
 The honest recommendation for a typical UK contractor or consultant: start with option two, use option one where it is already bundled with software you pay for, and only consider option three when you can point at a specific recurring question that costs the team hours every week.
 
-## Component queries: asking a copilot about model elements
+## Can you ask a BIM model about its components in plain English?
 
 A component query is a question about the elements in a model. How many fire doors on level 3 have no fire rating? Which rooms have no floor finish recorded? Which wall types have no U-value? It is one of the most common things people want from a BIM AI copilot, and each of the three types answers it differently.
 

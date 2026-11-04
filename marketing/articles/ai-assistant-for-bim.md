@@ -58,7 +58,7 @@ A prompt that works:
 
 > You are reviewing our BIM Execution Plan against the client's EIRs, both attached. Produce a table with three columns: EIR requirement (quote it), where our BEP responds (section number and a short quote), and status (Answered, Partially answered, Not answered). Do not summarise or paraphrase the EIR requirements. Where you find nothing in the BEP, write Not answered rather than guessing.
 
-Stage 3 is also the time to ask it to turn the EIR's information requirements into checking rules for your model checker, so the checks exist before the models fill up. Our guide to [AI for BIM model checking and QA](/guides/ai-bim-model-checking-and-qa) has the rule configuration prompt.
+Stage 3 is also the time to ask it to turn the EIR's information requirements into checking rules for your model checker, so the checks exist before the models fill up. Our guide to [AI BIM model checking](/guides/ai-bim-model-checking-and-qa) has the rule configuration prompt.
 
 ### RIBA Stage 4: coordination and technical design
 

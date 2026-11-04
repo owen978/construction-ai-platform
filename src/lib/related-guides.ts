@@ -46,6 +46,16 @@ export const START_HERE: Record<string, { lead: string; links: { href: string; a
     lead: 'New to this? Start with our',
     links: [{ href: '/guides/ai-construction-estimating', anchor: 'AI cost estimation guide' }],
   },
+  // One guide per BIM search: the hub stays the home for BIM workflows (30 Oct brief).
+  'ai-for/bim-manager': {
+    lead: 'Start here:',
+    links: [
+      { href: '/guides/ai-for-bim-workflows', anchor: 'AI for BIM workflows' },
+      { href: '/guides/ai-bim-model-checking-and-qa', anchor: 'AI BIM model checking' },
+      { href: '/guides/bim-ai-copilot-guide', anchor: 'BIM AI copilot' },
+      { href: '/guides/ai-assistant-for-bim', anchor: 'AI assistant for BIM' },
+    ],
+  },
   'ai-tools/chatgpt': {
     lead: 'Weighing up assistants? See',
     links: [{ href: '/ai-tools/claude', anchor: 'Claude for construction' }],
