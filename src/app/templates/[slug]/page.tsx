@@ -162,7 +162,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
       <div className="grid gap-12 lg:grid-cols-3">
         {/* Main content */}
         <div className="lg:col-span-2">
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-orange-50 text-3xl">
+          {/* With a written body the template should start on a phone's first screen, so the icon goes on phones. */}
+          <div className={`mb-4 h-14 w-14 items-center justify-center rounded-lg bg-orange-50 text-3xl ${pageBody ? 'hidden sm:flex' : 'flex'}`}>
             {template.icon || '\uD83D\uDCC4'}
           </div>
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{h1}</h1>
