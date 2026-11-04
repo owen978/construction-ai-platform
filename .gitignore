@@ -47,3 +47,4 @@ next-env.d.ts
 /src/content/workflow-results.generated.json
 /src/content/workflow-extras.generated.json
 /src/content/ai-for-extras.generated.json
+/src/content/page-bodies.generated.json

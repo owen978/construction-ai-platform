@@ -8,7 +8,9 @@ import { CopyButton } from '@/components/ui/copy-button'
 import { TemplateDownload } from '@/components/leads/template-download'
 import { CopilotCTA } from '@/components/ui/copilot-cta'
 import { features, isTemplateDownloadEnabled } from '@/lib/features'
-import { breadcrumbSchema, jsonLdScriptProps } from '@/lib/schema'
+import { breadcrumbSchema, creditsFor, extractFaqFromMarkdown, faqSchema, jsonLdScriptProps } from '@/lib/schema'
+import { getPageBody } from '@/lib/page-bodies'
+import { MarkdownContent } from '@/components/markdown-content'
 import { NewsletterSidebar } from '@/components/ui/newsletter-sidebar'
 import { NewsletterBanner } from '@/components/sections/newsletter-banner'
 import { getRelatedContent, withoutShown } from '@/lib/queries/related'
@@ -87,6 +89,10 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
 
   const serviceCta = getServiceCta('templates', slug)
   const downloads = isTemplateDownloadEnabled() && Boolean(template.template_content)
+  // A written page body (marketing/page-bodies/templates/<slug>.md) replaces the fixed sections.
+  const pageBody = getPageBody('templates', slug)
+  const h1 = pageBody?.h1 ?? template.name
+  const faqItems = pageBody ? extractFaqFromMarkdown(pageBody.body) : []
   const freeTool = FREE_TOOL_CALLOUTS[slug]
   const relatedResources = await getRelatedContent({
     title: `${template.name} ${template.primary_keyword ?? ''}`,
@@ -104,13 +110,14 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
     {
       '@context': 'https://schema.org',
       '@type': 'CreativeWork',
-      name: template.name,
+      name: h1,
       description: template.description || `Free ${template.name} for construction professionals`,
       url: `${SITE_URL}/templates/${template.slug}`,
       isAccessibleForFree: true,
       inLanguage: 'en-GB',
       dateModified: contentDate(template),
       image: `${SITE_URL}/templates/${template.slug}/opengraph-image`,
+      ...creditsFor(`/templates/${template.slug}`),
       publisher: {
         '@type': 'Organization',
         '@id': `${SITE_URL}/#organization`,
@@ -118,7 +125,25 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
         url: SITE_URL,
       },
     },
+    ...(faqItems.length > 0 ? [faqSchema(faqItems)] : []),
   ]
+
+  const templateBlock = template.template_content && (
+    <div id="template" className="mt-8 scroll-mt-20">
+      <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-slate-200 pb-3">
+        <h2 className="text-xl font-semibold text-slate-900">{pageBody ? `Free ${template.name.toLowerCase()}` : 'Free Template'}</h2>
+        {downloads && <TemplateDownload slug={template.slug} name={template.name} className="h-8" />}
+      </div>
+      <div className="relative">
+        <div className="absolute top-4 right-4">
+          <CopyButton text={template.template_content} />
+        </div>
+        <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-slate-900 p-6 font-mono text-sm leading-relaxed text-slate-100 shadow-lg">
+          {template.template_content}
+        </pre>
+      </div>
+    </div>
+  )
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
@@ -139,11 +164,11 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-orange-50 text-3xl">
             {template.icon || '\uD83D\uDCC4'}
           </div>
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{template.name}</h1>
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{h1}</h1>
 
-          {template.description && (
+          {(pageBody?.intro ?? template.description) && (
             <p className="mb-4 text-lg leading-relaxed text-slate-600">
-              {template.description}
+              {pageBody?.intro ?? template.description}
             </p>
           )}
 
@@ -156,6 +181,16 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
+          {pageBody ? (
+            <>
+              {templateBlock}
+              {freeTool && <FreeToolCallout {...freeTool} />}
+              <div className="mt-8">
+                <MarkdownContent content={pageBody.body} />
+              </div>
+            </>
+          ) : (
+          <>
           {freeTool && <FreeToolCallout {...freeTool} />}
 
           {/* What is it */}
@@ -182,22 +217,8 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
             </div>
           )}
 
-          {/* Template Content */}
-          {template.template_content && (
-            <div id="template" className="mt-8 scroll-mt-20">
-              <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-slate-200 pb-3">
-                <h2 className="text-xl font-semibold text-slate-900">Free Template</h2>
-                {downloads && <TemplateDownload slug={template.slug} name={template.name} className="h-8" />}
-              </div>
-              <div className="relative">
-                <div className="absolute top-4 right-4">
-                  <CopyButton text={template.template_content} />
-                </div>
-                <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg bg-slate-900 p-6 font-mono text-sm leading-relaxed text-slate-100 shadow-lg">
-                  {template.template_content}
-                </pre>
-              </div>
-            </div>
+          {templateBlock}
+          </>
           )}
 
           <DailyIdeasStrip ideas={getIdeasForPage(`/templates/${slug}`)} title="Daily ideas that use this template" moreHref="/daily" />
@@ -206,7 +227,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           <NewsletterBanner />
 
           {/* When to Use */}
-          {template.when_to_use && (
+          {!pageBody && template.when_to_use && (
             <div className="mt-8">
               <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">
                 When Do You Need This?
@@ -218,7 +239,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           )}
 
           {/* Who Uses It */}
-          {template.who_uses_it && (
+          {!pageBody && template.who_uses_it && (
             <div className="mt-8">
               <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">
                 Who Uses This Template?
@@ -230,7 +251,7 @@ export default async function TemplateDetailPage({ params }: TemplateDetailPageP
           )}
 
           {/* AI Tips */}
-          {template.ai_tips && (
+          {!pageBody && template.ai_tips && (
             <div className="mt-8">
               <h2 className="mb-4 border-b border-slate-200 pb-3 text-xl font-semibold text-slate-900">
                 Generate This with AI

@@ -92,11 +92,12 @@ export function profilePageSchema() {
  * (REVIEWED_PAGES) name him as the author; everything else, published by the
  * content tasks, has the site as author and Owen as editor ("Editor: Owen Hagger").
  */
-function contentCredits(path: string) {
+export function creditsFor(path: string) {
   return isReviewed(path)
     ? { author: personSchema() }
     : { author: organizationSchema(), editor: personSchema() }
 }
+const contentCredits = creditsFor
 
 // ─── Article (guides, workflows, daily ideas) ───────────────────────
 //
@@ -188,7 +189,12 @@ export function extractFaqFromMarkdown(content: string): FaqItem[] {
 
   const flush = () => {
     if (question && answerLines.length > 0) {
-      const answer = answerLines.join(' ').replace(/\s+/g, ' ').trim()
+      const answer = answerLines
+        .join(' ')
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // links read as their text
+        .replace(/\*\*([^*]+)\*\*/g, '$1')
+        .replace(/\s+/g, ' ')
+        .trim()
       if (answer) items.push({ question, answer })
     }
     question = null
