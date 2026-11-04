@@ -33,7 +33,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const SRC = resolve(ROOT, 'marketing/page-bodies')
 const OUT = resolve(ROOT, 'src/content/page-bodies.generated.json')
-const SECTIONS = ['templates', 'ai-tools']
+const SECTIONS = ['templates', 'ai-tools', 'tools']
 const MAX_INTRO_WORDS = 60
 
 const words = (s) => s.split(/\s+/).filter(Boolean).length

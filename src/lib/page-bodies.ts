@@ -19,7 +19,7 @@ export interface PageBody {
 
 const ALL = rawBodies as Record<string, PageBody>
 
-export function getPageBody(section: 'templates' | 'ai-tools', slug: string): PageBody | null {
+export function getPageBody(section: 'templates' | 'ai-tools' | 'tools', slug: string): PageBody | null {
   const body = ALL[`${section}/${slug}`]
   if (!body) return null
   if (body.status !== 'approved' && process.env.NODE_ENV !== 'development') return null
