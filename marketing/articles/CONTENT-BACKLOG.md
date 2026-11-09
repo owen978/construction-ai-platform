@@ -68,7 +68,7 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 
 | # | Status | Target keyword | Volume / KD | Slug | Internal links |
 |---|--------|----------------|-------------|------|----------------|
-| 30 | queued | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /newsletter |
+| 30 | PUBLISHED | best ai tools for construction | US/UK / KD 50 | best-ai-tools-for-construction | /ai-tools, /ai-tools/claude, /ai-tools/chatgpt, /newsletter |
 | 31 | queued | free ai for construction estimating | US 250 / KD 7 / $4.50 | free-ai-for-construction-estimating | /guides/ai-construction-estimating, /ai-tools/claude, /ai-workflows/generate-bill-of-quantities |
 | 32 | queued | ai construction software | US 350 / KD 52 | best-ai-construction-software | /ai-tools, /ai-tools/autodesk-construction-cloud, /ai-tools/procore |
 | 33 | queued | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-construction-estimating, /templates/cost-plan |
