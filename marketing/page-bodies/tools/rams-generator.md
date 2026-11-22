@@ -1,6 +1,6 @@
 ---
 status: "approved"
-updated: "2026-11-04"
+updated: "2026-11-22"
 h1: "Free RAMS Generator"
 intro: "Describe the task, the site and the equipment, and the AI RAMS generator drafts a risk assessment and method statement in one document: hazards scored for likelihood and severity, control measures, a step-by-step sequence, PPE and emergency arrangements. It's a first draft. A competent person must check it against the site and sign it off."
 ---

@@ -1,6 +1,6 @@
 ---
 status: "approved"
-updated: "2026-11-04"
+updated: "2026-11-22"
 slug: "claude"
 h1: "Claude for Construction: How to Use It on UK Projects"
 intro: "Claude is Anthropic's AI assistant. In construction it's most useful for reading long documents such as contracts, specifications, tender packs and meeting notes, then summarising, comparing or drafting from them. Treat it as a drafting and checking tool, not a decision maker. Someone who knows the job reviews every output before it goes anywhere."
