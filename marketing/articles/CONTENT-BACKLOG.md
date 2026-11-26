@@ -73,7 +73,7 @@ First-mover advantage. Each is a hub of ready-to-use prompts for that role, link
 | 32 | PUBLISHED | ai construction software | US 350 / KD 52 | best-ai-construction-software | /ai-tools, /ai-tools/autodesk-construction-cloud, /ai-tools/procore |
 | 33 | PUBLISHED | best ai tools for estimating | US 450 | best-ai-tools-for-estimating | /ai-tools/claude, /guides/ai-construction-estimating, /templates/cost-plan |
 | 34 | PUBLISHED | chatgpt vs claude for construction | comparison intent | chatgpt-vs-claude-for-construction | /ai-tools/chatgpt, /ai-tools/claude, /newsletter |
-| 35 | queued | best ai tools for project management construction | US 200 | best-ai-tools-for-construction-project-management | /ai-tools, /ai-workflows/generate-project-risk-register |
+| 35 | PUBLISHED | best ai tools for project management construction | US 200 | best-ai-tools-for-construction-project-management | /ai-tools, /ai-workflows/generate-project-risk-register |
 | 36 | queued | ai construction scheduling software | US 150 / KD 30 | best-ai-tools-for-construction-scheduling | /ai-workflows/generate-lookahead-schedule-summary, /ai-tools |
 
 ## Wave 5 — UK compliance guides (UK moat, zero US competition)
